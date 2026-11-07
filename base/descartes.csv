@@ -1,0 +1,737 @@
+doc_id,motivo,trecho
+D01,preâmbulo/cabeçalho,AGÊNCIA NACIONAL DE ENERGIA ELÉTRICA – ANEEL
+D01,preâmbulo/cabeçalho,Decisão Judicial
+D01,preâmbulo/cabeçalho,"MEDIDA PROVISÓRIA Nº 1.300, DE 21 DE MAIO DE 2025"
+D01,preâmbulo/cabeçalho,Voto
+D01,preâmbulo/cabeçalho,Texto Compilado
+D01,preâmbulo/cabeçalho,"O DIRETOR-GERAL DA AGÊNCIA NACIONAL DE ENERGIA ELÉTRICA – ANEEL, no uso de suas atribuições regimentais, de acordo com a"
+D01,assinatura/nota de publicação,ANDRÉ PEPITONE DA NÓBREGA
+D01,assinatura/nota de publicação,"Este texto não substitui o republicado no D.O. de 21.01.2022, seção 1, p. 74, v. 160, n. 15 e retificado no D.O. de 21.0"
+D01,assinatura/nota de publicação,"(*) Republicado em razão de incorreções no original publicado no DOU de 20/12/2021, edição 238, seção 1, página 206."
+D01,índice/sumário,ÍNDICE
+D01,índice/sumário,TÍTULO I -
+D01,índice/sumário,PARTE GERAL
+D01,índice/sumário,DAS DISPOSIÇÕES GERAIS
+D01,índice/sumário,Do Objeto e Âmbito de Aplicação
+D01,índice/sumário,Das Definições
+D01,índice/sumário,Dos Principais Direitos e Deveres
+D01,índice/sumário,Da Representação
+D01,índice/sumário,Dos Documentos e Provas
+D01,índice/sumário,DA CONEXÃO
+D01,índice/sumário,Das Disposições Gerais
+D01,índice/sumário,Da Tensão de Conexão
+D01,índice/sumário,Do Ponto de Conexão
+D01,índice/sumário,Das Instalações do Consumidor e Demais Usuários
+D01,índice/sumário,Das Instalações Compartilhadas
+D01,índice/sumário,Do Padrão de Entrada Gratuito
+D01,índice/sumário,Da Aprovação Prévia de Projeto
+D01,índice/sumário,Do Orçamento Estimado
+D01,índice/sumário,Do Orçamento de Conexão
+D01,índice/sumário,Dos Estudos e Projeto da Distribuidora
+D01,índice/sumário,Do Critério de Mínimo Custo Global
+D01,índice/sumário,Da Aprovação do Orçamento de Conexão
+D01,índice/sumário,Da Execução das Obras
+D01,índice/sumário,Da Vistoria e Instalação da Medição
+D01,índice/sumário,Dos Custos de Conexão
+D01,índice/sumário,Da Conexão Gratuita
+D01,índice/sumário,Das Obras com Participação Financeira
+D01,índice/sumário,Das Obras de Responsabilidade Exclusiva
+D01,índice/sumário,Da Antecipação das Obras da Distribuidora
+D01,índice/sumário,Do Fornecimento em Áreas de Fronteira
+D01,índice/sumário,Do Remanejamento Automático
+D01,índice/sumário,Da Operação Eletricamente Interligada
+D01,índice/sumário,DOS CONTRATOS - DISPOSIÇÕES GERAIS
+D01,índice/sumário,Dos Contratos do Grupo B
+D01,índice/sumário,Dos Contratos do Grupo A e dos demais Usuários
+D01,índice/sumário,Da Lei de Licitações e Contratos
+D01,índice/sumário,Do Prazo de Vigência e da Prorrogação
+D01,índice/sumário,Da Eficiência Energética e do Montante Contratado
+D01,índice/sumário,Da Alteração de Titularidade
+D01,índice/sumário,Do Encerramento Contratual
+D01,índice/sumário,Da Ausência de Contrato
+D01,índice/sumário,DO CONTRATO DE USO DO SISTEMA DE DISTRIBUIÇÃO
+D01,índice/sumário,Das Cláusulas Gerais
+D01,índice/sumário,Da Contratação
+D01,índice/sumário,Das Alterações Contratuais
+D01,índice/sumário,DA COMPRA DE ENERGIA
+D01,índice/sumário,Disposições Gerais
+D01,índice/sumário,Do Enquadramento como Consumidor Livre
+D01,índice/sumário,Do Contrato de Compra de Energia Regulada – CCER
+D01,índice/sumário,Do Consumidor Parcialmente Livre
+D01,índice/sumário,Da Migração do Consumidor Potencialmente Livre
+D01,índice/sumário,Da Retorno do Consumidor ao Ambiente de Contratação Regulada
+D01,índice/sumário,"DAS TARIFAS, CLASSES E DOS BENEFÍCIOS TARIFÁRIOS"
+D01,índice/sumário,Das Tarifas de Aplicação
+D01,índice/sumário,Dos Benefícios Tarifários
+D01,índice/sumário,Da Classe Residencial e da Tarifa Social de Energia Elétrica
+D01,índice/sumário,Da Classe Industrial
+D01,índice/sumário,"Da Classe Comercial, Serviços e outras atividades"
+D01,índice/sumário,Da Classe Rural e das Atividades de Irrigação e Aquicultura
+D01,índice/sumário,Da Classe Poder Público
+D01,índice/sumário,Da Classe Iluminação Pública
+D01,índice/sumário,Da Classe Serviço Público
+D01,índice/sumário,Da Classe Consumo Próprio
+D01,índice/sumário,Do Benefício por Consumo e Geração por Fontes Incentivadas
+D01,índice/sumário,Da Concessão Voluntária de Benefícios Tarifários
+D01,índice/sumário,"Da Classificação, Concessão e Manutenção dos Benefícios Tarifários"
+D01,índice/sumário,DAS MODALIDADES TARIFÁRIAS
+D01,índice/sumário,Da Modalidade Tarifária Convencional
+D01,índice/sumário,Das Modalidades Tarifárias Horárias
+D01,índice/sumário,Das Demais Modalidades
+D01,índice/sumário,Do Enquadramento
+D01,índice/sumário,Dos Postos Tarifários Horários
+D01,índice/sumário,DA MEDIÇÃO PARA FATURAMENTO
+D01,índice/sumário,Das Disposições Gerais
+D01,índice/sumário,Da Medição Externa
+D01,índice/sumário,Da Medição Totalizadora
+D01,índice/sumário,Da Inspeção do Sistema de Medição
+D01,índice/sumário,Do Defeito na Medição
+D01,índice/sumário,DA LEITURA
+D01,índice/sumário,Das Responsabilidades
+D01,índice/sumário,Do Período de Leitura
+D01,índice/sumário,Da Autoleitura
+D01,índice/sumário,Da Leitura Plurimensal
+D01,índice/sumário,Do Impedimento de Acesso para Leitura
+D01,índice/sumário,DO FATURAMENTO
+D01,índice/sumário,Das Disposições Gerais
+D01,índice/sumário,Do Faturamento do Grupo B
+D01,índice/sumário,Da Opção de Faturamento no Grupo B
+D01,índice/sumário,Do Faturamento do Grupo A e Demais Usuários
+D01,índice/sumário,Da Sazonalidade no Faturamento do Grupo A
+D01,índice/sumário,Do Faturamento da Demanda Complementar
+D01,índice/sumário,Da Ultrapassagem
+D01,índice/sumário,Do Fator de Potência e do Reativo Excedente
+D01,índice/sumário,Da Compensação de Perdas Técnicas
+D01,índice/sumário,Das Bandeiras Tarifárias
+D01,índice/sumário,Do Período de Testes e Ajustes
+D01,índice/sumário,Do Faturamento de Baixos Valores
+D01,índice/sumário,Do Faturamento por Estimativa em caso de Inexistência de Medição
+D01,índice/sumário,Da Ausência Temporária de Medição
+D01,índice/sumário,"Da Ausência de Leitura motivada por Situação de Emergência, Calamidade Pública ou Força Maior"
+D01,índice/sumário,Do Faturamento em Casos de Suspensão do Fornecimento
+D01,índice/sumário,Do Faturamento Incorreto
+D01,índice/sumário,Da Compensação do Faturamento
+D01,índice/sumário,DA FATURA E DO PAGAMENTO
+D01,índice/sumário,Das Disposições Gerais
+D01,índice/sumário,Das Informações e Contribuições de Caráter Social
+D01,índice/sumário,Da Entrega
+D01,índice/sumário,Do Vencimento
+D01,índice/sumário,Do Pagamento
+D01,índice/sumário,Da Duplicidade no Pagamento
+D01,índice/sumário,DO INADIMPLEMENTO
+D01,índice/sumário,Dos Acréscimos Moratórios
+D01,índice/sumário,Do Parcelamento do Débito
+D01,índice/sumário,Das Garantias
+D01,índice/sumário,Das Restrições pelo Inadimplemento
+D01,índice/sumário,Da Declaração de Quitação Anual
+D01,índice/sumário,DA SUSPENSÃO DO FORNECIMENTO
+D01,índice/sumário,"Da Ausência de Relação de Consumo, Contrato ou Outorga para Distribuição de Energia Elétrica"
+D01,índice/sumário,Da Situação Emergencial
+D01,índice/sumário,Da Suspensão por Desligamento na CCEE
+D01,índice/sumário,Da Suspensão Precedida de Notificação
+D01,índice/sumário,Da Notificação
+D01,índice/sumário,Da Suspensão Indevida
+D01,índice/sumário,Da Religação das Instalações
+D01,índice/sumário,Da Religação à Revelia
+D01,índice/sumário,DO SERVIÇO DE ATENDIMENTO AO CONSUMIDOR E DEMAIS USUÁRIOS
+D01,índice/sumário,Das Disposições Gerais
+D01,índice/sumário,Do Atendimento Presencial
+D01,índice/sumário,Do Atendimento Telefônico
+D01,índice/sumário,Do Atendimento pela Internet
+D01,índice/sumário,Das Demandas dos Consumidores e demais Usuários
+D01,índice/sumário,Da Resposta da Distribuidora
+D01,índice/sumário,Da Ouvidoria
+D01,índice/sumário,Da Comunicação da Realização de Serviços
+D01,índice/sumário,DA QUALIDADE DO SERVIÇO
+D01,índice/sumário,Da Continuidade
+D01,índice/sumário,Da Conformidade da Tensão
+D01,índice/sumário,Do Cumprimento de Prazos
+D01,índice/sumário,Da Qualidade do Atendimento Telefônico
+D01,índice/sumário,Do Tratamento das Demandas
+D01,índice/sumário,Da Pesquisa de Satisfação
+D01,índice/sumário,PARTE ESPECIAL
+D01,índice/sumário,DA ILUMINAÇÃO PÚBLICA
+D01,índice/sumário,Das Disposições Gerais
+D01,índice/sumário,Das Responsabilidades
+D01,índice/sumário,Da Conexão das Instalações
+D01,índice/sumário,Do Cadastro dos Pontos de Iluminação Pública
+D01,índice/sumário,Da Medição e Faturamento
+D01,índice/sumário,Dos Contratos
+D01,índice/sumário,DOS EMPREENDIMENTOS DE MÚLTIPLAS UNIDADES
+D01,índice/sumário,Dos Empreendimentos com Múltiplas Unidades Consumidoras
+D01,índice/sumário,Das Obras de Infraestrutura em Empreendimentos de Interesse Específico
+D01,índice/sumário,Da Regularização Fundiária Urbana de Interesse Social – Reurb-S
+D01,índice/sumário,Da Incorporação das Obras de Infraestrutura
+D01,índice/sumário,DA CONEXÃO TEMPORÁRIA
+D01,índice/sumário,Das Disposições Gerais
+D01,índice/sumário,Dos Contratos e dos Prazos
+D01,índice/sumário,Das Obras de Conexão
+D01,índice/sumário,Da Medição e do Faturamento
+D01,índice/sumário,Do Atendimento Temporário de Núcleos ou Assentamentos
+D01,índice/sumário,Da Reserva de Capacidade
+D01,índice/sumário,DO ATENDIMENTO POR SISTEMAS ISOLADOS
+D01,índice/sumário,Dos Critérios Gerais para o Atendimento Isolado
+D01,índice/sumário,Do Atendimento com Microssistemas ou Sistemas Individuais
+D01,índice/sumário,Da Vistoria e da Conexão
+D01,índice/sumário,"Da Medição, da Leitura e do Faturamento"
+D01,índice/sumário,Do Fornecimento em Período Diário Reduzido
+D01,índice/sumário,Da Tensão em Regime Permanente e da Continuidade do Serviço
+D01,índice/sumário,DAS INSTALAÇÕES DE RECARGA DE VEÍCULOS ELÉTRICOS
+D01,índice/sumário,Da Instalação de Estação de Recarga
+D01,índice/sumário,Dos Equipamentos Utilizados para a Recarga
+D01,índice/sumário,Do Funcionamento da Estação de Recarga
+D01,índice/sumário,Da Prestação de Atividade de Recarga de Veículos pela Distribuidora
+D01,índice/sumário,DO PRÉ-PAGAMENTO E PÓS-PAGAMENTO ELETRÔNICO DE ENERGIA ELÉTRICA
+D01,índice/sumário,Da Implantação e Abrangência
+D01,índice/sumário,Da Adesão
+D01,índice/sumário,"Da Estrutura de Venda, da Arrecadação e da Tarifa"
+D01,índice/sumário,Da Cobrança de Serviços
+D01,índice/sumário,Dos Requisitos Mínimos do Sistema de Medição
+D01,índice/sumário,Da Suspensão do Fornecimento
+D01,índice/sumário,Da Recuperação de Consumo
+D01,índice/sumário,Das Responsabilidades
+D01,índice/sumário,DOS PROCEDIMENTOS IRREGULARES
+D01,índice/sumário,Da Caracterização da Irregularidade e da Recuperação da Receita
+D01,índice/sumário,Da Duração
+D01,índice/sumário,Do Custo Administrativo
+D01,índice/sumário,Da Compensação da Receita da Irregularidade
+D01,índice/sumário,DO RESSARCIMENTO DE DANOS ELÉTRICOS
+D01,índice/sumário,Da Abrangência
+D01,índice/sumário,Das Condições para a Solicitação de Ressarcimento
+D01,índice/sumário,Dos Procedimentos
+D01,índice/sumário,Das Responsabilidades
+D01,índice/sumário,DOS SERVIÇOS E ATIVIDADES ACESSÓRIAS
+D01,índice/sumário,Dos Serviços Cobráveis
+D01,índice/sumário,Das Atividades Acessórias e Atípicas
+D01,índice/sumário,Das Condições para a Prestação e Cobrança de Atividades Acessórias ou Atípicas
+D01,índice/sumário,Do Fornecimento de Energia Elétrica Temporária com Desconto na Tarifa
+D01,índice/sumário,Da Exportação de Energia Elétrica para Pequenos Mercados em Regiões de Fronteira
+D01,índice/sumário,Da Repercussão Tarifária
+D01,índice/sumário,DAS REDES PARTICULARES
+D01,índice/sumário,Da Incorporação de Redes Particulares
+D01,índice/sumário,Do Procedimento de Incorporação
+D01,índice/sumário,Do Requerimento de Autorização de Rede Particular
+D01,índice/sumário,DA MICROGERAÇÃO E MINIGERAÇÃO DISTRIBUÍDA E DO SISTEMA DE COMPENSAÇÃO DE ENERGIA ELÉTRICA (SCEE)
+D01,índice/sumário,Da conexão de microgeração e minigeração distribuída
+D01,índice/sumário,Dos Critérios para participação e permanência no SCEE
+D01,índice/sumário,Do Faturamento de unidades consumidoras do SCEE
+D01,índice/sumário,Do faturamento no período de transição instituído pela Lei nº 14.300/2022
+D01,índice/sumário,Das não conformidades em unidades consumidoras participantes do SCEE
+D01,índice/sumário,Do envio de dados sobre MMGD à ANEEL
+D01,índice/sumário,DISPOSIÇÕES FINAIS E TRANSITÓRIAS
+D01,índice/sumário,Da Contagem dos Prazos
+D01,índice/sumário,Do Tratamento de Valores
+D01,índice/sumário,Da Capitalização dos Juros
+D01,índice/sumário,Do Cadastro
+D01,índice/sumário,Do Calendário
+D01,índice/sumário,Das Penalidades
+D01,índice/sumário,Disposições Transitórias
+D01,índice/sumário,Disposições Finais
+D01,índice/sumário,ANEXO I – CONTRATO DE ADESÃO - GRUPO B
+D01,índice/sumário,ANEXO II – REQUERIMENTO DE AUTORIZAÇÃO DE REDE PARTICULAR
+D01,índice/sumário,ANEXO III – REDE PARTICULAR - TERMO DE COMPROMISSO DE PASSAGEM E DE RESPONSABILIDADE POR DANOS
+D01,índice/sumário,ANEXO IV – PRAZOS PARA COMPENSAÇÃO EM CASO DE DESCUMPRIMENTO
+D02,preâmbulo/cabeçalho, | Presidência da República Casa Civil Subchefia para Assuntos Jurídicos
+D02,preâmbulo/cabeçalho,O PRESIDENTE DA REPÚBLICA Faço saber que o Congresso Nacional decreta e eu sanciono a seguinte Lei:
+D02,dispositivo revogado/vetado,"III - (revogado); (Redação dada pela Lei nº 15.235, de 2025)"
+D02,dispositivo revogado/vetado,"IV - (revogado). (Redação dada pela Lei nº 15.235, de 2025)"
+D02,dispositivo revogado/vetado,§ 5º (VETADO)
+D02,dispositivo revogado/vetado,Art. 13. (VETADO)
+D02,assinatura/nota de publicação,"Brasília, 20 de janeiro de 2010; 189º da Independência e 122º da República."
+D02,assinatura/nota de publicação,LUIZ INÁCIO LULA DA SILVA Luiz Paulo Teles Ferreira Barreto Guido Mantega Edison Lobão Luís Inácio Lucena Adams
+D02,assinatura/nota de publicação,Este texto não substitui o publicado no DOU de 21.1.2010
+D02,assinatura/nota de publicação,*
+D03,preâmbulo/cabeçalho, | Presidência da República Casa Civil Secretaria Especial para Assuntos Jurídicos
+D03,preâmbulo/cabeçalho,O PRESIDENTE DA REPÚBLICA Faço saber que o Congresso Nacional decreta e eu sanciono a seguinte Lei:
+D03,assinatura/nota de publicação,"Brasília, 8 de outubro de 2025; 204º da Independência e 137º da República."
+D03,assinatura/nota de publicação,LUIZ INÁCIO LULA DA SILVA
+D03,assinatura/nota de publicação,Fernando Haddad
+D03,assinatura/nota de publicação,Alexandre Silveira de Oliveira Simone Nassar Tebet.
+D03,assinatura/nota de publicação,Este texto não substitui o publicado no DOU de 9.10.2025 e retificado em 10.10.2025.
+D04,preâmbulo/cabeçalho,"GABINETE DO MINISTRO PORTARIA INTERMINISTERIAL Nº 630, DE 8 DE NOVEMBRO DE 2011 OS MINISTROS DE ESTADO DE MINAS E ENERGI"
+D05,preâmbulo/cabeçalho,AGÊNCIA NACIONAL DE ENERGIA ELÉTRICA – ANEEL
+D05,preâmbulo/cabeçalho,Voto
+D05,preâmbulo/cabeçalho,"O DIRETOR-GERAL DA AGÊNCIA NACIONAL DE ENERGIA ELÉTRICA – ANEEL, no uso de suas atribuições regimentais, de acordo com a"
+D05,preâmbulo/cabeçalho,RESOLVE:
+D05,assinatura/nota de publicação,SANDOVAL DE ARAÚJO FEITOSA NETO
+D05,assinatura/nota de publicação,"Este texto não substitui o publicado no D.O. de 16.12.2025, seção 1, p. 155, v. 163, n. 239 e o retificado no D.O. de 10"
+D05,fora do recorte (dispositivos_proprios),"Art. 2º: Art. 2º A Resolução Normativa nº 1.000, de 7 de dezembro de 2021, passa a vigora"
+D05,fora do recorte (dispositivos_proprios),"Art. 3º: Art. 3º A Resolução Normativa nº 472, de 24 de janeiro de 2012, passa a vigorar "
+D05,fora do recorte (dispositivos_proprios),"Art. 4º: Art. 4º O Anexo VIII da Resolução Normativa nº 956, de 7 de dezembro de 2021, pa"
+D05,fora do recorte (dispositivos_proprios),"Art. 5º: Art. 5º O Anexo XI da Resolução Normativa nº 956, de 7 de dezembro de 2021, pass"
+D05,fora do recorte (dispositivos_proprios),"Art. 7º: Art. 7º Alterar os Quadros I e II do Anexo I da Resolução Normativa nº 1.003, de"
+D05,fora do recorte (dispositivos_proprios),Texto: Alterações Submódulo 5.2 do PRORET
+D05,fora do recorte (dispositivos_proprios),Tabela: 
+D05,fora do recorte (dispositivos_proprios),Texto: Alterações no Submódulo 7.1 do PRORET
+D05,fora do recorte (dispositivos_proprios),Tabela: 
+D06,preâmbulo/cabeçalho,AGÊNCIA NACIONAL DE ENERGIA ELÉTRICA – ANEEL
+D06,preâmbulo/cabeçalho,Voto
+D06,preâmbulo/cabeçalho,Anexo I - Módulo 1 - GLOSSÁRIO DE TERMOS TÉCNICOS DO PRODIST
+D06,preâmbulo/cabeçalho,Anexo II - Módulo 4 - PROCEDIMENTOS OPERATIVOS DO SISTEMA DE DISTRIBUIÇÃO
+D06,preâmbulo/cabeçalho,Anexo III - Módulo 6 - INFORMAÇÕES REQUERIDAS E OBRIGAÇÕES
+D06,preâmbulo/cabeçalho,Anexo IV - Módulo 4 - PRESTAÇÃO DOS SERVIÇOS
+D06,preâmbulo/cabeçalho,Anexo IV - Módulo 8 - QUALIDADE DO FORNECIMENTO DE ENERGIA ELÉTRICA
+D06,preâmbulo/cabeçalho,Anexo V - Módulo 11 - FATURA DE ENERGIA ELÉTRICA E INFORMAÇÕES SUPLEMENTARES
+D06,preâmbulo/cabeçalho,Anexo VI - Módulo 6 - COORDENAÇÃO E CONTROLE DA OPERAÇÃO
+D06,preâmbulo/cabeçalho,"O DIRETOR-GERAL DA AGÊNCIA NACIONAL DE ENERGIA ELÉTRICA – ANEEL, no uso de suas atribuições regimentais, de acordo com a"
+D06,preâmbulo/cabeçalho,RESOLVE:
+D06,assinatura/nota de publicação,SANDOVAL DE ARAÚJO FEITOSA NETO
+D06,assinatura/nota de publicação,"Este texto não substitui o publicado no D.O. de 30.10.2025, seção 1, p. 89, v. 163, n. 207."
+D06,fora do recorte (dispositivos_proprios),"Art. 2º: Art. 2º O Anexo I da Resolução Normativa nº 956, de 7 de dezembro de 2021, passa"
+D06,fora do recorte (dispositivos_proprios),"Art. 3º: Art. 3º O Anexo IV da Resolução Normativa nº 956, de 7 de dezembro de 2021, pass"
+D06,fora do recorte (dispositivos_proprios),Texto: Comunicação entre Distribuidoras e Poder Público em Situações de Emergência Resp
+D06,fora do recorte (dispositivos_proprios),"Texto: Cessão Emergencial de recursos humanos, equipamentos e materiais entre distribui"
+D06,fora do recorte (dispositivos_proprios),Texto: Planos de Contingência Objetivo 140. O plano de contingência deve ser elaborado 
+D06,fora do recorte (dispositivos_proprios),"Art. 4º: Art. 4º O Anexo VI da Resolução Normativa nº 956, de 7 de dezembro de 2021, pass"
+D06,fora do recorte (dispositivos_proprios),"Art. 5º: Art. 5º O Anexo VIII da Resolução Normativa nº 956, de 7 de dezembro de 2021, pa"
+D06,fora do recorte (dispositivos_proprios),"Art. 8º: Art. 8º A Resolução Normativa nº 1.000, de 7 de dezembro de 2021, passa a vigora"
+D06,fora do recorte (dispositivos_proprios),"Art. 9º: Art. 9º A Resolução Normativa nº 846, de 11 de junho de 2019, passa a vigorar co"
+D06,fora do recorte (dispositivos_proprios),"Art. 12: Art. 12 O Anexo V – Módulo V da Resolução Normativa nº 948, de 21 de novembro, p"
+D07,fora do recorte (secoes),"Item 1: 1. Além desta seção introdutória, este módulo está estruturado da seguinte forma"
+D07,fora do recorte (secoes),Item 2: 2. Estabelecer os procedimentos relativos à qualidade do fornecimento de energia
+D07,fora do recorte (secoes),"Item 3: 3. Definir os fenômenos relacionados à qualidade do produto, aqui entendidos com"
+D07,fora do recorte (secoes),"Item 4: 4. Definir fenômenos relacionados à qualidade do serviço, aqui entendidos como a"
+D07,fora do recorte (secoes),"Item 5: 5. Estabelecer os procedimentos relacionados à apuração da qualidade comercial, "
+D07,fora do recorte (secoes),Item 6: 6. Estabelecer os procedimentos para apuração e encaminhamento das informações r
+D07,fora do recorte (secoes),Item 7: 7. Estabelecer os procedimentos para a realização da compensação e o envio dos r
+D07,fora do recorte (secoes),Item 8: 8. Os procedimentos definidos neste módulo devem ser observados por: consumidore
+D07,fora do recorte (secoes),Item 9: 9. Os procedimentos de qualidade do fornecimento de energia elétrica definidos n
+D07,fora do recorte (secoes),Item 10: 10. As centrais geradoras que se conectam às Demais Instalações de Transmissão –
+D07,fora do recorte (secoes),"Item 11: 11. A distribuidora deve disponibilizar, sempre que solicitado, as informações s"
+D07,fora do recorte (secoes),Item 12: 12. Os seguintes fenômenos associados à qualidade do produto são tratados nesta 
+D07,fora do recorte (secoes),Item 13: 13. A conformidade de tensão em regime permanente refere-se à comparação do valo
+D07,fora do recorte (secoes),Item 14: 14. A tensão em regime permanente deve ser acompanhada em todo o sistema de dist
+D07,fora do recorte (secoes),Item 15: 15. A tensão em regime permanente deve ser avaliada por meio de um conjunto de l
+D07,fora do recorte (secoes),Item 16: 16. A conformidade dos níveis de tensão deve ser avaliada nos pontos de conexão 
+D07,fora do recorte (secoes),"Item 17: 17. A partir de 1º de janeiro de 2023, distribuidora deve possuir a certificação"
+D07,fora do recorte (secoes),Item 18: 18. Os valores de tensão obtidos por medições devem ser comparados à tensão de r
+D07,fora do recorte (secoes),"Item 19: 19. Para cada tensão de referência, as leituras a ela associadas classificam-se "
+D07,fora do recorte (secoes),Item 20: 20. Os valores nominais de tensão devem ser fixados em função do planejamento do
+D07,fora do recorte (secoes),Item 21: 21. Com relação às tensões contratadas entre distribuidoras: a tensão a ser cont
+D07,fora do recorte (secoes),Item 22: 22. Com relação às tensões contratadas junto à distribuidora: a tensão a ser con
+D07,fora do recorte (secoes),"Item 23: 23. As tensões de atendimento referidas na alínea “a” do item 22, devem ser clas"
+D07,fora do recorte (secoes),"Item 24: 24. As tensões de atendimento referidas na alínea “c” do item 22, devem ser clas"
+D07,fora do recorte (secoes),Item 25: 25. A tensão de atendimento associada às leituras deve ser classificada segundo 
+D07,fora do recorte (secoes),Item 26: 26. Indicadores individuais de tensão em regime permanente. 26.1. Os indicadores
+D07,fora do recorte (secoes),Item 27: 27. Indicadores coletivos de tensão em regime permanente. 27.1. Os indicadores c
+D07,fora do recorte (secoes),Item 28: 28. Os limites para os indicadores individuais de tensão em regime permanente sã
+D07,fora do recorte (secoes),Item 29: 29. Para o cálculo da compensação deve ser utilizada a seguinte equação:
+D07,fora do recorte (secoes),Texto: Comptensão = [() × k1 + () × k2] × EUSD Equação 6 – Cálculo da compensação por v
+D07,fora do recorte (secoes),Item 30: 30. A compensação deve ser mantida enquanto o indicador DRP for superior ao DRPl
+D07,fora do recorte (secoes),Item 31: 31. O valor da compensação deve ser creditado na fatura emitida no prazo máximo 
+D07,fora do recorte (secoes),"Item 32: 32. Nos casos em que o valor da compensação exceder o valor a ser faturado, o cr"
+D07,fora do recorte (secoes),Item 32: 32. Nos casos em que o valor da compensação exceder o valor a ser faturado devem
+D07,fora do recorte (secoes),Item 33: 33. A compensação pela violação dos indicadores DRP e DRC é devida ao titular da
+D07,fora do recorte (secoes),Item 34: 34. Caso haja troca de titularidade da unidade consumidora em um mês cuja compen
+D07,fora do recorte (secoes),"Item 35: 35. A compensação devida ao consumidor, conforme critério estabelecido nesta Seç"
+D07,fora do recorte (secoes),"Item 36: 36. No caso de inadimplência, podem ser deduzidos da compensação os débitos venc"
+D07,fora do recorte (secoes),Item 37: 37. No caso de agentes importadores ou exportadores de energia elétrica com inst
+D07,fora do recorte (secoes),Item 38: 38. O valor do fator de potência deve ser calculado a partir dos valores registr
+D07,fora do recorte (secoes),Item 39: 39. O controle do fator de potência deve ser efetuado por medição permanente e o
+D07,fora do recorte (secoes),"Item 40: 40. A distribuidora deve manter, em meio eletrônico, o resultado das medições de"
+D07,fora do recorte (secoes),Item 41: 41. Para unidade consumidora do Grupo A ou ponto de conexão entre distribuidoras
+D07,fora do recorte (secoes),"Item 42: 42. Para central geradora, o fator de potência deve estar compreendido entre os "
+D07,fora do recorte (secoes),Item 43: 43. As distorções harmônicas são fenômenos associados a deformações nas formas d
+D07,fora do recorte (secoes),Item 44: 44. Os indicadores de distorções harmônicas são os seguintes:
+D07,fora do recorte (secoes),Texto: DITh% Distorção harmônica total de tensão DTT% Distorção harmônica total de tens
+D07,fora do recorte (secoes),"Item 45: 45. As equações para o cálculo dos indicadores DITh%, DTT%, DTTp%, DTTi% e DTT3%"
+D07,fora do recorte (secoes),Item 46: 46. Os limites para os indicadores das distorções harmônicas totais constam na T
+D07,fora do recorte (secoes),Item 47: 47. Os limites correspondem ao máximo valor desejável a ser observado no sistema
+D07,fora do recorte (secoes),Item 48: 48. No caso de medições realizadas utilizando-se Transformador de Potencial – TP
+D07,fora do recorte (secoes),Item 49: 49. O desequilíbrio de tensão é o fenômeno caracterizado por qualquer diferença 
+D07,fora do recorte (secoes),Item 50: 50. O indicador de desequilíbrio de tensão a ser comparado com os limites é o FD
+D07,fora do recorte (secoes),Item 51: 51. A equação para o cálculo do indicador FD% é: FD% = V- × 100 [%] V+ Equação 1
+D07,fora do recorte (secoes),"Item 52: 52. Alternativamente, pode-se utilizar a equação a seguir, que conduz a resultad"
+D07,fora do recorte (secoes),Item 53: 53. Os limites para o indicador de desequilíbrio de tensão FD95% estão apresenta
+D07,fora do recorte (secoes),"Texto: Vn ≤ 2,3 kV 2,3 kV < Vn < 230kV FD95% 3,0% 2,0%"
+D07,fora do recorte (secoes),Item 54: 54. Os limites correspondem ao máximo valor desejável a ser observado no sistema
+D07,fora do recorte (secoes),"Item 55: 55. A flutuação de tensão é um fenômeno caracterizado pela variação aleatória, r"
+D07,fora do recorte (secoes),Item 56: 56. A determinação da qualidade da tensão do sistema de distribuição quanto à fl
+D07,fora do recorte (secoes),"Item 57: 57. Os indicadores de flutuação de tensão são o Pst, o Plt e o Pst95%."
+D07,fora do recorte (secoes),Item 58: 58. O indicador Pst representa a severidade dos níveis de cintilação luminosa as
+D07,fora do recorte (secoes),Item 59: 59. O indicador Plt representa a severidade dos níveis de cintilação luminosa as
+D07,fora do recorte (secoes),Item 60: 60. O indicador Pst95% representa o valor do indicador Pst que foi superado em a
+D07,fora do recorte (secoes),"Item 61: 61. A equação para o cálculo do indicador Pst é: Pst = j0,0314P0,1 + 0,0525P1 + "
+D07,fora do recorte (secoes),Item 62: 62. O Plt corresponde a um valor representativo de 12 amostras consecutivas de P
+D07,fora do recorte (secoes),Item 63: 63. A Tabela 4 fornece os limites a serem utilizados para a avaliação do desempe
+D07,fora do recorte (secoes),"Texto: Vn ≤ 2,3 kV 2,3 kV < Vn < 69 kV 69 kV ≤ Vn < 230 kV Pst95% 1,0 pu 1,5 pu 2,0 pu"
+D07,fora do recorte (secoes),Item 64: 64. Os limites correspondem ao máximo valor desejável a ser observado no sistema
+D07,fora do recorte (secoes),Item 65: 65. O sistema de distribuição e as instalações de geração a ele conectadas devem
+D07,fora do recorte (secoes),"Item 66: 66. Quando da ocorrência de distúrbios no sistema de distribuição, as instalaçõe"
+D07,fora do recorte (secoes),Item 67: 67. Havendo necessidade de corte de geração ou de carga para permitir a recupera
+D07,fora do recorte (secoes),Item 68: 68. Variações de tensão de curta duração – VTCD são desvios significativos na am
+D07,fora do recorte (secoes),Item 69: 69. As variações de tensão de curta duração são classificadas de acordo com a Ta
+D07,fora do recorte (secoes),Texto: Amplitude da tensão (valor eficaz) em relação à tensão de referência Variação Mo
+D07,fora do recorte (secoes),"Item 70: 70. Os indicadores de VTCD são Amplitude do evento de VTCD – Ve, Duração do even"
+D07,fora do recorte (secoes),Item 71: 71. As equações para o cálculo dos indicadores associados com as variações de te
+D07,fora do recorte (secoes),Texto: Ve = × 100 [%] Vref Equação 19 – Cálculo do Ve sendo: Ve = amplitude do evento d
+D07,fora do recorte (secoes),"Item 72: 72. O registro dos eventos de variação de tensão de curta duração, em termos de "
+D07,fora do recorte (secoes),Item 73: 73. A Tabela 7 apresenta a estratificação da Tabela 6 em nove regiões de sensibi
+D07,fora do recorte (secoes),"Item 74: 74. O indicador Fator de Impacto – FI, que caracteriza a severidade da incidênci"
+D07,fora do recorte (secoes),Item 75: 75. O Fator de Ponderação – fpond para cada região de sensibilidade e o Fator de
+D07,fora do recorte (secoes),"Item 76: 76. No planejamento do sistema de distribuição, utiliza-se o valor de referência"
+D07,fora do recorte (secoes),Item 77: 77. O valor de referência do indicador Fator de Impacto – FI para o SDMT e o SDA
+D07,fora do recorte (secoes),Item 78: 78. Para o SDBT não são estabelecidos valores de referência para VTCD.
+D07,fora do recorte (secoes),Item 79: 79. Os instrumentos de medição devem atender aos requisitos mínimos da Seção 5.2
+D07,fora do recorte (secoes),Item 80: 80. Os instrumentos utilizados para as medições amostrais de tensão em regime pe
+D07,fora do recorte (secoes),"Item 81: 81. Para gerar os indicadores de distorções harmônicas, flutuação de tensão e de"
+D07,fora do recorte (secoes),"Item 82: 82. No intuito de se obter 1.008 leituras válidas, intervalos adicionais devem s"
+D07,fora do recorte (secoes),"Item 83: 83. Após a aquisição de 1.008 registros válidos de medição, deve ser obtido um c"
+D07,fora do recorte (secoes),"Item 84: 84. Os indicadores FD95%, DTT95%, DTTp95%, DTTi95%, DTT395% e Pst95% são associa"
+D07,fora do recorte (secoes),Item 85: 85. O indicador FI deve ser associado ao mês civil no qual se deu o término da m
+D07,fora do recorte (secoes),"Item 86: 86. Para as medições de distorções harmônicas, desequilíbrios de tensão e flutua"
+D07,fora do recorte (secoes),"Item 87: 87. Para as medições de nível de tensão em regime permanente, na ocorrência de v"
+D07,fora do recorte (secoes),Item 88: 88. Para a medição das VTCD devem ser considerados os seguintes procedimentos: a
+D07,fora do recorte (secoes),Item 89: 89. A tensão em regime permanente deve ser avaliada por meio de um conjunto de l
+D07,fora do recorte (secoes),"Item 90: 90. As distorções harmônicas de tensão, o desequilíbrio de tensão, a flutuação d"
+D07,fora do recorte (secoes),Item 91: 91. Para as medições amostrais de tensão devem ser adotados sistemas de medição 
+D07,fora do recorte (secoes),Item 92: 92. O sorteio da amostra das unidades consumidoras de cada distribuidora para fi
+D07,fora do recorte (secoes),Item 93: 93. A unidade consumidora sorteada passa a compor a base de medições amostrais d
+D07,fora do recorte (secoes),"Item 94: 94. A base de medições amostrais da distribuidora será ampliada a cada ano, com "
+D07,fora do recorte (secoes),Item 95: 95. A unidade consumidora sorteada que já possuir medição permanente passará a c
+D07,fora do recorte (secoes),"Item 96: 96. Até o mês de setembro de cada ano, a distribuidora deve solicitar à ANEEL a "
+D07,fora do recorte (secoes),"Item 97: 97. A relação das unidades consumidoras da amostra definida, acrescida de uma ma"
+D07,fora do recorte (secoes),"Item 98: 98. A distribuidora deve comunicar ao consumidor, por meio de comunicação auditá"
+D07,fora do recorte (secoes),"Item 99: 99. A distribuidora deve efetuar, para cada uma das unidades consumidoras perten"
+D07,fora do recorte (secoes),Item 100: 100. Os indicadores DRP e DRC mensais das medições amostrais devem ser calculado
+D07,fora do recorte (secoes),"Item 101: 101. Fica a critério da distribuidora, com base no quantitativo trimestral, a de"
+D07,fora do recorte (secoes),"Item 102: 102. Para o ano de 2021, as medições em cada trimestre devem abranger, no mínimo"
+D07,fora do recorte (secoes),Texto: Número total de unidades consumidoras da distribuidora Dimensão da amostra (unid
+D07,fora do recorte (secoes),"Item 103: 103. A partir de 2022, deve ser acrescido trimestralmente à base de medições amo"
+D07,fora do recorte (secoes),Texto: Número total de unidades consumidoras da distribuidora Dimensão da amostra (unid
+D07,fora do recorte (secoes),"Item 104: 104. Para as medições amostrais realizadas até o ano de 2020, a distribuidora de"
+D07,fora do recorte (secoes),"Item 105: 105. As alíneas “d”, “e”, “f” e “i” do item 104 não se aplicam às medições perma"
+D07,fora do recorte (secoes),"Item 106: 106. Para as medições amostrais realizadas a partir do ano 2021, a distribuidora"
+D07,fora do recorte (secoes),"Item 107: 107. Os dados de que tratam os itens 104 e 106 devem estar disponíveis, em meio "
+D07,fora do recorte (secoes),Item 108: 108. A distribuidora deve enviar à ANEEL os valores dos indicadores DRP e DRC ob
+D07,fora do recorte (secoes),Item 109: 109. Os indicadores devem ser apurados por meio de procedimentos auditáveis que 
+D07,fora do recorte (secoes),"Item 110: 110. Os indicadores coletivos são calculados pela ANEEL, a partir dos indicadore"
+D07,fora do recorte (secoes),Item 111: 111. O usuário pode solicitar à distribuidora sistema de medição com funcionalid
+D07,fora do recorte (secoes),"Item 112: 112. O sistema de medição deve ser instalado pela distribuidora, devendo a difer"
+D07,fora do recorte (secoes),Item 113: 113. O sistema de medição deve ser instalado pela distribuidora no prazo de até 
+D07,fora do recorte (secoes),Item 114: 114. Quando o usuário possuir Sistema de Medição para Faturamento – SMF com func
+D07,fora do recorte (secoes),"Item 115: 115. A distribuidora deve efetuar, para cada um dos pontos de medição permanente"
+D07,fora do recorte (secoes),Item 116: 116. A distribuidora deve manter registro em sistema informatizado do ponto de m
+D07,fora do recorte (secoes),Item 117: 117. A distribuidora deve disponibilizar todas as informações obtidas da medição
+D07,fora do recorte (secoes),"Item 118: 118. Os dados de que trata o item 116 devem ser mantidos pela distribuidora, em "
+D07,fora do recorte (secoes),Item 119: 119. A distribuidora deve possuir equipes capacitadas e quantidade de medidores 
+D07,fora do recorte (secoes),"Item 120: 120. Quando da reclamação associada à qualidade do produto, a distribuidora deve"
+D07,fora do recorte (secoes),Item 121: 121. Quando da reclamação de usuário que não possua medição permanente associada
+D07,fora do recorte (secoes),Item 122: 122. Os dados de que trata a alínea “j” do item 121 devem ser mantidos pela dist
+D07,fora do recorte (secoes),"Item 123: 123. Quando a reclamação provier de usuário que possua medição permanente, assoc"
+D07,fora do recorte (secoes),Item 124: 124. Os dados de que trata a alínea “g” do item 123 devem ser mantidos pela dist
+D07,fora do recorte (secoes),"Item 125: 125. Caso as medições de tensão indiquem valor de DRP superior ao DRPlimite, ou "
+D07,fora do recorte (secoes),Item 126: 126. A regularização do nível de tensão para o caso de medição permanente será c
+D07,fora do recorte (secoes),"Item 127: 127. A regularização do nível de tensão, para os casos de medição eventual, deve"
+D07,fora do recorte (secoes),"Item 128: 128. Deve ser considerado como mês da efetiva regularização do nível de tensão, "
+D07,fora do recorte (secoes),Item 129: 129. Quando a regularização do nível de tensão ocorrer no mesmo mês em que foi c
+D07,fora do recorte (secoes),"Item 130: 130. Caso haja reclamações com a mesma abrangência geoelétrica, que sejam reinci"
+D07,fora do recorte (secoes),"Item 131: 131. Quando da reclamação do usuário associada a distorções harmônicas, desequil"
+D07,fora do recorte (secoes),Texto: Registro (número sequencial) Data (1) Hora (2) Amplitude do evento (pu) (3) Dura
+D07,fora do recorte (secoes),Item 132: 132. Os dados de que trata a alínea “j” do item 131 devem ser mantidos pela dist
+D07,fora do recorte (secoes),"Item 133: 133. Nas análises de que tratam os itens 130 e 131, a distribuidora deve: invest"
+D07,fora do recorte (secoes),Item 134: 134. Os estudos específicos de qualidade do produto devem avaliar o potencial im
+D07,fora do recorte (secoes),Item 135: 135. A distribuidora deve realizar estudos no caso de usuário com cargas potenci
+D07,fora do recorte (secoes),Item 136: 136. A distribuidora deve definir os tipos de instalações elétricas potencialmen
+D07,fora do recorte (secoes),Item 137: 137. As conclusões dos estudos e recomendações deverão constar no orçamento prév
+D07,fora do recorte (secoes),Item 138: 138. Caso se verifique nos estudos específicos que há problema de qualidade do p
+D07,fora do recorte (secoes),Item 139: 139. Requisitos e procedimentos para fins de conexão ao sistema de distribuição 
+D07,fora do recorte (secoes),"Item 304: 304. A distribuidora deve, observando as disposições sobre a prestação do serviç"
+D07,fora do recorte (secoes),Item 305: 305. A disposição do item 304 deve ser observada também na relação entre a distr
+D07,fora do recorte (secoes),"Item 306: 306. Para o alcance da diretriz de melhoria, a distribuidora deve utilizar-se de"
+D07,fora do recorte (secoes),Item 307: 307. A distribuidora deve enviar à ANEEL as informações e indicadores de seguran
+D07,fora do recorte (secoes),Item 308: 308. Todas as informações sobre os acidentes do trabalho e acidentes com terceir
+D07,fora do recorte (secoes),Item 309: 309. Os dados dos acidentes do trabalho e de acidentes com terceiros relacionado
+D07,fora do recorte (secoes),Item 310: 310. As informações coletadas pela distribuidora sobre os acidentes com terceiro
+D07,fora do recorte (secoes),Item 311: 311. Na apuração e apresentação das informações requeridas deve-se observar as d
+D07,fora do recorte (secoes),Item 312: 312. A distribuidora deve realizar o acompanhamento da segurança do trabalho e d
+D07,fora do recorte (secoes),Item 313: 313. Para o acompanhamento da segurança do trabalho são apurados os seguintes qu
+D07,fora do recorte (secoes),Item 314: 314. Para o acompanhamento da segurança do trabalho são apurados os seguintes in
+D07,fora do recorte (secoes),Item 315: 315. Para o acompanhamento da segurança de terceiros são apurados os seguintes q
+D07,fora do recorte (secoes),Item 316: 316. Os acidentes e mortes com terceiros devem ser estratificados conforme as se
+D07,fora do recorte (secoes),"Item 317: 317. Na apuração das taxas de frequência e de gravidade, deve-se discriminar os "
+D07,fora do recorte (secoes),Item 318: 318. O número de acidentes com funcionários deve incluir no somatório: número de
+D07,fora do recorte (secoes),Item 319: 319. Na apuração dos quantitativos relacionados à segurança de terceiros devem s
+D09,preâmbulo/cabeçalho, | Presidência da República Secretaria-Geral Subchefia para Assuntos Jurídicos
+D09,preâmbulo/cabeçalho,O PRESIDENTE DA REPÚBLICA Faço saber que o Congresso Nacional decreta e eu sanciono a seguinte Lei:
+D09,dispositivo revogado/vetado,"Parágrafo único. (VETADO). (Incluído pela Lei nº 14.620, de 2023)"
+D09,assinatura/nota de publicação,"Brasília, 6 de janeiro de 2022; 201º da Independência e 134º da República."
+D09,assinatura/nota de publicação,JAIR MESSIAS BOLSONARO Marcelo Pacheco dos Guaranys Bento Albuquerque
+D10,preâmbulo/cabeçalho, | Presidência da República Casa Civil Subchefia para Assuntos Jurídicos
+D10,preâmbulo/cabeçalho,"O PRESIDENTE DA REPÚBLICA, faço saber que o Congresso Nacional decreta e eu sanciono a seguinte lei:"
+D10,dispositivo revogado/vetado,§ 1º (Vetado).
+D10,dispositivo revogado/vetado,§ 2º (Vetado).
+D10,dispositivo revogado/vetado,IX - (Vetado);
+D10,dispositivo revogado/vetado,Art. 11. (Vetado).
+D10,dispositivo revogado/vetado,Art. 15. (Vetado).
+D10,dispositivo revogado/vetado,Art. 16. (Vetado).
+D10,dispositivo revogado/vetado,II - (Vetado).
+D10,dispositivo revogado/vetado,Parágrafo único. (Vetado).
+D10,dispositivo revogado/vetado,§ 1º (Vetado).
+D10,dispositivo revogado/vetado,§ 4º (Vetado).
+D10,dispositivo revogado/vetado,Art. 45. (Vetado).
+D10,dispositivo revogado/vetado,V - (Vetado);
+D10,dispositivo revogado/vetado,"XIX - (VETADO). (Incluído pela Lei nº 14.181, de 2021)"
+D10,dispositivo revogado/vetado,§ 3º (Vetado).
+D10,dispositivo revogado/vetado,§ 3º (Vetado).
+D10,dispositivo revogado/vetado,§ 1º (Vetado).
+D10,dispositivo revogado/vetado,§ 5º (Vetado)
+D10,dispositivo revogado/vetado,"I - (VETADO); (Incluído pela Lei nº 14.181, de 2021)"
+D10,dispositivo revogado/vetado,"Parágrafo único. (VETADO). (Incluído pela Lei nº 14.181, de 2021)"
+D10,dispositivo revogado/vetado,"Art. 54-E. (VETADO). (Incluído pela Lei nº 14.181, de 2021)"
+D10,dispositivo revogado/vetado,§ 2º (Vetado).
+D10,dispositivo revogado/vetado,§ 2º (Vetado)
+D10,dispositivo revogado/vetado,§ 3º (Vetado).
+D10,dispositivo revogado/vetado,Art. 62. (Vetado).
+D10,dispositivo revogado/vetado,Parágrafo único. (Vetado).
+D10,dispositivo revogado/vetado,Parágrafo único. (Vetado).
+D10,dispositivo revogado/vetado,§ 2º (Vetado).
+D10,dispositivo revogado/vetado,§ 3º (Vetado).
+D10,dispositivo revogado/vetado,Parágrafo único. (Vetado).
+D10,dispositivo revogado/vetado,Art. 85. (Vetado).
+D10,dispositivo revogado/vetado,Art. 86. (Vetado).
+D10,dispositivo revogado/vetado,Art. 89. (Vetado)
+D10,dispositivo revogado/vetado,Parágrafo único. (Vetado).
+D10,dispositivo revogado/vetado,Art. 96. (Vetado).
+D10,dispositivo revogado/vetado,Parágrafo único. (Vetado).
+D10,dispositivo revogado/vetado,§ 1º (Vetado).
+D10,dispositivo revogado/vetado,§ 2º (Vetado)
+D10,dispositivo revogado/vetado,X - (Vetado).
+D10,dispositivo revogado/vetado,XI - (Vetado).
+D10,dispositivo revogado/vetado,XII - (Vetado)
+D10,dispositivo revogado/vetado,Art. 108. (Vetado).
+D10,dispositivo revogado/vetado,Art. 109. (Vetado).
+D10,assinatura/nota de publicação,"Brasília, 11 de setembro de 1990; 169º da Independência e 102º da República."
+D10,assinatura/nota de publicação,FERNANDO COLLOR Bernardo Cabral Zélia M. Cardoso de Mello Ozires Silva
+D10,assinatura/nota de publicação,Este texto não substitui o publicado no DOU de 12.9.1990 e Retificado em 10.1.2007
+D10,assinatura/nota de publicação,*
+D10,fora do recorte (titulo),"Art. 61: Art. 61. Constituem crimes contra as relações de consumo previstas neste código,"
+D10,fora do recorte (titulo),Art. 63: Art. 63. Omitir dizeres ou sinais ostensivos sobre a nocividade ou periculosidad
+D10,fora do recorte (titulo),Art. 64: Art. 64. Deixar de comunicar à autoridade competente e aos consumidores a nocivi
+D10,fora do recorte (titulo),"Art. 65: Art. 65. Executar serviço de alto grau de periculosidade, contrariando determina"
+D10,fora do recorte (titulo),"Art. 66: Art. 66. Fazer afirmação falsa ou enganosa, ou omitir informação relevante sobre"
+D10,fora do recorte (titulo),Art. 67: Art. 67. Fazer ou promover publicidade que sabe ou deveria saber ser enganosa ou
+D10,fora do recorte (titulo),Art. 68: Art. 68. Fazer ou promover publicidade que sabe ou deveria saber ser capaz de in
+D10,fora do recorte (titulo),"Art. 69: Art. 69. Deixar de organizar dados fáticos, técnicos e científicos que dão base "
+D10,fora do recorte (titulo),"Art. 70: Art. 70. Empregar na reparação de produtos, peça ou componentes de reposição usa"
+D10,fora do recorte (titulo),"Art. 71: Art. 71. Utilizar, na cobrança de dívidas, de ameaça, coação, constrangimento fí"
+D10,fora do recorte (titulo),Art. 72: Art. 72. Impedir ou dificultar o acesso do consumidor às informações que sobre e
+D10,fora do recorte (titulo),Art. 73: Art. 73. Deixar de corrigir imediatamente informação sobre consumidor constante 
+D10,fora do recorte (titulo),Art. 74: Art. 74. Deixar de entregar ao consumidor o termo de garantia adequadamente pree
+D10,fora do recorte (titulo),"Art. 75: Art. 75. Quem, de qualquer forma, concorrer para os crimes referidos neste códig"
+D10,fora do recorte (titulo),Art. 76: Art. 76. São circunstâncias agravantes dos crimes tipificados neste código: I - 
+D10,fora do recorte (titulo),"Art. 77: Art. 77. A pena pecuniária prevista nesta Seção será fixada em dias-multa, corre"
+D10,fora do recorte (titulo),"Art. 78: Art. 78. Além das penas privativas de liberdade e de multa, podem ser impostas, "
+D10,fora do recorte (titulo),"Art. 79: Art. 79. O valor da fiança, nas infrações de que trata este código, será fixado "
+D10,fora do recorte (titulo),"Art. 80: Art. 80. No processo penal atinente aos crimes previstos neste código, bem como "
+D10,fora do recorte (titulo),Art. 81: Art. 81. A defesa dos interesses e direitos dos consumidores e das vítimas poder
+D10,fora do recorte (titulo),"Art. 82: Art. 82. Para os fins do art. 81, parágrafo único, são legitimados concorrenteme"
+D10,fora do recorte (titulo),Art. 83: Art. 83. Para a defesa dos direitos e interesses protegidos por este código são 
+D10,fora do recorte (titulo),Art. 84: Art. 84. Na ação que tenha por objeto o cumprimento da obrigação de fazer ou não
+D10,fora do recorte (titulo),Art. 87: Art. 87. Nas ações coletivas de que trata este código não haverá adiantamento de
+D10,fora do recorte (titulo),"Art. 88: Art. 88. Na hipótese do art. 13, parágrafo único deste código, a ação de regress"
+D10,fora do recorte (titulo),Art. 90: Art. 90. Aplicam-se às ações previstas neste título as normas do Código de Proce
+D10,fora do recorte (titulo),"Art. 91: Art. 91. Os legitimados de que trata o art. 82 poderão propor, em nome próprio e"
+D10,fora do recorte (titulo),"Art. 92: Art. 92. O Ministério Público, se não ajuizar a ação, atuará sempre como fiscal "
+D10,fora do recorte (titulo),"Art. 93: Art. 93. Ressalvada a competência da Justiça Federal, é competente para a causa "
+D10,fora do recorte (titulo),"Art. 94: Art. 94. Proposta a ação, será publicado edital no órgão oficial, a fim de que o"
+D10,fora do recorte (titulo),"Art. 95: Art. 95. Em caso de procedência do pedido, a condenação será genérica, fixando a"
+D10,fora do recorte (titulo),Art. 97: Art. 97. A liquidação e a execução de sentença poderão ser promovidas pela vítim
+D10,fora do recorte (titulo),"Art. 98: Art. 98. A execução poderá ser coletiva, sendo promovida pelos legitimados de qu"
+D10,fora do recorte (titulo),Art. 99: Art. 99. Em caso de concurso de créditos decorrentes de condenação prevista na L
+D10,fora do recorte (titulo),Art. 100: Art. 100. Decorrido o prazo de um ano sem habilitação de interessados em número 
+D10,fora do recorte (titulo),Art. 101: Art. 101. Na ação de responsabilidade civil do fornecedor de produtos e serviços
+D10,fora do recorte (titulo),Art. 102: Art. 102. Os legitimados a agir na forma deste código poderão propor ação visand
+D10,fora do recorte (titulo),"Art. 103: Art. 103. Nas ações coletivas de que trata este código, a sentença fará coisa ju"
+D10,fora do recorte (titulo),"Art. 104: Art. 104. As ações coletivas, previstas nos incisos I e II e do parágrafo único "
+D10,fora do recorte (titulo),"Art. 104-A: Art. 104-A. A requerimento do consumidor superendividado pessoa natural, o juiz "
+D10,fora do recorte (titulo),"Art. 104-B: Art. 104-B. Se não houver êxito na conciliação em relação a quaisquer credores, "
+D10,fora do recorte (titulo),Art. 104-C: Art. 104-C. Compete concorrente e facultativamente aos órgãos públicos integrant
+D10,fora do recorte (titulo),"Art. 105: Art. 105. Integram o Sistema Nacional de Defesa do Consumidor (SNDC), os órgãos "
+D10,fora do recorte (titulo),"Art. 106: Art. 106. O Departamento Nacional de Defesa do Consumidor, da Secretaria Naciona"
+D10,fora do recorte (titulo),Art. 107: Art. 107. As entidades civis de consumidores e as associações de fornecedores ou
+D10,fora do recorte (titulo),"Art. 110: Art. 110. Acrescente-se o seguinte inciso IV ao art. 1º da Lei n° 7.347, de 24 d"
+D10,fora do recorte (titulo),"Art. 111: Art. 111. O inciso II do art. 5º da Lei n° 7.347, de 24 de julho de 1985, passa "
+D10,fora do recorte (titulo),"Art. 112: Art. 112. O § 3º do art. 5º da Lei n° 7.347, de 24 de julho de 1985, passa a ter"
+D10,fora do recorte (titulo),"Art. 113: Art. 113. Acrescente-se os seguintes §§ 4º, 5º e 6º ao art. 5º. da Lei n.° 7.347"
+D10,fora do recorte (titulo),"Art. 114: Art. 114. O art. 15 da Lei n° 7.347, de 24 de julho de 1985, passa a ter a segui"
+D10,fora do recorte (titulo),"Art. 115: Art. 115. Suprima-se o caput do art. 17 da Lei n° 7.347, de 24 de julho de 1985,"
+D10,fora do recorte (titulo),"Art. 116: Art. 116. Dê-se a seguinte redação ao art. 18 da Lei n° 7.347, de 24 de julho de"
+D10,fora do recorte (titulo),"Art. 117: Art. 117. Acrescente-se à Lei n° 7.347, de 24 de julho de 1985, o seguinte dispo"
+D10,fora do recorte (titulo),Art. 118: Art. 118. Este código entrará em vigor dentro de cento e oitenta dias a contar d
+D10,fora do recorte (titulo),Art. 119: Art. 119. Revogam-se as disposições em contrário.
+D11,preâmbulo/cabeçalho, | Presidência da República Secretaria-Geral Subchefia para Assuntos Jurídicos
+D11,preâmbulo/cabeçalho,O PRESIDENTE DA REPÚBLICA Faço saber que o Congresso Nacional decreta e eu sanciono a seguinte Lei:
+D11,assinatura/nota de publicação,"Brasília, 26 de junho de 2017; 196º da Independência e 129º da República."
+D11,assinatura/nota de publicação,MICHEL TEMER Torquato Jardim Dyogo Henrique de Oliveira Wagner de Campos Rosário
+D11,assinatura/nota de publicação,Este texto não substitui o publicado no DOU de 27.6.2017
+D11,assinatura/nota de publicação,*
+D12,cabeçalho/rodapé repetido,onde:
+D12,fora do recorte (secoes),"Item 16: 16. A ANEEL fixará em Resolução Homologatória específica, os valores das Bandeir"
+D12,fora do recorte (secoes),Item 17: 17. Constará da mesma Resolução Homologatória os intervalos-limite de geração te
+D12,fora do recorte (secoes),Item 18: 18. A definição das faixas de acionamento observará limiares de risco definidos 
+D12,fora do recorte (secoes),"Item 19: 19. Na definição dos valores das Bandeiras Tarifárias, as previsões de custos da"
+D12,fora do recorte (secoes),"Item 20: 20. Além dos custos estimados, para a definição dos valores das Bandeiras Tarifá"
+D12,fora do recorte (secoes),"Item 21: 21. Na estimativa de receita decorrente do Ressarcimento da CONER, deverá ser co"
+D12,fora do recorte (secoes),Item 22: 22. A Tarifa de Energia – TE será calculada no processo tarifário de cada distri
+D12,fora do recorte (secoes),Item 23: 23. A variável fator de ajuste do MRE é definida nestes termos: 𝑴𝐑𝐄= ∑ 𝐆𝐇𝐮 𝐮∈𝐌𝐑𝐄
+D12,fora do recorte (secoes),"Item 24: 24. O valor da Bandeira Tarifária Verde, definido em R$ por MWh, será calculado "
+D12,fora do recorte (secoes),"Item 25: 25. Os valores dos adicionais das Bandeiras Tarifárias, definidos em R$ por MWh,"
+D12,fora do recorte (secoes),"Item 26: 26. Na definição dos valores das Bandeiras, será considerada referência comum de"
+D12,fora do recorte (secoes),"Item 27: 27. O acionamento das Bandeiras Tarifárias será definido mensalmente pela ANEEL,"
+D12,fora do recorte (secoes),Item 28: 28. A ANEEL tornará pública a informação em seu endereço eletrônico no dia do en
+D12,fora do recorte (secoes),"Item 29: 29. A distribuidora terá o prazo de um dia útil, contado da publicação do Despac"
+D12,fora do recorte (secoes),Item 30: 30. O período de aplicação da Bandeira Tarifária será o mês subsequente à sua di
+D12,fora do recorte (secoes),"Item 31: 31. Para o acionamento das Bandeiras Tarifárias, o ONS deverá informar a previsã"
+D12,fora do recorte (secoes),Item 32: 32. Caso haja determinação de acionamento de usinas termelétricas por razões de 
+D12,fora do recorte (secoes),"Item 33: 33. Para o acionamento das Bandeiras Tarifárias, a CCEE deverá levar ao centro d"
+D12,fora do recorte (secoes),Item 34: 34. A sistemática de acionamento das Bandeiras Tarifárias levará em conta a cara
+D12,fora do recorte (secoes),Texto: LimSupPat: limite superior do correspondente patamar de Bandeira Tarifária.
+D12,fora do recorte (secoes),Item 35: 35. O acionamento da Bandeira Tarifária observará o correspondente enquadramento
+D12,fora do recorte (secoes),Texto: PLDmin ≤ PLDgatilho ≤ PLDlimsup_verde Amarela PLDliminf_amarela < PLDgatilho ≤ P
+D12,fora do recorte (secoes),Item 36: 36. De modo a conferir reprodutibilidade à sua divulgação: a) O ONS deverá estru
+D12,fora do recorte (secoes),Item 40: 40. A CCEE deverá: a) instituir a Conta dos Recursos de Bandeiras Tarifárias (Co
+D12,fora do recorte (secoes),Item 41: 41. Os valores da Conta Bandeiras não representam receitas da CCEE e não serão c
+D12,fora do recorte (secoes),Item 42: 42. O saldo positivo remanescente na Conta Bandeiras deve ser aplicado em: (i) C
+D12,fora do recorte (secoes),"Item 43: 43. Os custos administrativos, financeiros e eventuais encargos tributários (CAF"
+D12,fora do recorte (secoes),"Item 44: 44. O CAFT de cada ano será recebido pela CCEE em parcela única, na apuração da "
+D12,fora do recorte (secoes),"Item 45: 45. Caso não haja saldo suficiente para o pagamento do CAFT, as concessionárias "
+D12,fora do recorte (secoes),"Item 46: 46. Os valores por concessionária, de que trata o parágrafo anterior, serão obti"
+D12,fora do recorte (secoes),Item 47: 47. A CCEE deverá encaminhar informações sobre a movimentação financeira e sobre
+D12,fora do recorte (secoes),"Item 48: 48. Após a fiscalização do CAFT relativo ao ano anterior, se identificada realiz"
+D12,fora do recorte (secoes),Item 49: 49. Os valores mensais dos repasses financeiros da Conta Bandeiras serão apurado
+D12,fora do recorte (secoes),"Item 50: 50. A situação superavitária ocorre quando: ∑𝐑𝐞𝐜𝐞𝐢𝐭𝐚 𝐁𝐚𝐧𝐝𝐞𝐢𝐫𝐚𝐬𝐝,𝐧+ 𝐒𝐚𝐥𝐝𝐨 𝐂𝐨𝐧𝐭𝐚𝐧>"
+D12,fora do recorte (secoes),"Item 51: 51. A situação deficitária ocorre quando: ∑𝐑𝐞𝐜𝐞𝐢𝐭𝐚 𝐁𝐚𝐧𝐝𝐞𝐢𝐫𝐚𝐬𝐝,𝐧+ 𝐒𝐚𝐥𝐝𝐨 𝐂𝐨𝐧𝐭𝐚𝐧≤ 𝐝"
+D12,fora do recorte (secoes),Item 52: 52. Quando a situação superavitária ocorrer as fórmulas (8) a (9) deverão ser ap
+D12,fora do recorte (secoes),"Item 53: 53. Quando a situação deficitária ocorrer, a fórmula (11) deverá ser aplicada pa"
+D12,fora do recorte (secoes),"Item 54: 54. Sendo a situação superavitária ou deficitária, as seguintes definições são a"
+D12,fora do recorte (secoes),Item 55: 55. O aporte do prêmio de risco a ser considerado no “𝑆𝑎𝑙𝑑𝑜 𝐶𝑜𝑛𝑡𝑎” para cada dis
+D12,fora do recorte (secoes),"Item 56: 56. Em relação ao aporte do prêmio de risco de que trata a Lei nº 13.203/2015, c"
+D12,fora do recorte (secoes),Item 57: 57. Os recursos da Conta Bandeiras serão alocados prioritariamente para cobertur
+D12,fora do recorte (secoes),Item 58: 58. Os recursos do prêmio de risco de que trata a Lei nº 13.203/2015 serão aloca
+D12,fora do recorte (secoes),"Item 59: 59. Quando ocorrer a situação superavitária da CCRBT, as receitas excedentes ret"
+D12,fora do recorte (secoes),Item 60: 60. As Concessionárias Supridas e as Permissionárias de Distribuição de Energia 
+D12,fora do recorte (secoes),Item 61: 61. Os custos não cobertos pelos repasses da Conta Bandeiras serão recuperados p
+D12,fora do recorte (secoes),Item 62: 62. No reajuste tarifário anual e/ou revisão tarifária periódica das distribuido
+D12,fora do recorte (secoes),Item 63: 63. O Custo Líquido Não Coberto será zerado após o reconhecimento deste no proce
+D12,fora do recorte (secoes),Item 64: 64. Os repasses financeiros da Conta Bandeiras serão efetuados observando os seg
+D12,fora do recorte (secoes),Item 65: 65. O valor do prêmio de risco a ser aportado por cada agente gerador na Conta B
+D12,fora do recorte (secoes),"Item 66: 66. Após a apuração mensal da Conta Bandeiras, a ANEEL disponibilizará em seu sí"
+D12,fora do recorte (secoes),"Item 67: 67. Para operacionalizar os repasses mensais de recursos à Conta Bandeiras, a CC"
+D12,fora do recorte (secoes),Item 68: 68. O repasse dos recursos realizados à Conta Bandeiras deve ser feito por meio 
+D12,fora do recorte (secoes),Item 69: 69. O rateio da eventual inadimplência (loss sharing) entre as distribuidoras cr
+D12,fora do recorte (secoes),Item 70: 70. Após o encerramento do processo mensal de liquidação do mercado de curto pra
+D13,fora do recorte (secoes),"Item 1: 1. Além desta seção introdutória, este módulo está estruturado da seguinte forma"
+D13,fora do recorte (secoes),Item 2: 2. Estabelecer os procedimentos de operação dos sistemas de distribuição.
+D13,fora do recorte (secoes),Item 3: 3. Orientar a formulação de planos e programas operacionais dos sistemas de dist
+D13,fora do recorte (secoes),Item 4: 4. Padronizar os procedimentos de relacionamento operacional entre os centros de
+D13,fora do recorte (secoes),"Item 5: 5. Definir os procedimentos e responsabilidades das distribuidoras, dos agentes "
+D13,fora do recorte (secoes),Item 6: 6. Definir os recursos mínimos necessários para garantir a comunicação de voz e 
+D13,fora do recorte (secoes),Item 7: 7. Os procedimentos definidos nesse módulo devem ser observados por: distribuido
+D13,fora do recorte (secoes),Item 8: 8. As informações previstas e verificadas de carga e de despacho de geração forn
+D13,fora do recorte (secoes),Item 9: 9. As informações de carga e de despacho de geração destinam-se: ao desenvolvime
+D13,fora do recorte (secoes),Item 10: 10. Os intercâmbios de informações necessários aos procedimentos operativos estã
+D13,fora do recorte (secoes),Item 11: 11. Os dados previstos devem abranger um horizonte de até 5 anos.
+D13,fora do recorte (secoes),"Item 12: 12. A distribuidora é responsável por: coletar, processar e validar os dados de "
+D13,fora do recorte (secoes),Item 13: 13. O usuário é responsável por: fornecer informações consistentes relativas aos
+D13,fora do recorte (secoes),Item 14: 14. As responsabilidades do ONS estão estabelecidas nos Procedimentos de Rede.
+D13,fora do recorte (secoes),"Item 41: 41. A distribuidora deve selecionar as unidades consumidoras, subestações e alim"
+D13,fora do recorte (secoes),"Item 42: 42. A distribuidora deve estabelecer procedimentos detalhados das ações, diretri"
+D13,fora do recorte (secoes),"Item 43: 43. A distribuidora deve elaborar um documento denominado Mensagens Operativas, "
+D13,fora do recorte (secoes),Item 44: 44. A distribuidora deve elaborar um documento denominado Tabelas de Prioridade 
+D13,fora do recorte (secoes),Item 45: 45. A distribuidora deve elaborar um documento denominado Tabelas de Prioridade 
+D13,fora do recorte (secoes),Item 46: 46. A distribuidora tem as seguintes atribuições no controle de carga: definir o
+D13,fora do recorte (secoes),Item 47: 47. A central geradora não despachada centralizadamente ou o CDGD têm as seguint
+D13,fora do recorte (secoes),Item 48: 48. Os consumidores têm as seguintes atribuições no controle de carga: manter at
+D13,fora do recorte (secoes),"Item 49: 49. São ações para o controle de carga: o corte indireto, pela redução manual do"
+D13,fora do recorte (secoes),Item 50: 50. As ações de controle de carga podem ser classificadas da seguinte forma: Qua
+D13,fora do recorte (secoes),"Item 51: 51. Toda e qualquer disponibilidade de geração da central geradora, despachada c"
+D13,fora do recorte (secoes),Item 52: 52. Os remanejamentos de carga devem ser priorizados em relação às ações de cort
+D13,fora do recorte (secoes),Item 53: 53. A distribuidora deve dispor de Instruções de Operação ou Mensagens Operativa
+D13,fora do recorte (secoes),"Item 54: 54. Para o controle de carga de longa duração, a distribuidora deve prever nos A"
+D13,fora do recorte (secoes),Item 55: 55. A distribuidora e os usuários que estejam sob ação de controle de carga por 
+D13,fora do recorte (secoes),Item 56: 56. O processo de restabelecimento manual das cargas por corte direto ou indiret
+D13,fora do recorte (secoes),Item 57: 57. Durante o processo de restabelecimento da carga: a ordem de priorização de r
+D13,fora do recorte (secoes),"Item 58: 58. No caso particular de cargas desligadas por ação do ERAC, a ordem de prioriz"
+D13,fora do recorte (secoes),Item 59: 59. Quando tiverem sido adotadas ações simultâneas de corte direto de carga e re
+D13,fora do recorte (secoes),Item 60: 60. Em situações de contingências que resultem em sobrecarga nos equipamentos da
+D13,fora do recorte (secoes),Item 61: 61. A distribuidora deve definir critérios para classificação e priorização das 
+D13,fora do recorte (secoes),Item 62: 62. As cargas interruptíveis por contrato devem ser as primeiras indicadas para 
+D13,fora do recorte (secoes),Item 63: 63. A Priorização de Alimentadores por Subestação – PAS deve atender aos desliga
+D13,fora do recorte (secoes),Item 64: 64. Os critérios que devem orientar a elaboração da PAS são: alimentadores com u
+D13,fora do recorte (secoes),"Item 65: 65. Nos casos de ações de controle de carga programáveis, a distribuidora deve a"
+D13,fora do recorte (secoes),Item 66: 66. A distribuidora acessada pode requerer o acompanhamento dos seguintes testes
+D13,fora do recorte (secoes),Item 67: 67. Os testes de instalações de centrais geradoras despachadas centralizadamente
+D13,fora do recorte (secoes),Item 68: 68. A distribuidora acessada deve definir a necessidade e a periodicidade de tes
+D13,fora do recorte (secoes),Item 69: 69. A distribuidora acessada pode solicitar ao usuário que realize testes em sua
+D13,fora do recorte (secoes),"Item 70: 70. O usuário pode requerer e acompanhar a realização de testes, pela distribuid"
+D13,fora do recorte (secoes),Item 71: 71. A distribuidora deve informar antecipadamente aos usuários sobre a realizaçã
+D13,fora do recorte (secoes),Item 72: 72. A distribuidora acessada deve estabelecer os procedimentos operacionais a se
+D13,fora do recorte (secoes),Item 73: 73. Os procedimentos de teste que envolvam relacionamentos entre agente de trans
+D13,fora do recorte (secoes),Item 74: 74. O Centro de Operação da distribuição – COD tem as seguintes atribuições: coo
+D13,fora do recorte (secoes),"Item 75: 75. O acessante e o CDGD têm as seguintes atribuições: supervisionar, comandar e"
+D13,fora do recorte (secoes),Item 76: 76. O CDGD realiza a gestão técnica e administrativa das centrais do agrupamento
+D13,fora do recorte (secoes),"Item 77: 77. O COT tem as seguintes atribuições: coordenar, supervisionar e controlar as "
+D13,fora do recorte (secoes),Item 78: 78. A operação de central geradora alimentando uma parcela eletricamente isolada
+D13,fora do recorte (secoes),"Item 79: 79. A central geradora, responsável pelo controle de frequência da parcela eletr"
+D13,fora do recorte (secoes),"Item 80: 80. A distribuidora deve realizar estudos, instruções operativas e de segurança "
+D13,fora do recorte (secoes),Item 81: 81. A central geradora deve fornecer as informações necessárias para a elaboraçã
+D13,fora do recorte (secoes),Item 82: 82. As informações relativas às ocorrências intercambiadas entre os agentes e a 
+D13,fora do recorte (secoes),Item 83: 83. O processo de análise de perturbação deve ser executado quando houver solici
+D13,fora do recorte (secoes),"Item 84: 84. No processo de análise de perturbação, devem ser identificadas as anormalida"
+D13,fora do recorte (secoes),"Item 85: 85. Deve ser analisado o comportamento do sistema elétrico, verificando: o desem"
+D13,fora do recorte (secoes),Item 86: 86. Como produto da análise de perturbação deve ser gerado um relatório contendo
+D13,fora do recorte (secoes),Item 87: 87. Os COD devem manter os relatórios e os registros relativos às perturbações p
+D13,fora do recorte (secoes),Item 88: 88. Os usuários são responsáveis por implementar e disponibilizar os recursos de
+D13,fora do recorte (secoes),"Item 89: 89. A implementação de serviços de comunicação de voz, assim como a qualidade e "
+D13,fora do recorte (secoes),Item 90: 90. A implementação de serviços de comunicação de dados entre os usuários e o CO
+D13,fora do recorte (secoes),"Item 91: 91. Cabe aos usuários disponibilizarem os dados solicitados pela distribuidora, "
+D13,fora do recorte (secoes),Item 92: 92. O COD e o COT devem compartilhar dados de supervisão e controle que permitam
+D13,fora do recorte (secoes),"Item 93: 93. A implementação de serviços de comunicação de dados, bem como a qualidade e "
+D13,fora do recorte (secoes),Item 94: 94. As distribuidoras devem estabelecer um plano de manejo vegetal na sua área d
+D13,fora do recorte (secoes),"Item 95: 95. As distribuidoras deverão celebrar convênios, acordos de cooperação ou outro"
+D13,fora do recorte (secoes),Item 96: 96. As distribuidoras devem garantir a rápida remoção de árvores ou galhos caído
+D13,fora do recorte (secoes),"Item 97: 97. A escolha de tecnologias, projetos e estratégias operacionais pelas distribu"
+D13,fora do recorte (secoes),"Item 98: 98. As distribuidoras são responsáveis pela realização de ações preventivas, dev"
+D13,fora do recorte (secoes),Item 99: 99. As distribuidoras de energia elétrica devem realizar inspeções periódicas na
+D13,fora do recorte (secoes),Item 100: 100. As distribuidoras devem elaborar Relatório Anual de Gestão do Manejo Vegeta
+D13,fora do recorte (secoes),Item 101: 101. O Relatório Anual de Gestão do Manejo Vegetal deve conter no mínimo a descr
+D13,fora do recorte (secoes),Item 102: 102. As distribuidoras devem disponibilizar a versão mais atualizada de seu Rela
+D13,fora do recorte (secoes),Item 103: 103. As distribuidoras devem disponibilizar a versão mais atualizada de seu plan
+D13,fora do recorte (secoes),Item 104: 104. As distribuidoras devem manter registro detalhado durante o período de 05 a
+D13,fora do recorte (secoes),Item 113: 113. As distribuidoras de energia devem disponibilizar uma API (Application Prog
+D13,fora do recorte (secoes),Item 114: 114. A ANEEL estabelecerá procedimento para comunicação e acompanhamento das sit
+D13,fora do recorte (secoes),Item 115: 115. A comunicação deve ser clara e transparente com o intuito de gerar confianç
+D13,fora do recorte (secoes),Item 116: 116. A comunicação deve facilitar a coordenação entre as distribuidoras e os órg
+D13,fora do recorte (secoes),Item 117: 117. As distribuidoras devem notificar o Poder Público imediatamente após a iden
+D13,fora do recorte (secoes),Item 118: 118. As distribuidoras devem garantir que os canais de comunicação oficiais este
+D13,fora do recorte (secoes),Item 119: 119. As distribuidoras devem estabelecer protocolos de alertas para notificar ra
+D13,fora do recorte (secoes),"Item 120: 120. As distribuidoras devem realizar comunicações formais, com periodicidade an"
+D13,fora do recorte (secoes),Item 121: 121. Estabelecer as condições para a realização de Cessão Emergencial de recurso
+D13,fora do recorte (secoes),Item 122: 122. Situação de Crise: Evento que afeta significativamente a capacidade operaci
+D13,fora do recorte (secoes),Item 123: 123. Cessão Emergencial de Recursos: Cessão temporária de profissionais técnicos
+D13,fora do recorte (secoes),Item 124: 124. Recursos Disponíveis: Totalidade dos recursos humanos (próprios ou terceiri
+D13,fora do recorte (secoes),Item 125: 125. Colaboração e Solidariedade: as distribuidoras ou transmissoras podem promo
+D13,fora do recorte (secoes),Item 126: 126. Segurança Operacional: a Cessão Emergencial de recurso não deve comprometer
+D13,fora do recorte (secoes),Item 127: 127. Proporcionalidade e Necessidade: a Cessão Emergencial deve ser limitada à n
+D13,fora do recorte (secoes),Item 128: 128. Neutralidade: os valores referentes aos custos ou despesas incorridos pela 
+D13,fora do recorte (secoes),"Item 129: 129. Individualidade da concessão: todas as informações, documentações, arquivos"
+D13,fora do recorte (secoes),Item 130: 130. A Cessão Emergencial de recursos somente pode ser realizada em situações de
+D13,fora do recorte (secoes),Item 131: 131. A Cessão Emergencial de recursos somente pode ser realizada em situações em
+D13,fora do recorte (secoes),"Item 132: 132. Ao acionar o mecanismo de Cessão Emergencial de recursos, a distribuidora c"
+D13,fora do recorte (secoes),Item 133: 133. As distribuidoras envolvidas devem formalizar Acordo de Cessão Emergencial 
+D13,fora do recorte (secoes),Item 134: 134. O acordo deve prever cláusulas sobre: a) Reembolso de despesas com horas de
+D13,fora do recorte (secoes),Item 135: 135. As equipes cedidas devem possuir capacitação e experiência compatíveis com 
+D13,fora do recorte (secoes),"Item 136: 136. A distribuidora cessionária deve prover condições adequadas de trabalho, co"
+D13,fora do recorte (secoes),Item 137: 137. O tempo de cessão das equipes não pode comprometer significativamente o ate
+D13,fora do recorte (secoes),Item 138: 138. O reembolso à cedente não deve ultrapassar o prazo de doze meses contados d
+D13,fora do recorte (secoes),"Item 139: 139. Os contratos de Cessão Emergencial de recursos humanos, equipamentos e mate"
+D13,fora do recorte (secoes),Item 140: 140. O plano de contingência deve ser elaborado de forma a garantir a continuida
+D13,fora do recorte (secoes),Item 141: 141. O plano de contingência deve conter os nomes e telefones de contato dos res
+D13,fora do recorte (secoes),Item 142: 142. O plano de contingência deve ser baseado nos seguintes princípios norteador
+D13,fora do recorte (secoes),Item 143: 143. O plano de contingência deve observar as seguintes diretrizes: a) Monitoram
+D13,fora do recorte (secoes),Item 144: 144. O plano de contingência deve conter os seguintes requisitos mínimos: a) Ide
+D13,fora do recorte (secoes),Item 145: 145. A realização de simulados ou disponibilização de treinamentos atualizados d
+D13,fora do recorte (secoes),Item 146: 146. A revisão do plano de contingência deverá ser feita sempre que necessário e
+D13,fora do recorte (secoes),"Item 147: 147. As distribuidoras devem disponibilizar a versão mais atualizada, sem a iden"
+D13,fora do recorte (secoes),"Item 148: 148. O plano de contingência deve possuir versão do documento, data de aprovação"
