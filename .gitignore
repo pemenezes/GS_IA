@@ -15,6 +15,8 @@ venv/
 
 # Artefatos gerados (pesados ou reprodutíveis)
 base/indices/
+# Páginas gov.br (CC BY-ND 3.0): original e trechos só locais, regenerados pelo script
+base/local/
 *.faiss
 *.sqlite
 *.db

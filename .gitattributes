@@ -1,3 +1,6 @@
 * text=auto eol=lf
 *.png binary
 *.pdf binary
+# Originais baixados: bytes exatos (o sha256 registrado depende disso)
+base/raw/*.html -text
+base/raw/*.pdf binary
