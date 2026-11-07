@@ -101,7 +101,19 @@ encontrei estas distribuidoras com sede em municípios da RMSP:
 3. **CDC (D10):** só o Título I, "Dos Direitos do Consumidor".
 4. **Atos que alteram outros (D05, D06):** indexar os textos consolidados (REN 1.000, Lei 12.212, PRODIST) e, dos atos que os alteram, só os dispositivos de vigência e transição.
 
-## 6. Riscos para a Fase 2
+## 6. Resultado da Fase 2 (07/11/2026)
+
+- **Base gerada:** 19 documentos e 1.810 trechos. Desses, 1.696 vêm de atos oficiais, versionados em `base/chunks.jsonl`, e 114 vêm de páginas gov.br, só locais. A tabela final está em [`base/fontes.csv`](../base/fontes.csv), e as estatísticas no notebook [`01_base_conhecimento.ipynb`](../notebooks/01_base_conhecimento.ipynb).
+- **D04:** o link do Ministério da Saúde entrega um **PDF** de 2011, e não uma página HTML. O manifesto foi corrigido.
+- **Downloads da ANEEL:** os 7 documentos hospedados pela ANEEL (D01, D05 a D08, D12 e D13) foram obtidos pelo navegador, por causa do bloqueio da Cloudflare. O sha256 de cada arquivo está registrado.
+- **REN 1.147/2025:** já está incorporada ao texto compilado da REN 1.000, com 55 notas "Incluído/Redação dada pela REN ANEEL 1.147".
+- **Recortes do PRODIST e do PRORET:**
+  - Módulo 8, Seções 8.2 e 8.3;
+  - Módulo 4, Seções 4.2 e 4.8;
+  - PRORET 6.8, Seções 1, 2, 3, 6 e 9.
+- **Páginas com alerta de desatualização** (campo `alerta` dos trechos): D14, modificada em 08/09/2025; D15, em 24/02/2022; D16, em 04/07/2025. Cada uma foi modificada antes de normas mais recentes sobre o seu tema.
+
+## 7. Riscos para a Fase 2
 
 - **Textos compilados do Planalto:** mostram as redações revogadas tachadas, ao lado das vigentes. A extração **precisa descartar o texto tachado**; senão a base passa a conter regras antigas como se valessem, que é justamente a armadilha temporal que o teste quer pegar.
 - **Páginas explicativas desatualizadas (D15, D16):** podem estar atrás das normas. Na Fase 2, cada uma será conferida contra o texto normativo vigente; se houver conflito, a norma vence e a página fica marcada.

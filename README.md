@@ -53,6 +53,25 @@ As versões dos modelos também ficam travadas no `config.yaml`: o digest de cad
 O benchmark grava `avaliacao/runs/benchmark_modelos.csv`. Feche programas que usam a GPU
 (navegadores com aceleração de hardware, jogos) antes de medir.
 
+## Base de conhecimento
+
+```powershell
+.\.venv\Scripts\python.exe scripts\construir_base.py          # baixa o que faltar e gera os trechos
+.\.venv\Scripts\python.exe scripts\construir_base.py --etapa base   # só regera os trechos
+.\.venv\Scripts\python.exe scripts\qc_amostra.py              # amostra de controle de qualidade
+```
+
+- A entrada é `base/manifesto.yaml`, com os 19 documentos aprovados (`docs/lista_documentos.md`).
+- Os originais dos **atos oficiais** já estão versionados em `base/raw/`, com sha256 e data de acesso em `base/raw/downloads.json`. Os trechos deles estão em `base/chunks.jsonl`.
+- As **páginas explicativas do gov.br** estão sob licença CC BY-ND 3.0, então o texto delas não vai para o git. O script baixa as páginas para `base/local/` e gera `base/local/chunks_govbr.jsonl` na sua máquina. Elas podem ter mudado desde 07/11/2026; o hash original está em `base/fontes.csv`.
+- Os servidores da ANEEL (`www2.aneel.gov.br`, `git.aneel.gov.br`) bloqueiam clientes HTTP com um desafio da Cloudflare (erro 403). Os arquivos versionados foram obtidos por navegador e importados com `scripts/importar_download_navegador.py`, que mantém os bytes originais e o hash.
+
+Para executar os notebooks, ative o venv antes (`.\.venv\Scripts\Activate.ps1`), para que o kernel use as bibliotecas do projeto:
+
+```powershell
+jupyter nbconvert --to notebook --execute --inplace notebooks\01_base_conhecimento.ipynb
+```
+
 ## Estrutura
 
 ```
