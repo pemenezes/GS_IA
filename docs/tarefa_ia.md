@@ -1,6 +1,6 @@
 # Tarefa da IA: Luz Cidadã
 
-**Versão:** 1 (Fase 1, 07/11/2026). Aguarda aprovação do Pedro.
+**Versão:** 1 (Fase 1). Aprovada pelo Pedro em 07/11/2026.
 
 ## 1. Tarefa
 
@@ -120,8 +120,9 @@ só na Fase 3, conferidos no texto oficial.
 - consumidores do mercado livre e grandes consumidores (alta e média tensão);
 - iluminação pública, recarga de veículo elétrico e projetos técnicos de conexão de geração distribuída (dimensionamento, potência de usina).
 
-**Pendente:** o recorte do CDC e o tratamento das páginas gov.br sob CC BY-ND podem mudar a coluna de
-documentos acima (ver a seção 5 de [`lista_documentos.md`](lista_documentos.md)).
+Decisões de 07/11/2026 sobre a base (ver a seção 5 de [`lista_documentos.md`](lista_documentos.md)):
+- o CDC (D10) entra só com o Título I;
+- as páginas gov.br (D14 a D19) entram no índice local, mas o texto delas não vai para o repositório.
 
 ## 7. Ligação com a avaliação (Fase 3)
 

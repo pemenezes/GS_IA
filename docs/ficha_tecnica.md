@@ -1,6 +1,6 @@
 # Ficha Técnica: Luz Cidadã
 
-**Versão:** 1 (Fase 1, 07/11/2026). Aguarda aprovação do Pedro. Componente desta disciplina:
+**Versão:** 1 (Fase 1). Aprovada pelo Pedro em 07/11/2026. Componente desta disciplina:
 *Inteligência* (Generative AI for Engineering).
 
 **Equipe:** Anny Carolina (RM98295), Henrique Lima (RM551528), Pedro Menezes (RM97432).

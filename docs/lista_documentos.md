@@ -90,16 +90,16 @@ encontrei estas distribuidoras com sede em municípios da RMSP:
 - O mapa da ARSESP é só uma imagem e não permite extrair essa relação.
 - O mapeamento entre município e distribuidora será feito nos dados abertos da ANEEL na Fase 6, porque é ele que define os bairros da API simulada de paradas programadas.
 
-## 5. Decisões pendentes (Pedro)
+## 5. Decisões do Pedro (07/11/2026)
 
-1. **Páginas do gov.br sob CC BY-ND (D14 a D19):** como tratá-las no repositório público?
-   - **(a)** Incluir os trechos literais com atribuição, como redistribuição sem alteração.
-   - **(b)** Versionar só o link e o hash: o script baixa as páginas e gera os trechos localmente, sem pôr o texto no git.
-   - **(c)** Excluir as páginas.
-2. **Recorte do CDC (D10):** a lei inteira (mais realista para a busca, mas traz muitos trechos fora do
-   tema) ou só o Título I, "Dos Direitos do Consumidor", que contém o art. 22 citado no plano.
-3. **Atos que alteram outros (D05, D06):** proponho indexar os textos consolidados (REN 1.000, Lei 12.212,
-   PRODIST) e, dos atos que os alteram, só os dispositivos de vigência e transição. Isso evita trechos duplicados que confundiriam a busca e as citações.
+1. **Lista aprovada integralmente:** os 19 itens (D01 a D19), inclusive os P2, e as exclusões da seção 3.
+2. **Páginas do gov.br sob CC BY-ND (D14 a D19): opção (b).**
+   - No git ficam só o link, o hash e a data de acesso dessas páginas.
+   - O script de ingestão baixa as páginas e gera os trechos localmente.
+   - O texto delas não vai para o repositório público: em `base/raw/` e em `base/chunks.jsonl`, os trechos dessas fontes ficam fora do arquivo versionado.
+   - Pode mudar se o professor orientar diferente (dúvida 7 da seção 12 do plano).
+3. **CDC (D10):** só o Título I, "Dos Direitos do Consumidor".
+4. **Atos que alteram outros (D05, D06):** indexar os textos consolidados (REN 1.000, Lei 12.212, PRODIST) e, dos atos que os alteram, só os dispositivos de vigência e transição.
 
 ## 6. Riscos para a Fase 2
 
