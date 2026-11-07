@@ -21,11 +21,9 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
-from pydantic import ValidationError  # noqa: E402
-
 from src.config import carregar_config  # noqa: E402
 from src.rag import llm_ollama  # noqa: E402
-from src.rag.schema import Resposta  # noqa: E402
+from src.rag.schema import classificar_saida, schema_para_llm  # noqa: E402
 
 LIMITE_JSON_S = 15.0
 PACOTES = [
@@ -168,12 +166,20 @@ def checar_ollama(cfg: dict, modelo: str) -> None:
         return
 
     locais = {m["name"]: m for m in llm_ollama.modelos_locais(host)}
-    for cand in cfg["llm"].get("candidatos", []):
-        status = "baixado" if cand in locais else "NÃO baixado"
+    candidatos = cfg["llm"].get("candidatos", {})
+    for cand, esperado in candidatos.items():
+        if cand not in locais:
+            status = "NÃO baixado"
+        elif locais[cand]["digest"] == esperado:
+            status = f"baixado, digest {esperado[:12]} confere"
+        else:
+            status = f"baixado, DIGEST DIVERGE ({locais[cand]['digest'][:12]} != {esperado[:12]})"
         print(f"          candidato {cand}: {status}")
     if modelo not in locais:
         falha(f"modelo {modelo} não está baixado (ollama pull {modelo})")
         return
+    if modelo in candidatos and locais[modelo]["digest"] != candidatos[modelo]:
+        falha(f"digest de {modelo} diverge do config.yaml: a tag foi atualizada no Ollama")
 
     opcoes = llm_ollama.opcoes_do_config(cfg["llm"])
     t0 = time.perf_counter()
@@ -182,7 +188,7 @@ def checar_ollama(cfg: dict, modelo: str) -> None:
             host,
             modelo,
             MENSAGENS_TESTE,
-            Resposta.model_json_schema(),
+            schema_para_llm(),
             opcoes,
             think=cfg["llm"]["think"],
             keep_alive=cfg["llm"]["keep_alive"],
@@ -193,19 +199,20 @@ def checar_ollama(cfg: dict, modelo: str) -> None:
     dt = time.perf_counter() - t0
 
     conteudo = corpo["message"]["content"]
-    try:
-        resp = Resposta.model_validate_json(conteudo)
-        ok("JSON válido segundo o schema Resposta")
-    except ValidationError as e:
-        falha(f"JSON inválido: {e.errors()[:2]}\n          saída: {conteudo[:300]}")
+    resp, categoria = classificar_saida(conteudo)
+    if categoria in ("json", "schema"):
+        falha(f"saída fora do schema ({categoria}): {conteudo[:300]}")
         return
-    print("          " + json.dumps(resp.model_dump(), ensure_ascii=False)[:400])
+    ok("JSON válido segundo o schema Resposta")
+    print("          " + json.dumps(json.loads(conteudo), ensure_ascii=False)[:400])
+    if categoria == "regras":
+        aviso("viola as regras do Apêndice B.1 (informativo; o validador da Fase 5 trata)")
 
     tps = corpo.get("eval_count", 0) / max(corpo.get("eval_duration", 1) / 1e9, 1e-9)
     carga = corpo.get("load_duration", 0) / 1e9
     msg = f"tempo total {dt:.1f} s (carga {carga:.1f} s), geração {tps:.1f} tokens/s"
     (ok if dt < LIMITE_JSON_S else falha)(f"{msg} [limite {LIMITE_JSON_S:.0f} s]")
-    if not resp.recusa and any(f.id == "teste-1" for f in resp.fontes):
+    if resp and not resp.recusa and any(f.id.strip("[]") == "teste-1" for f in resp.fontes):
         ok("citou a fonte do trecho de teste")
     else:
         aviso("não citou a fonte esperada (informativo; avaliado nas fases 5+)")
@@ -228,10 +235,11 @@ def checar_embeddings(cfg: dict) -> None:
         return
     nome = cfg["embeddings"]["modelo"]
     disp = cfg["embeddings"]["dispositivo_consulta"]
+    revisao = cfg["embeddings"]["revisao"]
     t0 = time.perf_counter()
-    modelo = SentenceTransformer(nome, device=disp)
+    modelo = SentenceTransformer(nome, device=disp, revision=revisao)
     modelo.max_seq_length = cfg["embeddings"]["max_length"]
-    ok(f"{nome} carregado em {disp} ({time.perf_counter() - t0:.1f} s)")
+    ok(f"{nome}@{revisao[:7]} carregado em {disp} ({time.perf_counter() - t0:.1f} s)")
 
     frases = [
         "Fiquei sem luz em casa. Em quanto tempo a energia deve voltar?",

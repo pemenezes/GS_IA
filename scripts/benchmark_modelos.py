@@ -1,8 +1,12 @@
 """Benchmark inicial dos LLMs candidatos (Fase 0).
 
-Para cada modelo: descarrega tudo, mede a VRAM de base, faz uma chamada a frio (tempo de carga)
-e três casos com contexto fictício (curto, recusa e contexto longo), amostrando a VRAM da GPU a
-cada 100 ms. Grava avaliacao/runs/benchmark_modelos.csv.
+Para cada modelo: descarrega tudo, mede a VRAM de base, faz uma chamada de aquecimento (tempo de
+carga) e três casos com contexto fictício (curto, recusa e contexto longo), amostrando a VRAM da
+GPU a cada 100 ms. Grava avaliacao/runs/benchmark_modelos.csv.
+
+Os casos não repetem o texto uns dos outros: o Ollama reaproveita o cache de um prefixo de prompt
+já processado, o que deixaria a latência artificialmente baixa. Só o prompt de sistema é comum a
+todos, como será em produção.
 
 Uso:  python scripts/benchmark_modelos.py [--modelos TAG ...]
 """
@@ -20,11 +24,10 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 import pynvml  # noqa: E402
-from pydantic import ValidationError  # noqa: E402
 
 from src.config import RAIZ, carregar_config  # noqa: E402
 from src.rag import llm_ollama  # noqa: E402
-from src.rag.schema import Resposta  # noqa: E402
+from src.rag.schema import classificar_saida, schema_para_llm  # noqa: E402
 
 SAIDA = RAIZ / "avaliacao" / "runs" / "benchmark_modelos.csv"
 
@@ -40,6 +43,11 @@ CURTO = (
     "[t1] A Biblioteca Municipal de Exemplo funciona de segunda a sexta-feira, das 8h às 18h. "
     "Aos sábados, abre das 9h às 13h. Aos domingos permanece fechada."
 )
+CURTO_RECUSA = (
+    "[t2] O Museu de Exemplo recebe visitas guiadas às terças e quintas-feiras, às 10h. "
+    "Grupos com mais de dez pessoas precisam agendar com uma semana de antecedência."
+)
+AQUECIMENTO = "TRECHOS:\n[w1] Texto de aquecimento.\n\nPERGUNTA: Qual é o texto?"
 ATIVIDADES = [
     "oficinas de pintura",
     "aulas de violão",
@@ -55,7 +63,7 @@ UNIDADES = [
 ]
 CASOS = {
     "curto": f"TRECHOS:\n{CURTO}\n\nPERGUNTA: A biblioteca abre no sábado à tarde?",
-    "recusa": f"TRECHOS:\n{CURTO}\n\nPERGUNTA: Qual é o telefone da biblioteca?",
+    "recusa": f"TRECHOS:\n{CURTO_RECUSA}\n\nPERGUNTA: Qual é o telefone do museu?",
     "longo": "TRECHOS:\n"
     + "\n".join(UNIDADES)
     + "\n\nPERGUNTA: Qual é a capacidade do auditório da unidade 27 e o que ela oferece?",
@@ -82,6 +90,7 @@ COLUNAS = [
     "tokens_s_geracao",
     "tokens_s_prompt",
     "json_valido",
+    "regras_b1_ok",
     "recusou_quando_devia",
     "citou_fonte_certa",
     "observacoes",
@@ -121,7 +130,7 @@ class MonitorVRAM:
 def medir_modelo(cfg: dict, modelo: str, info: dict, mon: MonitorVRAM) -> dict:
     host = cfg["llm"]["host"]
     opcoes = llm_ollama.opcoes_do_config(cfg["llm"])
-    schema = Resposta.model_json_schema()
+    schema = schema_para_llm()
 
     for m in llm_ollama.modelos_carregados(host):
         llm_ollama.descarregar(host, m["name"])
@@ -138,7 +147,7 @@ def medir_modelo(cfg: dict, modelo: str, info: dict, mon: MonitorVRAM) -> dict:
 
     linha: dict = {"modelo": modelo, "num_ctx": opcoes["num_ctx"], "vram_base_mib": base}
     with mon:
-        frio, _ = chamar(CASOS["curto"])
+        frio, _ = chamar(AQUECIMENTO)
         linha["carga_s"] = round(frio.get("load_duration", 0) / 1e9, 2)
         resultados = {nome: chamar(p) for nome, p in CASOS.items()}
         pct = next(
@@ -153,17 +162,16 @@ def medir_modelo(cfg: dict, modelo: str, info: dict, mon: MonitorVRAM) -> dict:
     linha["vram_modelo_mib"] = mon.pico - base
     linha["pct_na_gpu"] = round(pct)
 
-    validos, respostas = 0, {}
+    validos = regras_ok = 0
+    respostas = {}
     eval_tok = eval_ns = 0
     for nome, (corpo, lat) in resultados.items():
         linha[f"lat_{nome}_s"] = round(lat, 2)
         eval_tok += corpo.get("eval_count", 0)
         eval_ns += corpo.get("eval_duration", 0)
-        try:
-            respostas[nome] = Resposta.model_validate_json(corpo["message"]["content"])
-            validos += 1
-        except ValidationError:
-            respostas[nome] = None
+        respostas[nome], categoria = classificar_saida(corpo["message"]["content"])
+        validos += categoria in ("ok", "regras")
+        regras_ok += categoria == "ok"
     longo = resultados["longo"][0]
     linha["tokens_prompt_longo"] = longo.get("prompt_eval_count", 0)
     linha["tokens_s_prompt"] = round(
@@ -171,6 +179,7 @@ def medir_modelo(cfg: dict, modelo: str, info: dict, mon: MonitorVRAM) -> dict:
     )
     linha["tokens_s_geracao"] = round(eval_tok / max(eval_ns / 1e9, 1e-9), 1)
     linha["json_valido"] = f"{validos}/{len(CASOS)}"
+    linha["regras_b1_ok"] = f"{regras_ok}/{len(CASOS)}"
 
     r_rec = respostas.get("recusa")
     linha["recusou_quando_devia"] = bool(r_rec and r_rec.recusa)
@@ -192,7 +201,7 @@ def main() -> int:
         sys.stdout.reconfigure(encoding="utf-8")
     cfg = carregar_config()
     ap = argparse.ArgumentParser(description=__doc__.splitlines()[0])
-    ap.add_argument("--modelos", nargs="+", default=cfg["llm"]["candidatos"])
+    ap.add_argument("--modelos", nargs="+", default=list(cfg["llm"]["candidatos"]))
     args = ap.parse_args()
 
     host = cfg["llm"]["host"]
@@ -236,6 +245,7 @@ def main() -> int:
                     "vram_modelo_mib",
                     "pct_na_gpu",
                     "json_valido",
+                    "regras_b1_ok",
                     "recusou_quando_devia",
                     "citou_fonte_certa",
                     "observacoes",

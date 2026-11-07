@@ -8,6 +8,7 @@ chunking:
   prefixo_contexto: true           # ex.: "REN 1000/2021 > Art. 362 > § 1º"
 embeddings:
   modelo: BAAI/bge-m3
+  revisao: 5617a9f61b028005a4858fdac845db406aefb181   # commit do Hugging Face (07/11/2026)
   dispositivo_indexacao: cuda      # fp16
   dispositivo_consulta: cpu
   max_length: 512
@@ -23,11 +24,11 @@ llm:
   servidor: ollama
   host: "http://localhost:11434"
   modelo: "qwen3:4b-instruct-2507-q4_K_M"   # provisório (Fase 0); escolha final na Fase 5
-  candidatos:
-    - "qwen3:4b-instruct-2507-q4_K_M"
-    - "qwen3.5:4b-q4_K_M"
-    - "gemma3:4b-it-q4_K_M"
-    - "llama3.2:3b-instruct-q4_K_M"
+  candidatos:                      # tag -> digest sha256 (tags do Ollama podem ser atualizadas)
+    "qwen3:4b-instruct-2507-q4_K_M": 0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0
+    "qwen3.5:4b-q4_K_M": d8b0f5e9760cd1682034f292d7ef72ec46f432149be0df7574bf2d6e92e38c04
+    "gemma3:4b-it-q4_K_M": 68ceab7e468a31c988b44d5a4984a0e21f58c4f7158c6ce29c1804babac38df7
+    "llama3.2:3b-instruct-q4_K_M": a80c4f17acd55265feec403c7aef86be0c25983ab279d83f3bcd3abbcb5b8b72
   quantizacao: Q4_K_M
   num_ctx: 4096
   temperature: 0.0

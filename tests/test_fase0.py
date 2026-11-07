@@ -1,10 +1,14 @@
+import re
+
 import httpx
 import pytest
 from pydantic import ValidationError
 
-from src.config import carregar_config
+from src.config import RAIZ, carregar_config
 from src.rag import llm_ollama
-from src.rag.schema import Resposta
+from src.rag.schema import Resposta, classificar_saida, schema_para_llm
+
+FONTE_OK = '[{"tipo": "norma", "id": "c1", "trecho_citado": "texto"}]'
 
 
 def test_config_tem_chaves_essenciais():
@@ -16,6 +20,23 @@ def test_config_tem_chaves_essenciais():
     assert cfg["llm"]["modelo"] in cfg["llm"]["candidatos"]
 
 
+def test_config_trava_versoes_dos_modelos():
+    cfg = carregar_config()
+    for tag, digest in cfg["llm"]["candidatos"].items():
+        assert re.fullmatch(r"[0-9a-f]{64}", str(digest)), tag
+    assert re.fullmatch(r"[0-9a-f]{40}", cfg["embeddings"]["revisao"])
+
+
+def test_lock_aponta_indice_do_torch_cuda():
+    linhas = (RAIZ / "requirements-lock.txt").read_text(encoding="utf-8").splitlines()
+    torch = next(linha for linha in linhas if linha.startswith("torch=="))
+    if "+cu" in torch:
+        assert any(
+            linha.startswith("--extra-index-url https://download.pytorch.org/whl/cu")
+            for linha in linhas
+        )
+
+
 def test_ollama_host_sobrescrito_por_env(monkeypatch):
     monkeypatch.setenv("OLLAMA_HOST", "127.0.0.1:9999")
     assert carregar_config()["llm"]["host"] == "http://127.0.0.1:9999"
@@ -23,8 +44,7 @@ def test_ollama_host_sobrescrito_por_env(monkeypatch):
 
 def test_schema_aceita_resposta_valida():
     r = Resposta.model_validate_json(
-        '{"resposta": "Sim.", "recusa": false, "confianca": "alta",'
-        ' "fontes": [{"tipo": "norma", "id": "c1", "trecho_citado": "texto"}]}'
+        '{"resposta": "Sim.", "recusa": false, "confianca": "alta", "fontes": ' + FONTE_OK + "}"
     )
     assert r.fontes[0].id == "c1"
     assert r.motivo_recusa is None
@@ -44,6 +64,44 @@ def test_schema_aceita_resposta_valida():
 def test_schema_rejeita_resposta_invalida(json_invalido):
     with pytest.raises(ValidationError):
         Resposta.model_validate_json(json_invalido)
+
+
+def test_regra_b1_resposta_sem_recusa_exige_fonte():
+    with pytest.raises(ValidationError, match="pelo menos uma fonte"):
+        Resposta.model_validate_json('{"resposta": "nao", "recusa": false, "confianca": "alta"}')
+    recusa = Resposta.model_validate_json(
+        '{"resposta": "Não consta.", "recusa": true, "motivo_recusa": "fora da base",'
+        ' "confianca": "baixa"}'
+    )
+    assert recusa.fontes == []
+
+
+def test_schema_para_llm_exige_todos_os_campos():
+    schema = schema_para_llm()
+    assert set(schema["required"]) == set(schema["properties"])
+    fonte = schema["$defs"]["Fonte"]
+    assert set(fonte["required"]) == set(fonte["properties"])
+    assert "fontes" not in Resposta.model_json_schema()["required"]
+
+
+@pytest.mark.parametrize(
+    ("conteudo", "categoria"),
+    [
+        (
+            '{"resposta": "Sim.", "recusa": false, "confianca": "alta", "fontes": '
+            + FONTE_OK
+            + "}",
+            "ok",
+        ),
+        ('{"resposta": "Sim.", "recusa": false, "confianca": "alta", "fontes": []}', "regras"),
+        ('{"resposta": "Sim.", "recusa": false, "confianca": "talvez", "fontes": []}', "schema"),
+        ('{"resposta": "Sim.", "recusa": ', "json"),
+    ],
+)
+def test_classificar_saida(conteudo, categoria):
+    resposta, obtida = classificar_saida(conteudo)
+    assert obtida == categoria
+    assert (resposta is not None) == (categoria == "ok")
 
 
 def test_chat_json_envia_schema_e_opcoes(monkeypatch):

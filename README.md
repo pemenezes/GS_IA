@@ -35,7 +35,11 @@ ollama pull llama3.2:3b-instruct-q4_K_M
 ```
 
 `requirements.txt` traz as dependências diretas com versão travada; `requirements-lock.txt`
-traz o freeze completo do ambiente de referência.
+traz o freeze completo do ambiente de referência (`pip install -r requirements-lock.txt` para
+reproduzir exatamente; regenere com `scripts\gerar_lock.py`).
+
+As versões dos modelos também ficam travadas no `config.yaml`: o digest de cada LLM do Ollama
+(o `check_env.py` avisa se a tag foi atualizada) e a revisão do bge-m3 no Hugging Face.
 
 ## Verificar o ambiente
 
