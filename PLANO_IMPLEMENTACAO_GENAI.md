@@ -589,8 +589,8 @@ Se algo atrasar: cortar na ordem **LoRA (9) → reranker → Docker/CI → pergu
 2. É aceito **treinar (LoRA) fora da máquina local** (Colab) desde que o modelo final rode local? (Só relevante se a Fase 9 for feita.)
 3. O **ODS 7** é aceito, mesmo fora da lista sugerida?
 4. A pontuação 05 aceita **agente** como "especialização" sem LoRA? (O enunciado diz "LoRA **ou** agente".)
-5. Nome completo e **RM de todos os integrantes** da equipe (para o relatório).
-6. O trabalho desta disciplina é individual ou em grupo? (Define o repositório e o relatório.)
+5. ~~Nome completo e **RM de todos os integrantes** da equipe (para o relatório).~~ **Respondida (07/11):** Anny Carolina (RM98295), Henrique Lima (RM551528), Pedro Menezes (RM97432). Confirmar se "Anny Carolina" e "Henrique Lima" são os nomes completos exigidos no relatório.
+6. ~~O trabalho desta disciplina é individual ou em grupo?~~ **Respondida (07/11):** em grupo; repositório público na conta do Pedro: https://github.com/pemenezes/GS_IA
 
 ---
 

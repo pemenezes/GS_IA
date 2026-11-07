@@ -7,6 +7,14 @@ resposta. O plano completo está em [`PLANO_IMPLEMENTACAO_GENAI.md`](PLANO_IMPLE
 
 > README em construção: a versão final (Fase 10) terá instruções completas de reprodução.
 
+## Integrantes
+
+| Nome | RM |
+|---|---|
+| Anny Carolina | RM98295 |
+| Henrique Lima | RM551528 |
+| Pedro Menezes | RM97432 |
+
 ## Pré-requisitos
 
 - Windows 10/11, Python 3.11 ou 3.12
