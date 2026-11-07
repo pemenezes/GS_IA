@@ -1,0 +1,48 @@
+seed: 42
+data_referencia: "2026-11-10"      # fixa nos testes (para perguntas dependentes de data)
+chunking:
+  alvo_tokens: 250
+  min_tokens: 60
+  max_tokens: 400
+  overlap_tokens: 40               # só ao dividir artigos longos
+  prefixo_contexto: true           # ex.: "REN 1000/2021 > Art. 362 > § 1º"
+embeddings:
+  modelo: BAAI/bge-m3
+  dispositivo_indexacao: cuda      # fp16
+  dispositivo_consulta: cpu
+  max_length: 512
+  normalizar: true
+retrieval:
+  hibrido: true
+  rrf_k: 60
+  candidatos: 20
+  top_k_final: 3                   # comparar com 5 na Fase 4
+  reranker: null                   # opcional
+  limiar_recusa: null              # definido na Fase 4, com o split dev
+llm:
+  servidor: ollama
+  host: "http://localhost:11434"
+  modelo: "qwen3:4b-instruct-2507-q4_K_M"   # provisório (Fase 0); escolha final na Fase 5
+  candidatos:
+    - "qwen3:4b-instruct-2507-q4_K_M"
+    - "qwen3.5:4b-q4_K_M"
+    - "gemma3:4b-it-q4_K_M"
+    - "llama3.2:3b-instruct-q4_K_M"
+  quantizacao: Q4_K_M
+  num_ctx: 4096
+  temperature: 0.0
+  top_p: 1.0
+  seed: 42
+  num_predict: 512
+  think: false
+  keep_alive: "30m"
+agente:
+  max_passos: 3
+  timeout_ferramenta_s: 5
+api_paradas:
+  base_url: "http://localhost:8001"
+  api_key_env: PARADAS_API_KEY
+avaliacao:
+  split_dev: 0.4
+  split_seed: 42
+  ic_wilson: 0.95

@@ -1,0 +1,33 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+
+# Segredos
+.env
+.env.*
+!.env.example
+
+# Artefatos gerados (pesados ou reprodutíveis)
+base/indices/
+*.faiss
+*.sqlite
+*.db
+logs/
+*.log
+
+# Modelos / pesos locais
+models/
+*.gguf
+*.safetensors
+
+# IDE / SO
+.vscode/
+.idea/
+Thumbs.db
+.DS_Store
