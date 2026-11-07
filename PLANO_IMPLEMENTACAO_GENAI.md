@@ -591,6 +591,9 @@ Se algo atrasar: cortar na ordem **LoRA (9) → reranker → Docker/CI → pergu
 4. A pontuação 05 aceita **agente** como "especialização" sem LoRA? (O enunciado diz "LoRA **ou** agente".)
 5. ~~Nome completo e **RM de todos os integrantes** da equipe (para o relatório).~~ **Respondida (07/11):** Anny Carolina (RM98295), Henrique Lima (RM551528), Pedro Menezes (RM97432). Confirmar se "Anny Carolina" e "Henrique Lima" são os nomes completos exigidos no relatório.
 6. ~~O trabalho desta disciplina é individual ou em grupo?~~ **Respondida (07/11):** em grupo; repositório público na conta do Pedro: https://github.com/pemenezes/GS_IA
+7. **(Fase 1)** Páginas do gov.br estão sob CC BY-ND 3.0 (sem derivações): podemos versionar trechos literais delas no repositório público? Ver `docs/lista_documentos.md`, seção 5.
+8. **(Fase 1)** Recorte do CDC na base: lei inteira ou só o Título I?
+9. **(Fase 1)** Manual de Repercussão da TSEE 2026: número do despacho e link oficial não localizados (proposto excluir).
 
 ---
 
