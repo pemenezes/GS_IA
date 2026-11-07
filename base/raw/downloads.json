@@ -1,0 +1,152 @@
+[
+  {
+    "doc_id": "D01",
+    "arquivo": "D01.html",
+    "url": "https://www2.aneel.gov.br/cedoc/ren20211000.html",
+    "url_final": "https://www2.aneel.gov.br/cedoc/ren20211000.html",
+    "sha256": "412f05550b9fa780eb930f63268eb3d6cb37f80161ba41685a85a9824df564b8",
+    "bytes": 2955169,
+    "data_acesso": "2026-11-07T17:25:41-03:00",
+    "content_type": "text/html",
+    "last_modified": "Tue, 26 May 2026 16:16:48 GMT",
+    "metodo": "navegador"
+  },
+  {
+    "doc_id": "D02",
+    "arquivo": "D02.html",
+    "url": "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2010/lei/l12212.htm",
+    "url_final": "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2010/lei/l12212.htm",
+    "sha256": "72a54cb01a62c63db6cdb7141761951d41abda26052250d6587019154e6f0cdc",
+    "bytes": 39351,
+    "data_acesso": "2026-11-07T14:12:47-03:00",
+    "content_type": "text/html",
+    "last_modified": "Thu, 23 Apr 2026 23:31:41 GMT"
+  },
+  {
+    "doc_id": "D03",
+    "arquivo": "D03.html",
+    "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/lei/l15235.htm",
+    "url_final": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/lei/l15235.htm",
+    "sha256": "f3a3477f34f5e2baab005732886403d20f1d3a2fb8a4e9db937d04be793a1c40",
+    "bytes": 30599,
+    "data_acesso": "2026-11-07T14:12:48-03:00",
+    "content_type": "text/html",
+    "last_modified": "Thu, 23 Apr 2026 23:35:17 GMT"
+  },
+  {
+    "doc_id": "D04",
+    "arquivo": "D04.pdf",
+    "url": "https://www.gov.br/saude/pt-br/composicao/saes/dahu/atencao-domiciliar/legislacao/anos-anteriores/2012/portaria-interministerial-no-630-de-8-de-novembro-de-2011",
+    "url_final": "https://www.gov.br/saude/pt-br/composicao/saes/dahu/atencao-domiciliar/legislacao/anos-anteriores/2012/portaria-interministerial-no-630-de-8-de-novembro-de-2011",
+    "sha256": "192c0f5157bc574f8cf174071398948c786d9fe3b4a34ba9b4619d7814ab2142",
+    "bytes": 17333,
+    "data_acesso": "2026-11-07T17:30:59-03:00",
+    "content_type": "application/pdf",
+    "last_modified": ""
+  },
+  {
+    "doc_id": "D05",
+    "arquivo": "D05.html",
+    "url": "https://www2.aneel.gov.br/cedoc/ren20251147.html",
+    "url_final": "https://www2.aneel.gov.br/cedoc/ren20251147.html",
+    "sha256": "b49e6275fb45761a49fc1b99ce9a33440188c8697de4659ca55226b2d5c2a211",
+    "bytes": 96327,
+    "data_acesso": "2026-11-07T17:26:06-03:00",
+    "content_type": "text/html",
+    "last_modified": "Thu, 13 Aug 2026 14:58:11 GMT",
+    "metodo": "navegador"
+  },
+  {
+    "doc_id": "D06",
+    "arquivo": "D06.html",
+    "url": "https://www2.aneel.gov.br/cedoc/ren20251137.html",
+    "url_final": "https://www2.aneel.gov.br/cedoc/ren20251137.html",
+    "sha256": "b2fc022929c2de4e96d6674e037973bd1dc4eba1bbe333e4ce31bcaf2b1dffa3",
+    "bytes": 436395,
+    "data_acesso": "2026-11-07T17:26:07-03:00",
+    "content_type": "text/html",
+    "last_modified": "Tue, 31 Mar 2026 15:09:53 GMT",
+    "metodo": "navegador"
+  },
+  {
+    "doc_id": "D07",
+    "arquivo": "D07.pdf",
+    "url": "https://www.gov.br/aneel/pt-br/centrais-de-conteudos/procedimentos-regulatorios/prodist",
+    "url_final": "https://git.aneel.gov.br/publico/centralconteudo/-/raw/main/procreg/prodist/modulo08/aren20251137_Prodist_modulo_8_v14.pdf",
+    "sha256": "d0e3c0e9a15f5d46c71f5f1e061e9c5f4887e02dc2d2fc3610fba06faff65a58",
+    "bytes": 2299477,
+    "data_acesso": "2026-11-07T17:26:53-03:00",
+    "content_type": "application/pdf",
+    "last_modified": "",
+    "metodo": "navegador"
+  },
+  {
+    "doc_id": "D08",
+    "arquivo": "D08.pdf",
+    "url": "https://www.gov.br/aneel/pt-br/centrais-de-conteudos/procedimentos-regulatorios/prodist",
+    "url_final": "https://git.aneel.gov.br/publico/centralconteudo/-/raw/main/procreg/prodist/modulo09/aren2021956_Prodist_modulo_9_v2.pdf",
+    "sha256": "a932c0b722a2019029bdd05039a95ca2bdf038bd530129d9265f02b1b1941e6b",
+    "bytes": 313661,
+    "data_acesso": "2026-11-07T17:26:54-03:00",
+    "content_type": "application/pdf",
+    "last_modified": "",
+    "metodo": "navegador"
+  },
+  {
+    "doc_id": "D09",
+    "arquivo": "D09.html",
+    "url": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/lei/l14300.htm",
+    "url_final": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/lei/l14300.htm",
+    "sha256": "bbf31991f2ebe3ba044004dddd4bfaffc3da65a06b3bf28c0cf2b819ba1f802c",
+    "bytes": 115475,
+    "data_acesso": "2026-11-07T14:13:45-03:00",
+    "content_type": "text/html",
+    "last_modified": "Thu, 23 Apr 2026 23:34:27 GMT"
+  },
+  {
+    "doc_id": "D10",
+    "arquivo": "D10.html",
+    "url": "https://www.planalto.gov.br/ccivil_03/leis/l8078compilado.htm",
+    "url_final": "https://www.planalto.gov.br/ccivil_03/leis/l8078compilado.htm",
+    "sha256": "6627bb9cf769ee24c4c0e33b9aa7d47e9070a45c501611413bb953155f169ea2",
+    "bytes": 170672,
+    "data_acesso": "2026-11-07T14:13:46-03:00",
+    "content_type": "text/html",
+    "last_modified": "Tue, 13 Oct 2026 09:50:35 GMT"
+  },
+  {
+    "doc_id": "D11",
+    "arquivo": "D11.html",
+    "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2017/lei/l13460.htm",
+    "url_final": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2017/lei/l13460.htm",
+    "sha256": "1057cf9edbaa0a23dba38846c784bf7269fca8752239c07097367c312403c667",
+    "bytes": 69906,
+    "data_acesso": "2026-11-07T14:13:46-03:00",
+    "content_type": "text/html",
+    "last_modified": "Thu, 23 Apr 2026 23:33:19 GMT"
+  },
+  {
+    "doc_id": "D12",
+    "arquivo": "D12.pdf",
+    "url": "https://www.gov.br/aneel/pt-br/centrais-de-conteudos/procedimentos-regulatorios/proret",
+    "url_final": "https://git.aneel.gov.br/publico/centralconteudo/-/raw/main/procreg/proret/modulo06/subm6.8/Proret_Submod_6.8_V_1.10C_aren20241084.pdf",
+    "sha256": "01b7165c494ccd72822f2d2a49893e0f8398c8a020e2e203f1ed125b158f4afe",
+    "bytes": 316391,
+    "data_acesso": "2026-11-07T17:26:55-03:00",
+    "content_type": "application/pdf",
+    "last_modified": "",
+    "metodo": "navegador"
+  },
+  {
+    "doc_id": "D13",
+    "arquivo": "D13.pdf",
+    "url": "https://www.gov.br/aneel/pt-br/centrais-de-conteudos/procedimentos-regulatorios/prodist",
+    "url_final": "https://git.aneel.gov.br/publico/centralconteudo/-/raw/main/procreg/prodist/modulo04/aren20251137_Prodist_modulo_4_v3.pdf",
+    "sha256": "a0fb3b30563d4b7807ca5a5f91060b377d16410ba60c54aeca528c9853f3e3ae",
+    "bytes": 480229,
+    "data_acesso": "2026-11-07T17:26:56-03:00",
+    "content_type": "application/pdf",
+    "last_modified": "",
+    "metodo": "navegador"
+  }
+]
