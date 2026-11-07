@@ -1,3 +1,6 @@
+# Freeze completo do ambiente de referencia (Windows, Python 3.12, CUDA 12.8).
+# Gerado por scripts/gerar_lock.py; nao editar a mao.
+--extra-index-url https://download.pytorch.org/whl/cu128
 annotated-doc==0.0.5
 annotated-types==0.8.0
 anyio==4.16.0
