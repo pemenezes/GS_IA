@@ -1,0 +1,270 @@
+# Entrada do pipeline de ingestão (scripts/construir_base.py).
+# Aprovado na Fase 1 (docs/lista_documentos.md). Nenhum conteúdo jurídico é escrito aqui:
+# só identificação, origem e regras de corte.
+#
+# extrator: planalto | aneel | pdf | govbr
+# versionar_texto: false => original e trechos ficam em base/local/ (fora do git; licença CC BY-ND)
+# recorte.tipo: integral | titulo (só um Título) | dispositivos_proprios (descarta artigos que só
+#               alteram outra norma) | secoes (lista de seções; definida na Fase 2)
+# resolver: para PDFs listados numa página, o texto do item a procurar antes do link "versão vigente"
+
+data_consulta: "2026-11-07"
+
+documentos:
+  - id: D01
+    rotulo: "REN 1.000/2021"
+    documento: "Resolução Normativa ANEEL nº 1.000, de 7 de dezembro de 2021 (texto compilado)"
+    orgao: ANEEL
+    tipo_fonte: ato_oficial
+    data_publicacao: "2021-12-07"
+    urls: ["https://www2.aneel.gov.br/cedoc/ren20211000.html"]
+    formato: HTML
+    extrator: aneel
+    licenca: "ato oficial (Lei 9.610/1998, art. 8º, IV)"
+    versionar_texto: true
+    recorte: {tipo: integral}
+
+  - id: D02
+    rotulo: "Lei 12.212/2010"
+    documento: "Lei nº 12.212, de 20 de janeiro de 2010 (versão compilada)"
+    orgao: Presidência da República
+    tipo_fonte: ato_oficial
+    data_publicacao: "2010-01-20"
+    urls: ["https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2010/lei/l12212.htm"]
+    formato: HTML
+    extrator: planalto
+    licenca: "ato oficial (Lei 9.610/1998, art. 8º, IV); Portaria SG/PR nº 130/2021"
+    versionar_texto: true
+    recorte: {tipo: integral}
+
+  - id: D03
+    rotulo: "Lei 15.235/2025"
+    documento: "Lei nº 15.235, de 8 de outubro de 2025 (conversão da MP nº 1.300/2025)"
+    orgao: Presidência da República
+    tipo_fonte: ato_oficial
+    data_publicacao: "2025-10-08"
+    urls: ["https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/lei/l15235.htm"]
+    formato: HTML
+    extrator: planalto
+    licenca: "ato oficial (Lei 9.610/1998, art. 8º, IV); Portaria SG/PR nº 130/2021"
+    versionar_texto: true
+    recorte: {tipo: integral}
+
+  - id: D04
+    rotulo: "Portaria Interministerial MME/MS 630/2011"
+    documento: "Portaria Interministerial MME/MS nº 630, de 8 de novembro de 2011"
+    orgao: MME e Ministério da Saúde
+    tipo_fonte: ato_oficial
+    data_publicacao: "2011-11-08"
+    urls: ["https://www.gov.br/saude/pt-br/composicao/saes/dahu/atencao-domiciliar/legislacao/anos-anteriores/2012/portaria-interministerial-no-630-de-8-de-novembro-de-2011"]
+    formato: PDF
+    extrator: pdf
+    licenca: "ato oficial (Lei 9.610/1998, art. 8º, IV); PDF disponibilizado no site do Ministério da Saúde"
+    versionar_texto: true
+    recorte: {tipo: integral}
+
+  - id: D05
+    rotulo: "REN 1.147/2025"
+    documento: "Resolução Normativa ANEEL nº 1.147, de 9 de dezembro de 2025"
+    orgao: ANEEL
+    tipo_fonte: ato_oficial
+    data_publicacao: "2025-12-09"
+    urls: ["https://www2.aneel.gov.br/cedoc/ren20251147.html"]
+    formato: HTML
+    extrator: aneel
+    licenca: "ato oficial (Lei 9.610/1998, art. 8º, IV)"
+    versionar_texto: true
+    recorte: {tipo: dispositivos_proprios}
+
+  - id: D06
+    rotulo: "REN 1.137/2025"
+    documento: "Resolução Normativa ANEEL nº 1.137, de 21 de outubro de 2025"
+    orgao: ANEEL
+    tipo_fonte: ato_oficial
+    data_publicacao: "2025-10-21"
+    urls: ["https://www2.aneel.gov.br/cedoc/ren20251137.html"]
+    formato: HTML
+    extrator: aneel
+    licenca: "ato oficial (Lei 9.610/1998, art. 8º, IV)"
+    versionar_texto: true
+    recorte: {tipo: dispositivos_proprios}
+
+  - id: D07
+    rotulo: "PRODIST Módulo 8"
+    documento: "PRODIST, Módulo 8: Qualidade do Fornecimento de Energia Elétrica (versão vigente)"
+    orgao: ANEEL
+    tipo_fonte: ato_oficial
+    urls: ["https://www.gov.br/aneel/pt-br/centrais-de-conteudos/procedimentos-regulatorios/prodist"]
+    resolver: "Módulo 8"
+    formato: PDF
+    extrator: pdf
+    licenca: "ato oficial (Lei 9.610/1998, art. 8º, IV)"
+    versionar_texto: true
+    # 8.2 Qualidade do Serviço (continuidade, compensação, emergência); 8.3 Qualidade Comercial.
+    # Fora: 8.1 (tensão), 8.4 (segurança do trabalho), anexos de tabelas.
+    recorte: {tipo: secoes, secoes: ["8.2", "8.3"]}
+
+  - id: D08
+    rotulo: "PRODIST Módulo 9"
+    documento: "PRODIST, Módulo 9: Ressarcimento de Danos Elétricos (versão vigente)"
+    orgao: ANEEL
+    tipo_fonte: ato_oficial
+    urls: ["https://www.gov.br/aneel/pt-br/centrais-de-conteudos/procedimentos-regulatorios/prodist"]
+    resolver: "Módulo 9"
+    formato: PDF
+    extrator: pdf
+    licenca: "ato oficial (Lei 9.610/1998, art. 8º, IV)"
+    versionar_texto: true
+    recorte: {tipo: integral}
+
+  - id: D09
+    rotulo: "Lei 14.300/2022"
+    documento: "Lei nº 14.300, de 6 de janeiro de 2022 (marco legal da micro e minigeração distribuída)"
+    orgao: Presidência da República
+    tipo_fonte: ato_oficial
+    data_publicacao: "2022-01-06"
+    urls: ["https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/lei/l14300.htm"]
+    formato: HTML
+    extrator: planalto
+    licenca: "ato oficial (Lei 9.610/1998, art. 8º, IV); Portaria SG/PR nº 130/2021"
+    versionar_texto: true
+    recorte: {tipo: integral}
+
+  - id: D10
+    rotulo: "CDC (Lei 8.078/1990)"
+    documento: "Lei nº 8.078, de 11 de setembro de 1990 - Código de Defesa do Consumidor (compilada), Título I"
+    orgao: Presidência da República
+    tipo_fonte: ato_oficial
+    data_publicacao: "1990-09-11"
+    urls: ["https://www.planalto.gov.br/ccivil_03/leis/l8078compilado.htm"]
+    formato: HTML
+    extrator: planalto
+    licenca: "ato oficial (Lei 9.610/1998, art. 8º, IV); Portaria SG/PR nº 130/2021"
+    versionar_texto: true
+    recorte: {tipo: titulo, titulo: "I"}
+
+  - id: D11
+    rotulo: "Lei 13.460/2017"
+    documento: "Lei nº 13.460, de 26 de junho de 2017 (direitos do usuário de serviço público)"
+    orgao: Presidência da República
+    tipo_fonte: ato_oficial
+    data_publicacao: "2017-06-26"
+    urls: ["https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2017/lei/l13460.htm"]
+    formato: HTML
+    extrator: planalto
+    licenca: "ato oficial (Lei 9.610/1998, art. 8º, IV); Portaria SG/PR nº 130/2021"
+    versionar_texto: true
+    recorte: {tipo: integral}
+
+  - id: D12
+    rotulo: "PRORET Submódulo 6.8"
+    documento: "PRORET, Submódulo 6.8: Bandeiras Tarifárias (versão vigente)"
+    orgao: ANEEL
+    tipo_fonte: ato_oficial
+    urls: ["https://www.gov.br/aneel/pt-br/centrais-de-conteudos/procedimentos-regulatorios/proret"]
+    resolver: "Submódulo 6.8"
+    formato: PDF
+    extrator: pdf
+    licenca: "ato oficial (Lei 9.610/1998, art. 8º, IV)"
+    versionar_texto: true
+    # Fora: 4 e 5 (cálculo das faixas e mecanismo de acionamento), 7 e 8 (conta centralizadora).
+    recorte: {tipo: secoes, secoes: ["1", "2", "3", "6", "9"]}
+
+  - id: D13
+    rotulo: "PRODIST Módulo 4"
+    documento: "PRODIST, Módulo 4: Procedimentos Operativos do Sistema de Distribuição (versão vigente)"
+    orgao: ANEEL
+    tipo_fonte: ato_oficial
+    urls: ["https://www.gov.br/aneel/pt-br/centrais-de-conteudos/procedimentos-regulatorios/prodist"]
+    resolver: "Módulo 4"
+    formato: PDF
+    extrator: pdf
+    licenca: "ato oficial (Lei 9.610/1998, art. 8º, IV)"
+    versionar_texto: true
+    # 4.2 Programação de intervenções; 4.8 Comunicação com consumidores em interrupções.
+    recorte: {tipo: secoes, secoes: ["4.2", "4.8"]}
+
+  - id: D14
+    rotulo: "ANEEL - Como resolver"
+    documento: "ANEEL - Como resolver: principais dúvidas"
+    orgao: ANEEL
+    tipo_fonte: pagina_explicativa
+    urls: ["https://www.gov.br/aneel/pt-br/consumidores/como-resolver"]
+    formato: HTML
+    extrator: govbr
+    licenca: "CC BY-ND 3.0"
+    versionar_texto: false
+    recorte: {tipo: integral}
+    alerta: >-
+      Página modificada em 08/09/2025, antes da REN 1.137/2025 e da REN 1.147/2025; em conflito,
+      prevalece o texto normativo vigente.
+
+  - id: D15
+    rotulo: "ANEEL - FAQ Bandeiras Tarifárias"
+    documento: "ANEEL - Perguntas frequentes sobre Bandeiras Tarifárias"
+    orgao: ANEEL
+    tipo_fonte: pagina_explicativa
+    urls: ["https://www.gov.br/aneel/pt-br/assuntos/tarifas/bandeiras-tarifarias/faq-bandeiras-tarifarias"]
+    formato: HTML
+    extrator: govbr
+    licenca: "CC BY-ND 3.0"
+    versionar_texto: false
+    recorte: {tipo: integral}
+    alerta: >-
+      Página modificada em 24/02/2022, antes da versão vigente do PRORET Submódulo 6.8 (aprovada pela
+      REN 1.084/2024); em conflito, prevalece o texto normativo vigente.
+
+  - id: D16
+    rotulo: "ANEEL - Tarifa Social"
+    documento: "ANEEL - Tarifa Social"
+    orgao: ANEEL
+    tipo_fonte: pagina_explicativa
+    urls: ["https://www.gov.br/aneel/pt-br/assuntos/tarifas/tarifa-social"]
+    formato: HTML
+    extrator: govbr
+    licenca: "CC BY-ND 3.0"
+    versionar_texto: false
+    recorte: {tipo: integral}
+    alerta: >-
+      Página modificada em 04/07/2025, antes da Lei 15.235/2025 e da REN 1.147/2025: cita a MP
+      1.300/2025 e não menciona o Desconto Social; em conflito, prevalece o texto normativo vigente.
+
+  - id: D17
+    rotulo: "MME - Luz do Povo"
+    documento: "MME - Programa Luz do Povo: página e perguntas frequentes"
+    orgao: Ministério de Minas e Energia
+    tipo_fonte: pagina_explicativa
+    urls:
+      - "https://www.gov.br/mme/pt-br/luzdopovo"
+      - "https://www.gov.br/mme/pt-br/luzdopovo/perguntas-frequentes-faq/perguntas-frequentes"
+    formato: HTML
+    extrator: govbr
+    licenca: "CC BY-ND 3.0"
+    versionar_texto: false
+    recorte: {tipo: integral}
+
+  - id: D18
+    rotulo: "ANEEL - Canais de atendimento"
+    documento: "ANEEL - Reclame da distribuidora; Fale com a sua distribuidora"
+    orgao: ANEEL
+    tipo_fonte: pagina_explicativa
+    urls:
+      - "https://www.gov.br/aneel/pt-br/canais_atendimento/reclame-da-distribuidora"
+      - "https://www.gov.br/aneel/pt-br/canais_atendimento/fale-com-a-sua-distribuidora"
+    formato: HTML
+    extrator: govbr
+    licenca: "CC BY-ND 3.0"
+    versionar_texto: false
+    recorte: {tipo: integral}
+
+  - id: D19
+    rotulo: "ANEEL - Micro e Minigeração Distribuída"
+    documento: "ANEEL - Micro e Minigeração Distribuída"
+    orgao: ANEEL
+    tipo_fonte: pagina_explicativa
+    urls: ["https://www.gov.br/aneel/pt-br/assuntos/geracao-distribuida"]
+    formato: HTML
+    extrator: govbr
+    licenca: "CC BY-ND 3.0"
+    versionar_texto: false
+    recorte: {tipo: integral}
