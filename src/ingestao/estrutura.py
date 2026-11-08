@@ -48,7 +48,7 @@ _NIVEL = {
 }
 _CABECALHO_RE = re.compile(
     r"^(PARTE|T[ÍI]TULO|CAP[ÍI]TULO|Se[çc][ãa]o|SE[ÇC][ÃA]O|Subse[çc][ãa]o|SUBSE[ÇC][ÃA]O)\s+"
-    r"([IVXLCDM]+|[ÚU]NIC[AO]|\d+)\b\s*[-–.]?\s*(.*)$"
+    r"([IVXLCDM]+(?:\s*[-–]\s*[A-Z](?=\s*$|\s+[-–]))?|[ÚU]NIC[AO]|\d+)\b\s*[-–.]?\s*(.*)$"
 )
 _ANEXO_RE = re.compile(r"^ANEXO\b\s*([IVXLCDM]+|\d+|[ÚU]NICO)?\b\s*[-–]?\s*(.*)$")
 _ART_RE = re.compile(r"^Art\.?\s*(\d+(?:\.\d+)?)\s*º?\s*(?:-\s*([A-Z]{1,2}))?(?![\w])")
@@ -77,7 +77,7 @@ def _slug(texto: str) -> str:
 def _e_nome_de_cabecalho(bloco: Bloco) -> bool:
     t = bloco.texto
     return (
-        len(t) <= 160
+        len(t) <= 300
         and not _ROTULO_DISP_RE.match(t)
         and not _CABECALHO_RE.match(t)
         and not _ANEXO_RE.match(t)

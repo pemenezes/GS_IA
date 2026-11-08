@@ -119,6 +119,15 @@ documentos:
     licenca: "ato oficial (Lei 9.610/1998, art. 8º, IV)"
     versionar_texto: true
     recorte: {tipo: integral}
+    # A "versão vigente" publicada (v2, 2021) não reflete a revogação feita pela REN 1.137/2025.
+    alertas_trechos:
+      s9.1-item14: >-
+        A alínea b deste item (indeferimento por Situação de Emergência ou de Calamidade Pública)
+        foi revogada pelo art. 20 da REN 1.137/2025 (trecho D06-art20); o PDF publicado como
+        versão vigente do Módulo 9 ainda a contém.
+      s9.1-item15: >-
+        Este item depende da alínea b do item 14, revogada pelo art. 20 da REN 1.137/2025
+        (trecho D06-art20).
 
   - id: D09
     rotulo: "Lei 14.300/2022"

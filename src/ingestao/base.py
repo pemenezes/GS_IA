@@ -107,7 +107,8 @@ def processar_documento(
                         "versionado": doc["versionar_texto"],
                         "notas_redacao": sorted(set(u.notas)),
                         "contem_tabela": tabela,
-                        "alerta": doc.get("alerta"),
+                        "alerta": (doc.get("alertas_trechos") or {}).get(u.uid)
+                        or doc.get("alerta"),
                         "n_tokens": tok.contar(texto),
                         "texto": texto,
                     }

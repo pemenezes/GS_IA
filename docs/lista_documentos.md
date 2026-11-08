@@ -117,6 +117,15 @@ encontrei estas distribuidoras com sede em municípios da RMSP:
   - os Anexos II e III da REN 1.000, que são formulários em branco sobre rede particular, foram removidos da base.
 
   Com isso, a Fase 2 está concluída.
+- **Ajustes feitos durante a Fase 3 (08/11/2026):**
+  - **Anexo 8.B do Módulo 8 incluído:** Tabelas 1 a 5, com os limites individuais de DIC, FIC, DMIC, DICRI e DISE. Por decisão do Pedro, essas tabelas entraram na base: sem elas, a base não dizia o limite de horas de interrupção, como pede o exemplo canônico 1. As tabelas foram extraídas linha a linha com pdfplumber.
+  - **Módulo 9 desatualizado:** o art. 20 da REN 1.137/2025 revoga a alínea b do item 14 do Módulo 9 (indeferimento do ressarcimento por situação de emergência). O PDF publicado como "versão vigente" do Módulo 9 (v2, de 2021) ainda contém essa alínea. Os trechos `D08-s9.1-item14` e `D08-s9.1-item15` receberam `alerta`.
+  - **Correções de extração:**
+    - ordinais "§ 1 o" viraram "§ 1º";
+    - capítulos com sufixo de letra ("CAPÍTULO VI – A", no CDC) passaram a ser reconhecidos;
+    - nomes de seção longos (Seção VII do capítulo de iluminação pública da REN 1.000) também.
+
+  A base ficou com 1.812 trechos, 1.698 deles versionados.
 
 ## 7. Riscos para a Fase 2
 

@@ -22,6 +22,7 @@ def normalizar(texto: str) -> str:
     texto = re.sub(r"(\d)\s*[°˚]", r"\1º", texto)
     texto = re.sub(r"\b([Nn])\s+[oº](s?)(?=\s*\d)", r"\1º\2", texto)
     texto = re.sub(r"(\d)\s+º", r"\1º", texto)
+    texto = re.sub(r"((?:Art\.|§)\s*\d+)\s+o\b", r"\1º", texto)
     texto = re.sub(r"\bArt\.(?=\d)", "Art. ", texto)
     texto = re.sub(r"§(?=\d)", "§ ", texto)
     texto = re.sub(r"\.{5,}", " (...) ", texto)

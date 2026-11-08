@@ -56,6 +56,7 @@ class TokFalso:
 def test_normalizar_ordinais_e_espacos():
     assert normalizar("Art. 1°  da Lei n o 10.438\xa0e  §2") == "Art. 1º da Lei nº 10.438 e § 2"
     assert normalizar("Leis n os 9.991 e 10.925") == "Leis nºs 9.991 e 10.925"
+    assert normalizar("§ 1 o A distribuidora e Art. 2 o O") == "§ 1º A distribuidora e Art. 2º O"
 
 
 def test_separar_notas_de_redacao():
@@ -113,6 +114,20 @@ def test_articulado_ficticio():
     assert len(por_id["art2"].linhas) == 3, "artigos citados entre aspas ficam no Art. 2º"
     motivos = {m for m, _ in est.descartes}
     assert {"dispositivo revogado/vetado", "assinatura/nota de publicação"} <= motivos
+
+
+def test_cabecalho_com_sufixo_de_letra_e_nome_longo():
+    nome_longo = "Da Seção de Teste " + "com nome muito comprido " * 8
+    html = (
+        "<p>CAPÍTULO VI – A</p><p>DO CAPÍTULO INSERIDO DE TESTE</p><p>Seção VII</p>"
+        f"<p>{nome_longo}</p><p>Art. 54-A. Texto de teste.</p>"
+    )
+    est = estruturar_articulado(extrair_html_ato(html.encode("utf-8")))
+    assert [u.uid for u in est.unidades] == ["art54a"]
+    assert est.unidades[0].hierarquia == [
+        "CAPÍTULO VI – A – DO CAPÍTULO INSERIDO DE TESTE",
+        f"Seção VII – {normalizar(nome_longo)}",
+    ]
 
 
 def test_recorte_dispositivos_proprios():
