@@ -57,13 +57,19 @@ def _rodar(ret: Retriever, casos, modo: str, reranker: bool, vetores: dict) -> l
                 "tipo": c.tipo,
                 "split": c.split,
                 "gold": c.chunk_ids_gold,
+                "gold_v2": c.gold_v2,
                 "ranking": ranking,
-                "posicao": posicao_primeiro_gold(ranking, c.chunk_ids_gold),
+                "posicao_v1": posicao_primeiro_gold(ranking, c.chunk_ids_gold),
+                "posicao": posicao_primeiro_gold(ranking, c.gold_v2),
                 "todos_gold": {k: todos_gold_no_topo(ranking, c.chunk_ids_gold, k) for k in KS},
                 "latencia_s": round(lat, 3),
             }
         )
     return linhas
+
+
+def _resumo_v1(linhas: list[dict]) -> dict:
+    return resumir([{**x, "posicao": x["posicao_v1"]} for x in linhas], KS)
 
 
 def _vetores(ret: Retriever, perguntas: dict[str, str]) -> dict:
@@ -79,6 +85,7 @@ def ablacao(cfg: dict) -> None:
     for modo, rr in VARIANTES:
         linhas = _rodar(ret, casos, modo, rr, vetores)
         r = resumir(linhas, KS)["total"]
+        r1 = _resumo_v1(linhas)["total"]
         nome = f"{modo}{'+reranker' if rr else ''}"
         lat = sorted(x["latencia_s"] for x in linhas)
         tabela.append(
@@ -89,14 +96,20 @@ def ablacao(cfg: dict) -> None:
                 **{f"acertos@{k}": r[f"acertos@{k}"] for k in KS},
                 "ic95@3": f"[{r['ic@3'][0]:.2f}; {r['ic@3'][1]:.2f}]",
                 "mrr": round(r["mrr"], 3),
+                **{f"recall@{k}_v1": round(r1[f"recall@{k}"], 3) for k in KS},
                 "latencia_p50_s": lat[len(lat) // 2],
                 "latencia_max_s": lat[-1],
             }
         )
-        detalhes[nome] = {"por_tipo": resumir(linhas, KS), "linhas": linhas}
+        detalhes[nome] = {
+            "por_tipo": resumir(linhas, KS),
+            "por_tipo_v1": _resumo_v1(linhas),
+            "linhas": linhas,
+        }
         print(
-            f"  {nome:<18} r@1={r['recall@1']:.3f} r@3={r['recall@3']:.3f} "
-            f"r@5={r['recall@5']:.3f} mrr={r['mrr']:.3f} p50={lat[len(lat) // 2]:.2f}s"
+            f"  {nome:<18} v2: r@1={r['recall@1']:.3f} r@3={r['recall@3']:.3f} "
+            f"r@5={r['recall@5']:.3f} mrr={r['mrr']:.3f} | v1: r@1={r1['recall@1']:.3f} "
+            f"r@3={r1['recall@3']:.3f} | p50={lat[len(lat) // 2]:.2f}s"
         )
     _csv(SAIDA / "ablacao_dev.csv", tabela)
     (SAIDA / "ablacao_dev_detalhes.json").write_text(
@@ -135,7 +148,9 @@ def limiar(cfg: dict) -> None:
     for it in itens:
         it["nota"] = round(_nota_portao(ret, it["pergunta"], usar_rr, None), 4)
     pos = sorted(i["nota"] for i in itens if i["rotulo"] == "responder")
-    neg = sorted((i["nota"] for i in itens if i["rotulo"] == "recusar"), reverse=True)
+    # Decisão do Pedro (08/11, opção B): o portão cuida do fora do domínio; as "não consta"
+    # do domínio ficam para a recusa do LLM (gatilho b da Fase 1), só reportadas aqui.
+    neg = sorted((i["nota"] for i in itens if i["subtipo"] == "fora_dominio"), reverse=True)
     max_fp = int(0.05 * len(neg))
     # Aceita se nota >= τ. Com no máximo max_fp negativas acima, τ fica logo acima da
     # (max_fp+1)-ésima maior nota negativa: é o menor τ que respeita o limite.
@@ -143,6 +158,7 @@ def limiar(cfg: dict) -> None:
     tau = round(corte + 1e-4, 4)
     tpr = sum(p >= tau for p in pos) / len(pos)
     fpr = sum(n >= tau for n in neg) / len(neg)
+    nao_consta = [i["nota"] for i in itens if i["subtipo"] == "nao_consta"]
     curva = []
     for t in sorted({i["nota"] for i in itens}):
         curva.append(
@@ -150,6 +166,7 @@ def limiar(cfg: dict) -> None:
                 "tau": t,
                 "tpr": sum(p >= t for p in pos) / len(pos),
                 "fpr": sum(n >= t for n in neg) / len(neg),
+                "nao_consta_aceitas": sum(n >= t for n in nao_consta) / len(nao_consta),
             }
         )
     por_subtipo = {}
@@ -158,7 +175,8 @@ def limiar(cfg: dict) -> None:
         por_subtipo[st] = {"n": len(sel), "aceitas": sum(i["nota"] >= tau for i in sel)}
     resultado = {
         "nota": "reranker (top-1)" if usar_rr else "cosseno denso (top-1)",
-        "criterio": "maior TPR das respondíveis com FPR <= 5% das negativas",
+        "criterio": "maior TPR das respondíveis com no máximo 5% das perguntas fora do "
+        "domínio passando (opção B, Pedro, 08/11/2026); 'não consta' recusadas pelo LLM",
         "tau": tau,
         "tpr": round(tpr, 3),
         "fpr": round(fpr, 3),
@@ -199,7 +217,12 @@ def final(cfg: dict) -> None:
                 portao.append(
                     {"id": c.id, "tipo": c.tipo, "nota": round(nota, 4), "aceita": nota >= tau}
                 )
-        saida[split] = {"recuperacao": resumir(linhas, KS), "linhas": linhas, "portao": portao}
+        saida[split] = {
+            "recuperacao": resumir(linhas, KS),
+            "recuperacao_v1": _resumo_v1(linhas),
+            "linhas": linhas,
+            "portao": portao,
+        }
         r = saida[split]["recuperacao"]["total"]
         aceitas = {
             t: (

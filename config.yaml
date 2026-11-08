@@ -14,16 +14,19 @@ embeddings:
   max_length: 512
   normalizar: true
 retrieval:
-  hibrido: true
+  # Escolha da Fase 4 (ablação no dev, gabarito v2; critério recall@3 > recall@1 > latência):
+  # densa empatou com híbrida+reranker em r@3 (0,938) e r@1 (0,750) e é ~100x mais rápida.
+  hibrido: false
   rrf_k: 60
   candidatos: 20
-  top_k_final: 3                   # comparar com 5 na Fase 4
-  reranker: null                   # opcional; definido pela ablação da Fase 4
+  top_k_final: 3                   # r@5 = r@3 na densa: 3 trechos bastam
+  reranker: null                   # não adotado (ver avaliacao/retrieval/ablacao_dev.csv)
   reranker_ablacao:                # modelo testado na ablação (usado quando reranker=True)
     modelo: BAAI/bge-reranker-v2-m3
     revisao: 953dc6f6f85a1b2dbfca4c34a2796e7dde08d41e   # commit do Hugging Face (08/11/2026)
     dispositivo: cuda              # fp16; CPU levou ~12 s/pergunta, GPU ~0,24 s (cabe com o LLM)
-  limiar_recusa: null              # definido na Fase 4, com o split dev
+  # Fase 4: cosseno do melhor trecho (densa); ≤ 5% das fora do domínio passam (dev + calibração).
+  limiar_recusa: 0.6038            # ver avaliacao/retrieval/limiar.json
 llm:
   servidor: ollama
   host: "http://localhost:11434"

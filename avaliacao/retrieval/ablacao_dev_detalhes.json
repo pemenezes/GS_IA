@@ -1,0 +1,4190 @@
+{
+ "denso": {
+  "por_tipo": {
+   "direta": {
+    "n": 7,
+    "recall@1": 0.8571428571428571,
+    "acertos@1": 6,
+    "ic@1": [
+     0.48686549668097007,
+     0.9743210440510253
+    ],
+    "recall@3": 1.0,
+    "acertos@3": 7,
+    "ic@3": [
+     0.6456611570247934,
+     1.0
+    ],
+    "recall@5": 1.0,
+    "acertos@5": 7,
+    "ic@5": [
+     0.6456611570247934,
+     1.0
+    ],
+    "mrr": 0.9285714285714286
+   },
+   "total": {
+    "n": 16,
+    "recall@1": 0.75,
+    "acertos@1": 12,
+    "ic@1": [
+     0.5050123107060135,
+     0.8981809801576265
+    ],
+    "recall@3": 0.9375,
+    "acertos@3": 15,
+    "ic@3": [
+     0.7167073163197013,
+     0.9888809426916687
+    ],
+    "recall@5": 0.9375,
+    "acertos@5": 15,
+    "ic@5": [
+     0.7167073163197013,
+     0.9888809426916687
+    ],
+    "mrr": 0.8333333333333334,
+    "todos_gold@1": 0.0,
+    "todos_gold@3": 0.0,
+    "todos_gold@5": 0.0
+   },
+   "coloquial": {
+    "n": 5,
+    "recall@1": 0.8,
+    "acertos@1": 4,
+    "ic@1": [
+     0.3755282641185388,
+     0.9637768390302125
+    ],
+    "recall@3": 1.0,
+    "acertos@3": 5,
+    "ic@3": [
+     0.5655085052479191,
+     1.0
+    ],
+    "recall@5": 1.0,
+    "acertos@5": 5,
+    "ic@5": [
+     0.5655085052479191,
+     1.0
+    ],
+    "mrr": 0.9
+   },
+   "ruido": {
+    "n": 2,
+    "recall@1": 0.5,
+    "acertos@1": 1,
+    "ic@1": [
+     0.09452865480086614,
+     0.9054713451991339
+    ],
+    "recall@3": 0.5,
+    "acertos@3": 1,
+    "ic@3": [
+     0.09452865480086614,
+     0.9054713451991339
+    ],
+    "recall@5": 0.5,
+    "acertos@5": 1,
+    "ic@5": [
+     0.09452865480086614,
+     0.9054713451991339
+    ],
+    "mrr": 0.5
+   },
+   "multi_trecho": {
+    "n": 2,
+    "recall@1": 0.5,
+    "acertos@1": 1,
+    "ic@1": [
+     0.09452865480086614,
+     0.9054713451991339
+    ],
+    "recall@3": 1.0,
+    "acertos@3": 2,
+    "ic@3": [
+     0.34237195288961925,
+     1.0
+    ],
+    "recall@5": 1.0,
+    "acertos@5": 2,
+    "ic@5": [
+     0.34237195288961925,
+     1.0
+    ],
+    "mrr": 0.6666666666666666,
+    "todos_gold@1": 0.0,
+    "todos_gold@3": 0.0,
+    "todos_gold@5": 0.0
+   }
+  },
+  "por_tipo_v1": {
+   "direta": {
+    "n": 7,
+    "recall@1": 0.7142857142857143,
+    "acertos@1": 5,
+    "ic@1": [
+     0.35892909014821267,
+     0.9177828342909844
+    ],
+    "recall@3": 0.7142857142857143,
+    "acertos@3": 5,
+    "ic@3": [
+     0.35892909014821267,
+     0.9177828342909844
+    ],
+    "recall@5": 0.8571428571428571,
+    "acertos@5": 6,
+    "ic@5": [
+     0.48686549668097007,
+     0.9743210440510253
+    ],
+    "mrr": 0.75
+   },
+   "total": {
+    "n": 16,
+    "recall@1": 0.375,
+    "acertos@1": 6,
+    "ic@1": [
+     0.18480982554752806,
+     0.613593529020652
+    ],
+    "recall@3": 0.5625,
+    "acertos@3": 9,
+    "ic@3": [
+     0.33178195606776517,
+     0.7690163666481448
+    ],
+    "recall@5": 0.6875,
+    "acertos@5": 11,
+    "ic@5": [
+     0.4440393186673406,
+     0.8583556494803894
+    ],
+    "mrr": 0.4791666666666667,
+    "todos_gold@1": 0.0,
+    "todos_gold@3": 0.0,
+    "todos_gold@5": 0.0
+   },
+   "coloquial": {
+    "n": 5,
+    "recall@1": 0.2,
+    "acertos@1": 1,
+    "ic@1": [
+     0.03622316096978745,
+     0.6244717358814613
+    ],
+    "recall@3": 0.6,
+    "acertos@3": 3,
+    "ic@3": [
+     0.23071993220883708,
+     0.8823817688407467
+    ],
+    "recall@5": 0.6,
+    "acertos@5": 3,
+    "ic@5": [
+     0.23071993220883708,
+     0.8823817688407467
+    ],
+    "mrr": 0.36666666666666664
+   },
+   "ruido": {
+    "n": 2,
+    "recall@1": 0.0,
+    "acertos@1": 0,
+    "ic@1": [
+     0.0,
+     0.6576280471103807
+    ],
+    "recall@3": 0.0,
+    "acertos@3": 0,
+    "ic@3": [
+     0.0,
+     0.6576280471103807
+    ],
+    "recall@5": 0.5,
+    "acertos@5": 1,
+    "ic@5": [
+     0.09452865480086614,
+     0.9054713451991339
+    ],
+    "mrr": 0.125
+   },
+   "multi_trecho": {
+    "n": 2,
+    "recall@1": 0.0,
+    "acertos@1": 0,
+    "ic@1": [
+     0.0,
+     0.6576280471103807
+    ],
+    "recall@3": 0.5,
+    "acertos@3": 1,
+    "ic@3": [
+     0.09452865480086614,
+     0.9054713451991339
+    ],
+    "recall@5": 0.5,
+    "acertos@5": 1,
+    "ic@5": [
+     0.09452865480086614,
+     0.9054713451991339
+    ],
+    "mrr": 0.16666666666666666,
+    "todos_gold@1": 0.0,
+    "todos_gold@3": 0.0,
+    "todos_gold@5": 0.0
+   }
+  },
+  "linhas": [
+   {
+    "id": "T-001",
+    "tipo": "direta",
+    "split": "dev",
+    "gold": [
+     "D01-art362"
+    ],
+    "gold_v2": [
+     "D01-art362",
+     "D01-anexoi-clausulasexta-p3",
+     "D14-q15"
+    ],
+    "ranking": [
+     "D01-art362",
+     "D01-anexoi-clausulasexta-p3",
+     "D01-art587",
+     "D01-art365",
+     "D14-q15"
+    ],
+    "posicao_v1": 1,
+    "posicao": 1,
+    "todos_gold": {
+     "1": true,
+     "3": true,
+     "5": true
+    },
+    "latencia_s": 0.001
+   },
+   {
+    "id": "T-004",
+    "tipo": "direta",
+    "split": "dev",
+    "gold": [
+     "D13-s4.8-item105"
+    ],
+    "gold_v2": [
+     "D13-s4.8-item105"
+    ],
+    "ranking": [
+     "D13-s4.8-item105",
+     "D14-q14",
+     "D13-s4.8-item106",
+     "D01-art362",
+     "D13-s4.8-item107"
+    ],
+    "posicao_v1": 1,
+    "posicao": 1,
+    "todos_gold": {
+     "1": true,
+     "3": true,
+     "5": true
+    },
+    "latencia_s": 0.001
+   },
+   {
+    "id": "T-010",
+    "tipo": "direta",
+    "split": "dev",
+    "gold": [
+     "D02-art1"
+    ],
+    "gold_v2": [
+     "D02-art1",
+     "D01-art179-p1",
+     "D17-p1-s03",
+     "D16-s00"
+    ],
+    "ranking": [
+     "D16-s01",
+     "D16-s00",
+     "D16-s05-p1",
+     "D02-art1",
+     "D17-p2-q03"
+    ],
+    "posicao_v1": 4,
+    "posicao": 2,
+    "todos_gold": {
+     "1": false,
+     "3": false,
+     "5": true
+    },
+    "latencia_s": 0.001
+   },
+   {
+    "id": "T-012",
+    "tipo": "direta",
+    "split": "dev",
+    "gold": [
+     "D02-art2-p3"
+    ],
+    "gold_v2": [
+     "D02-art2-p3",
+     "D03-art3",
+     "D17-p1-s03"
+    ],
+    "ranking": [
+     "D02-art2-p3",
+     "D17-p2-q04",
+     "D03-art3",
+     "D17-p1-s03",
+     "D17-p1-s04"
+    ],
+    "posicao_v1": 1,
+    "posicao": 1,
+    "todos_gold": {
+     "1": true,
+     "3": true,
+     "5": true
+    },
+    "latencia_s": 0.001
+   },
+   {
+    "id": "T-014",
+    "tipo": "direta",
+    "split": "dev",
+    "gold": [
+     "D07-s8.2-item198",
+     "D14-q14"
+    ],
+    "gold_v2": [
+     "D07-s8.2-item198",
+     "D14-q14",
+     "D01-art436-p1",
+     "D01-anexoi-clausulasexta-p4"
+    ],
+    "ranking": [
+     "D07-s8.2-item198",
+     "D07-s8.2-item196",
+     "D01-art436-p1",
+     "D01-art436-p2",
+     "D01-anexoi-clausulasexta-p4"
+    ],
+    "posicao_v1": 1,
+    "posicao": 1,
+    "todos_gold": {
+     "1": false,
+     "3": false,
+     "5": false
+    },
+    "latencia_s": 0.001
+   },
+   {
+    "id": "T-016",
+    "tipo": "direta",
+    "split": "dev",
+    "gold": [
+     "D01-art2-p15",
+     "D19-s01-p1"
+    ],
+    "gold_v2": [
+     "D01-art2-p15",
+     "D19-s01-p1",
+     "D09-art1-p6"
+    ],
+    "ranking": [
+     "D19-s01-p1",
+     "D01-art31",
+     "D09-art1-p8",
+     "D09-art4-p1",
+     "D09-art28"
+    ],
+    "posicao_v1": 1,
+    "posicao": 1,
+    "todos_gold": {
+     "1": false,
+     "3": false,
+     "5": false
+    },
+    "latencia_s": 0.0
+   },
+   {
+    "id": "T-017",
+    "tipo": "direta",
+    "split": "dev",
+    "gold": [
+     "D01-art421"
+    ],
+    "gold_v2": [
+     "D01-art421",
+     "D01-anexoi-clausulaoitava-p3",
+     "D01-anexoiv-tabela-p5"
+    ],
+    "ranking": [
+     "D01-anexoi-clausulaoitava-p3",
+     "D01-art325-p3",
+     "D01-art408",
+     "D01-art325-p4",
+     "D07-s8.3-item275"
+    ],
+    "posicao_v1": 0,
+    "posicao": 1,
+    "todos_gold": {
+     "1": false,
+     "3": false,
+     "5": false
+    },
+    "latencia_s": 0.0
+   },
+   {
+    "id": "T-019",
+    "tipo": "coloquial",
+    "split": "dev",
+    "gold": [
+     "D01-art362"
+    ],
+    "gold_v2": [
+     "D01-art362",
+     "D01-anexoi-clausulasexta-p3",
+     "D14-q15"
+    ],
+    "ranking": [
+     "D01-anexoi-clausulasexta-p3",
+     "D14-q02",
+     "D01-art339",
+     "D14-q05",
+     "D14-q07"
+    ],
+    "posicao_v1": 0,
+    "posicao": 1,
+    "todos_gold": {
+     "1": false,
+     "3": false,
+     "5": false
+    },
+    "latencia_s": 0.0
+   },
+   {
+    "id": "T-023",
+    "tipo": "coloquial",
+    "split": "dev",
+    "gold": [
+     "D07-s8.2-item198",
+     "D14-q14"
+    ],
+    "gold_v2": [
+     "D07-s8.2-item198",
+     "D14-q14",
+     "D01-art436-p1",
+     "D01-anexoi-clausulasexta-p4"
+    ],
+    "ranking": [
+     "D01-anexoi-clausulasexta-p4",
+     "D07-s8.2-item196",
+     "D07-s8.2-item198",
+     "D14-q02",
+     "D14-q14"
+    ],
+    "posicao_v1": 3,
+    "posicao": 1,
+    "todos_gold": {
+     "1": false,
+     "3": false,
+     "5": true
+    },
+    "latencia_s": 0.0
+   },
+   {
+    "id": "T-025",
+    "tipo": "coloquial",
+    "split": "dev",
+    "gold": [
+     "D03-art1"
+    ],
+    "gold_v2": [
+     "D03-art1",
+     "D17-p1-s04",
+     "D17-p2-q03",
+     "D01-art179-p3"
+    ],
+    "ranking": [
+     "D17-p2-q03",
+     "D17-p1-s04",
+     "D17-p1-s05",
+     "D02-art2-p2",
+     "D17-p2-q04"
+    ],
+    "posicao_v1": 0,
+    "posicao": 1,
+    "todos_gold": {
+     "1": false,
+     "3": false,
+     "5": false
+    },
+    "latencia_s": 0.0
+   },
+   {
+    "id": "T-027",
+    "tipo": "coloquial",
+    "split": "dev",
+    "gold": [
+     "D13-s4.8-item105"
+    ],
+    "gold_v2": [
+     "D13-s4.8-item105"
+    ],
+    "ranking": [
+     "D14-q14",
+     "D13-s4.8-item105",
+     "D14-q11",
+     "D14-q10",
+     "D13-s4.8-item106"
+    ],
+    "posicao_v1": 2,
+    "posicao": 2,
+    "todos_gold": {
+     "1": false,
+     "3": true,
+     "5": true
+    },
+    "latencia_s": 0.0
+   },
+   {
+    "id": "T-029",
+    "tipo": "coloquial",
+    "split": "dev",
+    "gold": [
+     "D01-art2-p15",
+     "D19-s01-p1"
+    ],
+    "gold_v2": [
+     "D01-art2-p15",
+     "D19-s01-p1",
+     "D09-art1-p6"
+    ],
+    "ranking": [
+     "D19-s01-p1",
+     "D01-art31",
+     "D01-art655c-p1",
+     "D09-art4-p1",
+     "D01-art655c-p2"
+    ],
+    "posicao_v1": 1,
+    "posicao": 1,
+    "todos_gold": {
+     "1": false,
+     "3": false,
+     "5": false
+    },
+    "latencia_s": 0.0
+   },
+   {
+    "id": "T-031",
+    "tipo": "ruido",
+    "split": "dev",
+    "gold": [
+     "D01-art362"
+    ],
+    "gold_v2": [
+     "D01-art362",
+     "D01-anexoi-clausulasexta-p3",
+     "D14-q15"
+    ],
+    "ranking": [
+     "D14-q05",
+     "D01-art347",
+     "D14-q19",
+     "D01-art339",
+     "D01-art115"
+    ],
+    "posicao_v1": 0,
+    "posicao": 0,
+    "todos_gold": {
+     "1": false,
+     "3": false,
+     "5": false
+    },
+    "latencia_s": 0.0
+   },
+   {
+    "id": "T-035",
+    "tipo": "ruido",
+    "split": "dev",
+    "gold": [
+     "D07-s8.2-item198",
+     "D14-q14"
+    ],
+    "gold_v2": [
+     "D07-s8.2-item198",
+     "D14-q14",
+     "D01-art436-p1",
+     "D01-anexoi-clausulasexta-p4"
+    ],
+    "ranking": [
+     "D01-anexoi-clausulasexta-p4",
+     "D01-art436-p1",
+     "D01-anexoi-clausulasexta-p3",
+     "D07-s8.2-item198",
+     "D14-q02"
+    ],
+    "posicao_v1": 4,
+    "posicao": 1,
+    "todos_gold": {
+     "1": false,
+     "3": false,
+     "5": false
+    },
+    "latencia_s": 0.0
+   },
+   {
+    "id": "T-041",
+    "tipo": "multi_trecho",
+    "split": "dev",
+    "gold": [
+     "D03-art1",
+     "D05-art9"
+    ],
+    "gold_v2": [
+     "D03-art1",
+     "D05-art9",
+     "D17-p1-s04",
+     "D17-p2-q03",
+     "D01-art179-p3"
+    ],
+    "ranking": [
+     "D17-p1-s04",
+     "D17-p2-q03",
+     "D16-s04",
+     "D16-s01",
+     "D01-art179-p3"
+    ],
+    "posicao_v1": 0,
+    "posicao": 1,
+    "todos_gold": {
+     "1": false,
+     "3": false,
+     "5": false
+    },
+    "latencia_s": 0.0
+   },
+   {
+    "id": "T-042",
+    "tipo": "multi_trecho",
+    "split": "dev",
+    "gold": [
+     "D01-art423",
+     "D18-p1-s03-p2"
+    ],
+    "gold_v2": [
+     "D01-art423",
+     "D18-p1-s03-p2",
+     "D01-anexoi-clausulaoitava-p4"
+    ],
+    "ranking": [
+     "D18-p2-s00",
+     "D14-q08",
+     "D01-art423",
+     "D01-art421",
+     "D01-art325-p3"
+    ],
+    "posicao_v1": 3,
+    "posicao": 3,
+    "todos_gold": {
+     "1": false,
+     "3": false,
+     "5": false
+    },
+    "latencia_s": 0.0
+   }
+  ]
+ },
+ "bm25": {
+  "por_tipo": {
+   "direta": {
+    "n": 7,
+    "recall@1": 0.42857142857142855,
+    "acertos@1": 3,
+    "ic@1": [
+     0.15821692226262685,
+     0.7495457695909742
+    ],
+    "recall@3": 0.5714285714285714,
+    "acertos@3": 4,
+    "ic@3": [
+     0.2504542304090258,
+     0.8417830777373732
+    ],
+    "recall@5": 0.8571428571428571,
+    "acertos@5": 6,
+    "ic@5": [
+     0.48686549668097007,
+     0.9743210440510253
+    ],
+    "mrr": 0.5642857142857143
+   },
+   "total": {
+    "n": 16,
+    "recall@1": 0.4375,
+    "acertos@1": 7,
+    "ic@1": [
+     0.2309836333518552,
+     0.6682180439322347
+    ],
+    "recall@3": 0.5625,
+    "acertos@3": 9,
+    "ic@3": [
+     0.33178195606776517,
+     0.7690163666481448
+    ],
+    "recall@5": 0.6875,
+    "acertos@5": 11,
+    "ic@5": [
+     0.4440393186673406,
+     0.8583556494803894
+    ],
+    "mrr": 0.528125,
+    "todos_gold@1": 0.0,
+    "todos_gold@3": 0.0,
+    "todos_gold@5": 0.0
+   },
+   "coloquial": {
+    "n": 5,
+    "recall@1": 0.4,
+    "acertos@1": 2,
+    "ic@1": [
+     0.1176182311592533,
+     0.769280067791163
+    ],
+    "recall@3": 0.6,
+    "acertos@3": 3,
+    "ic@3": [
+     0.23071993220883708,
+     0.8823817688407467
+    ],
+    "recall@5": 0.6,
+    "acertos@5": 3,
+    "ic@5": [
+     0.23071993220883708,
+     0.8823817688407467
+    ],
+    "mrr": 0.5
+   },
+   "ruido": {
+    "n": 2,
+    "recall@1": 0.5,
+    "acertos@1": 1,
+    "ic@1": [
+     0.09452865480086614,
+     0.9054713451991339
+    ],
+    "recall@3": 0.5,
+    "acertos@3": 1,
+    "ic@3": [
+     0.09452865480086614,
+     0.9054713451991339
+    ],
+    "recall@5": 0.5,
+    "acertos@5": 1,
+    "ic@5": [
+     0.09452865480086614,
+     0.9054713451991339
+    ],
+    "mrr": 0.5
+   },
+   "multi_trecho": {
+    "n": 2,
+    "recall@1": 0.5,
+    "acertos@1": 1,
+    "ic@1": [
+     0.09452865480086614,
+     0.9054713451991339
+    ],
+    "recall@3": 0.5,
+    "acertos@3": 1,
+    "ic@3": [
+     0.09452865480086614,
+     0.9054713451991339
+    ],
+    "recall@5": 0.5,
+    "acertos@5": 1,
+    "ic@5": [
+     0.09452865480086614,
+     0.9054713451991339
+    ],
+    "mrr": 0.5,
+    "todos_gold@1": 0.0,
+    "todos_gold@3": 0.0,
+    "todos_gold@5": 0.0
+   }
+  },
+  "por_tipo_v1": {
+   "direta": {
+    "n": 7,
+    "recall@1": 0.42857142857142855,
+    "acertos@1": 3,
+    "ic@1": [
+     0.15821692226262685,
+     0.7495457695909742
+    ],
+    "recall@3": 0.5714285714285714,
+    "acertos@3": 4,
+    "ic@3": [
+     0.2504542304090258,
+     0.8417830777373732
+    ],
+    "recall@5": 0.7142857142857143,
+    "acertos@5": 5,
+    "ic@5": [
+     0.35892909014821267,
+     0.9177828342909844
+    ],
+    "mrr": 0.5357142857142857
+   },
+   "total": {
+    "n": 16,
+    "recall@1": 0.3125,
+    "acertos@1": 5,
+    "ic@1": [
+     0.14164435051961052,
+     0.5559606813326594
+    ],
+    "recall@3": 0.375,
+    "acertos@3": 6,
+    "ic@3": [
+     0.18480982554752806,
+     0.613593529020652
+    ],
+    "recall@5": 0.4375,
+    "acertos@5": 7,
+    "ic@5": [
+     0.2309836333518552,
+     0.6682180439322347
+    ],
+    "mrr": 0.359375,
+    "todos_gold@1": 0.0,
+    "todos_gold@3": 0.0,
+    "todos_gold@5": 0.0
+   },
+   "coloquial": {
+    "n": 5,
+    "recall@1": 0.2,
+    "acertos@1": 1,
+    "ic@1": [
+     0.03622316096978745,
+     0.6244717358814613
+    ],
+    "recall@3": 0.2,
+    "acertos@3": 1,
+    "ic@3": [
+     0.03622316096978745,
+     0.6244717358814613
+    ],
+    "recall@5": 0.2,
+    "acertos@5": 1,
+    "ic@5": [
+     0.03622316096978745,
+     0.6244717358814613
+    ],
+    "mrr": 0.2
+   },
+   "ruido": {
+    "n": 2,
+    "recall@1": 0.5,
+    "acertos@1": 1,
+    "ic@1": [
+     0.09452865480086614,
+     0.9054713451991339
+    ],
+    "recall@3": 0.5,
+    "acertos@3": 1,
+    "ic@3": [
+     0.09452865480086614,
+     0.9054713451991339
+    ],
+    "recall@5": 0.5,
+    "acertos@5": 1,
+    "ic@5": [
+     0.09452865480086614,
+     0.9054713451991339
+    ],
+    "mrr": 0.5
+   },
+   "multi_trecho": {
+    "n": 2,
+    "recall@1": 0.0,
+    "acertos@1": 0,
+    "ic@1": [
+     0.0,
+     0.6576280471103807
+    ],
+    "recall@3": 0.0,
+    "acertos@3": 0,
+    "ic@3": [
+     0.0,
+     0.6576280471103807
+    ],
+    "recall@5": 0.0,
+    "acertos@5": 0,
+    "ic@5": [
+     0.0,
+     0.6576280471103807
+    ],
+    "mrr": 0.0,
+    "todos_gold@1": 0.0,
+    "todos_gold@3": 0.0,
+    "todos_gold@5": 0.0
+   }
+  },
+  "linhas": [
+   {
+    "id": "T-001",
+    "tipo": "direta",
+    "split": "dev",
+    "gold": [
+     "D01-art362"
+    ],
+    "gold_v2": [
+     "D01-art362",
+     "D01-anexoi-clausulasexta-p3",
+     "D14-q15"
+    ],
+    "ranking": [
+     "D01-art362",
+     "D01-anexoiv-tabela-p11",
+     "D14-q15",
+     "D01-art365",
+     "D01-anexoiv-tabela-p12"
+    ],
+    "posicao_v1": 1,
+    "posicao": 1,
+    "todos_gold": {
+     "1": true,
+     "3": true,
+     "5": true
+    },
+    "latencia_s": 0.007
+   },
+   {
+    "id": "T-004",
+    "tipo": "direta",
+    "split": "dev",
+    "gold": [
+     "D13-s4.8-item105"
+    ],
+    "gold_v2": [
+     "D13-s4.8-item105"
+    ],
+    "ranking": [
+     "D14-q14",
+     "D13-s4.8-item105",
+     "D13-s4.8-item109",
+     "D01-art434",
+     "D18-p1-s03-p1"
+    ],
+    "posicao_v1": 2,
+    "posicao": 2,
+    "todos_gold": {
+     "1": false,
+     "3": true,
+     "5": true
+    },
+    "latencia_s": 0.005
+   },
+   {
+    "id": "T-010",
+    "tipo": "direta",
+    "split": "dev",
+    "gold": [
+     "D02-art1"
+    ],
+    "gold_v2": [
+     "D02-art1",
+     "D01-art179-p1",
+     "D17-p1-s03",
+     "D16-s00"
+    ],
+    "ranking": [
+     "D16-s01",
+     "D16-s05-p1",
+     "D15-q16",
+     "D16-s02",
+     "D05-art1"
+    ],
+    "posicao_v1": 0,
+    "posicao": 0,
+    "todos_gold": {
+     "1": false,
+     "3": false,
+     "5": false
+    },
+    "latencia_s": 0.003
+   },
+   {
+    "id": "T-012",
+    "tipo": "direta",
+    "split": "dev",
+    "gold": [
+     "D02-art2-p3"
+    ],
+    "gold_v2": [
+     "D02-art2-p3",
+     "D03-art3",
+     "D17-p1-s03"
+    ],
+    "ranking": [
+     "D02-art2-p3",
+     "D17-p2-q04",
+     "D17-p1-s05",
+     "D17-p1-s04",
+     "D03-art3"
+    ],
+    "posicao_v1": 1,
+    "posicao": 1,
+    "todos_gold": {
+     "1": true,
+     "3": true,
+     "5": true
+    },
+    "latencia_s": 0.005
+   },
+   {
+    "id": "T-014",
+    "tipo": "direta",
+    "split": "dev",
+    "gold": [
+     "D07-s8.2-item198",
+     "D14-q14"
+    ],
+    "gold_v2": [
+     "D07-s8.2-item198",
+     "D14-q14",
+     "D01-art436-p1",
+     "D01-anexoi-clausulasexta-p4"
+    ],
+    "ranking": [
+     "D14-q14",
+     "D07-s8.2-item196",
+     "D17-p1-s05",
+     "D07-s8.2-item191",
+     "D07-s8.2-item198"
+    ],
+    "posicao_v1": 1,
+    "posicao": 1,
+    "todos_gold": {
+     "1": false,
+     "3": false,
+     "5": true
+    },
+    "latencia_s": 0.007
+   },
+   {
+    "id": "T-016",
+    "tipo": "direta",
+    "split": "dev",
+    "gold": [
+     "D01-art2-p15",
+     "D19-s01-p1"
+    ],
+    "gold_v2": [
+     "D01-art2-p15",
+     "D19-s01-p1",
+     "D09-art1-p6"
+    ],
+    "ranking": [
+     "D01-art655r-p5",
+     "D01-art31",
+     "D01-art105",
+     "D01-art2-p15",
+     "D01-art73a-p1"
+    ],
+    "posicao_v1": 4,
+    "posicao": 4,
+    "todos_gold": {
+     "1": false,
+     "3": false,
+     "5": false
+    },
+    "latencia_s": 0.004
+   },
+   {
+    "id": "T-017",
+    "tipo": "direta",
+    "split": "dev",
+    "gold": [
+     "D01-art421"
+    ],
+    "gold_v2": [
+     "D01-art421",
+     "D01-anexoi-clausulaoitava-p3",
+     "D01-anexoiv-tabela-p5"
+    ],
+    "ranking": [
+     "D18-p1-s03-p1",
+     "D01-art325-p3",
+     "D01-art325-p4",
+     "D07-s8.3-item285",
+     "D01-anexoi-clausulaoitava-p3"
+    ],
+    "posicao_v1": 0,
+    "posicao": 5,
+    "todos_gold": {
+     "1": false,
+     "3": false,
+     "5": false
+    },
+    "latencia_s": 0.003
+   },
+   {
+    "id": "T-019",
+    "tipo": "coloquial",
+    "split": "dev",
+    "gold": [
+     "D01-art362"
+    ],
+    "gold_v2": [
+     "D01-art362",
+     "D01-anexoi-clausulasexta-p3",
+     "D14-q15"
+    ],
+    "ranking": [
+     "D14-q05",
+     "D14-q15",
+     "D14-q03",
+     "D15-q05",
+     "D15-q02"
+    ],
+    "posicao_v1": 0,
+    "posicao": 2,
+    "todos_gold": {
+     "1": false,
+     "3": false,
+     "5": false
+    },
+    "latencia_s": 0.007
+   },
+   {
+    "id": "T-023",
+    "tipo": "coloquial",
+    "split": "dev",
+    "gold": [
+     "D07-s8.2-item198",
+     "D14-q14"
+    ],
+    "gold_v2": [
+     "D07-s8.2-item198",
+     "D14-q14",
+     "D01-art436-p1",
+     "D01-anexoi-clausulasexta-p4"
+    ],
+    "ranking": [
+     "D14-q14",
+     "D14-q10",
+     "D14-q15",
+     "D14-q05",
+     "D07-s8.2-item159"
+    ],
+    "posicao_v1": 1,
+    "posicao": 1,
+    "todos_gold": {
+     "1": false,
+     "3": false,
+     "5": false
+    },
+    "latencia_s": 0.007
+   },
+   {
+    "id": "T-025",
+    "tipo": "coloquial",
+    "split": "dev",
+    "gold": [
+     "D03-art1"
+    ],
+    "gold_v2": [
+     "D03-art1",
+     "D17-p1-s04",
+     "D17-p2-q03",
+     "D01-art179-p3"
+    ],
+    "ranking": [
+     "D17-p2-q03",
+     "D17-p1-s04",
+     "D17-p1-s05",
+     "D17-p2-q04",
+     "D01-art178a-p1"
+    ],
+    "posicao_v1": 0,
+    "posicao": 1,
+    "todos_gold": {
+     "1": false,
+     "3": false,
+     "5": false
+    },
+    "latencia_s": 0.008
+   },
+   {
+    "id": "T-027",
+    "tipo": "coloquial",
+    "split": "dev",
+    "gold": [
+     "D13-s4.8-item105"
+    ],
+    "gold_v2": [
+     "D13-s4.8-item105"
+    ],
+    "ranking": [
+     "D14-q14",
+     "D15-q04",
+     "D14-q05",
+     "D18-p2-s01-p17",
+     "D14-q15"
+    ],
+    "posicao_v1": 0,
+    "posicao": 0,
+    "todos_gold": {
+     "1": false,
+     "3": false,
+     "5": false
+    },
+    "latencia_s": 0.004
+   },
+   {
+    "id": "T-029",
+    "tipo": "coloquial",
+    "split": "dev",
+    "gold": [
+     "D01-art2-p15",
+     "D19-s01-p1"
+    ],
+    "gold_v2": [
+     "D01-art2-p15",
+     "D19-s01-p1",
+     "D09-art1-p6"
+    ],
+    "ranking": [
+     "D01-art655b",
+     "D01-art522",
+     "D01-art655o-p4",
+     "D01-art30-p3",
+     "D01-art123"
+    ],
+    "posicao_v1": 0,
+    "posicao": 0,
+    "todos_gold": {
+     "1": false,
+     "3": false,
+     "5": false
+    },
+    "latencia_s": 0.005
+   },
+   {
+    "id": "T-031",
+    "tipo": "ruido",
+    "split": "dev",
+    "gold": [
+     "D01-art362"
+    ],
+    "gold_v2": [
+     "D01-art362",
+     "D01-anexoi-clausulasexta-p3",
+     "D14-q15"
+    ],
+    "ranking": [
+     "D14-q03",
+     "D01-art109-p2",
+     "D14-q19",
+     "D12-s3-item11",
+     "D14-q04"
+    ],
+    "posicao_v1": 0,
+    "posicao": 0,
+    "todos_gold": {
+     "1": false,
+     "3": false,
+     "5": false
+    },
+    "latencia_s": 0.005
+   },
+   {
+    "id": "T-035",
+    "tipo": "ruido",
+    "split": "dev",
+    "gold": [
+     "D07-s8.2-item198",
+     "D14-q14"
+    ],
+    "gold_v2": [
+     "D07-s8.2-item198",
+     "D14-q14",
+     "D01-art436-p1",
+     "D01-anexoi-clausulasexta-p4"
+    ],
+    "ranking": [
+     "D14-q14",
+     "D14-q10",
+     "D01-art369",
+     "D07-s8.2-item196",
+     "D01-art655c-p9"
+    ],
+    "posicao_v1": 1,
+    "posicao": 1,
+    "todos_gold": {
+     "1": false,
+     "3": false,
+     "5": false
+    },
+    "latencia_s": 0.008
+   },
+   {
+    "id": "T-041",
+    "tipo": "multi_trecho",
+    "split": "dev",
+    "gold": [
+     "D03-art1",
+     "D05-art9"
+    ],
+    "gold_v2": [
+     "D03-art1",
+     "D05-art9",
+     "D17-p1-s04",
+     "D17-p2-q03",
+     "D01-art179-p3"
+    ],
+    "ranking": [
+     "D17-p1-s04",
+     "D17-p2-q03",
+     "D01-anexoi-clausulasetima",
+     "D16-s05-p1",
+     "D17-p2-q02"
+    ],
+    "posicao_v1": 0,
+    "posicao": 1,
+    "todos_gold": {
+     "1": false,
+     "3": false,
+     "5": false
+    },
+    "latencia_s": 0.005
+   },
+   {
+    "id": "T-042",
+    "tipo": "multi_trecho",
+    "split": "dev",
+    "gold": [
+     "D01-art423",
+     "D18-p1-s03-p2"
+    ],
+    "gold_v2": [
+     "D01-art423",
+     "D18-p1-s03-p2",
+     "D01-anexoi-clausulaoitava-p4"
+    ],
+    "ranking": [
+     "D01-anexoi-clausulaoitava-p3",
+     "D18-p1-s03-p1",
+     "D01-art325-p3",
+     "D17-p2-q07",
+     "D14-q08"
+    ],
+    "posicao_v1": 0,
+    "posicao": 0,
+    "todos_gold": {
+     "1": false,
+     "3": false,
+     "5": false
+    },
+    "latencia_s": 0.004
+   }
+  ]
+ },
+ "hibrido": {
+  "por_tipo": {
+   "direta": {
+    "n": 7,
+    "recall@1": 0.42857142857142855,
+    "acertos@1": 3,
+    "ic@1": [
+     0.15821692226262685,
+     0.7495457695909742
+    ],
+    "recall@3": 0.7142857142857143,
+    "acertos@3": 5,
+    "ic@3": [
+     0.35892909014821267,
+     0.9177828342909844
+    ],
+    "recall@5": 1.0,
+    "acertos@5": 7,
+    "ic@5": [
+     0.6456611570247934,
+     1.0
+    ],
+    "mrr": 0.6428571428571429
+   },
+   "total": {
+    "n": 16,
+    "recall@1": 0.4375,
+    "acertos@1": 7,
+    "ic@1": [
+     0.2309836333518552,
+     0.6682180439322347
+    ],
+    "recall@3": 0.625,
+    "acertos@3": 10,
+    "ic@3": [
+     0.3864064709793481,
+     0.815190174452472
+    ],
+    "recall@5": 0.9375,
+    "acertos@5": 15,
+    "ic@5": [
+     0.7167073163197013,
+     0.9888809426916687
+    ],
+    "mrr": 0.603125,
+    "todos_gold@1": 0.0,
+    "todos_gold@3": 0.0,
+    "todos_gold@5": 0.0
+   },
+   "coloquial": {
+    "n": 5,
+    "recall@1": 0.4,
+    "acertos@1": 2,
+    "ic@1": [
+     0.1176182311592533,
+     0.769280067791163
+    ],
+    "recall@3": 0.6,
+    "acertos@3": 3,
+    "ic@3": [
+     0.23071993220883708,
+     0.8823817688407467
+    ],
+    "recall@5": 1.0,
+    "acertos@5": 5,
+    "ic@5": [
+     0.5655085052479191,
+     1.0
+    ],
+    "mrr": 0.5900000000000001
+   },
+   "ruido": {
+    "n": 2,
+    "recall@1": 0.5,
+    "acertos@1": 1,
+    "ic@1": [
+     0.09452865480086614,
+     0.9054713451991339
+    ],
+    "recall@3": 0.5,
+    "acertos@3": 1,
+    "ic@3": [
+     0.09452865480086614,
+     0.9054713451991339
+    ],
+    "recall@5": 0.5,
+    "acertos@5": 1,
+    "ic@5": [
+     0.09452865480086614,
+     0.9054713451991339
+    ],
+    "mrr": 0.5
+   },
+   "multi_trecho": {
+    "n": 2,
+    "recall@1": 0.5,
+    "acertos@1": 1,
+    "ic@1": [
+     0.09452865480086614,
+     0.9054713451991339
+    ],
+    "recall@3": 0.5,
+    "acertos@3": 1,
+    "ic@3": [
+     0.09452865480086614,
+     0.9054713451991339
+    ],
+    "recall@5": 1.0,
+    "acertos@5": 2,
+    "ic@5": [
+     0.34237195288961925,
+     1.0
+    ],
+    "mrr": 0.6,
+    "todos_gold@1": 0.0,
+    "todos_gold@3": 0.0,
+    "todos_gold@5": 0.0
+   }
+  },
+  "por_tipo_v1": {
+   "direta": {
+    "n": 7,
+    "recall@1": 0.42857142857142855,
+    "acertos@1": 3,
+    "ic@1": [
+     0.15821692226262685,
+     0.7495457695909742
+    ],
+    "recall@3": 0.5714285714285714,
+    "acertos@3": 4,
+    "ic@3": [
+     0.2504542304090258,
+     0.8417830777373732
+    ],
+    "recall@5": 1.0,
+    "acertos@5": 7,
+    "ic@5": [
+     0.6456611570247934,
+     1.0
+    ],
+    "mrr": 0.6071428571428571
+   },
+   "total": {
+    "n": 16,
+    "recall@1": 0.3125,
+    "acertos@1": 5,
+    "ic@1": [
+     0.14164435051961052,
+     0.5559606813326594
+    ],
+    "recall@3": 0.375,
+    "acertos@3": 6,
+    "ic@3": [
+     0.18480982554752806,
+     0.613593529020652
+    ],
+    "recall@5": 0.75,
+    "acertos@5": 12,
+    "ic@5": [
+     0.5050123107060135,
+     0.8981809801576265
+    ],
+    "mrr": 0.43125,
+    "todos_gold@1": 0.0,
+    "todos_gold@3": 0.0,
+    "todos_gold@5": 0.0
+   },
+   "coloquial": {
+    "n": 5,
+    "recall@1": 0.2,
+    "acertos@1": 1,
+    "ic@1": [
+     0.03622316096978745,
+     0.6244717358814613
+    ],
+    "recall@3": 0.2,
+    "acertos@3": 1,
+    "ic@3": [
+     0.03622316096978745,
+     0.6244717358814613
+    ],
+    "recall@5": 0.6,
+    "acertos@5": 3,
+    "ic@5": [
+     0.23071993220883708,
+     0.8823817688407467
+    ],
+    "mrr": 0.29
+   },
+   "ruido": {
+    "n": 2,
+    "recall@1": 0.5,
+    "acertos@1": 1,
+    "ic@1": [
+     0.09452865480086614,
+     0.9054713451991339
+    ],
+    "recall@3": 0.5,
+    "acertos@3": 1,
+    "ic@3": [
+     0.09452865480086614,
+     0.9054713451991339
+    ],
+    "recall@5": 0.5,
+    "acertos@5": 1,
+    "ic@5": [
+     0.09452865480086614,
+     0.9054713451991339
+    ],
+    "mrr": 0.5
+   },
+   "multi_trecho": {
+    "n": 2,
+    "recall@1": 0.0,
+    "acertos@1": 0,
+    "ic@1": [
+     0.0,
+     0.6576280471103807
+    ],
+    "recall@3": 0.0,
+    "acertos@3": 0,
+    "ic@3": [
+     0.0,
+     0.6576280471103807
+    ],
+    "recall@5": 0.5,
+    "acertos@5": 1,
+    "ic@5": [
+     0.09452865480086614,
+     0.9054713451991339
+    ],
+    "mrr": 0.1,
+    "todos_gold@1": 0.0,
+    "todos_gold@3": 0.0,
+    "todos_gold@5": 0.0
+   }
+  },
+  "linhas": [
+   {
+    "id": "T-001",
+    "tipo": "direta",
+    "split": "dev",
+    "gold": [
+     "D01-art362"
+    ],
+    "gold_v2": [
+     "D01-art362",
+     "D01-anexoi-clausulasexta-p3",
+     "D14-q15"
+    ],
+    "ranking": [
+     "D01-art362",
+     "D14-q15",
+     "D01-art365",
+     "D01-anexoi-clausulasexta-p3",
+     "D01-anexoiv-tabela-p12"
+    ],
+    "posicao_v1": 1,
+    "posicao": 1,
+    "todos_gold": {
+     "1": true,
+     "3": true,
+     "5": true
+    },
+    "latencia_s": 0.007
+   },
+   {
+    "id": "T-004",
+    "tipo": "direta",
+    "split": "dev",
+    "gold": [
+     "D13-s4.8-item105"
+    ],
+    "gold_v2": [
+     "D13-s4.8-item105"
+    ],
+    "ranking": [
+     "D13-s4.8-item105",
+     "D14-q14",
+     "D01-art434",
+     "D14-q10",
+     "D13-s4.8-item106"
+    ],
+    "posicao_v1": 1,
+    "posicao": 1,
+    "todos_gold": {
+     "1": true,
+     "3": true,
+     "5": true
+    },
+    "latencia_s": 0.005
+   },
+   {
+    "id": "T-010",
+    "tipo": "direta",
+    "split": "dev",
+    "gold": [
+     "D02-art1"
+    ],
+    "gold_v2": [
+     "D02-art1",
+     "D01-art179-p1",
+     "D17-p1-s03",
+     "D16-s00"
+    ],
+    "ranking": [
+     "D16-s01",
+     "D16-s05-p1",
+     "D17-p2-q03",
+     "D02-art1",
+     "D16-s02"
+    ],
+    "posicao_v1": 4,
+    "posicao": 4,
+    "todos_gold": {
+     "1": false,
+     "3": false,
+     "5": true
+    },
+    "latencia_s": 0.003
+   },
+   {
+    "id": "T-012",
+    "tipo": "direta",
+    "split": "dev",
+    "gold": [
+     "D02-art2-p3"
+    ],
+    "gold_v2": [
+     "D02-art2-p3",
+     "D03-art3",
+     "D17-p1-s03"
+    ],
+    "ranking": [
+     "D02-art2-p3",
+     "D17-p2-q04",
+     "D03-art3",
+     "D17-p1-s05",
+     "D17-p1-s04"
+    ],
+    "posicao_v1": 1,
+    "posicao": 1,
+    "todos_gold": {
+     "1": true,
+     "3": true,
+     "5": true
+    },
+    "latencia_s": 0.005
+   },
+   {
+    "id": "T-014",
+    "tipo": "direta",
+    "split": "dev",
+    "gold": [
+     "D07-s8.2-item198",
+     "D14-q14"
+    ],
+    "gold_v2": [
+     "D07-s8.2-item198",
+     "D14-q14",
+     "D01-art436-p1",
+     "D01-anexoi-clausulasexta-p4"
+    ],
+    "ranking": [
+     "D07-s8.2-item196",
+     "D07-s8.2-item198",
+     "D14-q14",
+     "D13-s4.8-item105",
+     "D01-anexoi-clausulasexta-p4"
+    ],
+    "posicao_v1": 2,
+    "posicao": 2,
+    "todos_gold": {
+     "1": false,
+     "3": true,
+     "5": true
+    },
+    "latencia_s": 0.007
+   },
+   {
+    "id": "T-016",
+    "tipo": "direta",
+    "split": "dev",
+    "gold": [
+     "D01-art2-p15",
+     "D19-s01-p1"
+    ],
+    "gold_v2": [
+     "D01-art2-p15",
+     "D19-s01-p1",
+     "D09-art1-p6"
+    ],
+    "ranking": [
+     "D01-art31",
+     "D01-art655r-p5",
+     "D09-art4-p1",
+     "D01-art2-p15",
+     "D01-art655r-p1"
+    ],
+    "posicao_v1": 4,
+    "posicao": 4,
+    "todos_gold": {
+     "1": false,
+     "3": false,
+     "5": false
+    },
+    "latencia_s": 0.006
+   },
+   {
+    "id": "T-017",
+    "tipo": "direta",
+    "split": "dev",
+    "gold": [
+     "D01-art421"
+    ],
+    "gold_v2": [
+     "D01-art421",
+     "D01-anexoi-clausulaoitava-p3",
+     "D01-anexoiv-tabela-p5"
+    ],
+    "ranking": [
+     "D01-art325-p3",
+     "D01-anexoi-clausulaoitava-p3",
+     "D01-art325-p4",
+     "D01-art421",
+     "D01-art423"
+    ],
+    "posicao_v1": 4,
+    "posicao": 2,
+    "todos_gold": {
+     "1": false,
+     "3": false,
+     "5": true
+    },
+    "latencia_s": 0.004
+   },
+   {
+    "id": "T-019",
+    "tipo": "coloquial",
+    "split": "dev",
+    "gold": [
+     "D01-art362"
+    ],
+    "gold_v2": [
+     "D01-art362",
+     "D01-anexoi-clausulasexta-p3",
+     "D14-q15"
+    ],
+    "ranking": [
+     "D14-q05",
+     "D14-q15",
+     "D14-q03",
+     "D01-art534",
+     "D14-q11"
+    ],
+    "posicao_v1": 0,
+    "posicao": 2,
+    "todos_gold": {
+     "1": false,
+     "3": false,
+     "5": false
+    },
+    "latencia_s": 0.007
+   },
+   {
+    "id": "T-023",
+    "tipo": "coloquial",
+    "split": "dev",
+    "gold": [
+     "D07-s8.2-item198",
+     "D14-q14"
+    ],
+    "gold_v2": [
+     "D07-s8.2-item198",
+     "D14-q14",
+     "D01-art436-p1",
+     "D01-anexoi-clausulasexta-p4"
+    ],
+    "ranking": [
+     "D14-q14",
+     "D14-q10",
+     "D07-s8.2-item196",
+     "D14-q15",
+     "D01-anexoi-clausulasexta-p4"
+    ],
+    "posicao_v1": 1,
+    "posicao": 1,
+    "todos_gold": {
+     "1": false,
+     "3": false,
+     "5": false
+    },
+    "latencia_s": 0.008
+   },
+   {
+    "id": "T-025",
+    "tipo": "coloquial",
+    "split": "dev",
+    "gold": [
+     "D03-art1"
+    ],
+    "gold_v2": [
+     "D03-art1",
+     "D17-p1-s04",
+     "D17-p2-q03",
+     "D01-art179-p3"
+    ],
+    "ranking": [
+     "D17-p2-q03",
+     "D17-p1-s04",
+     "D17-p1-s05",
+     "D17-p2-q04",
+     "D17-p1-s03"
+    ],
+    "posicao_v1": 0,
+    "posicao": 1,
+    "todos_gold": {
+     "1": false,
+     "3": false,
+     "5": false
+    },
+    "latencia_s": 0.008
+   },
+   {
+    "id": "T-027",
+    "tipo": "coloquial",
+    "split": "dev",
+    "gold": [
+     "D13-s4.8-item105"
+    ],
+    "gold_v2": [
+     "D13-s4.8-item105"
+    ],
+    "ranking": [
+     "D14-q14",
+     "D14-q10",
+     "D14-q15",
+     "D13-s4.8-item107",
+     "D13-s4.8-item105"
+    ],
+    "posicao_v1": 5,
+    "posicao": 5,
+    "todos_gold": {
+     "1": false,
+     "3": false,
+     "5": true
+    },
+    "latencia_s": 0.005
+   },
+   {
+    "id": "T-029",
+    "tipo": "coloquial",
+    "split": "dev",
+    "gold": [
+     "D01-art2-p15",
+     "D19-s01-p1"
+    ],
+    "gold_v2": [
+     "D01-art2-p15",
+     "D19-s01-p1",
+     "D09-art1-p6"
+    ],
+    "ranking": [
+     "D01-art655b",
+     "D01-art30-p3",
+     "D01-art30-p2",
+     "D19-s01-p1",
+     "D01-art31"
+    ],
+    "posicao_v1": 4,
+    "posicao": 4,
+    "todos_gold": {
+     "1": false,
+     "3": false,
+     "5": false
+    },
+    "latencia_s": 0.006
+   },
+   {
+    "id": "T-031",
+    "tipo": "ruido",
+    "split": "dev",
+    "gold": [
+     "D01-art362"
+    ],
+    "gold_v2": [
+     "D01-art362",
+     "D01-anexoi-clausulasexta-p3",
+     "D14-q15"
+    ],
+    "ranking": [
+     "D14-q19",
+     "D14-q05",
+     "D14-q03",
+     "D14-q18",
+     "D01-art347"
+    ],
+    "posicao_v1": 0,
+    "posicao": 0,
+    "todos_gold": {
+     "1": false,
+     "3": false,
+     "5": false
+    },
+    "latencia_s": 0.006
+   },
+   {
+    "id": "T-035",
+    "tipo": "ruido",
+    "split": "dev",
+    "gold": [
+     "D07-s8.2-item198",
+     "D14-q14"
+    ],
+    "gold_v2": [
+     "D07-s8.2-item198",
+     "D14-q14",
+     "D01-art436-p1",
+     "D01-anexoi-clausulasexta-p4"
+    ],
+    "ranking": [
+     "D14-q14",
+     "D14-q10",
+     "D07-s8.2-item196",
+     "D01-anexoi-clausulasexta-p4",
+     "D01-art436-p1"
+    ],
+    "posicao_v1": 1,
+    "posicao": 1,
+    "todos_gold": {
+     "1": false,
+     "3": false,
+     "5": false
+    },
+    "latencia_s": 0.01
+   },
+   {
+    "id": "T-041",
+    "tipo": "multi_trecho",
+    "split": "dev",
+    "gold": [
+     "D03-art1",
+     "D05-art9"
+    ],
+    "gold_v2": [
+     "D03-art1",
+     "D05-art9",
+     "D17-p1-s04",
+     "D17-p2-q03",
+     "D01-art179-p3"
+    ],
+    "ranking": [
+     "D17-p1-s04",
+     "D17-p2-q03",
+     "D16-s04",
+     "D16-s01",
+     "D16-s05-p1"
+    ],
+    "posicao_v1": 0,
+    "posicao": 1,
+    "todos_gold": {
+     "1": false,
+     "3": false,
+     "5": false
+    },
+    "latencia_s": 0.006
+   },
+   {
+    "id": "T-042",
+    "tipo": "multi_trecho",
+    "split": "dev",
+    "gold": [
+     "D01-art423",
+     "D18-p1-s03-p2"
+    ],
+    "gold_v2": [
+     "D01-art423",
+     "D18-p1-s03-p2",
+     "D01-anexoi-clausulaoitava-p4"
+    ],
+    "ranking": [
+     "D14-q08",
+     "D01-art325-p3",
+     "D18-p1-s03-p1",
+     "D01-anexoi-clausulaoitava-p3",
+     "D01-art423"
+    ],
+    "posicao_v1": 5,
+    "posicao": 5,
+    "todos_gold": {
+     "1": false,
+     "3": false,
+     "5": false
+    },
+    "latencia_s": 0.007
+   }
+  ]
+ },
+ "denso+reranker": {
+  "por_tipo": {
+   "direta": {
+    "n": 7,
+    "recall@1": 0.5714285714285714,
+    "acertos@1": 4,
+    "ic@1": [
+     0.2504542304090258,
+     0.8417830777373732
+    ],
+    "recall@3": 1.0,
+    "acertos@3": 7,
+    "ic@3": [
+     0.6456611570247934,
+     1.0
+    ],
+    "recall@5": 1.0,
+    "acertos@5": 7,
+    "ic@5": [
+     0.6456611570247934,
+     1.0
+    ],
+    "mrr": 0.7857142857142857
+   },
+   "total": {
+    "n": 16,
+    "recall@1": 0.6875,
+    "acertos@1": 11,
+    "ic@1": [
+     0.4440393186673406,
+     0.8583556494803894
+    ],
+    "recall@3": 0.875,
+    "acertos@3": 14,
+    "ic@3": [
+     0.6397666856325173,
+     0.9650232506629428
+    ],
+    "recall@5": 0.875,
+    "acertos@5": 14,
+    "ic@5": [
+     0.6397666856325173,
+     0.9650232506629428
+    ],
+    "mrr": 0.78125,
+    "todos_gold@1": 0.0,
+    "todos_gold@3": 0.0,
+    "todos_gold@5": 0.0
+   },
+   "coloquial": {
+    "n": 5,
+    "recall@1": 0.8,
+    "acertos@1": 4,
+    "ic@1": [
+     0.3755282641185388,
+     0.9637768390302125
+    ],
+    "recall@3": 0.8,
+    "acertos@3": 4,
+    "ic@3": [
+     0.3755282641185388,
+     0.9637768390302125
+    ],
+    "recall@5": 0.8,
+    "acertos@5": 4,
+    "ic@5": [
+     0.3755282641185388,
+     0.9637768390302125
+    ],
+    "mrr": 0.8
+   },
+   "ruido": {
+    "n": 2,
+    "recall@1": 1.0,
+    "acertos@1": 2,
+    "ic@1": [
+     0.34237195288961925,
+     1.0
+    ],
+    "recall@3": 1.0,
+    "acertos@3": 2,
+    "ic@3": [
+     0.34237195288961925,
+     1.0
+    ],
+    "recall@5": 1.0,
+    "acertos@5": 2,
+    "ic@5": [
+     0.34237195288961925,
+     1.0
+    ],
+    "mrr": 1.0
+   },
+   "multi_trecho": {
+    "n": 2,
+    "recall@1": 0.5,
+    "acertos@1": 1,
+    "ic@1": [
+     0.09452865480086614,
+     0.9054713451991339
+    ],
+    "recall@3": 0.5,
+    "acertos@3": 1,
+    "ic@3": [
+     0.09452865480086614,
+     0.9054713451991339
+    ],
+    "recall@5": 0.5,
+    "acertos@5": 1,
+    "ic@5": [
+     0.09452865480086614,
+     0.9054713451991339
+    ],
+    "mrr": 0.5,
+    "todos_gold@1": 0.0,
+    "todos_gold@3": 0.0,
+    "todos_gold@5": 0.0
+   }
+  },
+  "por_tipo_v1": {
+   "direta": {
+    "n": 7,
+    "recall@1": 0.5714285714285714,
+    "acertos@1": 4,
+    "ic@1": [
+     0.2504542304090258,
+     0.8417830777373732
+    ],
+    "recall@3": 1.0,
+    "acertos@3": 7,
+    "ic@3": [
+     0.6456611570247934,
+     1.0
+    ],
+    "recall@5": 1.0,
+    "acertos@5": 7,
+    "ic@5": [
+     0.6456611570247934,
+     1.0
+    ],
+    "mrr": 0.7619047619047619
+   },
+   "total": {
+    "n": 16,
+    "recall@1": 0.375,
+    "acertos@1": 6,
+    "ic@1": [
+     0.18480982554752806,
+     0.613593529020652
+    ],
+    "recall@3": 0.5625,
+    "acertos@3": 9,
+    "ic@3": [
+     0.33178195606776517,
+     0.7690163666481448
+    ],
+    "recall@5": 0.6875,
+    "acertos@5": 11,
+    "ic@5": [
+     0.4440393186673406,
+     0.8583556494803894
+    ],
+    "mrr": 0.4895833333333333,
+    "todos_gold@1": 0.0,
+    "todos_gold@3": 0.0,
+    "todos_gold@5": 0.0
+   },
+   "coloquial": {
+    "n": 5,
+    "recall@1": 0.4,
+    "acertos@1": 2,
+    "ic@1": [
+     0.1176182311592533,
+     0.769280067791163
+    ],
+    "recall@3": 0.4,
+    "acertos@3": 2,
+    "ic@3": [
+     0.1176182311592533,
+     0.769280067791163
+    ],
+    "recall@5": 0.6,
+    "acertos@5": 3,
+    "ic@5": [
+     0.23071993220883708,
+     0.8823817688407467
+    ],
+    "mrr": 0.45
+   },
+   "ruido": {
+    "n": 2,
+    "recall@1": 0.0,
+    "acertos@1": 0,
+    "ic@1": [
+     0.0,
+     0.6576280471103807
+    ],
+    "recall@3": 0.0,
+    "acertos@3": 0,
+    "ic@3": [
+     0.0,
+     0.6576280471103807
+    ],
+    "recall@5": 0.5,
+    "acertos@5": 1,
+    "ic@5": [
+     0.09452865480086614,
+     0.9054713451991339
+    ],
+    "mrr": 0.125
+   },
+   "multi_trecho": {
+    "n": 2,
+    "recall@1": 0.0,
+    "acertos@1": 0,
+    "ic@1": [
+     0.0,
+     0.6576280471103807
+    ],
+    "recall@3": 0.0,
+    "acertos@3": 0,
+    "ic@3": [
+     0.0,
+     0.6576280471103807
+    ],
+    "recall@5": 0.0,
+    "acertos@5": 0,
+    "ic@5": [
+     0.0,
+     0.6576280471103807
+    ],
+    "mrr": 0.0,
+    "todos_gold@1": 0.0,
+    "todos_gold@3": 0.0,
+    "todos_gold@5": 0.0
+   }
+  },
+  "linhas": [
+   {
+    "id": "T-001",
+    "tipo": "direta",
+    "split": "dev",
+    "gold": [
+     "D01-art362"
+    ],
+    "gold_v2": [
+     "D01-art362",
+     "D01-anexoi-clausulasexta-p3",
+     "D14-q15"
+    ],
+    "ranking": [
+     "D01-art362",
+     "D14-q15",
+     "D01-anexoi-clausulasexta-p3",
+     "D01-art364",
+     "D01-art533"
+    ],
+    "posicao_v1": 1,
+    "posicao": 1,
+    "todos_gold": {
+     "1": true,
+     "3": true,
+     "5": true
+    },
+    "latencia_s": 5.715
+   },
+   {
+    "id": "T-004",
+    "tipo": "direta",
+    "split": "dev",
+    "gold": [
+     "D13-s4.8-item105"
+    ],
+    "gold_v2": [
+     "D13-s4.8-item105"
+    ],
+    "ranking": [
+     "D14-q14",
+     "D13-s4.8-item105",
+     "D01-anexoi-clausulasexta-p4",
+     "D01-anexoi-clausulasexta-p3",
+     "D14-q10"
+    ],
+    "posicao_v1": 2,
+    "posicao": 2,
+    "todos_gold": {
+     "1": false,
+     "3": true,
+     "5": true
+    },
+    "latencia_s": 0.286
+   },
+   {
+    "id": "T-010",
+    "tipo": "direta",
+    "split": "dev",
+    "gold": [
+     "D02-art1"
+    ],
+    "gold_v2": [
+     "D02-art1",
+     "D01-art179-p1",
+     "D17-p1-s03",
+     "D16-s00"
+    ],
+    "ranking": [
+     "D16-s01",
+     "D16-s00",
+     "D02-art1",
+     "D03-art3",
+     "D16-s05-p1"
+    ],
+    "posicao_v1": 3,
+    "posicao": 2,
+    "todos_gold": {
+     "1": false,
+     "3": true,
+     "5": true
+    },
+    "latencia_s": 0.234
+   },
+   {
+    "id": "T-012",
+    "tipo": "direta",
+    "split": "dev",
+    "gold": [
+     "D02-art2-p3"
+    ],
+    "gold_v2": [
+     "D02-art2-p3",
+     "D03-art3",
+     "D17-p1-s03"
+    ],
+    "ranking": [
+     "D02-art2-p3",
+     "D03-art3",
+     "D17-p2-q04",
+     "D17-p1-s04",
+     "D17-p2-q03"
+    ],
+    "posicao_v1": 1,
+    "posicao": 1,
+    "todos_gold": {
+     "1": true,
+     "3": true,
+     "5": true
+    },
+    "latencia_s": 0.266
+   },
+   {
+    "id": "T-014",
+    "tipo": "direta",
+    "split": "dev",
+    "gold": [
+     "D07-s8.2-item198",
+     "D14-q14"
+    ],
+    "gold_v2": [
+     "D07-s8.2-item198",
+     "D14-q14",
+     "D01-art436-p1",
+     "D01-anexoi-clausulasexta-p4"
+    ],
+    "ranking": [
+     "D07-s8.2-item198",
+     "D01-art436-p1",
+     "D14-q14",
+     "D07-s8.2-item196",
+     "D01-anexoi-clausulasexta-p4"
+    ],
+    "posicao_v1": 1,
+    "posicao": 1,
+    "todos_gold": {
+     "1": false,
+     "3": true,
+     "5": true
+    },
+    "latencia_s": 0.267
+   },
+   {
+    "id": "T-016",
+    "tipo": "direta",
+    "split": "dev",
+    "gold": [
+     "D01-art2-p15",
+     "D19-s01-p1"
+    ],
+    "gold_v2": [
+     "D01-art2-p15",
+     "D19-s01-p1",
+     "D09-art1-p6"
+    ],
+    "ranking": [
+     "D19-s01-p1",
+     "D01-art31",
+     "D01-art2-p15",
+     "D09-art1-p8",
+     "D01-art655c-p1"
+    ],
+    "posicao_v1": 1,
+    "posicao": 1,
+    "todos_gold": {
+     "1": false,
+     "3": true,
+     "5": true
+    },
+    "latencia_s": 0.23
+   },
+   {
+    "id": "T-017",
+    "tipo": "direta",
+    "split": "dev",
+    "gold": [
+     "D01-art421"
+    ],
+    "gold_v2": [
+     "D01-art421",
+     "D01-anexoi-clausulaoitava-p3",
+     "D01-anexoiv-tabela-p5"
+    ],
+    "ranking": [
+     "D01-art325-p3",
+     "D01-art421",
+     "D01-anexoi-clausulaoitava-p3",
+     "D01-art325-p4",
+     "D01-art408"
+    ],
+    "posicao_v1": 2,
+    "posicao": 2,
+    "todos_gold": {
+     "1": false,
+     "3": true,
+     "5": true
+    },
+    "latencia_s": 0.26
+   },
+   {
+    "id": "T-019",
+    "tipo": "coloquial",
+    "split": "dev",
+    "gold": [
+     "D01-art362"
+    ],
+    "gold_v2": [
+     "D01-art362",
+     "D01-anexoi-clausulasexta-p3",
+     "D14-q15"
+    ],
+    "ranking": [
+     "D14-q15",
+     "D01-anexoi-clausulasexta-p3",
+     "D01-art534",
+     "D01-art362",
+     "D01-art533"
+    ],
+    "posicao_v1": 4,
+    "posicao": 1,
+    "todos_gold": {
+     "1": false,
+     "3": false,
+     "5": true
+    },
+    "latencia_s": 0.261
+   },
+   {
+    "id": "T-023",
+    "tipo": "coloquial",
+    "split": "dev",
+    "gold": [
+     "D07-s8.2-item198",
+     "D14-q14"
+    ],
+    "gold_v2": [
+     "D07-s8.2-item198",
+     "D14-q14",
+     "D01-art436-p1",
+     "D01-anexoi-clausulasexta-p4"
+    ],
+    "ranking": [
+     "D14-q14",
+     "D14-q10",
+     "D01-anexoi-clausulasexta-p4",
+     "D07-s8.2-item198",
+     "D01-art436-p1"
+    ],
+    "posicao_v1": 1,
+    "posicao": 1,
+    "todos_gold": {
+     "1": false,
+     "3": false,
+     "5": true
+    },
+    "latencia_s": 0.288
+   },
+   {
+    "id": "T-025",
+    "tipo": "coloquial",
+    "split": "dev",
+    "gold": [
+     "D03-art1"
+    ],
+    "gold_v2": [
+     "D03-art1",
+     "D17-p1-s04",
+     "D17-p2-q03",
+     "D01-art179-p3"
+    ],
+    "ranking": [
+     "D17-p2-q03",
+     "D17-p1-s04",
+     "D17-p2-q04",
+     "D17-p1-s05",
+     "D01-art178a-p1"
+    ],
+    "posicao_v1": 0,
+    "posicao": 1,
+    "todos_gold": {
+     "1": false,
+     "3": false,
+     "5": false
+    },
+    "latencia_s": 0.259
+   },
+   {
+    "id": "T-027",
+    "tipo": "coloquial",
+    "split": "dev",
+    "gold": [
+     "D13-s4.8-item105"
+    ],
+    "gold_v2": [
+     "D13-s4.8-item105"
+    ],
+    "ranking": [
+     "D14-q14",
+     "D14-q11",
+     "D01-art436-p2",
+     "D07-s8.2-item196",
+     "D01-art436-p1"
+    ],
+    "posicao_v1": 0,
+    "posicao": 0,
+    "todos_gold": {
+     "1": false,
+     "3": false,
+     "5": false
+    },
+    "latencia_s": 0.279
+   },
+   {
+    "id": "T-029",
+    "tipo": "coloquial",
+    "split": "dev",
+    "gold": [
+     "D01-art2-p15",
+     "D19-s01-p1"
+    ],
+    "gold_v2": [
+     "D01-art2-p15",
+     "D19-s01-p1",
+     "D09-art1-p6"
+    ],
+    "ranking": [
+     "D19-s01-p1",
+     "D09-art1-p8",
+     "D01-art655b",
+     "D09-art35",
+     "D01-art655c-p1"
+    ],
+    "posicao_v1": 1,
+    "posicao": 1,
+    "todos_gold": {
+     "1": false,
+     "3": false,
+     "5": false
+    },
+    "latencia_s": 0.214
+   },
+   {
+    "id": "T-031",
+    "tipo": "ruido",
+    "split": "dev",
+    "gold": [
+     "D01-art362"
+    ],
+    "gold_v2": [
+     "D01-art362",
+     "D01-anexoi-clausulasexta-p3",
+     "D14-q15"
+    ],
+    "ranking": [
+     "D14-q15",
+     "D14-q10",
+     "D14-q03",
+     "D14-q18",
+     "D01-art339"
+    ],
+    "posicao_v1": 0,
+    "posicao": 1,
+    "todos_gold": {
+     "1": false,
+     "3": false,
+     "5": false
+    },
+    "latencia_s": 0.245
+   },
+   {
+    "id": "T-035",
+    "tipo": "ruido",
+    "split": "dev",
+    "gold": [
+     "D07-s8.2-item198",
+     "D14-q14"
+    ],
+    "gold_v2": [
+     "D07-s8.2-item198",
+     "D14-q14",
+     "D01-art436-p1",
+     "D01-anexoi-clausulasexta-p4"
+    ],
+    "ranking": [
+     "D01-anexoi-clausulasexta-p4",
+     "D13-s4.2-item27",
+     "D13-s4.2-item26",
+     "D14-q14",
+     "D14-q10"
+    ],
+    "posicao_v1": 4,
+    "posicao": 1,
+    "todos_gold": {
+     "1": false,
+     "3": false,
+     "5": false
+    },
+    "latencia_s": 0.291
+   },
+   {
+    "id": "T-041",
+    "tipo": "multi_trecho",
+    "split": "dev",
+    "gold": [
+     "D03-art1",
+     "D05-art9"
+    ],
+    "gold_v2": [
+     "D03-art1",
+     "D05-art9",
+     "D17-p1-s04",
+     "D17-p2-q03",
+     "D01-art179-p3"
+    ],
+    "ranking": [
+     "D17-p2-q03",
+     "D16-s00",
+     "D17-p1-s04",
+     "D16-s01",
+     "D16-s02"
+    ],
+    "posicao_v1": 0,
+    "posicao": 1,
+    "todos_gold": {
+     "1": false,
+     "3": false,
+     "5": false
+    },
+    "latencia_s": 0.243
+   },
+   {
+    "id": "T-042",
+    "tipo": "multi_trecho",
+    "split": "dev",
+    "gold": [
+     "D01-art423",
+     "D18-p1-s03-p2"
+    ],
+    "gold_v2": [
+     "D01-art423",
+     "D18-p1-s03-p2",
+     "D01-anexoi-clausulaoitava-p4"
+    ],
+    "ranking": [
+     "D01-anexoi-clausulaoitava-p3",
+     "D14-q08",
+     "D18-p1-s03-p1",
+     "D18-p2-s00",
+     "D01-art325-p3"
+    ],
+    "posicao_v1": 0,
+    "posicao": 0,
+    "todos_gold": {
+     "1": false,
+     "3": false,
+     "5": false
+    },
+    "latencia_s": 0.263
+   }
+  ]
+ },
+ "bm25+reranker": {
+  "por_tipo": {
+   "direta": {
+    "n": 7,
+    "recall@1": 0.42857142857142855,
+    "acertos@1": 3,
+    "ic@1": [
+     0.15821692226262685,
+     0.7495457695909742
+    ],
+    "recall@3": 1.0,
+    "acertos@3": 7,
+    "ic@3": [
+     0.6456611570247934,
+     1.0
+    ],
+    "recall@5": 1.0,
+    "acertos@5": 7,
+    "ic@5": [
+     0.6456611570247934,
+     1.0
+    ],
+    "mrr": 0.7142857142857143
+   },
+   "total": {
+    "n": 16,
+    "recall@1": 0.5625,
+    "acertos@1": 9,
+    "ic@1": [
+     0.33178195606776517,
+     0.7690163666481448
+    ],
+    "recall@3": 0.875,
+    "acertos@3": 14,
+    "ic@3": [
+     0.6397666856325173,
+     0.9650232506629428
+    ],
+    "recall@5": 0.875,
+    "acertos@5": 14,
+    "ic@5": [
+     0.6397666856325173,
+     0.9650232506629428
+    ],
+    "mrr": 0.7083333333333334,
+    "todos_gold@1": 0.0,
+    "todos_gold@3": 0.0,
+    "todos_gold@5": 0.0
+   },
+   "coloquial": {
+    "n": 5,
+    "recall@1": 0.6,
+    "acertos@1": 3,
+    "ic@1": [
+     0.23071993220883708,
+     0.8823817688407467
+    ],
+    "recall@3": 0.6,
+    "acertos@3": 3,
+    "ic@3": [
+     0.23071993220883708,
+     0.8823817688407467
+    ],
+    "recall@5": 0.6,
+    "acertos@5": 3,
+    "ic@5": [
+     0.23071993220883708,
+     0.8823817688407467
+    ],
+    "mrr": 0.6
+   },
+   "ruido": {
+    "n": 2,
+    "recall@1": 0.5,
+    "acertos@1": 1,
+    "ic@1": [
+     0.09452865480086614,
+     0.9054713451991339
+    ],
+    "recall@3": 1.0,
+    "acertos@3": 2,
+    "ic@3": [
+     0.34237195288961925,
+     1.0
+    ],
+    "recall@5": 1.0,
+    "acertos@5": 2,
+    "ic@5": [
+     0.34237195288961925,
+     1.0
+    ],
+    "mrr": 0.6666666666666666
+   },
+   "multi_trecho": {
+    "n": 2,
+    "recall@1": 1.0,
+    "acertos@1": 2,
+    "ic@1": [
+     0.34237195288961925,
+     1.0
+    ],
+    "recall@3": 1.0,
+    "acertos@3": 2,
+    "ic@3": [
+     0.34237195288961925,
+     1.0
+    ],
+    "recall@5": 1.0,
+    "acertos@5": 2,
+    "ic@5": [
+     0.34237195288961925,
+     1.0
+    ],
+    "mrr": 1.0,
+    "todos_gold@1": 0.0,
+    "todos_gold@3": 0.0,
+    "todos_gold@5": 0.0
+   }
+  },
+  "por_tipo_v1": {
+   "direta": {
+    "n": 7,
+    "recall@1": 0.42857142857142855,
+    "acertos@1": 3,
+    "ic@1": [
+     0.15821692226262685,
+     0.7495457695909742
+    ],
+    "recall@3": 1.0,
+    "acertos@3": 7,
+    "ic@3": [
+     0.6456611570247934,
+     1.0
+    ],
+    "recall@5": 1.0,
+    "acertos@5": 7,
+    "ic@5": [
+     0.6456611570247934,
+     1.0
+    ],
+    "mrr": 0.7142857142857143
+   },
+   "total": {
+    "n": 16,
+    "recall@1": 0.375,
+    "acertos@1": 6,
+    "ic@1": [
+     0.18480982554752806,
+     0.613593529020652
+    ],
+    "recall@3": 0.6875,
+    "acertos@3": 11,
+    "ic@3": [
+     0.4440393186673406,
+     0.8583556494803894
+    ],
+    "recall@5": 0.6875,
+    "acertos@5": 11,
+    "ic@5": [
+     0.4440393186673406,
+     0.8583556494803894
+    ],
+    "mrr": 0.5208333333333334,
+    "todos_gold@1": 0.0,
+    "todos_gold@3": 0.0,
+    "todos_gold@5": 0.0
+   },
+   "coloquial": {
+    "n": 5,
+    "recall@1": 0.2,
+    "acertos@1": 1,
+    "ic@1": [
+     0.03622316096978745,
+     0.6244717358814613
+    ],
+    "recall@3": 0.2,
+    "acertos@3": 1,
+    "ic@3": [
+     0.03622316096978745,
+     0.6244717358814613
+    ],
+    "recall@5": 0.2,
+    "acertos@5": 1,
+    "ic@5": [
+     0.03622316096978745,
+     0.6244717358814613
+    ],
+    "mrr": 0.2
+   },
+   "ruido": {
+    "n": 2,
+    "recall@1": 0.5,
+    "acertos@1": 1,
+    "ic@1": [
+     0.09452865480086614,
+     0.9054713451991339
+    ],
+    "recall@3": 1.0,
+    "acertos@3": 2,
+    "ic@3": [
+     0.34237195288961925,
+     1.0
+    ],
+    "recall@5": 1.0,
+    "acertos@5": 2,
+    "ic@5": [
+     0.34237195288961925,
+     1.0
+    ],
+    "mrr": 0.6666666666666666
+   },
+   "multi_trecho": {
+    "n": 2,
+    "recall@1": 0.5,
+    "acertos@1": 1,
+    "ic@1": [
+     0.09452865480086614,
+     0.9054713451991339
+    ],
+    "recall@3": 0.5,
+    "acertos@3": 1,
+    "ic@3": [
+     0.09452865480086614,
+     0.9054713451991339
+    ],
+    "recall@5": 0.5,
+    "acertos@5": 1,
+    "ic@5": [
+     0.09452865480086614,
+     0.9054713451991339
+    ],
+    "mrr": 0.5,
+    "todos_gold@1": 0.0,
+    "todos_gold@3": 0.0,
+    "todos_gold@5": 0.0
+   }
+  },
+  "linhas": [
+   {
+    "id": "T-001",
+    "tipo": "direta",
+    "split": "dev",
+    "gold": [
+     "D01-art362"
+    ],
+    "gold_v2": [
+     "D01-art362",
+     "D01-anexoi-clausulasexta-p3",
+     "D14-q15"
+    ],
+    "ranking": [
+     "D01-art362",
+     "D14-q15",
+     "D01-anexoi-clausulasexta-p3",
+     "D01-art364",
+     "D01-art365"
+    ],
+    "posicao_v1": 1,
+    "posicao": 1,
+    "todos_gold": {
+     "1": true,
+     "3": true,
+     "5": true
+    },
+    "latencia_s": 0.281
+   },
+   {
+    "id": "T-004",
+    "tipo": "direta",
+    "split": "dev",
+    "gold": [
+     "D13-s4.8-item105"
+    ],
+    "gold_v2": [
+     "D13-s4.8-item105"
+    ],
+    "ranking": [
+     "D14-q14",
+     "D13-s4.8-item105",
+     "D14-q10",
+     "D01-art418",
+     "D01-art434"
+    ],
+    "posicao_v1": 2,
+    "posicao": 2,
+    "todos_gold": {
+     "1": false,
+     "3": true,
+     "5": true
+    },
+    "latencia_s": 0.233
+   },
+   {
+    "id": "T-010",
+    "tipo": "direta",
+    "split": "dev",
+    "gold": [
+     "D02-art1"
+    ],
+    "gold_v2": [
+     "D02-art1",
+     "D01-art179-p1",
+     "D17-p1-s03",
+     "D16-s00"
+    ],
+    "ranking": [
+     "D16-s01",
+     "D02-art1",
+     "D03-art3",
+     "D16-s05-p1",
+     "D16-s02"
+    ],
+    "posicao_v1": 2,
+    "posicao": 2,
+    "todos_gold": {
+     "1": false,
+     "3": true,
+     "5": true
+    },
+    "latencia_s": 0.226
+   },
+   {
+    "id": "T-012",
+    "tipo": "direta",
+    "split": "dev",
+    "gold": [
+     "D02-art2-p3"
+    ],
+    "gold_v2": [
+     "D02-art2-p3",
+     "D03-art3",
+     "D17-p1-s03"
+    ],
+    "ranking": [
+     "D02-art2-p3",
+     "D03-art3",
+     "D17-p2-q04",
+     "D17-p1-s04",
+     "D17-p2-q03"
+    ],
+    "posicao_v1": 1,
+    "posicao": 1,
+    "todos_gold": {
+     "1": true,
+     "3": true,
+     "5": true
+    },
+    "latencia_s": 0.248
+   },
+   {
+    "id": "T-014",
+    "tipo": "direta",
+    "split": "dev",
+    "gold": [
+     "D07-s8.2-item198",
+     "D14-q14"
+    ],
+    "gold_v2": [
+     "D07-s8.2-item198",
+     "D14-q14",
+     "D01-art436-p1",
+     "D01-anexoi-clausulasexta-p4"
+    ],
+    "ranking": [
+     "D07-s8.2-item198",
+     "D14-q14",
+     "D07-s8.2-item196",
+     "D01-anexoi-clausulasexta-p4",
+     "D13-s4.2-item28"
+    ],
+    "posicao_v1": 1,
+    "posicao": 1,
+    "todos_gold": {
+     "1": false,
+     "3": true,
+     "5": true
+    },
+    "latencia_s": 0.269
+   },
+   {
+    "id": "T-016",
+    "tipo": "direta",
+    "split": "dev",
+    "gold": [
+     "D01-art2-p15",
+     "D19-s01-p1"
+    ],
+    "gold_v2": [
+     "D01-art2-p15",
+     "D19-s01-p1",
+     "D09-art1-p6"
+    ],
+    "ranking": [
+     "D01-art31",
+     "D01-art2-p15",
+     "D01-art73a-p1",
+     "D01-art655p-p1",
+     "D01-art655c-p1"
+    ],
+    "posicao_v1": 2,
+    "posicao": 2,
+    "todos_gold": {
+     "1": false,
+     "3": false,
+     "5": false
+    },
+    "latencia_s": 0.268
+   },
+   {
+    "id": "T-017",
+    "tipo": "direta",
+    "split": "dev",
+    "gold": [
+     "D01-art421"
+    ],
+    "gold_v2": [
+     "D01-art421",
+     "D01-anexoi-clausulaoitava-p3",
+     "D01-anexoiv-tabela-p5"
+    ],
+    "ranking": [
+     "D01-art325-p3",
+     "D01-art421",
+     "D01-anexoi-clausulaoitava-p3",
+     "D01-art325-p4",
+     "D01-anexoiv-tabela-p5"
+    ],
+    "posicao_v1": 2,
+    "posicao": 2,
+    "todos_gold": {
+     "1": false,
+     "3": true,
+     "5": true
+    },
+    "latencia_s": 0.269
+   },
+   {
+    "id": "T-019",
+    "tipo": "coloquial",
+    "split": "dev",
+    "gold": [
+     "D01-art362"
+    ],
+    "gold_v2": [
+     "D01-art362",
+     "D01-anexoi-clausulasexta-p3",
+     "D14-q15"
+    ],
+    "ranking": [
+     "D14-q15",
+     "D01-art534",
+     "D14-q11",
+     "D14-q03",
+     "D14-q05"
+    ],
+    "posicao_v1": 0,
+    "posicao": 1,
+    "todos_gold": {
+     "1": false,
+     "3": false,
+     "5": false
+    },
+    "latencia_s": 0.226
+   },
+   {
+    "id": "T-023",
+    "tipo": "coloquial",
+    "split": "dev",
+    "gold": [
+     "D07-s8.2-item198",
+     "D14-q14"
+    ],
+    "gold_v2": [
+     "D07-s8.2-item198",
+     "D14-q14",
+     "D01-art436-p1",
+     "D01-anexoi-clausulasexta-p4"
+    ],
+    "ranking": [
+     "D14-q14",
+     "D14-q10",
+     "D07-s8.2-item196",
+     "D14-q15",
+     "D01-art655c-p9"
+    ],
+    "posicao_v1": 1,
+    "posicao": 1,
+    "todos_gold": {
+     "1": false,
+     "3": false,
+     "5": false
+    },
+    "latencia_s": 0.283
+   },
+   {
+    "id": "T-025",
+    "tipo": "coloquial",
+    "split": "dev",
+    "gold": [
+     "D03-art1"
+    ],
+    "gold_v2": [
+     "D03-art1",
+     "D17-p1-s04",
+     "D17-p2-q03",
+     "D01-art179-p3"
+    ],
+    "ranking": [
+     "D17-p2-q03",
+     "D17-p1-s04",
+     "D17-p2-q04",
+     "D17-p1-s05",
+     "D01-art178a-p1"
+    ],
+    "posicao_v1": 0,
+    "posicao": 1,
+    "todos_gold": {
+     "1": false,
+     "3": false,
+     "5": false
+    },
+    "latencia_s": 0.284
+   },
+   {
+    "id": "T-027",
+    "tipo": "coloquial",
+    "split": "dev",
+    "gold": [
+     "D13-s4.8-item105"
+    ],
+    "gold_v2": [
+     "D13-s4.8-item105"
+    ],
+    "ranking": [
+     "D14-q14",
+     "D14-q10",
+     "D13-s4.8-item107",
+     "D01-art608",
+     "D14-q05"
+    ],
+    "posicao_v1": 0,
+    "posicao": 0,
+    "todos_gold": {
+     "1": false,
+     "3": false,
+     "5": false
+    },
+    "latencia_s": 0.238
+   },
+   {
+    "id": "T-029",
+    "tipo": "coloquial",
+    "split": "dev",
+    "gold": [
+     "D01-art2-p15",
+     "D19-s01-p1"
+    ],
+    "gold_v2": [
+     "D01-art2-p15",
+     "D19-s01-p1",
+     "D09-art1-p6"
+    ],
+    "ranking": [
+     "D01-art655b",
+     "D01-art655o-p4",
+     "D01-art522",
+     "D01-art30-p2",
+     "D01-art123"
+    ],
+    "posicao_v1": 0,
+    "posicao": 0,
+    "todos_gold": {
+     "1": false,
+     "3": false,
+     "5": false
+    },
+    "latencia_s": 0.221
+   },
+   {
+    "id": "T-031",
+    "tipo": "ruido",
+    "split": "dev",
+    "gold": [
+     "D01-art362"
+    ],
+    "gold_v2": [
+     "D01-art362",
+     "D01-anexoi-clausulasexta-p3",
+     "D14-q15"
+    ],
+    "ranking": [
+     "D14-q03",
+     "D14-q18",
+     "D01-art362",
+     "D14-q05",
+     "D14-q19"
+    ],
+    "posicao_v1": 3,
+    "posicao": 3,
+    "todos_gold": {
+     "1": false,
+     "3": true,
+     "5": true
+    },
+    "latencia_s": 0.248
+   },
+   {
+    "id": "T-035",
+    "tipo": "ruido",
+    "split": "dev",
+    "gold": [
+     "D07-s8.2-item198",
+     "D14-q14"
+    ],
+    "gold_v2": [
+     "D07-s8.2-item198",
+     "D14-q14",
+     "D01-art436-p1",
+     "D01-anexoi-clausulasexta-p4"
+    ],
+    "ranking": [
+     "D14-q14",
+     "D14-q10",
+     "D07-s8.2-item196",
+     "D01-art250-p2",
+     "D07-s8.2-item161-p2"
+    ],
+    "posicao_v1": 1,
+    "posicao": 1,
+    "todos_gold": {
+     "1": false,
+     "3": false,
+     "5": false
+    },
+    "latencia_s": 0.292
+   },
+   {
+    "id": "T-041",
+    "tipo": "multi_trecho",
+    "split": "dev",
+    "gold": [
+     "D03-art1",
+     "D05-art9"
+    ],
+    "gold_v2": [
+     "D03-art1",
+     "D05-art9",
+     "D17-p1-s04",
+     "D17-p2-q03",
+     "D01-art179-p3"
+    ],
+    "ranking": [
+     "D17-p2-q03",
+     "D17-p1-s04",
+     "D16-s01",
+     "D16-s02",
+     "D03-art3"
+    ],
+    "posicao_v1": 0,
+    "posicao": 1,
+    "todos_gold": {
+     "1": false,
+     "3": false,
+     "5": false
+    },
+    "latencia_s": 0.233
+   },
+   {
+    "id": "T-042",
+    "tipo": "multi_trecho",
+    "split": "dev",
+    "gold": [
+     "D01-art423",
+     "D18-p1-s03-p2"
+    ],
+    "gold_v2": [
+     "D01-art423",
+     "D18-p1-s03-p2",
+     "D01-anexoi-clausulaoitava-p4"
+    ],
+    "ranking": [
+     "D18-p1-s03-p2",
+     "D01-anexoi-clausulaoitava-p3",
+     "D14-q08",
+     "D18-p1-s03-p1",
+     "D01-art325-p3"
+    ],
+    "posicao_v1": 1,
+    "posicao": 1,
+    "todos_gold": {
+     "1": false,
+     "3": false,
+     "5": false
+    },
+    "latencia_s": 0.231
+   }
+  ]
+ },
+ "hibrido+reranker": {
+  "por_tipo": {
+   "direta": {
+    "n": 7,
+    "recall@1": 0.5714285714285714,
+    "acertos@1": 4,
+    "ic@1": [
+     0.2504542304090258,
+     0.8417830777373732
+    ],
+    "recall@3": 1.0,
+    "acertos@3": 7,
+    "ic@3": [
+     0.6456611570247934,
+     1.0
+    ],
+    "recall@5": 1.0,
+    "acertos@5": 7,
+    "ic@5": [
+     0.6456611570247934,
+     1.0
+    ],
+    "mrr": 0.7857142857142857
+   },
+   "total": {
+    "n": 16,
+    "recall@1": 0.75,
+    "acertos@1": 12,
+    "ic@1": [
+     0.5050123107060135,
+     0.8981809801576265
+    ],
+    "recall@3": 0.9375,
+    "acertos@3": 15,
+    "ic@3": [
+     0.7167073163197013,
+     0.9888809426916687
+    ],
+    "recall@5": 1.0,
+    "acertos@5": 16,
+    "ic@5": [
+     0.8063865817272802,
+     1.0
+    ],
+    "mrr": 0.85625,
+    "todos_gold@1": 0.0,
+    "todos_gold@3": 0.0,
+    "todos_gold@5": 0.0
+   },
+   "coloquial": {
+    "n": 5,
+    "recall@1": 0.8,
+    "acertos@1": 4,
+    "ic@1": [
+     0.3755282641185388,
+     0.9637768390302125
+    ],
+    "recall@3": 0.8,
+    "acertos@3": 4,
+    "ic@3": [
+     0.3755282641185388,
+     0.9637768390302125
+    ],
+    "recall@5": 1.0,
+    "acertos@5": 5,
+    "ic@5": [
+     0.5655085052479191,
+     1.0
+    ],
+    "mrr": 0.8400000000000001
+   },
+   "ruido": {
+    "n": 2,
+    "recall@1": 1.0,
+    "acertos@1": 2,
+    "ic@1": [
+     0.34237195288961925,
+     1.0
+    ],
+    "recall@3": 1.0,
+    "acertos@3": 2,
+    "ic@3": [
+     0.34237195288961925,
+     1.0
+    ],
+    "recall@5": 1.0,
+    "acertos@5": 2,
+    "ic@5": [
+     0.34237195288961925,
+     1.0
+    ],
+    "mrr": 1.0
+   },
+   "multi_trecho": {
+    "n": 2,
+    "recall@1": 1.0,
+    "acertos@1": 2,
+    "ic@1": [
+     0.34237195288961925,
+     1.0
+    ],
+    "recall@3": 1.0,
+    "acertos@3": 2,
+    "ic@3": [
+     0.34237195288961925,
+     1.0
+    ],
+    "recall@5": 1.0,
+    "acertos@5": 2,
+    "ic@5": [
+     0.34237195288961925,
+     1.0
+    ],
+    "mrr": 1.0,
+    "todos_gold@1": 0.0,
+    "todos_gold@3": 0.0,
+    "todos_gold@5": 0.0
+   }
+  },
+  "por_tipo_v1": {
+   "direta": {
+    "n": 7,
+    "recall@1": 0.5714285714285714,
+    "acertos@1": 4,
+    "ic@1": [
+     0.2504542304090258,
+     0.8417830777373732
+    ],
+    "recall@3": 1.0,
+    "acertos@3": 7,
+    "ic@3": [
+     0.6456611570247934,
+     1.0
+    ],
+    "recall@5": 1.0,
+    "acertos@5": 7,
+    "ic@5": [
+     0.6456611570247934,
+     1.0
+    ],
+    "mrr": 0.7619047619047619
+   },
+   "total": {
+    "n": 16,
+    "recall@1": 0.4375,
+    "acertos@1": 7,
+    "ic@1": [
+     0.2309836333518552,
+     0.6682180439322347
+    ],
+    "recall@3": 0.6875,
+    "acertos@3": 11,
+    "ic@3": [
+     0.4440393186673406,
+     0.8583556494803894
+    ],
+    "recall@5": 0.8125,
+    "acertos@5": 13,
+    "ic@5": [
+     0.5699064013154177,
+     0.9340852122641324
+    ],
+    "mrr": 0.5697916666666667,
+    "todos_gold@1": 0.0,
+    "todos_gold@3": 0.0,
+    "todos_gold@5": 0.0
+   },
+   "coloquial": {
+    "n": 5,
+    "recall@1": 0.4,
+    "acertos@1": 2,
+    "ic@1": [
+     0.1176182311592533,
+     0.769280067791163
+    ],
+    "recall@3": 0.4,
+    "acertos@3": 2,
+    "ic@3": [
+     0.1176182311592533,
+     0.769280067791163
+    ],
+    "recall@5": 0.8,
+    "acertos@5": 4,
+    "ic@5": [
+     0.3755282641185388,
+     0.9637768390302125
+    ],
+    "mrr": 0.49000000000000005
+   },
+   "ruido": {
+    "n": 2,
+    "recall@1": 0.0,
+    "acertos@1": 0,
+    "ic@1": [
+     0.0,
+     0.6576280471103807
+    ],
+    "recall@3": 0.5,
+    "acertos@3": 1,
+    "ic@3": [
+     0.09452865480086614,
+     0.9054713451991339
+    ],
+    "recall@5": 0.5,
+    "acertos@5": 1,
+    "ic@5": [
+     0.09452865480086614,
+     0.9054713451991339
+    ],
+    "mrr": 0.16666666666666666
+   },
+   "multi_trecho": {
+    "n": 2,
+    "recall@1": 0.5,
+    "acertos@1": 1,
+    "ic@1": [
+     0.09452865480086614,
+     0.9054713451991339
+    ],
+    "recall@3": 0.5,
+    "acertos@3": 1,
+    "ic@3": [
+     0.09452865480086614,
+     0.9054713451991339
+    ],
+    "recall@5": 0.5,
+    "acertos@5": 1,
+    "ic@5": [
+     0.09452865480086614,
+     0.9054713451991339
+    ],
+    "mrr": 0.5,
+    "todos_gold@1": 0.0,
+    "todos_gold@3": 0.0,
+    "todos_gold@5": 0.0
+   }
+  },
+  "linhas": [
+   {
+    "id": "T-001",
+    "tipo": "direta",
+    "split": "dev",
+    "gold": [
+     "D01-art362"
+    ],
+    "gold_v2": [
+     "D01-art362",
+     "D01-anexoi-clausulasexta-p3",
+     "D14-q15"
+    ],
+    "ranking": [
+     "D01-art362",
+     "D14-q15",
+     "D01-anexoi-clausulasexta-p3",
+     "D01-art364",
+     "D01-art533"
+    ],
+    "posicao_v1": 1,
+    "posicao": 1,
+    "todos_gold": {
+     "1": true,
+     "3": true,
+     "5": true
+    },
+    "latencia_s": 0.29
+   },
+   {
+    "id": "T-004",
+    "tipo": "direta",
+    "split": "dev",
+    "gold": [
+     "D13-s4.8-item105"
+    ],
+    "gold_v2": [
+     "D13-s4.8-item105"
+    ],
+    "ranking": [
+     "D14-q14",
+     "D13-s4.8-item105",
+     "D01-anexoi-clausulasexta-p3",
+     "D14-q10",
+     "D01-art362"
+    ],
+    "posicao_v1": 2,
+    "posicao": 2,
+    "todos_gold": {
+     "1": false,
+     "3": true,
+     "5": true
+    },
+    "latencia_s": 0.284
+   },
+   {
+    "id": "T-010",
+    "tipo": "direta",
+    "split": "dev",
+    "gold": [
+     "D02-art1"
+    ],
+    "gold_v2": [
+     "D02-art1",
+     "D01-art179-p1",
+     "D17-p1-s03",
+     "D16-s00"
+    ],
+    "ranking": [
+     "D16-s01",
+     "D16-s00",
+     "D02-art1",
+     "D03-art3",
+     "D16-s05-p1"
+    ],
+    "posicao_v1": 3,
+    "posicao": 2,
+    "todos_gold": {
+     "1": false,
+     "3": true,
+     "5": true
+    },
+    "latencia_s": 0.237
+   },
+   {
+    "id": "T-012",
+    "tipo": "direta",
+    "split": "dev",
+    "gold": [
+     "D02-art2-p3"
+    ],
+    "gold_v2": [
+     "D02-art2-p3",
+     "D03-art3",
+     "D17-p1-s03"
+    ],
+    "ranking": [
+     "D02-art2-p3",
+     "D03-art3",
+     "D17-p2-q04",
+     "D17-p1-s04",
+     "D17-p2-q03"
+    ],
+    "posicao_v1": 1,
+    "posicao": 1,
+    "todos_gold": {
+     "1": true,
+     "3": true,
+     "5": true
+    },
+    "latencia_s": 0.25
+   },
+   {
+    "id": "T-014",
+    "tipo": "direta",
+    "split": "dev",
+    "gold": [
+     "D07-s8.2-item198",
+     "D14-q14"
+    ],
+    "gold_v2": [
+     "D07-s8.2-item198",
+     "D14-q14",
+     "D01-art436-p1",
+     "D01-anexoi-clausulasexta-p4"
+    ],
+    "ranking": [
+     "D07-s8.2-item198",
+     "D01-art436-p1",
+     "D14-q14",
+     "D07-s8.2-item196",
+     "D01-anexoi-clausulasexta-p4"
+    ],
+    "posicao_v1": 1,
+    "posicao": 1,
+    "todos_gold": {
+     "1": false,
+     "3": true,
+     "5": true
+    },
+    "latencia_s": 0.266
+   },
+   {
+    "id": "T-016",
+    "tipo": "direta",
+    "split": "dev",
+    "gold": [
+     "D01-art2-p15",
+     "D19-s01-p1"
+    ],
+    "gold_v2": [
+     "D01-art2-p15",
+     "D19-s01-p1",
+     "D09-art1-p6"
+    ],
+    "ranking": [
+     "D19-s01-p1",
+     "D01-art31",
+     "D01-art2-p15",
+     "D09-art1-p8",
+     "D01-art73a-p1"
+    ],
+    "posicao_v1": 1,
+    "posicao": 1,
+    "todos_gold": {
+     "1": false,
+     "3": true,
+     "5": true
+    },
+    "latencia_s": 0.27
+   },
+   {
+    "id": "T-017",
+    "tipo": "direta",
+    "split": "dev",
+    "gold": [
+     "D01-art421"
+    ],
+    "gold_v2": [
+     "D01-art421",
+     "D01-anexoi-clausulaoitava-p3",
+     "D01-anexoiv-tabela-p5"
+    ],
+    "ranking": [
+     "D01-art325-p3",
+     "D01-art421",
+     "D01-anexoi-clausulaoitava-p3",
+     "D01-art325-p4",
+     "D01-art408"
+    ],
+    "posicao_v1": 2,
+    "posicao": 2,
+    "todos_gold": {
+     "1": false,
+     "3": true,
+     "5": true
+    },
+    "latencia_s": 0.256
+   },
+   {
+    "id": "T-019",
+    "tipo": "coloquial",
+    "split": "dev",
+    "gold": [
+     "D01-art362"
+    ],
+    "gold_v2": [
+     "D01-art362",
+     "D01-anexoi-clausulasexta-p3",
+     "D14-q15"
+    ],
+    "ranking": [
+     "D14-q15",
+     "D01-anexoi-clausulasexta-p3",
+     "D01-art534",
+     "D01-art362",
+     "D01-art339"
+    ],
+    "posicao_v1": 4,
+    "posicao": 1,
+    "todos_gold": {
+     "1": false,
+     "3": false,
+     "5": true
+    },
+    "latencia_s": 0.258
+   },
+   {
+    "id": "T-023",
+    "tipo": "coloquial",
+    "split": "dev",
+    "gold": [
+     "D07-s8.2-item198",
+     "D14-q14"
+    ],
+    "gold_v2": [
+     "D07-s8.2-item198",
+     "D14-q14",
+     "D01-art436-p1",
+     "D01-anexoi-clausulasexta-p4"
+    ],
+    "ranking": [
+     "D14-q14",
+     "D14-q10",
+     "D01-anexoi-clausulasexta-p4",
+     "D07-s8.2-item198",
+     "D01-art436-p1"
+    ],
+    "posicao_v1": 1,
+    "posicao": 1,
+    "todos_gold": {
+     "1": false,
+     "3": false,
+     "5": true
+    },
+    "latencia_s": 0.288
+   },
+   {
+    "id": "T-025",
+    "tipo": "coloquial",
+    "split": "dev",
+    "gold": [
+     "D03-art1"
+    ],
+    "gold_v2": [
+     "D03-art1",
+     "D17-p1-s04",
+     "D17-p2-q03",
+     "D01-art179-p3"
+    ],
+    "ranking": [
+     "D17-p2-q03",
+     "D17-p1-s04",
+     "D17-p2-q04",
+     "D17-p1-s05",
+     "D01-art178a-p1"
+    ],
+    "posicao_v1": 0,
+    "posicao": 1,
+    "todos_gold": {
+     "1": false,
+     "3": false,
+     "5": false
+    },
+    "latencia_s": 0.278
+   },
+   {
+    "id": "T-027",
+    "tipo": "coloquial",
+    "split": "dev",
+    "gold": [
+     "D13-s4.8-item105"
+    ],
+    "gold_v2": [
+     "D13-s4.8-item105"
+    ],
+    "ranking": [
+     "D14-q14",
+     "D14-q11",
+     "D01-art436-p2",
+     "D07-s8.2-item196",
+     "D13-s4.8-item105"
+    ],
+    "posicao_v1": 5,
+    "posicao": 5,
+    "todos_gold": {
+     "1": false,
+     "3": false,
+     "5": true
+    },
+    "latencia_s": 0.271
+   },
+   {
+    "id": "T-029",
+    "tipo": "coloquial",
+    "split": "dev",
+    "gold": [
+     "D01-art2-p15",
+     "D19-s01-p1"
+    ],
+    "gold_v2": [
+     "D01-art2-p15",
+     "D19-s01-p1",
+     "D09-art1-p6"
+    ],
+    "ranking": [
+     "D19-s01-p1",
+     "D09-art1-p8",
+     "D01-art655b",
+     "D09-art35",
+     "D01-art655o-p4"
+    ],
+    "posicao_v1": 1,
+    "posicao": 1,
+    "todos_gold": {
+     "1": false,
+     "3": false,
+     "5": false
+    },
+    "latencia_s": 0.215
+   },
+   {
+    "id": "T-031",
+    "tipo": "ruido",
+    "split": "dev",
+    "gold": [
+     "D01-art362"
+    ],
+    "gold_v2": [
+     "D01-art362",
+     "D01-anexoi-clausulasexta-p3",
+     "D14-q15"
+    ],
+    "ranking": [
+     "D14-q15",
+     "D14-q03",
+     "D14-q18",
+     "D01-art339",
+     "D14-q11"
+    ],
+    "posicao_v1": 0,
+    "posicao": 1,
+    "todos_gold": {
+     "1": false,
+     "3": false,
+     "5": false
+    },
+    "latencia_s": 0.241
+   },
+   {
+    "id": "T-035",
+    "tipo": "ruido",
+    "split": "dev",
+    "gold": [
+     "D07-s8.2-item198",
+     "D14-q14"
+    ],
+    "gold_v2": [
+     "D07-s8.2-item198",
+     "D14-q14",
+     "D01-art436-p1",
+     "D01-anexoi-clausulasexta-p4"
+    ],
+    "ranking": [
+     "D01-anexoi-clausulasexta-p4",
+     "D13-s4.2-item26",
+     "D14-q14",
+     "D14-q10",
+     "D01-art436-p1"
+    ],
+    "posicao_v1": 3,
+    "posicao": 1,
+    "todos_gold": {
+     "1": false,
+     "3": false,
+     "5": false
+    },
+    "latencia_s": 0.293
+   },
+   {
+    "id": "T-041",
+    "tipo": "multi_trecho",
+    "split": "dev",
+    "gold": [
+     "D03-art1",
+     "D05-art9"
+    ],
+    "gold_v2": [
+     "D03-art1",
+     "D05-art9",
+     "D17-p1-s04",
+     "D17-p2-q03",
+     "D01-art179-p3"
+    ],
+    "ranking": [
+     "D17-p2-q03",
+     "D16-s00",
+     "D17-p1-s04",
+     "D16-s01",
+     "D16-s02"
+    ],
+    "posicao_v1": 0,
+    "posicao": 1,
+    "todos_gold": {
+     "1": false,
+     "3": false,
+     "5": false
+    },
+    "latencia_s": 0.252
+   },
+   {
+    "id": "T-042",
+    "tipo": "multi_trecho",
+    "split": "dev",
+    "gold": [
+     "D01-art423",
+     "D18-p1-s03-p2"
+    ],
+    "gold_v2": [
+     "D01-art423",
+     "D18-p1-s03-p2",
+     "D01-anexoi-clausulaoitava-p4"
+    ],
+    "ranking": [
+     "D18-p1-s03-p2",
+     "D01-anexoi-clausulaoitava-p3",
+     "D14-q08",
+     "D18-p1-s03-p1",
+     "D18-p2-s00"
+    ],
+    "posicao_v1": 1,
+    "posicao": 1,
+    "todos_gold": {
+     "1": false,
+     "3": false,
+     "5": false
+    },
+    "latencia_s": 0.26
+   }
+  ]
+ }
+}

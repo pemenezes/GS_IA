@@ -1,0 +1,39 @@
+{
+  "nota": "cosseno denso (top-1)",
+  "criterio": "maior TPR das respondíveis com no máximo 5% das perguntas fora do domínio passando (opção B, Pedro, 08/11/2026); 'não consta' recusadas pelo LLM",
+  "tau": 0.6038,
+  "tpr": 0.903,
+  "fpr": 0.043,
+  "n_positivas": 31,
+  "n_negativas": 23,
+  "por_subtipo": {
+    "coloquial": {
+      "n": 5,
+      "aceitas": 4
+    },
+    "direta": {
+      "n": 7,
+      "aceitas": 7
+    },
+    "fora_dominio": {
+      "n": 23,
+      "aceitas": 1
+    },
+    "multi_trecho": {
+      "n": 2,
+      "aceitas": 2
+    },
+    "nao_consta": {
+      "n": 12,
+      "aceitas": 3
+    },
+    "respondivel": {
+      "n": 15,
+      "aceitas": 15
+    },
+    "ruido": {
+      "n": 2,
+      "aceitas": 0
+    }
+  }
+}
