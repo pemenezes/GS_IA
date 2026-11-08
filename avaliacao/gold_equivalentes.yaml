@@ -1,0 +1,68 @@
+# Gabarito v2 (Fase 4): trechos que respondem à pergunta tanto quanto o gold original.
+# Motivo: a base repete regras (REN 1.000 x contrato de adesão do Anexo I x páginas explicativas
+# x PRODIST), e o gold v1 listava só um lugar. Os candidatos foram levantados sem usar resultados
+# de busca do split test: trechos com os fatos-chave literais entre os 15 mais próximos da
+# RESPOSTA gabarito, mais equivalentes com grafia diferente (ex.: "72h"), lidos um a um.
+# Vale para todas as perguntas do grupo. status: proposto | aprovado (Pedro).
+status: proposto
+grupos:
+  G01: # religação normal, área urbana (24 horas)
+    - {chunk_id: D01-anexoi-clausulasexta-p3, motivo: "Contrato de adesão, 6.6: até 24h para a área urbana"}
+    - {chunk_id: D14-q15, motivo: "ANEEL Como resolver: religação em até 24 horas nas áreas urbanas"}
+  G02: # corte por inadimplência na sexta-feira
+    - {chunk_id: D01-anexoi-clausulasexta-p2, motivo: "Contrato de adesão, 6.4: 8h às 18h, vedada às sextas-feiras"}
+  G03: # aviso de interrupção programada, residência comum (72 horas)
+    - {chunk_id: D01-art436-p2, motivo: "REN 1.000 art. 436, III: 72 horas para as demais unidades consumidoras"}
+    - {chunk_id: D01-anexoi-clausulasexta-p4, motivo: "Contrato de adesão, 6.8: 72h nas demais situações"}
+  G06: # prazo para pedir ressarcimento (5 anos)
+    - {chunk_id: D01-art602-p2, motivo: "Continuação do art. 602, com o caput (até 5 anos) repetido"}
+    - {chunk_id: D01-anexoi-clausulaoitava-p4, motivo: "Contrato de adesão, 8.6: reclamação de danos em até 5 anos"}
+  G08: # custo de disponibilidade monofásico (30 kWh)
+    - {chunk_id: D15-q11, motivo: "FAQ Bandeiras: 30 kWh se monofásico (página com alerta: cita a REN 414/2010, revogada)"}
+  G10: # desconto da Tarifa Social (100% até 80 kWh)
+    - {chunk_id: D01-art179-p1, motivo: "REN 1.000 art. 179, § 1º: até 80 kWh/mês, redução de 100%"}
+    - {chunk_id: D17-p1-s03, motivo: "MME Luz do Povo: gratuidade até 80 kWh"}
+    - {chunk_id: D16-s00, motivo: "ANEEL Tarifa Social: não pagam os primeiros 80 kWh (página com alerta)"}
+  G11: # critério de renda da Tarifa Social (meio salário mínimo)
+    - {chunk_id: D01-art177-p1, motivo: "REN 1.000 art. 177, I: renda por pessoa até meio salário-mínimo"}
+    - {chunk_id: D17-p1-s03, motivo: "MME Luz do Povo: CadÚnico com renda per capita até meio salário-mínimo"}
+  G12: # indígenas e quilombolas (80 kWh)
+    - {chunk_id: D03-art3, motivo: "Lei 15.235 art. 3º: nova redação do § 4º da Lei 12.212 (80 kWh/mês)"}
+    - {chunk_id: D17-p1-s03, motivo: "MME Luz do Povo: famílias indígenas e quilombolas na gratuidade até 80 kWh"}
+  G14: # aviso a quem usa equipamento vital (5 dias úteis)
+    - {chunk_id: D01-art436-p1, motivo: "REN 1.000 art. 436, I: 5 dias úteis, com cadastro prévio"}
+    - {chunk_id: D01-anexoi-clausulasexta-p4, motivo: "Contrato de adesão, 6.8: 5 dias úteis, documento escrito"}
+  G16: # microgeração (75 kW)
+    - {chunk_id: D09-art1-p6, motivo: "Lei 14.300 art. 1º, XI: microgeração até 75 kW"}
+  G17: # prazo da ouvidoria (10 dias úteis)
+    - {chunk_id: D01-anexoi-clausulaoitava-p3, motivo: "Contrato de adesão, 8.5.3: ouvidoria em até 10 dias úteis"}
+    - {chunk_id: D01-anexoiv-tabela-p5, motivo: "Anexo IV da REN 1.000: art. 421, § 1º, II, 10 dias úteis"}
+  G19: # suspensão indevida (4 horas)
+    - {chunk_id: D01-anexoi-clausulasexta-p3, motivo: "Contrato de adesão, 6.6: até 4h em caso de suspensão indevida"}
+    - {chunk_id: D14-q11, motivo: "ANEEL Como resolver, corte indevido: 4 horas"}
+  G20: # aviso prévio de corte por inadimplência (15 dias)
+    - {chunk_id: D01-anexoi-clausulasexta-p2, motivo: "Contrato de adesão, 6.3: 15 dias nos casos de inadimplemento"}
+  G21: # verificação de equipamento com medicamentos (1 dia útil)
+    - {chunk_id: D01-art613, motivo: "REN 1.000 art. 613, I: até 1 dia útil para alimentos perecíveis ou medicamentos"}
+    - {chunk_id: D01-anexoiv-tabela-p7, motivo: "Anexo IV da REN 1.000: art. 613, I, 1 dia útil"}
+  G22: # BPC dá direito à Tarifa Social
+    - {chunk_id: D01-art177-p1, motivo: "REN 1.000 art. 177, II: idosos ou PcD que recebam o BPC"}
+    - {chunk_id: D02-art2-p2, motivo: "Continuação do art. 2º da Lei 12.212, com o inciso II (BPC) repetido"}
+    - {chunk_id: D17-p1-s03, motivo: "MME Luz do Povo: idosos e PcD que recebam o BPC"}
+  G23: # Desconto Social (120 kWh)
+    - {chunk_id: D17-p1-s04, motivo: "MME Luz do Povo: Desconto Social até 120 kWh"}
+    - {chunk_id: D17-p2-q03, motivo: "MME FAQ: Desconto Social desde 1º/1/2026, até 120 kWh"}
+    - {chunk_id: D01-art179-p3, motivo: "REN 1.000 art. 179, § 4º: subclasse desconto social até 120 kWh/mês"}
+  G26: # multi: Tarifa Social para quem usa aparelho de tratamento (3 SM + documentos)
+    - {chunk_id: D01-art177-p1, motivo: "REN 1.000 art. 177, III, a: renda até três salários-mínimos"}
+    - {chunk_id: D01-art178-p1, motivo: "REN 1.000 art. 178: relatório e atestado assinado por profissional médico"}
+  G27: # multi: prazos de resultado e de ressarcimento (15 e 20 dias)
+    - {chunk_id: D08-s9.3-item50, motivo: "PRODIST Módulo 9, item 50: resposta em 15 dias"}
+    - {chunk_id: D08-s9.3-item58, motivo: "PRODIST Módulo 9, item 58: ressarcimento em 20 dias"}
+    - {chunk_id: D01-anexoiv-tabela-p7, motivo: "Anexo IV da REN 1.000: art. 617, I, 15 dias"}
+  G28: # multi: aviso de interrupção programada geral e com equipamento vital
+    - {chunk_id: D01-anexoi-clausulasexta-p4, motivo: "Contrato de adesão, 6.8: 5 dias úteis e 72h"}
+    - {chunk_id: D01-art436-p1, motivo: "REN 1.000 art. 436, I: 5 dias úteis"}
+    - {chunk_id: D01-art436-p2, motivo: "REN 1.000 art. 436, III: 72 horas"}
+  G29: # multi: reclamar na ANEEL e telefone
+    - {chunk_id: D01-anexoi-clausulaoitava-p4, motivo: "Contrato de adesão, 8.5.4: na ANEEL, telefone 167"}
