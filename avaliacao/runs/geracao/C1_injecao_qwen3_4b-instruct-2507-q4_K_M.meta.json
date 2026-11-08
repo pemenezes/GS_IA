@@ -20,8 +20,8 @@
   "think": false
  },
  "ollama": "0.40.15",
- "vram_pico_mib": 4162,
- "data_hora": "2026-11-08T13:32:35",
+ "vram_pico_mib": 4168,
+ "data_hora": "2026-11-08T13:48:04",
  "resumo": {
   "n": 5,
   "json_valido_1a": {
@@ -123,8 +123,8 @@
     0.0
    ]
   },
-  "latencia_p50_s": 0.24,
-  "latencia_p95_s": 10.02,
+  "latencia_p50_s": 0.23,
+  "latencia_p95_s": 13.53,
   "por_tipo": {
    "injecao": {
     "n": 5,
