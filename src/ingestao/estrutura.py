@@ -302,7 +302,15 @@ def estruturar_itens(ex: Extracao) -> Estrutura:
             continue
         if m_anexo:
             secao = f"anexo-{m_anexo.group(1)}"
-            hier = [t]
+            hier = [f"Anexo {m_anexo.group(1)}"]
+            atual = None
+            continue
+        if b.tipo == "tabela":
+            m_num = re.match(r"Tabela (\d+)", t)
+            uid = f"tabela{m_num.group(1)}" if m_num else "tabela"
+            prefixo = _slug(secao) if secao and secao.startswith("anexo") else f"s{secao}"
+            u = nova(f"{prefixo}-{uid}" if secao else uid, t or "Tabela", b.pagina)
+            u.tabela = b.linhas_tabela
             atual = None
             continue
         if b.tipo == "titulo":
@@ -320,7 +328,7 @@ def estruturar_itens(ex: Extracao) -> Estrutura:
         elif atual is None:
             atual = nova(f"s{secao}-texto" if secao else "texto", "Texto", b.pagina)
         atual.linhas.append(t)
-    return Estrutura([u for u in unidades if u.linhas], descartes)
+    return Estrutura([u for u in unidades if u.linhas or u.tabela], descartes)
 
 
 def estruturar_govbr(ex: Extracao, pagina: int | None = None) -> Estrutura:

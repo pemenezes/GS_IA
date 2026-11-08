@@ -101,9 +101,11 @@ documentos:
     extrator: pdf
     licenca: "ato oficial (Lei 9.610/1998, art. 8º, IV)"
     versionar_texto: true
-    # 8.2 Qualidade do Serviço (continuidade, compensação, emergência); 8.3 Qualidade Comercial.
-    # Fora: 8.1 (tensão), 8.4 (segurança do trabalho), anexos de tabelas.
-    recorte: {tipo: secoes, secoes: ["8.2", "8.3"]}
+    # 8.2 Qualidade do Serviço (continuidade, compensação, emergência); 8.3 Qualidade Comercial;
+    # Anexo 8.B (tabelas 1 a 5 de limites individuais, incluído em 08/11/2026).
+    # Fora: 8.1 (tensão), 8.4 (segurança do trabalho), Anexos 8.A e 8.C.
+    recorte: {tipo: secoes, secoes: ["8.2", "8.3", "anexo-8.B"]}
+    tabelas_pdf: [80, 81]  # páginas do Anexo 8.B, lidas como tabela (pdfplumber)
 
   - id: D08
     rotulo: "PRODIST Módulo 9"

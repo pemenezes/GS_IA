@@ -132,6 +132,7 @@ _INICIO_PARAGRAFO_PDF = re.compile(
     r"\d+(?:-[A-Z])?(?:\.\d+)*\.\s"  # item numerado: 13. / 13.1. / 220-A.
     r"|[A-Z]\.\s"  # alínea do PRORET: A.
     r"|Se[çc][ãa]o\s+\d+\.\d+\b"  # Seção 8.2
+    r"|ANEXO\s+\d+\.[A-Z]\b"  # ANEXO 8.B
     r"|Art\.\s*\d+"
     r"|§\s*\d+"
     r"|Par[áa]grafo\s+[úu]nico"
@@ -170,12 +171,45 @@ def _e_subtitulo(
     return anterior_fechou and proxima_abre
 
 
-def extrair_pdf(dados: bytes) -> Extracao:
-    """PDF: junta as linhas em parágrafos pelos marcadores de item e reconhece subtítulos."""
+def _celula_pdf(texto: str | None) -> str:
+    texto = re.sub(r"(\w)\n(\w)\b", r"\1\2", texto or "")
+    return normalizar(texto.replace("\n", " "))
+
+
+def _tabelas_da_pagina(dados: bytes, numero: int) -> list[Bloco]:
+    """Tabelas de uma página (pdfplumber), com a legenda "Tabela N – ..." logo acima de cada uma."""
+    import io
+
+    import pdfplumber
+
+    blocos: list[Bloco] = []
+    with pdfplumber.open(io.BytesIO(dados)) as pdf:
+        pag = pdf.pages[numero - 1]
+        for t in pag.find_tables():
+            linhas = [[_celula_pdf(c) for c in linha] for linha in t.extract()]
+            linhas = [linha for linha in linhas if any(linha)]
+            acima = pag.crop((0, max(0, t.bbox[1] - 45), pag.width, t.bbox[1])).extract_text()
+            m = re.search(r"Tabela \d+ – .*", (acima or "").replace("\n", " "), re.S)
+            legenda = normalizar(m.group(0)) if m else ""
+            blocos.append(Bloco(legenda, "tabela", numero, linhas_tabela=linhas))
+    return blocos
+
+
+def extrair_pdf(dados: bytes, paginas_tabela: list[int] | None = None) -> Extracao:
+    """PDF: junta as linhas em parágrafos pelos marcadores de item e reconhece subtítulos.
+
+    Páginas em `paginas_tabela` são lidas como tabelas (pdfplumber), não como texto corrido.
+    """
     doc = pymupdf.open(stream=dados, filetype="pdf")
+    paginas_tabela = paginas_tabela or []
     paginas = [
         [normalizar(linha) for linha in p.get_text().splitlines() if normalizar(linha)] for p in doc
     ]
+    tabelas_por_pagina = {n: _tabelas_da_pagina(dados, n) for n in paginas_tabela}
+    for n in paginas_tabela:
+        paginas[n - 1] = [
+            linha for linha in paginas[n - 1] if re.match(r"ANEXO\s+\d+\.[A-Z]\b", linha)
+        ]
     repetidas = _linhas_repetidas(paginas)
     descartes: list[tuple[str, str]] = [("cabeçalho/rodapé repetido", r) for r in repetidas]
     linhas = [
@@ -196,7 +230,26 @@ def extrair_pdf(dados: bytes) -> Extracao:
             atual.clear()
 
     anterior_titulo = False
+    pendentes = dict(tabelas_por_pagina)
+
+    def inserir_tabelas_ate(pagina: int) -> None:
+        for n in sorted(p for p in pendentes if p <= pagina):
+            fechar()
+            for t in pendentes.pop(n):
+                anterior_tab = blocos[-1] if blocos and blocos[-1].tipo == "tabela" else None
+                continua = (
+                    anterior_tab is not None
+                    and not t.texto
+                    and len(t.linhas_tabela[0]) == len(anterior_tab.linhas_tabela[0])
+                )
+                if continua:
+                    anterior_tab.linhas_tabela.extend(t.linhas_tabela)
+                else:
+                    blocos.append(t)
+
     for i, (pag, linha) in enumerate(linhas):
+        if pendentes and min(pendentes) < pag:
+            inserir_tabelas_ate(pag - 1)
         anterior = linhas[i - 1][1] if i else None
         proxima = linhas[i + 1][1] if i + 1 < len(linhas) else None
         if re.fullmatch(r"Se[çc][ãa]o\s+\d+\.\d+", linha) or _e_subtitulo(
@@ -211,7 +264,10 @@ def extrair_pdf(dados: bytes) -> Extracao:
             fechar()
             pagina_atual = pag
         atual.append(linha)
+        if pendentes and pag in pendentes and (i + 1 == len(linhas) or linhas[i + 1][0] > pag):
+            inserir_tabelas_ate(pag)
     fechar()
+    inserir_tabelas_ate(len(paginas))
     return Extracao(blocos, descartes, {"paginas": str(len(paginas))})
 
 
@@ -375,6 +431,13 @@ EXTRATORES = {
     "pdf": extrair_pdf,
     "govbr": extrair_govbr,
 }
+
+
+def extrair_arquivo(doc: dict, dados: bytes) -> Extracao:
+    """Extrai um original aplicando as opções do manifesto (ex.: páginas lidas como tabela)."""
+    if doc["extrator"] == "pdf":
+        return extrair_pdf(dados, doc.get("tabelas_pdf"))
+    return EXTRATORES[doc["extrator"]](dados)
 
 
 def extrair(extrator: str, arquivos: list[Path]) -> Extracao:

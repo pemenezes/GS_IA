@@ -13,7 +13,7 @@ from src.config import RAIZ
 from src.ingestao import download
 from src.ingestao.chunking import Parametros, Tokenizador, chunks_da_unidade
 from src.ingestao.estrutura import estruturar
-from src.ingestao.extracao import EXTRATORES
+from src.ingestao.extracao import extrair_arquivo
 
 CHUNKS = RAIZ / "base" / "chunks.jsonl"
 CHUNKS_LOCAL = RAIZ / "base" / "local" / "chunks_govbr.jsonl"
@@ -72,7 +72,7 @@ def processar_documento(
     descartes: list[dict[str, str]] = []
     versoes = []
     for idx, (arq, reg) in enumerate(arquivos, start=1):
-        ex = EXTRATORES[doc["extrator"]](arq.read_bytes())
+        ex = extrair_arquivo(doc, arq.read_bytes())
         est = estruturar(doc, ex, pagina=idx if len(arquivos) > 1 else None)
         versoes.append(_versao_fonte(doc, reg, ex.metadados))
         vigencia = f"versão disponível na fonte oficial em {reg['data_acesso'][:10]}" + (

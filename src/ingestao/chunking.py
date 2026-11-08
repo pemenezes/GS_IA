@@ -143,7 +143,7 @@ def chunks_da_unidade(
         tem_cabecalho = (
             len(u.tabela) > 1
             and len(primeira) > 1
-            and all(len(c) <= 40 and not re.search(r"\d", c) for c in primeira)
+            and all(not re.search(r"\d", c) for c in primeira)
         )
         corpo = u.tabela[1:] if tem_cabecalho else u.tabela
         linhas = [" | ".join(c) for c in corpo]

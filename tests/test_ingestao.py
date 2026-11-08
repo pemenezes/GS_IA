@@ -250,6 +250,13 @@ def test_tabela_repete_cabecalho_so_quando_existe():
     com = Unidade("t", "Tabela", [], [], tabela=[["Tipo", "Prazo"]] + [["1", "5 dias"]] * 12)
     for _, texto, tabela in chunks_da_unidade("Doc", com, TokFalso(), p):
         assert tabela and texto.split("\n")[1] == "Tipo | Prazo"
+    longa = "Faixa de Variação dos Limites Anuais de Indicadores de Continuidade dos Conjuntos"
+    com_longo = Unidade(
+        "t", "Tabela", [], [], tabela=[[longa, "DISE (horas)"]] + [["≤ 5", "24"]] * 9
+    )
+    partes = chunks_da_unidade("Doc", com_longo, TokFalso(), p)
+    assert len(partes) > 1
+    assert all(texto.split("\n")[1].startswith("Faixa de Variação") for _, texto, _ in partes)
     sem = Unidade(
         "t", "Tabela", [], [], tabela=[[f"Cooperativa {i}, telefone 0800 {i}"] for i in range(12)]
     )

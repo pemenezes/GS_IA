@@ -20,10 +20,10 @@ Gerado por `scripts/qc_amostra.py`. Colunas automáticas: **fiel** (todas as lin
 | 14 | `D01-art96-p1` | Art. 96 | 239 | ok | ok | ok | ok |
 | 15 | `D07-s8.2-item161-p2` | Item 161 | 248 | ok | ok | ok | ok |
 | 16 | `D07-s8.2-item249` | Item 249 | 84 | ok | ok | ok | ok |
-| 17 | `D08-s9.1-item15` | Item 15 | 78 | ok | ok | ok | ok |
-| 18 | `D09-art36-p2` | Art. 36 | 252 | ok | ok | ok | ok |
-| 19 | `D10-art4-p2` | Art. 4º | 219 | ok | ok | ok | ok |
-| 20 | `D10-art5` | Art. 5º | 231 | ok | ok | ok | ok |
+| 17 | `D08-s9.1-item9` | Item 9 | 79 | ok | ok | ok | ok |
+| 18 | `D09-art31` | Art. 31 | 74 | ok | ok | ok | ok |
+| 19 | `D09-art37` | Art. 37 | 35 | ok | ok | ok | ok |
+| 20 | `D10-art1` | Art. 1º | 92 | ok | ok | ok | ok |
 
 ## Trechos sorteados
 
@@ -270,19 +270,19 @@ PRODIST Módulo 8 > Seção 8.2 – Qualidade do Serviço > Compensações por v
 249. Os relatórios de que trata o item 248 devem conter a listagem das interrupções com o detalhamento das ocorrências, a apuração dos indicadores correspondentes e, quando aplicável, o cálculo das compensações.
 ```
 
-### 17. `D08-s9.1-item15`
+### 17. `D08-s9.1-item9`
 
 - Fonte: PRODIST, Módulo 9: Ressarcimento de Danos Elétricos (versão vigente) (https://git.aneel.gov.br/publico/centralconteudo/-/raw/main/procreg/prodist/modulo09/aren2021956_Prodist_modulo_9_v2.pdf)
-- Hierarquia: Seção 9.1 – Da Solicitação e Análise > Excludentes de responsabilidade
+- Hierarquia: Seção 9.1 – Da Solicitação e Análise
 - Notas de redação: —
 - Vigência: versão disponível na fonte oficial em 2026-11-07; arquivo aren2021956_Prodist_modulo_9_v2.pdf (versão 2)
 
 ```text
-PRODIST Módulo 9 > Seção 9.1 – Da Solicitação e Análise > Excludentes de responsabilidade > Item 15
-15. No caso previsto na alínea “b” do item 14, uma cópia do ato que estabelece a Situação de Emergência ou de Calamidade Pública deve ser encaminhada ao consumidor em anexo à Carta de Indeferimento.
+PRODIST Módulo 9 > Seção 9.1 – Da Solicitação e Análise > Item 9
+9. Os canais de atendimento para recebimento da Solicitação a serem disponibilizados pela distribuidora, bem como os documentos e informações que podem ser exigidos do consumidor, estão dispostos nas Regras de Prestação do Serviço Público de Distribuição de Energia Elétrica.
 ```
 
-### 18. `D09-art36-p2`
+### 18. `D09-art31`
 
 - Fonte: Lei nº 14.300, de 6 de janeiro de 2022 (marco legal da micro e minigeração distribuída) (https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/lei/l14300.htm)
 - Hierarquia: CAPÍTULO VII – DISPOSIÇÕES FINAIS
@@ -290,43 +290,30 @@ PRODIST Módulo 9 > Seção 9.1 – Da Solicitação e Análise > Excludentes de
 - Vigência: versão disponível na fonte oficial em 2026-11-07; arquivo l14300.htm; Last-Modified Thu, 23 Apr 2026 23:34:27 GMT
 
 ```text
-Lei 14.300/2022 > CAPÍTULO VII – DISPOSIÇÕES FINAIS > Art. 36
-§ 3º A distribuidora de energia elétrica promoverá chamadas públicas para credenciamento de empresas especializadas e, posteriormente, chamadas concorrenciais para contratação de serviços com o objetivo de implementar as instalações dos sistemas fotovoltaicos, locais ou remotos, ou de outras fontes renováveis.
-§ 4º O consumidor participante do PERS será faturado pela distribuidora de energia elétrica com base na regra do art. 17 desta Lei, e os volumes de energia excedentes oriundos da geração nas unidades atendidas pelo PERS poderão ser adquiridos pela distribuidora, conforme regulação da Aneel.
-§ 5º Caberá à Aneel adaptar as normas pertinentes, no que couber, para viabilizar a formação dos recursos estabelecidos no § 1º deste artigo e demais medidas para a operacionalização dos procedimentos estabelecidos, e realizar o acompanhamento físico e contábil do PERS.
-§ 6º As contratações a que se refere o § 3º deste artigo deverão ser feitas por processos de concorrência por meio de chamadas públicas, na forma da regulamentação da Aneel.
+Lei 14.300/2022 > CAPÍTULO VII – DISPOSIÇÕES FINAIS > Art. 31
+Art. 31. Qualquer alteração de norma ou de procedimento das distribuidoras relacionada à microgeração ou minigeração distribuída ou às unidades consumidoras participantes do SCEE deverá ser publicada com prazo mínimo de 90 (noventa) dias para sua entrada em vigor.
 ```
 
-### 19. `D10-art4-p2`
+### 19. `D09-art37`
+
+- Fonte: Lei nº 14.300, de 6 de janeiro de 2022 (marco legal da micro e minigeração distribuída) (https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/lei/l14300.htm)
+- Hierarquia: CAPÍTULO VII – DISPOSIÇÕES FINAIS
+- Notas de redação: —
+- Vigência: versão disponível na fonte oficial em 2026-11-07; arquivo l14300.htm; Last-Modified Thu, 23 Apr 2026 23:34:27 GMT
+
+```text
+Lei 14.300/2022 > CAPÍTULO VII – DISPOSIÇÕES FINAIS > Art. 37
+Art. 37. Esta Lei entra em vigor na data de sua publicação.
+```
+
+### 20. `D10-art1`
 
 - Fonte: Lei nº 8.078, de 11 de setembro de 1990 - Código de Defesa do Consumidor (compilada), Título I (https://www.planalto.gov.br/ccivil_03/leis/l8078compilado.htm)
-- Hierarquia: TÍTULO I – Dos Direitos do Consumidor > CAPÍTULO II – Da Política Nacional de Relações de Consumo
-- Notas de redação: (Incluído pela Lei nº 14.181, de 2021); (Redação dada pela Lei nº 9.008, de 21.3.1995)
+- Hierarquia: TÍTULO I – Dos Direitos do Consumidor > CAPÍTULO I – Disposições Gerais
+- Notas de redação: —
 - Vigência: versão disponível na fonte oficial em 2026-11-07; arquivo l8078compilado.htm; Last-Modified Tue, 13 Oct 2026 09:50:35 GMT
 
 ```text
-CDC (Lei 8.078/1990) > TÍTULO I – Dos Direitos do Consumidor > CAPÍTULO II – Da Política Nacional de Relações de Consumo > Art. 4º
-Art. 4º A Política Nacional das Relações de Consumo tem por objetivo o atendimento das necessidades dos consumidores, o respeito à sua dignidade, saúde e segurança, a proteção de seus interesses (...)
-III - harmonização dos interesses dos participantes das relações de consumo e compatibilização da proteção do consumidor com a necessidade de desenvolvimento econômico e tecnológico, de modo a viabilizar os princípios nos quais se funda a ordem econômica (art. 170, da Constituição Federal), sempre com base na boa-fé e equilíbrio nas relações entre consumidores e fornecedores;
-IV - educação e informação de fornecedores e consumidores, quanto aos seus direitos e deveres, com vistas à melhoria do mercado de consumo;
-V - incentivo à criação pelos fornecedores de meios eficientes de controle de qualidade e segurança de produtos e serviços, assim como de mecanismos alternativos de solução de conflitos de consumo;
-```
-
-### 20. `D10-art5`
-
-- Fonte: Lei nº 8.078, de 11 de setembro de 1990 - Código de Defesa do Consumidor (compilada), Título I (https://www.planalto.gov.br/ccivil_03/leis/l8078compilado.htm)
-- Hierarquia: TÍTULO I – Dos Direitos do Consumidor > CAPÍTULO II – Da Política Nacional de Relações de Consumo
-- Notas de redação: (Incluído pela Lei nº 14.181, de 2021)
-- Vigência: versão disponível na fonte oficial em 2026-11-07; arquivo l8078compilado.htm; Last-Modified Tue, 13 Oct 2026 09:50:35 GMT
-
-```text
-CDC (Lei 8.078/1990) > TÍTULO I – Dos Direitos do Consumidor > CAPÍTULO II – Da Política Nacional de Relações de Consumo > Art. 5º
-Art. 5º Para a execução da Política Nacional das Relações de Consumo, contará o poder público com os seguintes instrumentos, entre outros:
-I - manutenção de assistência jurídica, integral e gratuita para o consumidor carente;
-II - instituição de Promotorias de Justiça de Defesa do Consumidor, no âmbito do Ministério Público;
-III - criação de delegacias de polícia especializadas no atendimento de consumidores vítimas de infrações penais de consumo;
-IV - criação de Juizados Especiais de Pequenas Causas e Varas Especializadas para a solução de litígios de consumo;
-V - concessão de estímulos à criação e desenvolvimento das Associações de Defesa do Consumidor.
-VI - instituição de mecanismos de prevenção e tratamento extrajudicial e judicial do superendividamento e de proteção do consumidor pessoa natural;
-VII - instituição de núcleos de conciliação e mediação de conflitos oriundos de superendividamento.
+CDC (Lei 8.078/1990) > TÍTULO I – Dos Direitos do Consumidor > CAPÍTULO I – Disposições Gerais > Art. 1º
+Art. 1º O presente código estabelece normas de proteção e defesa do consumidor, de ordem pública e interesse social, nos termos dos arts. 5º, inciso XXXII, 170, inciso V, da Constituição Federal e art. 48 de suas Disposições Transitórias.
 ```

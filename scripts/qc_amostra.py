@@ -21,7 +21,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 from src.config import RAIZ  # noqa: E402
 from src.ingestao import base, download  # noqa: E402
-from src.ingestao.extracao import EXTRATORES  # noqa: E402
+from src.ingestao.extracao import extrair_arquivo  # noqa: E402
 from src.ingestao.normalizacao import separar_notas  # noqa: E402
 
 OBRIGATORIOS = [
@@ -43,7 +43,7 @@ FIM_OK = (".", ";", ":", ")", "”", "?", "!")
 def _texto_fonte(doc: dict, sha: str) -> str:
     for arq, reg in base.arquivos_do_documento(doc):
         if reg["sha256"] == sha:
-            ex = EXTRATORES[doc["extrator"]](arq.read_bytes())
+            ex = extrair_arquivo(doc, arq.read_bytes())
             partes = []
             for b in ex.blocos:
                 if b.linhas_tabela:
