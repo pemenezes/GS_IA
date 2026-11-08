@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import hashlib
 import json
 from pathlib import Path
 from typing import Literal
@@ -12,6 +13,7 @@ from src.config import RAIZ
 
 TESTE = RAIZ / "avaliacao" / "teste.jsonl"
 CANDIDATAS = RAIZ / "avaliacao" / "teste_candidatas.jsonl"
+LOCK = RAIZ / "avaliacao" / "teste.lock"
 
 Tipo = Literal[
     "direta", "coloquial", "ruido", "multi_trecho", "nao_consta", "fora_dominio", "dinamica"
@@ -78,6 +80,15 @@ class Caso(BaseModel):
 def carregar(caminho: Path = TESTE) -> list[Caso]:
     with open(caminho, encoding="utf-8") as f:
         return [Caso.model_validate_json(linha) for linha in f if linha.strip()]
+
+
+def carregar_congelado(split: str | None = None) -> list[Caso]:
+    """Conjunto de teste congelado; falha se o arquivo não bater com o hash de teste.lock."""
+    sha = hashlib.sha256(TESTE.read_bytes()).hexdigest()
+    if sha != LOCK.read_text(encoding="utf-8").split()[0]:
+        raise RuntimeError("avaliacao/teste.jsonl mudou depois de congelado (hash diferente)")
+    casos = carregar(TESTE)
+    return [c for c in casos if split is None or c.split == split]
 
 
 def gravar(casos: list[Caso], caminho: Path) -> None:

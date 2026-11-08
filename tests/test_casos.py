@@ -8,7 +8,14 @@ from pathlib import Path
 import pytest
 from pydantic import ValidationError
 
-from src.avaliacao.casos import CANDIDATAS, COMPOSICAO, Caso, carregar
+from src.avaliacao.casos import (
+    CANDIDATAS,
+    COMPOSICAO,
+    TESTE,
+    Caso,
+    carregar,
+    carregar_congelado,
+)
 from src.avaliacao.ruido import ruido_de_voz
 from src.avaliacao.split import dividir
 from src.ingestao import base
@@ -100,6 +107,15 @@ sem_base = pytest.mark.skipif(
     not base.CHUNKS.exists() or not CANDIDATAS.exists(),
     reason="base ou candidatas ainda não geradas",
 )
+
+
+@pytest.mark.skipif(not TESTE.exists(), reason="conjunto ainda não congelado")
+def test_conjunto_congelado_confere_com_hash_e_split():
+    casos = carregar_congelado()
+    assert Counter(c.split for c in casos) == {"dev": 24, "test": 36}
+    assert len(carregar_congelado("dev")) == 24
+    dev_por_grupo = {c.grupo for c in casos if c.split == "dev"}
+    assert not dev_por_grupo & {c.grupo for c in casos if c.split == "test"}
 
 
 @sem_base
