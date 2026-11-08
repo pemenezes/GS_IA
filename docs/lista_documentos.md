@@ -103,7 +103,7 @@ encontrei estas distribuidoras com sede em municípios da RMSP:
 
 ## 6. Resultado da Fase 2 (07/11/2026)
 
-- **Base gerada:** 19 documentos e 1.810 trechos. Desses, 1.696 vêm de atos oficiais, versionados em `base/chunks.jsonl`, e 114 vêm de páginas gov.br, só locais. A tabela final está em [`base/fontes.csv`](../base/fontes.csv), e as estatísticas no notebook [`01_base_conhecimento.ipynb`](../notebooks/01_base_conhecimento.ipynb).
+- **Base gerada:** 19 documentos e 1.806 trechos. Desses, 1.692 vêm de atos oficiais, versionados em `base/chunks.jsonl`, e 114 vêm de páginas gov.br, só locais. A tabela final está em [`base/fontes.csv`](../base/fontes.csv), e as estatísticas no notebook [`01_base_conhecimento.ipynb`](../notebooks/01_base_conhecimento.ipynb).
 - **D04:** o link do Ministério da Saúde entrega um **PDF** de 2011, e não uma página HTML. O manifesto foi corrigido.
 - **Downloads da ANEEL:** os 7 documentos hospedados pela ANEEL (D01, D05 a D08, D12 e D13) foram obtidos pelo navegador, por causa do bloqueio da Cloudflare. O sha256 de cada arquivo está registrado.
 - **REN 1.147/2025:** já está incorporada ao texto compilado da REN 1.000, com 55 notas "Incluído/Redação dada pela REN ANEEL 1.147".
@@ -112,6 +112,11 @@ encontrei estas distribuidoras com sede em municípios da RMSP:
   - Módulo 4, Seções 4.2 e 4.8;
   - PRORET 6.8, Seções 1, 2, 3, 6 e 9.
 - **Páginas com alerta de desatualização** (campo `alerta` dos trechos): D14, modificada em 08/09/2025; D15, em 24/02/2022; D16, em 04/07/2025. Cada uma foi modificada antes de normas mais recentes sobre o seu tema.
+- **Aprovação do Pedro (08/11/2026):**
+  - os recortes do PRODIST e do PRORET foram aprovados como estão;
+  - os Anexos II e III da REN 1.000, que são formulários em branco sobre rede particular, foram removidos da base.
+
+  Com isso, a Fase 2 está concluída.
 
 ## 7. Riscos para a Fase 2
 

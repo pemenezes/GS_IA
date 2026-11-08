@@ -121,6 +121,19 @@ def test_recorte_dispositivos_proprios():
     assert [u.uid for u in aplicar_recorte(doc, est).unidades] == ["ementa", "art1", "art4"]
 
 
+def test_recorte_exclui_anexos_sem_confundir_numeracao():
+    est = estruturar_articulado(extrair_html_ato(LEI_FICTICIA.encode("utf-8")))
+    est.unidades += [
+        Unidade("anexoii-texto", "Texto", [], ["formulário"]),
+        Unidade("anexoiii-texto", "Texto", [], ["formulário"]),
+        Unidade("anexoiv-tabela", "Tabela", [], ["prazos"]),
+    ]
+    doc = {"recorte": {"tipo": "integral", "excluir_anexos": ["II"]}}
+    uids = [u.uid for u in aplicar_recorte(doc, est).unidades]
+    assert "anexoii-texto" not in uids
+    assert {"anexoiii-texto", "anexoiv-tabela", "art1"} <= set(uids)
+
+
 def _pdf_ficticio() -> bytes:
     doc = pymupdf.open()
     paginas = [

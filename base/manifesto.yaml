@@ -22,7 +22,8 @@ documentos:
     extrator: aneel
     licenca: "ato oficial (Lei 9.610/1998, art. 8º, IV)"
     versionar_texto: true
-    recorte: {tipo: integral}
+    # Anexos II e III são formulários em branco (rede particular); removidos em 08/11/2026.
+    recorte: {tipo: integral, excluir_anexos: ["II", "III"]}
 
   - id: D02
     rotulo: "Lei 12.212/2010"

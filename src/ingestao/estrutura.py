@@ -358,12 +358,18 @@ def estruturar_govbr(ex: Extracao, pagina: int | None = None) -> Estrutura:
 def aplicar_recorte(doc: dict[str, Any], est: Estrutura) -> Estrutura:
     recorte = doc.get("recorte") or {"tipo": "integral"}
     tipo = recorte["tipo"]
-    if tipo == "integral":
+    anexos_fora = tuple(f"anexo{_slug(a)}-" for a in recorte.get("excluir_anexos") or [])
+    if tipo == "integral" and not anexos_fora:
         return est
     manter: list[Unidade] = []
     descartes = list(est.descartes)
     for u in est.unidades:
-        if u.uid in ("ementa", "notas"):
+        if anexos_fora and u.uid.startswith(anexos_fora):
+            descartes.append(
+                ("anexo excluído do recorte", f"{u.rotulo}: {' '.join(u.linhas)[:80]}")
+            )
+            continue
+        if tipo == "integral" or u.uid in ("ementa", "notas"):
             ok = True
         elif tipo == "titulo":
             alvo = recorte["titulo"]

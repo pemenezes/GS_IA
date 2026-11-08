@@ -169,12 +169,16 @@ def construir(manifesto: dict[str, Any], cfg: dict[str, Any]) -> dict[str, Any]:
 def _descrever_recorte(recorte: dict[str, Any]) -> str:
     tipo = recorte["tipo"]
     if tipo == "titulo":
-        return f"só o Título {recorte['titulo']}"
-    if tipo == "secoes":
-        return "seções " + ", ".join(recorte["secoes"])
-    if tipo == "dispositivos_proprios":
-        return "só dispositivos próprios (sem artigos que alteram outras normas)"
-    return "integral"
+        texto = f"só o Título {recorte['titulo']}"
+    elif tipo == "secoes":
+        texto = "seções " + ", ".join(recorte["secoes"])
+    elif tipo == "dispositivos_proprios":
+        texto = "só dispositivos próprios (sem artigos que alteram outras normas)"
+    else:
+        texto = "integral"
+    if recorte.get("excluir_anexos"):
+        texto += ", sem os Anexos " + " e ".join(recorte["excluir_anexos"])
+    return texto
 
 
 def _gravar_jsonl(caminho: Path, linhas: list[dict[str, Any]]) -> None:
