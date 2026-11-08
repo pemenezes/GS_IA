@@ -18,7 +18,11 @@ retrieval:
   rrf_k: 60
   candidatos: 20
   top_k_final: 3                   # comparar com 5 na Fase 4
-  reranker: null                   # opcional
+  reranker: null                   # opcional; definido pela ablação da Fase 4
+  reranker_ablacao:                # modelo testado na ablação (usado quando reranker=True)
+    modelo: BAAI/bge-reranker-v2-m3
+    revisao: 953dc6f6f85a1b2dbfca4c34a2796e7dde08d41e   # commit do Hugging Face (08/11/2026)
+    dispositivo: cuda              # fp16; CPU levou ~12 s/pergunta, GPU ~0,24 s (cabe com o LLM)
   limiar_recusa: null              # definido na Fase 4, com o split dev
 llm:
   servidor: ollama

@@ -34,7 +34,10 @@ class IndiceBM25:
         self.chunks = chunks
         self._bm25 = BM25Okapi([tokenizar(c["texto"]) for c in chunks])
 
+    def scores(self, consulta: str) -> list[float]:
+        return list(self._bm25.get_scores(tokenizar(consulta)))
+
     def buscar(self, consulta: str, k: int = 5) -> list[Resultado]:
-        scores = self._bm25.get_scores(tokenizar(consulta))
+        scores = self.scores(consulta)
         ordem = sorted(range(len(scores)), key=lambda i: -scores[i])[:k]
         return [Resultado(self.chunks[i], float(scores[i])) for i in ordem]

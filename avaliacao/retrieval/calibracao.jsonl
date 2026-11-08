@@ -1,0 +1,45 @@
+{"id": "CAL-01", "rotulo": "responder", "subtipo": "respondivel", "pergunta": "Qual é o prazo para a religação de urgência de uma casa em área rural?"}
+{"id": "CAL-02", "rotulo": "responder", "subtipo": "respondivel", "pergunta": "Se eu pagar a conta de luz com atraso, a distribuidora pode cobrar multa e juros?"}
+{"id": "CAL-03", "rotulo": "responder", "subtipo": "respondivel", "pergunta": "Depois que eu reclamo do medidor, em quanto tempo a distribuidora tem que verificar?"}
+{"id": "CAL-04", "rotulo": "responder", "subtipo": "respondivel", "pergunta": "O que é minigeração distribuída?"}
+{"id": "CAL-05", "rotulo": "responder", "subtipo": "respondivel", "pergunta": "Quando eu peço o desligamento definitivo, em quanto tempo sai a fatura final?"}
+{"id": "CAL-06", "rotulo": "responder", "subtipo": "respondivel", "pergunta": "A distribuidora pode se recusar a receber meu pedido de ressarcimento de danos?"}
+{"id": "CAL-07", "rotulo": "responder", "subtipo": "respondivel", "pergunta": "O que precisa constar no documento com o resultado da análise do ressarcimento?"}
+{"id": "CAL-08", "rotulo": "responder", "subtipo": "respondivel", "pergunta": "A ouvidoria da distribuidora pode prorrogar o prazo para me responder?"}
+{"id": "CAL-09", "rotulo": "responder", "subtipo": "respondivel", "pergunta": "Quais formas de ressarcimento a distribuidora pode escolher quando aprova o pedido?"}
+{"id": "CAL-10", "rotulo": "responder", "subtipo": "respondivel", "pergunta": "A distribuidora tem que mostrar no site quantas casas estão sem energia em cada bairro?"}
+{"id": "CAL-11", "rotulo": "responder", "subtipo": "respondivel", "pergunta": "Quais são as cores das bandeiras tarifárias?"}
+{"id": "CAL-12", "rotulo": "responder", "subtipo": "respondivel", "pergunta": "A tarifa social pode ser aplicada em mais de uma casa da mesma família?"}
+{"id": "CAL-13", "rotulo": "responder", "subtipo": "respondivel", "pergunta": "Preciso pedir a tarifa social ou ela é concedida automaticamente?"}
+{"id": "CAL-14", "rotulo": "responder", "subtipo": "respondivel", "pergunta": "Que informações eu preciso dar quando peço ressarcimento de um aparelho queimado?"}
+{"id": "CAL-15", "rotulo": "responder", "subtipo": "respondivel", "pergunta": "Posso pedir para parar de receber SMS da distribuidora sobre falta de energia?"}
+{"id": "CAL-16", "rotulo": "recusar", "subtipo": "fora_dominio", "pergunta": "A Comgás pode cortar o gás se eu atrasar a conta?"}
+{"id": "CAL-17", "rotulo": "recusar", "subtipo": "fora_dominio", "pergunta": "Como pagar o IPTU parcelado em São Paulo?"}
+{"id": "CAL-18", "rotulo": "recusar", "subtipo": "fora_dominio", "pergunta": "Como recorrer de uma multa de trânsito?"}
+{"id": "CAL-19", "rotulo": "recusar", "subtipo": "fora_dominio", "pergunta": "Quanto tempo demora para tirar o passaporte?"}
+{"id": "CAL-20", "rotulo": "recusar", "subtipo": "fora_dominio", "pergunta": "Qual time ganhou o campeonato brasileiro do ano passado?"}
+{"id": "CAL-21", "rotulo": "recusar", "subtipo": "fora_dominio", "pergunta": "Me conta uma piada curta."}
+{"id": "CAL-22", "rotulo": "recusar", "subtipo": "fora_dominio", "pergunta": "Escreva uma função em Python que ordena uma lista."}
+{"id": "CAL-23", "rotulo": "recusar", "subtipo": "fora_dominio", "pergunta": "Vai chover no fim de semana em Santos?"}
+{"id": "CAL-24", "rotulo": "recusar", "subtipo": "fora_dominio", "pergunta": "Como faço para trocar a resistência do chuveiro elétrico?"}
+{"id": "CAL-25", "rotulo": "recusar", "subtipo": "fora_dominio", "pergunta": "Qual a melhor marca de geladeira que gasta pouca energia?"}
+{"id": "CAL-26", "rotulo": "recusar", "subtipo": "fora_dominio", "pergunta": "Minha operadora de celular pode cancelar meu plano sem avisar?"}
+{"id": "CAL-27", "rotulo": "recusar", "subtipo": "fora_dominio", "pergunta": "Como pedir o seguro-desemprego?"}
+{"id": "CAL-28", "rotulo": "recusar", "subtipo": "fora_dominio", "pergunta": "O plano de saúde é obrigado a cobrir cirurgia de catarata?"}
+{"id": "CAL-29", "rotulo": "recusar", "subtipo": "fora_dominio", "pergunta": "Qual é a capital da Austrália?"}
+{"id": "CAL-30", "rotulo": "recusar", "subtipo": "fora_dominio", "pergunta": "Como fazer pão caseiro sem fermento biológico?"}
+{"id": "CAL-31", "rotulo": "recusar", "subtipo": "fora_dominio", "pergunta": "O condomínio pode proibir que eu tenha cachorro no apartamento?"}
+{"id": "CAL-32", "rotulo": "recusar", "subtipo": "fora_dominio", "pergunta": "Como declarar o imposto de renda sendo MEI?"}
+{"id": "CAL-33", "rotulo": "recusar", "subtipo": "fora_dominio", "pergunta": "A loja é obrigada a trocar um sapato que não serviu?"}
+{"id": "CAL-34", "rotulo": "recusar", "subtipo": "fora_dominio", "pergunta": "Quantos quilômetros tem uma maratona?"}
+{"id": "CAL-35", "rotulo": "recusar", "subtipo": "fora_dominio", "pergunta": "Como faço para agendar vacina no posto de saúde?"}
+{"id": "CAL-36", "rotulo": "recusar", "subtipo": "nao_consta", "pergunta": "Quanto custa em reais o kWh da tarifa social da Enel?"}
+{"id": "CAL-37", "rotulo": "recusar", "subtipo": "nao_consta", "pergunta": "Quando vai ser o próximo reajuste da conta de luz da Enel?"}
+{"id": "CAL-38", "rotulo": "recusar", "subtipo": "nao_consta", "pergunta": "Qual vai ser a bandeira tarifária de dezembro?"}
+{"id": "CAL-39", "rotulo": "recusar", "subtipo": "nao_consta", "pergunta": "Quanto a Enel lucrou em 2025?"}
+{"id": "CAL-40", "rotulo": "recusar", "subtipo": "nao_consta", "pergunta": "Qual é o telefone do Procon de Guarulhos?"}
+{"id": "CAL-41", "rotulo": "recusar", "subtipo": "nao_consta", "pergunta": "Quantos dias durou o apagão de novembro de 2023 em São Paulo?"}
+{"id": "CAL-42", "rotulo": "recusar", "subtipo": "nao_consta", "pergunta": "A Enel vai perder a concessão em São Paulo?"}
+{"id": "CAL-43", "rotulo": "recusar", "subtipo": "nao_consta", "pergunta": "Quanto custa instalar um sistema de placa solar de 5 kW?"}
+{"id": "CAL-44", "rotulo": "recusar", "subtipo": "nao_consta", "pergunta": "Qual empresa instala placa solar mais barato em São Paulo?"}
+{"id": "CAL-45", "rotulo": "recusar", "subtipo": "nao_consta", "pergunta": "Quanto a Enel cobra em reais pela taxa de religação de urgência?"}
