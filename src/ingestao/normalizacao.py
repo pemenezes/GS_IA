@@ -14,6 +14,12 @@ _PALAVRAS_NOTA = (
 # Notas entre parênteses, com até um nível de parênteses internos.
 NOTA_RE = re.compile(r"\(\s*(?:" + _PALAVRAS_NOTA + r")\b(?:[^()]|\([^()]*\))*\)", re.IGNORECASE)
 _VETADO_RE = re.compile(r"\(\s*(?:VETAD[OA]|vetad[oa])\s*\)")
+# Nota cujo "(" ficou dentro do texto tachado e foi removido junto com ele.
+NOTA_SEM_ABERTURA_RE = re.compile(
+    r"(?<!\()(?:^|(?<=\s))(?:Revogad[oa]s?|Inclu[íi]d[oa]s?|Reda[çc][ãa]o\s+dada)\s+pel[oa]\s+"
+    r"[^()]{3,80}?\d{4}\s*\)",
+    re.IGNORECASE,
+)
 
 
 def normalizar(texto: str) -> str:
@@ -36,6 +42,8 @@ def separar_notas(texto: str) -> tuple[str, list[str]]:
     """Remove as notas de redação do texto e as devolve à parte."""
     notas = [normalizar(m.group(0)) for m in NOTA_RE.finditer(texto)]
     limpo = NOTA_RE.sub(" ", texto)
+    notas += [f"({normalizar(m.group(0))}" for m in NOTA_SEM_ABERTURA_RE.finditer(limpo)]
+    limpo = NOTA_SEM_ABERTURA_RE.sub(" ", limpo)
     return normalizar(limpo), notas
 
 

@@ -65,6 +65,10 @@ def test_separar_notas_de_redacao():
     )
     assert texto == "I - regra nova;"
     assert len(notas) == 2
+    texto, notas = separar_notas("Revogado pela REN ANEEL 1.147, de 09.12.2025 )")
+    assert texto == "" and notas == ["(Revogado pela REN ANEEL 1.147, de 09.12.2025)"]
+    texto, _ = separar_notas("I - redação vigente; (Redação dada pela REN ANEEL 1, de 2025)")
+    assert texto == "I - redação vigente;"
 
 
 @pytest.mark.parametrize(
