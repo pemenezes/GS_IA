@@ -1,0 +1,180 @@
+{
+ "run": "C0_dev_qwen35_4b-q4_K_M",
+ "config": "C0",
+ "conjunto": "dev",
+ "modelo": "qwen3.5:4b-q4_K_M",
+ "digest": "d8b0f5e9760cd1682034f292d7ef72ec46f432149be0df7574bf2d6e92e38c04",
+ "estruturada": true,
+ "hash_prompts": "0be3168f3345",
+ "teste_lock": "41ec971221d50bf73c3a548db89b77cbd462baa4995cfcc56e40a5487bb49ccd",
+ "retrieval": {
+  "hibrido": false,
+  "top_k_final": 3,
+  "limiar_recusa": 0.6038
+ },
+ "llm": {
+  "num_ctx": 4096,
+  "temperature": 0.0,
+  "top_p": 1.0,
+  "seed": 42,
+  "think": false
+ },
+ "ollama": "0.40.15",
+ "vram_pico_mib": 4781,
+ "data_hora": "2026-11-08T12:55:01",
+ "resumo": {
+  "n": 24,
+  "json_valido_1a": {
+   "k": 24,
+   "n": 24,
+   "taxa": 1.0,
+   "ic95": [
+    0.8620194241710247,
+    1.0
+   ]
+  },
+  "regras_1a": {
+   "k": 20,
+   "n": 24,
+   "taxa": 0.833,
+   "ic95": [
+    0.6414652961213058,
+    0.9332143199927109
+   ]
+  },
+  "valida_final": {
+   "k": 20,
+   "n": 24,
+   "taxa": 0.833,
+   "ic95": [
+    0.6414652961213058,
+    0.9332143199927109
+   ]
+  },
+  "acuracia": {
+   "k": 0,
+   "n": 16,
+   "taxa": 0.0,
+   "ic95": [
+    0.0,
+    0.19361341827271994
+   ]
+  },
+  "citacao_correta": {
+   "k": 0,
+   "n": 15,
+   "taxa": 0.0,
+   "ic95": [
+    0.0,
+    0.20388926630434784
+   ]
+  },
+  "alucinacao": {
+   "k": 9,
+   "n": 15,
+   "taxa": 0.6,
+   "ic95": [
+    0.357464427565077,
+    0.8017577191740534
+   ]
+  },
+  "recusa_correta": {
+   "k": 3,
+   "n": 5,
+   "taxa": 0.6,
+   "ic95": [
+    0.23071993220883708,
+    0.8823817688407467
+   ]
+  },
+  "recusa_indevida": {
+   "k": 0,
+   "n": 16,
+   "taxa": 0.0,
+   "ic95": [
+    0.0,
+    0.19361341827271994
+   ]
+  },
+  "citacao_verificavel": {
+   "k": 0,
+   "n": 0,
+   "taxa": null,
+   "ic95": [
+    0.0,
+    0.0
+   ]
+  },
+  "recusa_nega_regra": {
+   "k": 0,
+   "n": 0,
+   "taxa": null,
+   "ic95": [
+    0.0,
+    0.0
+   ]
+  },
+  "recusa_dinamicas": {
+   "k": 2,
+   "n": 3,
+   "taxa": 0.667,
+   "ic95": [
+    0.2076549551264879,
+    0.9385096847238394
+   ]
+  },
+  "latencia_p50_s": 5.85,
+  "latencia_p95_s": 6.45,
+  "por_tipo": {
+   "direta": {
+    "n": 7,
+    "recusou": 0,
+    "acuracia": 0,
+    "citacao_correta": 0,
+    "alucinacao": 5
+   },
+   "coloquial": {
+    "n": 5,
+    "recusou": 0,
+    "acuracia": 0,
+    "citacao_correta": 0,
+    "alucinacao": 2
+   },
+   "ruido": {
+    "n": 2,
+    "recusou": 0,
+    "acuracia": 0,
+    "citacao_correta": 0,
+    "alucinacao": 1
+   },
+   "multi_trecho": {
+    "n": 2,
+    "recusou": 0,
+    "acuracia": 0,
+    "citacao_correta": 0,
+    "alucinacao": 1
+   },
+   "nao_consta": {
+    "n": 2,
+    "recusou": 1,
+    "acuracia": 0,
+    "citacao_correta": 0,
+    "alucinacao": 0
+   },
+   "fora_dominio": {
+    "n": 3,
+    "recusou": 2,
+    "acuracia": 0,
+    "citacao_correta": 0,
+    "alucinacao": 0
+   },
+   "dinamica": {
+    "n": 3,
+    "recusou": 2,
+    "acuracia": 0,
+    "citacao_correta": 0,
+    "alucinacao": 0
+   }
+  }
+ }
+}

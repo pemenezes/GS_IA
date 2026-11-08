@@ -1,0 +1,152 @@
+{
+ "run": "C1_calibracao_llama32_3b-instruct-q4_K_M",
+ "config": "C1",
+ "conjunto": "calibracao",
+ "modelo": "llama3.2:3b-instruct-q4_K_M",
+ "digest": "a80c4f17acd55265feec403c7aef86be0c25983ab279d83f3bcd3abbcb5b8b72",
+ "estruturada": true,
+ "hash_prompts": "0be3168f3345",
+ "teste_lock": "41ec971221d50bf73c3a548db89b77cbd462baa4995cfcc56e40a5487bb49ccd",
+ "retrieval": {
+  "hibrido": false,
+  "top_k_final": 3,
+  "limiar_recusa": 0.6038
+ },
+ "llm": {
+  "num_ctx": 4096,
+  "temperature": 0.0,
+  "top_p": 1.0,
+  "seed": 42,
+  "think": false
+ },
+ "ollama": "0.40.15",
+ "vram_pico_mib": 3566,
+ "data_hora": "2026-11-08T13:19:29",
+ "resumo": {
+  "n": 45,
+  "json_valido_1a": {
+   "k": 18,
+   "n": 18,
+   "taxa": 1.0,
+   "ic95": [
+    0.8241154494176252,
+    1.0
+   ]
+  },
+  "regras_1a": {
+   "k": 17,
+   "n": 18,
+   "taxa": 0.944,
+   "ic95": [
+    0.7424220019799247,
+    0.9901250641690756
+   ]
+  },
+  "valida_final": {
+   "k": 45,
+   "n": 45,
+   "taxa": 1.0,
+   "ic95": [
+    0.9213457380593594,
+    1.0
+   ]
+  },
+  "acuracia": {
+   "k": 0,
+   "n": 0,
+   "taxa": null,
+   "ic95": [
+    0.0,
+    0.0
+   ]
+  },
+  "citacao_correta": {
+   "k": 0,
+   "n": 0,
+   "taxa": null,
+   "ic95": [
+    0.0,
+    0.0
+   ]
+  },
+  "alucinacao": {
+   "k": 0,
+   "n": 0,
+   "taxa": null,
+   "ic95": [
+    0.0,
+    0.0
+   ]
+  },
+  "recusa_correta": {
+   "k": 27,
+   "n": 30,
+   "taxa": 0.9,
+   "ic95": [
+    0.7437855868473339,
+    0.9654007400402839
+   ]
+  },
+  "recusa_indevida": {
+   "k": 2,
+   "n": 15,
+   "taxa": 0.133,
+   "ic95": [
+    0.0373604698913593,
+    0.3788249920651624
+   ]
+  },
+  "citacao_verificavel": {
+   "k": 16,
+   "n": 16,
+   "taxa": 1.0,
+   "ic95": [
+    0.8063865817272802,
+    1.0
+   ]
+  },
+  "recusa_nega_regra": {
+   "k": 0,
+   "n": 0,
+   "taxa": null,
+   "ic95": [
+    0.0,
+    0.0
+   ]
+  },
+  "recusa_dinamicas": {
+   "k": 0,
+   "n": 0,
+   "taxa": null,
+   "ic95": [
+    0.0,
+    0.0
+   ]
+  },
+  "latencia_p50_s": 0.18,
+  "latencia_p95_s": 9.18,
+  "por_tipo": {
+   "respondivel": {
+    "n": 15,
+    "recusou": 2,
+    "acuracia": 0,
+    "citacao_correta": 0,
+    "alucinacao": 0
+   },
+   "fora_dominio": {
+    "n": 20,
+    "recusou": 19,
+    "acuracia": 0,
+    "citacao_correta": 0,
+    "alucinacao": 0
+   },
+   "nao_consta": {
+    "n": 10,
+    "recusou": 8,
+    "acuracia": 0,
+    "citacao_correta": 0,
+    "alucinacao": 0
+   }
+  }
+ }
+}
