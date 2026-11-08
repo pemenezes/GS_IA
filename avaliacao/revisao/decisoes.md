@@ -28,6 +28,29 @@ associada a situação de emergência ou calamidade pública decretada.
 A fonte da internet estava desatualizada, que é exatamente o comportamento que a armadilha temporal
 mede.
 
+## Gabarito v2: trechos gold equivalentes (08/11/2026, Fase 4)
+
+**Problema:** na primeira ablação da busca, no split dev, vários "erros" eram trechos que também
+respondem à pergunta. A base repete as mesmas regras em lugares diferentes:
+- a REN 1.000 e o contrato de adesão do seu Anexo I;
+- as leis e as páginas explicativas da ANEEL e do MME;
+- a REN 1.000 e o PRODIST.
+
+O gold v1 listava um lugar só, e com isso o recall saía subestimado.
+
+**Procedimento, sem usar resultados de busca do split test:**
+- trechos com os fatos-chave literais, entre os 15 mais próximos da **resposta gabarito**;
+- equivalentes com outra grafia, como "72h", achados na leitura;
+- leitura de cada candidato e pré-classificação por mim.
+
+**Decisão:** o Pedro aprovou os 40 equivalentes, em 20 grupos (`avaliacao/gold_equivalentes.yaml`;
+pacote em `revisao_gold_v2.md`). O campo `gold_equivalentes` foi acrescentado a 31 casos.
+
+**Recongelamento:** o v1 foi arquivado em `avaliacao/historico/teste_v1.jsonl` (sha256 `732d8b41`).
+O v2 (`avaliacao/teste.jsonl`, sha256 `41ec9712`) tem a mesma divisão dev/test e todos os demais
+campos idênticos ao v1. Isso é uma **correção do gabarito**, e não um ajuste do sistema: nenhum
+limiar, prompt ou modelo tinha sido definido. O relatório mostra o recall nos dois gabaritos.
+
 ## Outras decisões da mesma revisão
 
 - **Paradas programadas (Fase 6):** a API continua simulada, por ser a única forma de manter o

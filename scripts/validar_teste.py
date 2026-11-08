@@ -55,7 +55,7 @@ def validar(caminho: Path) -> list[str]:
     revogados = None
     alertas = " ".join(c["texto"] for c in chunks.values() if c.get("alerta"))
     for c in casos:
-        faltando = [g for g in c.chunk_ids_gold if g not in chunks]
+        faltando = [g for g in c.gold_v2 if g not in chunks]
         if faltando:
             erros.append(f"[3] {c.id}: trechos gold inexistentes {faltando}")
             continue

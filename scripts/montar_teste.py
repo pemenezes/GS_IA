@@ -29,7 +29,21 @@ REVISAO = RAIZ / "avaliacao" / "revisao" / "revisao_gabarito.md"
 RECUSA = {"nao_consta", "fora_dominio"}
 
 
+EQUIVALENTES = RAIZ / "avaliacao" / "gold_equivalentes.yaml"
+
+
+def _equivalentes() -> dict[str, list[str]]:
+    """Gabarito v2 aprovado pelo Pedro: grupo -> trechos gold equivalentes."""
+    if not EQUIVALENTES.exists():
+        return {}
+    dados = yaml.safe_load(EQUIVALENTES.read_text(encoding="utf-8"))
+    if dados["status"] != "aprovado":
+        return {}
+    return {g: [e["chunk_id"] for e in itens] for g, itens in dados["grupos"].items()}
+
+
 def montar() -> list[Caso]:
+    equivalentes = _equivalentes()
     dados = yaml.safe_load(FONTE.read_text(encoding="utf-8"))
     brutos = {c["id"]: c for c in dados["casos"]}
     casos = []
@@ -46,6 +60,7 @@ def montar() -> list[Caso]:
                 "pergunta": ruido_de_voz(origem["pergunta"], semente),
                 "observacoes": f"Versão com ruído de voz de {origem['id']}.",
             }
+        c["gold_equivalentes"] = equivalentes.get(c["grupo"], [])
         c.setdefault("deve_recusar", c["tipo"] in RECUSA)
         c.setdefault("requer_api", c["tipo"] == "dinamica")
         casos.append(Caso.model_validate(c))

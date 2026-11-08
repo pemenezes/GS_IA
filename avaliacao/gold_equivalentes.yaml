@@ -4,7 +4,8 @@
 # de busca do split test: trechos com os fatos-chave literais entre os 15 mais próximos da
 # RESPOSTA gabarito, mais equivalentes com grafia diferente (ex.: "72h"), lidos um a um.
 # Vale para todas as perguntas do grupo. status: proposto | aprovado (Pedro).
-status: proposto
+status: aprovado  # Pedro, 08/11/2026: os 40 equivalentes aprovados
+
 grupos:
   G01: # religação normal, área urbana (24 horas)
     - {chunk_id: D01-anexoi-clausulasexta-p3, motivo: "Contrato de adesão, 6.6: até 24h para a área urbana"}

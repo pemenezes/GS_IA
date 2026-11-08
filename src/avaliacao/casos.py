@@ -50,6 +50,8 @@ class Caso(BaseModel):
     deve_recusar: bool
     requer_api: bool = False
     chunk_ids_gold: list[str] = []
+    # Gabarito v2 (Fase 4): trechos que respondem tanto quanto o gold original.
+    gold_equivalentes: list[str] = []
     resposta_gabarito: str
     fatos_chave: list[str] = []
     fatos_proibidos: list[str] = []
@@ -74,7 +76,15 @@ class Caso(BaseModel):
             raise ValueError(f"{self.id}: ruído tem origem voz")
         if self.armadilha_temporal and not self.fatos_proibidos:
             raise ValueError(f"{self.id}: armadilha temporal exige fatos proibidos")
+        if self.gold_equivalentes and not self.chunk_ids_gold:
+            raise ValueError(f"{self.id}: equivalentes exigem um gold original")
         return self
+
+    @property
+    def gold_v2(self) -> list[str]:
+        return self.chunk_ids_gold + [
+            g for g in self.gold_equivalentes if g not in self.chunk_ids_gold
+        ]
 
 
 def carregar(caminho: Path = TESTE) -> list[Caso]:

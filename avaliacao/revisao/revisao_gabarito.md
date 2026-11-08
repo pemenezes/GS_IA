@@ -1232,7 +1232,7 @@ Trechos mais parecidos na base (BM25), para confirmar que a resposta não está 
 
 - `D18-p2-s01-p11` (10.6): (texto gov.br só local)
 - `D18-p2-s01-p10` (10.6): (texto gov.br só local)
-- `D16-s01` (8.6): (texto gov.br só local)
+- `D16-s01` (8.5): (texto gov.br só local)
 
 **Decisão:** ☐ ✅ aprovar  ☐ ✏️ ajustar  ☐ ❌ trocar  ·  Comentário: ____
 
@@ -1318,7 +1318,7 @@ Trechos mais parecidos na base (BM25), para confirmar que a resposta não está 
 
 - `D16-s05-p2` (19.3): (texto gov.br só local)
 - `D16-s00` (17.1): (texto gov.br só local)
-- `D17-p1-s03` (16.1): (texto gov.br só local)
+- `D17-p1-s03` (16.0): (texto gov.br só local)
 
 **Decisão:** ☐ ✅ aprovar  ☐ ✏️ ajustar  ☐ ❌ trocar  ·  Comentário: ____
 
