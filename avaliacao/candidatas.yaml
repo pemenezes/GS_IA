@@ -68,11 +68,13 @@ casos:
     tema: ressarcimento
     armadilha_temporal: true
     pergunta: "A distribuidora pode negar o ressarcimento de um aparelho queimado dizendo que a cidade estava em situação de emergência decretada?"
-    chunk_ids_gold: [D06-art20]
-    resposta_gabarito: "Essa justificativa foi retirada: a REN 1.137/2025 revogou a alínea b do item 14 do Módulo 9 do PRODIST, que permitia indeferir o pedido por situação de emergência ou calamidade pública."
-    fatos_chave: ["Revoga-se a alínea b do item 14 do Módulo 9 do PRODIST"]
-    fatos_proibidos: ["Situação de Emergência ou de Calamidade Pública decretada por autoridade competente"]
-    observacoes: "PEDRO: confirmar a interpretação. O PDF publicado como versão vigente do Módulo 9 (v2, 2021) ainda contém a alínea b; o trecho D08-s9.1-item14 está marcado com alerta. O fato proibido vem desse texto revogado."
+    chunk_ids_gold: [D06-art19, D06-art20, D01-art621-p3]
+    resposta_gabarito: "Não. Essa possibilidade existia (inciso VIII do art. 621 da REN 1.000 e alínea b do item 14 do Módulo 9 do PRODIST), mas foi revogada pela REN 1.137/2025 (arts. 19 e 20); hoje a situação de emergência não está entre os casos em que a distribuidora pode deixar de ressarcir."
+    fatos_chave: ["Revoga-se o inciso VIII do art. 621"]
+    fatos_proibidos:
+      - "interrupções associadas à situação de emergência ou de calamidade pública decretada por órgão competente"
+      - "Situação de Emergência ou de Calamidade Pública decretada por autoridade competente"
+    observacoes: "Ajustada com o Pedro em 08/11/2026. O inciso VIII do art. 621 aparece tachado no texto compilado da REN 1.000 (revogado pela REN 1.137/2025); a alínea b do item 14 do Módulo 9 ainda aparece no PDF publicado como versão vigente (trecho D08-s9.1-item14, com alerta). Fontes não oficiais na internet ainda reproduzem a regra revogada."
 
   - id: T-008
     tipo: direta

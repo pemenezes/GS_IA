@@ -3,6 +3,20 @@
 > **Situação:** rascunho da Fase 3, só com a especificação dos registros-âncora. A justificativa da
 > simulação, o gerador e as limitações entram na Fase 6.
 
+## Decisão sobre a fonte dos dados (08/11/2026)
+
+Não há fonte pública que permita consultar paradas **futuras** por bairro de forma automatizada e
+reprodutível:
+- a página de manutenção programada da Enel SP exige o número da instalação e não tem API pública;
+- os dados abertos da ANEEL trazem só interrupções já ocorridas, por conjunto elétrico;
+- a API prevista no item 113 do PRODIST Módulo 4 é exclusiva da ANEEL.
+
+Por isso a API continua simulada. Na Fase 6, os parâmetros do gerador (dias da semana, horários de
+início, durações) serão **calibrados com as interrupções programadas da Enel SP** no conjunto
+[Interrupções de Energia Elétrica nas Redes de Distribuição](https://dadosabertos.aneel.gov.br/dataset/interrupcoes-de-energia-eletrica-nas-redes-de-distribuicao)
+(licença ODbL). A API fica atrás de uma interface (`FonteParadas`), para poder ser trocada por dados
+reais da distribuidora.
+
 ## Por que há registros-âncora
 
 As 6 perguntas dinâmicas do conjunto de teste (`avaliacao/teste.jsonl`, tipo `dinamica`) dependem

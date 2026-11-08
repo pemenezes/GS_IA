@@ -179,18 +179,41 @@ Fonte: https://git.aneel.gov.br/publico/centralconteudo/-/raw/main/procreg/prodi
 
 **Pergunta:** A distribuidora pode negar o ressarcimento de um aparelho queimado dizendo que a cidade estava em situação de emergência decretada?
 
-**Resposta gabarito:** Essa justificativa foi retirada: a REN 1.137/2025 revogou a alínea b do item 14 do Módulo 9 do PRODIST, que permitia indeferir o pedido por situação de emergência ou calamidade pública.
+**Resposta gabarito:** Não. Essa possibilidade existia (inciso VIII do art. 621 da REN 1.000 e alínea b do item 14 do Módulo 9 do PRODIST), mas foi revogada pela REN 1.137/2025 (arts. 19 e 20); hoje a situação de emergência não está entre os casos em que a distribuidora pode deixar de ressarcir.
 
-**Fatos-chave (cópia literal do trecho):** `Revoga-se a alínea b do item 14 do Módulo 9 do PRODIST`
-**Fatos proibidos (regra antiga/revogada):** `Situação de Emergência ou de Calamidade Pública decretada por autoridade competente`
-**Observação:** PEDRO: confirmar a interpretação. O PDF publicado como versão vigente do Módulo 9 (v2, 2021) ainda contém a alínea b; o trecho D08-s9.1-item14 está marcado com alerta. O fato proibido vem desse texto revogado.
+**Fatos-chave (cópia literal do trecho):** `Revoga-se o inciso VIII do art. 621`
+**Fatos proibidos (regra antiga/revogada):** `interrupções associadas à situação de emergência ou de calamidade pública decretada por órgão competente` · `Situação de Emergência ou de Calamidade Pública decretada por autoridade competente`
+**Observação:** Ajustada com o Pedro em 08/11/2026. O inciso VIII do art. 621 aparece tachado no texto compilado da REN 1.000 (revogado pela REN 1.137/2025); a alínea b do item 14 do Módulo 9 ainda aparece no PDF publicado como versão vigente (trecho D08-s9.1-item14, com alerta). Fontes não oficiais na internet ainda reproduzem a regra revogada.
+
+<details><summary>Trecho <code>D06-art19</code> · Resolução Normativa ANEEL nº 1.137, de 21 de outubro de 2025</summary>
+
+REN 1.137/2025 > Seção X – Das Disposições Finais e Transitórias > Art. 19
+Art. 19. **Revoga-se o inciso VIII do art. 621** da Resolução Normativa nº 1.000 de 2021.
+
+Fonte: https://www2.aneel.gov.br/cedoc/ren20251137.html
+
+</details>
 
 <details><summary>Trecho <code>D06-art20</code> · Resolução Normativa ANEEL nº 1.137, de 21 de outubro de 2025</summary>
 
 REN 1.137/2025 > Seção X – Das Disposições Finais e Transitórias > Art. 20
-Art. 20. **Revoga-se a alínea b do item 14 do Módulo 9 do PRODIST**, constante do anexo IX da Resolução Normativa nº 956 de 2021.
+Art. 20. Revoga-se a alínea b do item 14 do Módulo 9 do PRODIST, constante do anexo IX da Resolução Normativa nº 956 de 2021.
 
 Fonte: https://www2.aneel.gov.br/cedoc/ren20251137.html
+
+</details>
+
+<details><summary>Trecho <code>D01-art621-p3</code> · Resolução Normativa ANEEL nº 1.000, de 7 de dezembro de 2021 (texto compilado)</summary>
+
+REN 1.000/2021 > TÍTULO II – PARTE ESPECIAL > CAPÍTULO VIII – DO RESSARCIMENTO DE DANOS ELÉTRICOS > Seção IV – Das Responsabilidades > Art. 621
+Art. 621. A distribuidora só pode eximir-se do dever de ressarcir no caso de:
+VII - comprovar a ocorrência de religação da unidade consumidora à revelia, ligação clandestina ou ligação proveniente de terceiros que não possua outorga para distribuição de energia;
+IX - o solicitante manifestar a desistência do processo de ressarcimento antes da resposta da distribuidora;
+X - a solicitação de ressarcimento for recebida fora do prazo de 5 anos após a ocorrência do dano;
+XI - o laudo for motivo para indeferimento, conforme art. 616; ou
+XII - solicitação de ressarcimento em situação não abrangida por este Capítulo, conforme art. 599.
+
+Fonte: https://www2.aneel.gov.br/cedoc/ren20211000.html
 
 </details>
 
