@@ -17,7 +17,6 @@ import argparse
 import csv
 import datetime as dt
 import sys
-import threading
 import time
 from pathlib import Path
 
@@ -25,6 +24,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 import pynvml  # noqa: E402
 
+from src.avaliacao.vram import MonitorVRAM  # noqa: E402
 from src.config import RAIZ, carregar_config  # noqa: E402
 from src.rag import llm_ollama  # noqa: E402
 from src.rag.schema import classificar_saida, schema_para_llm  # noqa: E402
@@ -95,36 +95,6 @@ COLUNAS = [
     "citou_fonte_certa",
     "observacoes",
 ]
-
-
-class MonitorVRAM:
-    def __init__(self, intervalo: float = 0.1) -> None:
-        pynvml.nvmlInit()
-        self.h = pynvml.nvmlDeviceGetHandleByIndex(0)
-        self.intervalo = intervalo
-        self.pico = 0
-        self._parar = threading.Event()
-        self._thread: threading.Thread | None = None
-
-    def usada_mib(self) -> int:
-        return pynvml.nvmlDeviceGetMemoryInfo(self.h).used // 2**20
-
-    def __enter__(self) -> MonitorVRAM:
-        self.pico = self.usada_mib()
-        self._parar.clear()
-        self._thread = threading.Thread(target=self._loop, daemon=True)
-        self._thread.start()
-        return self
-
-    def _loop(self) -> None:
-        while not self._parar.is_set():
-            self.pico = max(self.pico, self.usada_mib())
-            time.sleep(self.intervalo)
-
-    def __exit__(self, *_: object) -> None:
-        self._parar.set()
-        if self._thread:
-            self._thread.join()
 
 
 def medir_modelo(cfg: dict, modelo: str, info: dict, mon: MonitorVRAM) -> dict:

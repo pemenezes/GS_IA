@@ -18,7 +18,8 @@ class Resposta(BaseModel):
     resposta: str = Field(description="linguagem simples, frases curtas")
     recusa: bool
     motivo_recusa: str | None = None
-    fontes: list[Fonte] = []
+    # Até 3 fontes (o C1 recebe 3 trechos): evita listas repetidas que estouram num_predict.
+    fontes: list[Fonte] = Field(default=[], max_length=3)
     confianca: Literal["alta", "media", "baixa"]
 
     @model_validator(mode="after")
@@ -32,7 +33,9 @@ def schema_para_llm(modelo: type[BaseModel] = Resposta) -> dict[str, Any]:
     """JSON Schema para o `format` do Ollama, com todos os campos obrigatórios.
 
     A geração restrita do Ollama só garante os campos listados em `required`; campos com valor
-    padrão (como `fontes`) ficariam de fora e o modelo poderia omiti-los.
+    padrão (como `fontes`) ficariam de fora e o modelo poderia omiti-los. O Ollama 0.40 gera as
+    chaves em ordem alfabética, seja qual for a ordem de `properties` (confianca, fontes,
+    motivo_recusa, recusa, resposta): as fontes já saem antes da resposta.
     """
     schema = copy.deepcopy(modelo.model_json_schema())
     for obj in (schema, *schema.get("$defs", {}).values()):

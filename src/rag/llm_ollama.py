@@ -45,21 +45,25 @@ def chat_json(
     host: str,
     modelo: str,
     mensagens: list[dict[str, str]],
-    schema: dict[str, Any],
+    schema: dict[str, Any] | None,
     opcoes: dict[str, Any],
     think: bool | None = False,
     keep_alive: str | int = "30m",
     timeout: float = 300,
 ) -> dict[str, Any]:
-    """Chama /api/chat sem streaming e devolve o corpo bruto da resposta do Ollama."""
+    """Chama /api/chat sem streaming e devolve o corpo bruto da resposta do Ollama.
+
+    Com `schema=None` não há saída estruturada (geração livre), para medir o efeito do `format`.
+    """
     payload: dict[str, Any] = {
         "model": modelo,
         "messages": mensagens,
-        "format": schema,
         "stream": False,
         "options": opcoes,
         "keep_alive": keep_alive,
     }
+    if schema is not None:
+        payload["format"] = schema
     if think is not None:
         payload["think"] = think
     r = httpx.post(f"{host}/api/chat", json=payload, timeout=timeout)

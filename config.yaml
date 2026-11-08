@@ -30,7 +30,9 @@ retrieval:
 llm:
   servidor: ollama
   host: "http://localhost:11434"
-  modelo: "qwen3:4b-instruct-2507-q4_K_M"   # provisório (Fase 0); escolha final na Fase 5
+  # Fase 5 (C1 no dev): maior acurácia (10/16) e citação correta (12/12) entre os 4 candidatos.
+  # Ver avaliacao/geracao/comparacao_modelos.csv.
+  modelo: "qwen3:4b-instruct-2507-q4_K_M"
   candidatos:                      # tag -> digest sha256 (tags do Ollama podem ser atualizadas)
     "qwen3:4b-instruct-2507-q4_K_M": 0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0
     "qwen3.5:4b-q4_K_M": d8b0f5e9760cd1682034f292d7ef72ec46f432149be0df7574bf2d6e92e38c04
@@ -41,9 +43,11 @@ llm:
   temperature: 0.0
   top_p: 1.0
   seed: 42
-  num_predict: 512
+  num_predict: 1024                # Fase 5: 512 cortava o JSON com 3 citações longas (T-010)
   think: false
   keep_alive: "30m"
+geracao:
+  estruturada: true                # `format` do Ollama com o JSON Schema
 agente:
   max_passos: 3
   timeout_ferramenta_s: 5

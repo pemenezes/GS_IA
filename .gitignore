@@ -17,6 +17,8 @@ venv/
 base/indices/
 # Páginas gov.br (CC BY-ND 3.0): original e trechos só locais, regenerados pelo script
 base/local/
+# Saídas completas da avaliação (podem conter citações literais de páginas gov.br)
+avaliacao/runs/local/
 *.faiss
 *.sqlite
 *.db
