@@ -170,11 +170,16 @@ def validar(
 
     for f in resp.fontes:
         original = f.id
-        chunk = chunks.get(f.id.strip().strip("[]")) if f.tipo == "norma" else None
+        # Trechos de norma por padrão; registros da agenda (C2) trazem tipo_citacao="api".
+        chunk = chunks.get(f.id.strip().strip("[]"))
+        if chunk is not None and chunk.get("tipo_citacao", "norma") != f.tipo:
+            chunk = None
         casamento, nota = casar_citacao(f.trecho_citado, chunk["texto"]) if chunk else ("nenhum", 0)
-        if casamento == "nenhum" and f.tipo == "norma":
+        if casamento == "nenhum":
             # Citação literal de outro trecho fornecido: a fonte existe, só o id está trocado.
             for cid, c in chunks.items():
+                if c.get("tipo_citacao", "norma") != f.tipo:
+                    continue
                 cas, nt = casar_citacao(f.trecho_citado, c["texto"])
                 if cas != "nenhum":
                     chunk, casamento, nota, f.id = c, cas, nt, cid

@@ -54,11 +54,16 @@ class Tentativa:
 class Saida:
     config: str
     resposta: Resposta | None  # None só no C0 quando a saída não passa no schema
-    origem: Literal["llm", "reparo", "portao", "contingencia", "invalida"]
+    origem: Literal[
+        "llm", "reparo", "portao", "contingencia", "invalida", "esclarecimento", "erro_agenda"
+    ]
     latencia_s: float
     nota_portao: float | None = None
     trechos: list[dict[str, Any]] = field(default_factory=list)  # chunk_id e nota
     tentativas: list[Tentativa] = field(default_factory=list)
+    # C2: decisão do roteador e consultas feitas à agenda de paradas.
+    roteamento: dict[str, Any] | None = None
+    consultas: list[dict[str, Any]] = field(default_factory=list)
 
 
 def chamar_ollama(cfg: dict[str, Any], modelo: str | None = None) -> ChamarLLM:
@@ -174,6 +179,19 @@ class C1(_Base):
         msgs = prompt.mensagens_c1(
             pergunta, [c.chunk for c in cands], self.data, self._schema_no_texto()
         )
+        self._gerar_com_reparo(msgs, chunks, pergunta, saida, RECUSA_CONTINGENCIA)
+        saida.latencia_s = round(time.perf_counter() - t0, 3)
+        return saida
+
+    def _gerar_com_reparo(
+        self,
+        msgs: list[dict[str, str]],
+        chunks: dict[str, dict[str, Any]],
+        pergunta: str,
+        saida: Saida,
+        contingencia: Resposta,
+    ) -> None:
+        """Gera, valida e tenta um reparo; se falhar de novo, usa a recusa de contingência."""
         for n in range(2):
             corpo, dur = self._gerar(msgs)
             conteudo = corpo["message"]["content"]
@@ -181,13 +199,10 @@ class C1(_Base):
             saida.tentativas.append(_tentativa(corpo, v, dur))
             if v.ok:
                 saida.resposta, saida.origem = v.resposta, ("llm" if n == 0 else "reparo")
-                break
+                return
             msgs = [
                 *msgs,
                 {"role": "assistant", "content": conteudo},
                 prompt.mensagem_reparo(v.erros),
             ]
-        else:
-            saida.resposta, saida.origem = RECUSA_CONTINGENCIA, "contingencia"
-        saida.latencia_s = round(time.perf_counter() - t0, 3)
-        return saida
+        saida.resposta, saida.origem = contingencia, "contingencia"
