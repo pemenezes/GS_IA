@@ -54,6 +54,8 @@ agente:
 api_paradas:
   base_url: "http://localhost:8001"
   api_key_env: PARADAS_API_KEY
+  arquivo_csv: dados/paradas_simuladas.csv    # versionado; gerado por scripts/gerar_paradas.py
+  arquivo_db: dados/paradas.sqlite            # fora do git; recriado a partir do CSV
 avaliacao:
   split_dev: 0.4
   split_seed: 42
