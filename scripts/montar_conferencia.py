@@ -1,0 +1,122 @@
+"""Documento da conferência manual do test (Fase 8), a partir das saídas e da pré-classificação.
+
+  python scripts/montar_conferencia.py
+
+Grava avaliacao/revisao/conferencia_test.md (versionado; citações de páginas gov.br trocadas
+por hash) e avaliacao/runs/local/conferencia_test_completa.md (completo, fora do git).
+"""
+
+from __future__ import annotations
+
+import hashlib
+import json
+import sys
+from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+
+import yaml  # noqa: E402
+
+from src.avaliacao.casos import carregar_congelado  # noqa: E402
+from src.config import RAIZ  # noqa: E402
+from src.rag import denso  # noqa: E402
+
+RUNS = RAIZ / "avaliacao" / "runs" / "local" / "geracao"
+PRE = RAIZ / "avaliacao" / "revisao" / "conferencia_pre.yaml"
+SAIDA = RAIZ / "avaliacao" / "revisao" / "conferencia_test.md"
+SAIDA_LOCAL = RAIZ / "avaliacao" / "runs" / "local" / "conferencia_test_completa.md"
+Q = "qwen3_4b-instruct-2507-q4_K_M"
+ROTULO = {"correta": "✅ correta", "parcial": "🟡 parcial", "incorreta": "❌ incorreta"}
+
+CABECALHO = """# Conferência manual do test (Fase 8)
+
+**Para:** Pedro. **Itens:** {n}. Cada item traz a pergunta, o gabarito que você aprovou na Fase 3,
+a resposta do sistema, as fontes citadas e a **minha pré-classificação**. Basta confirmar ou
+corrigir. Você pode responder no chat só com as discordâncias, por exemplo: "C2 T-018: correta".
+
+**Critérios**
+- **Veredito:** ✅ correta (responde o que foi perguntado, de acordo com o gabarito); 🟡 parcial
+  (o núcleo está certo, mas falta algo pedido ou há um detalhe duvidoso); ❌ incorreta (o núcleo
+  está errado ou não responde).
+- **Afirma algo falso?** Sim se a resposta **ou o trecho citado** contém uma afirmação falsa
+  (prazo, valor, regra ou citação inventada). É a medida manual de alucinação.
+- **Recusas do C0:** a recusa **nega uma regra que existe** ("não há prazo", "não há desconto")?
+
+Ficam de fora, porque já estão medidas sem ambiguidade:
+- as recusas de perguntas respondíveis no C1 e no C2, que contam como recusa indevida;
+- as perguntas "não consta" e fora do domínio, todas recusadas;
+- as dinâmicas, conferidas pelos registros da agenda.
+
+As respostas do C1 iguais às do C2 não se repetem: só entram as 5 que diferem.
+{aviso}
+"""
+AVISO_VERSIONADO = (
+    "\n> Nesta versão, as citações de páginas gov.br aparecem como hash (licença CC BY-ND). "
+    "A versão completa está em `avaliacao/runs/local/conferencia_test_completa.md`.\n"
+)
+
+
+def _ler(nome: str) -> dict[str, dict]:
+    with open(RUNS / f"{nome}.jsonl", encoding="utf-8") as f:
+        return {(x := json.loads(linha))["id"]: x for linha in f if linha.strip()}
+
+
+def _citacao(f: dict, govbr: set[str], mascarar: bool) -> str:
+    texto = f["trecho_citado"]
+    if mascarar and f["id"].strip("[] ") in govbr:
+        h = hashlib.sha256(texto.encode()).hexdigest()[:12]
+        texto = f"[página gov.br; sha256 {h}]"
+    return f"  - `{f['id']}`: {texto}"
+
+
+def _bloco(cfg: str, caso, x: dict, pre: dict, govbr: set[str], mascarar: bool) -> str:
+    r = x["saida"]["resposta"]
+    linhas = [
+        f"### {cfg} · {caso.id} ({caso.tipo})",
+        f"**Pergunta:** {caso.pergunta}",
+        f"**Gabarito:** {caso.resposta_gabarito} *(fatos-chave: {', '.join(caso.fatos_chave)})*",
+        f"**Resposta do {cfg}:** {r['resposta']}",
+    ]
+    if r["fontes"]:
+        linhas.append("**Fontes citadas:**")
+        linhas += [_citacao(f, govbr, mascarar) for f in r["fontes"]]
+    if "nega_regra" in pre:
+        linhas.append(f"**Pré-classificação:** nega uma regra que existe? **{pre['nega_regra']}**")
+    else:
+        linhas.append(
+            f"**Pré-classificação:** {ROTULO[pre['veredito']]} · afirma algo falso? "
+            f"**{pre['falso']}**"
+        )
+    if pre.get("nota"):
+        linhas.append(f"*{pre['nota']}*")
+    return "\n\n".join(linhas)
+
+
+def main() -> int:
+    if hasattr(sys.stdout, "reconfigure"):
+        sys.stdout.reconfigure(encoding="utf-8")
+    casos = {c.id: c for c in carregar_congelado("test")}
+    pre = yaml.safe_load(PRE.read_text(encoding="utf-8"))["itens"]
+    govbr = {c["chunk_id"] for c in denso.trechos_indexaveis() if not c.get("versionado", True)}
+    runs = {cfg: _ler(f"{cfg}_test_{Q}") for cfg in ("C0", "C1", "C2")}
+    secoes = [
+        ("C2", "C2", "## 1. C2: respostas dadas às perguntas respondíveis"),
+        ("C1", "C1", "## 2. C1: só as respostas que diferem do C2"),
+        ("C0", "C0", "## 3. C0 (sem a base): respostas dadas"),
+        ("C0_recusas", "C0", "## 4. C0: recusas de perguntas respondíveis"),
+    ]
+    n = sum(len(pre[k]) for k, _, _ in secoes)
+    for destino, mascarar in ((SAIDA, True), (SAIDA_LOCAL, False)):
+        partes = [CABECALHO.format(n=n, aviso=AVISO_VERSIONADO if mascarar else "")]
+        for chave, cfg, titulo in secoes:
+            partes.append(titulo)
+            for id_, p in pre[chave].items():
+                partes.append(_bloco(cfg, casos[id_], runs[cfg][id_], p, govbr, mascarar))
+        destino.parent.mkdir(parents=True, exist_ok=True)
+        destino.write_text("\n\n".join(partes) + "\n", encoding="utf-8", newline="\n")
+    print(f"{n} itens em {SAIDA.relative_to(RAIZ)} e {SAIDA_LOCAL.relative_to(RAIZ)}")
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())

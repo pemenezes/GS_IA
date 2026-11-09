@@ -1,0 +1,61 @@
+# Pré-classificação da conferência manual do test (Fase 8), feita pelo agente em 09/11/2026.
+# O Pedro confirma ou corrige cada item; a versão final fica em conferencia_test.yaml.
+# veredito: correta | parcial | incorreta (respostas); nega_regra: sim | nao (recusas do C0)
+# falso: a resposta ou o trecho citado afirma algo falso (sim | nao)
+status: pre_classificado
+itens:
+  C2:
+    T-002: {veredito: correta, falso: nao, nota: "Responde a sexta-feira; não cita o horário 8h–18h, que a pergunta não pediu."}
+    T-003: {veredito: incorreta, falso: sim, nota: "Pelo item 196 citado, '3 dias úteis com cadastro' vale para unidades em média tensão com demanda abaixo de 500 kW e para unidades comerciais ou industriais em baixa tensão; residência comum fica em 'outras unidades', com 72 horas."}
+    T-005: {veredito: correta, falso: nao, nota: ""}
+    T-006: {veredito: correta, falso: nao, nota: ""}
+    T-008: {veredito: correta, falso: nao, nota: ""}
+    T-009: {veredito: correta, falso: nao, nota: ""}
+    T-011: {veredito: incorreta, falso: sim, nota: "3 salários mínimos é o critério excepcional (equipamento de saúde); o geral é meio salário mínimo por pessoa."}
+    T-013: {veredito: correta, falso: nao, nota: ""}
+    T-015: {veredito: correta, falso: nao, nota: "A métrica automática reprovou só pela redação ('não há acréscimo')."}
+    T-018: {veredito: parcial, falso: nao, nota: "Conclusão certa, mas fundamenta na REN 1.000 (art. 4º) e não no art. 22 do CDC, que a pergunta cita."}
+    T-020: {veredito: correta, falso: nao, nota: "4 horas; não menciona o crédito da compensação, que a pergunta não pediu."}
+    T-021: {veredito: incorreta, falso: sim, nota: "'Três dias' de aviso; o certo é 15 dias. A frase sobre quitar no momento do corte também não está no gabarito."}
+    T-022: {veredito: correta, falso: nao, nota: ""}
+    T-026: {veredito: correta, falso: nao, nota: "A métrica automática reprovou só pela redação ('média' sem 'aritmética')."}
+    T-028: {veredito: incorreta, falso: sim, nota: "Diz que a bandeira vermelha não é cobrança a mais; há adicional, destacado na fatura."}
+    T-030: {veredito: correta, falso: nao, nota: "Redação estranha no fim ('desde que a queda tenha sido provável'), mas o prazo de 5 anos está certo."}
+    T-033: {veredito: incorreta, falso: sim, nota: "'5 dias úteis'; o certo é 15 dias. O trecho citado é sobre corte indevido, não sobre aviso de corte."}
+    T-037: {veredito: incorreta, falso: sim, nota: "Trata a interrupção longa como dano elétrico e atribui ao art. 621 algo que ele não diz; a regra é a compensação pelo limite do DISE."}
+    T-038: {veredito: correta, falso: nao, nota: ""}
+    T-039: {veredito: parcial, falso: nao, nota: "Acerta os 15 dias; diz com honestidade que o prazo de pagamento (20 dias) não estava nos trechos."}
+  C1:
+    T-003: {veredito: parcial, falso: sim, nota: "Mesma afirmação errada do C2 ('3 dias úteis com cadastro' é a regra de unidades comerciais, industriais ou de média tensão), mas acrescenta o aviso de 72 horas pela página da distribuidora, que é o certo para residência comum."}
+    T-020: {veredito: correta, falso: nao, nota: ""}
+    T-028: {veredito: incorreta, falso: sim, nota: "Igual ao C2."}
+    T-030: {veredito: correta, falso: nao, nota: "Igual ao C2."}
+    T-037: {veredito: incorreta, falso: sim, nota: "Igual ao C2."}
+  C0:
+    T-002: {veredito: incorreta, falso: sim, nota: "Acerta 'não pode na sexta', mas diz que basta aviso de 72 horas e que 'vale para qualquer dia'; cita texto inventado atribuído ao art. 362."}
+    T-009: {veredito: parcial, falso: sim, nota: "'Média dos consumos anteriores' vai na direção certa (faltam os 12 ciclos); a citação ('leitura por amostragem') é inventada."}
+    T-015: {veredito: incorreta, falso: sim, nota: "Diz que a bandeira verde significa energia de fontes renováveis."}
+    T-018: {veredito: parcial, falso: sim, nota: "Conclusão certa (serviço contínuo); cita um 'art. 13' do CDC com texto inventado."}
+    T-021: {veredito: incorreta, falso: sim, nota: "72 horas de aviso; o certo é 15 dias."}
+    T-028: {veredito: incorreta, falso: sim, nota: "Mesmo erro do C1 e do C2 sobre a bandeira vermelha."}
+    T-033: {veredito: incorreta, falso: sim, nota: "72 horas de aviso; o certo é 15 dias."}
+    T-038: {veredito: incorreta, falso: sim, nota: "Critério de 'dois salários mínimos' e não cita o relatório e atestado médicos."}
+  C0_recusas:
+    T-003: {nega_regra: sim, nota: ""}
+    T-005: {nega_regra: sim, nota: ""}
+    T-006: {nega_regra: sim, nota: ""}
+    T-007: {nega_regra: nao, nota: "A recusa diz que a distribuidora não pode negar só por causa da emergência declarada: na direção do gabarito, sem citar a revogação."}
+    T-008: {nega_regra: sim, nota: "A heurística não pegou ('Não há dados oficiais sobre o custo de disponibilidade')."}
+    T-011: {nega_regra: sim, nota: "A heurística não pegou ('O CadÚnico não define critério de renda')."}
+    T-013: {nega_regra: sim, nota: ""}
+    T-020: {nega_regra: sim, nota: ""}
+    T-022: {nega_regra: sim, nota: ""}
+    T-024: {nega_regra: sim, nota: "Diz que não há desconto para quem recebe o BPC."}
+    T-026: {nega_regra: sim, nota: "A heurística não pegou ('métodos internos que não são públicos')."}
+    T-030: {nega_regra: sim, nota: ""}
+    T-032: {nega_regra: sim, nota: ""}
+    T-034: {nega_regra: sim, nota: ""}
+    T-036: {nega_regra: sim, nota: ""}
+    T-037: {nega_regra: sim, nota: ""}
+    T-039: {nega_regra: sim, nota: ""}
+    T-040: {nega_regra: sim, nota: ""}
