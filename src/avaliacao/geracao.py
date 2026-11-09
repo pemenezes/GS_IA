@@ -147,6 +147,49 @@ def avaliar_linha(
     return m
 
 
+_NAO_HA = re.compile(r"\bnao (ha|tem|existe|consta|esta prevista|encontr\w*)\b|\bnenhum[a]?\b")
+
+
+def avaliar_dinamica(
+    esperada: dict[str, Any],
+    saida: dict[str, Any],
+    horas: dict[str, tuple[int, int]],
+    bairros: list[str],
+) -> bool:
+    """Acerto automático numa pergunta dinâmica (agenda de paradas).
+
+    com_parada: não recusou, citou (tipo api) todos os registros esperados e informou a hora de
+    início e de fim de cada um; sem_parada: não recusou, citou a consulta vazia, não citou
+    registro e disse que não há parada; bairro_ambiguo: pediu esclarecimento citando pelo menos
+    2 bairros; bairro_desconhecido e sem_bairro: pediu esclarecimento sem consultar.
+    """
+    r = saida["resposta"]
+    if r is None:
+        return False
+    texto = unidecode(r["resposta"]).lower()
+    ids = [f["id"].strip().strip("[]") for f in r["fontes"] if f["tipo"] == "api"]
+    situacao = esperada["situacao"]
+    if situacao == "com_parada":
+        nums = {n.lstrip("0") or "0" for n in numeros(r["resposta"])}  # "09:00" vale como 9
+        horas_ok = all(
+            {str(horas[i][0]), str(horas[i][1])} <= nums for i in esperada["registros_esperados"]
+        )
+        return not r["recusa"] and set(esperada["registros_esperados"]) <= set(ids) and horas_ok
+    if situacao == "sem_parada":
+        return (
+            not r["recusa"]
+            and any(i.startswith("consulta-") for i in ids)
+            and not any(i.startswith("PAR-") for i in ids)
+            and _NAO_HA.search(texto) is not None
+        )
+    if situacao == "bairro_ambiguo":
+        citados = {b for b in bairros if unidecode(b).lower() in texto}
+        return r["recusa"] and len(citados) >= 2
+    if situacao == "bairro_desconhecido":
+        return r["recusa"] and "nao encontrei o bairro" in texto
+    return r["recusa"] and "bairro" in texto and "?" in r["resposta"]
+
+
 JANELA_LITERAL = 60  # caracteres seguidos de uma página gov.br que bastam para mascarar o campo
 
 
@@ -234,6 +277,8 @@ def resumir(metricas: list[dict[str, Any]], latencias: list[float]) -> dict[str,
         "citacao_verificavel": _taxa(sel("citacao_verificavel")),
         "recusa_nega_regra": _taxa(sel("recusa_nega_regra")),
         "recusa_dinamicas": _taxa([m["recusou"] for m in metricas if m["tipo"] == "dinamica"]),
+        "acerto_dinamicas": _taxa(sel("acerto_dinamica")),
+        "roteamento_correto": _taxa(sel("roteamento_correto")),
         "latencia_p50_s": pct(0.5),
         "latencia_p95_s": pct(0.95),
         "por_tipo": {

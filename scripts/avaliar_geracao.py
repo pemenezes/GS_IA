@@ -1,12 +1,13 @@
-"""Avaliação da geração (Fase 5): roda C0 ou C1 sobre um conjunto e grava as saídas brutas.
+"""Avaliação da geração (Fases 5 e 7): roda C0, C1 ou C2 sobre um conjunto e grava as saídas.
 
-  python scripts/avaliar_geracao.py rodar --config C1 --conjunto dev [--modelo TAG]
+  python scripts/avaliar_geracao.py rodar --config C2 --conjunto dev [--modelo TAG]
          [--sem-estruturada]
   python scripts/avaliar_geracao.py resumo
 
-Conjuntos: dev e test (congelados), calibracao (45 perguntas da Fase 4, só comportamento) e
-injecao (5 tentativas de prompt injection). O test roda uma única vez, com a configuração do
-config.yaml (modelo e saída estruturada).
+Conjuntos: dev e test (congelados), calibracao (45 perguntas da Fase 4, só comportamento),
+injecao (5 tentativas de prompt injection) e dinamicas_extra (13 perguntas sobre a agenda,
+Fase 7). O test roda uma única vez, com a configuração do config.yaml (modelo e saída
+estruturada). O C2 usa a API de paradas no próprio processo, recriada a partir do CSV.
 
 Saídas em avaliacao/runs/geracao/ (versionadas; citações de páginas gov.br trocadas por hash) e
 avaliacao/runs/local/geracao/ (completas, fora do git). Resumo em avaliacao/geracao/.
@@ -18,6 +19,7 @@ import argparse
 import csv
 import dataclasses
 import datetime as dt
+import functools
 import json
 import sys
 import time
@@ -27,7 +29,12 @@ from typing import Any
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 from src.avaliacao.casos import LOCK, Caso, carregar_congelado  # noqa: E402
-from src.avaliacao.geracao import avaliar_linha, mascarar_govbr, resumir  # noqa: E402
+from src.avaliacao.geracao import (  # noqa: E402
+    avaliar_dinamica,
+    avaliar_linha,
+    mascarar_govbr,
+    resumir,
+)
 from src.avaliacao.vram import MonitorVRAM  # noqa: E402
 from src.config import RAIZ, carregar_config  # noqa: E402
 from src.rag import denso, llm_ollama, prompt  # noqa: E402
@@ -39,22 +46,73 @@ RUNS_LOCAL = RAIZ / "avaliacao" / "runs" / "local" / "geracao"
 RESUMO = RAIZ / "avaliacao" / "geracao"
 CALIBRACAO = RAIZ / "avaliacao" / "retrieval" / "calibracao.jsonl"
 INJECAO = RESUMO / "injecao.jsonl"
+DINAMICAS_EXTRA = RAIZ / "avaliacao" / "agente" / "dinamicas_extra.jsonl"
+CONJUNTOS = ["dev", "test", "calibracao", "injecao", "dinamicas_extra"]
+
+
+def _ler_jsonl(arq: Path) -> list[dict[str, Any]]:
+    with open(arq, encoding="utf-8") as f:
+        return [json.loads(x) for x in f if x.strip()]
 
 
 def _itens(conjunto: str) -> list[dict[str, Any]]:
-    """Perguntas do conjunto como dicionários com id, tipo, pergunta e (se houver) o Caso."""
+    """Perguntas do conjunto: id, tipo, pergunta, Caso (dev e test) e o esperado da agenda."""
     if conjunto in ("dev", "test"):
         return [
-            {"id": c.id, "tipo": c.tipo, "pergunta": c.pergunta, "caso": c}
+            {
+                "id": c.id,
+                "tipo": c.tipo,
+                "pergunta": c.pergunta,
+                "caso": c,
+                "requer_api": c.requer_api,
+                "api_esperada": c.api_esperada.model_dump() if c.api_esperada else None,
+            }
             for c in carregar_congelado(conjunto)
         ]
-    arq = CALIBRACAO if conjunto == "calibracao" else INJECAO
-    with open(arq, encoding="utf-8") as f:
-        linhas = [json.loads(x) for x in f if x.strip()]
-    tipo = (lambda x: x["subtipo"]) if conjunto == "calibracao" else (lambda x: "injecao")
-    return [
-        {"id": x["id"], "tipo": tipo(x), "pergunta": x["pergunta"], "caso": None} for x in linhas
-    ]
+    if conjunto == "dinamicas_extra":
+        return [{**x, "caso": None} for x in _ler_jsonl(DINAMICAS_EXTRA)]
+    if conjunto == "calibracao":
+        return [
+            {**x, "tipo": x["subtipo"], "caso": None, "requer_api": False}
+            for x in _ler_jsonl(CALIBRACAO)
+        ]
+    return [{**x, "tipo": "injecao", "caso": None} for x in _ler_jsonl(INJECAO)]
+
+
+@functools.cache
+def _contexto_agenda() -> tuple[dict[str, tuple[int, int]], list[str]]:
+    """Hora local de início e de fim de cada parada simulada, e a lista de bairros."""
+    from src.paradas_api.gerador import FUSO, carregar_distritos
+
+    cfg = carregar_config()
+    horas = {}
+    with open(RAIZ / cfg["api_paradas"]["arquivo_csv"], encoding="utf-8") as f:
+        for p in csv.DictReader(f):
+            ini, fim = (
+                dt.datetime.strptime(p[k], "%Y-%m-%dT%H:%M:%SZ")
+                .replace(tzinfo=dt.UTC)
+                .astimezone(FUSO)
+                for k in ("inicio_utc", "fim_utc")
+            )
+            horas[p["id"]] = (ini.hour, fim.hour)
+    return horas, carregar_distritos()
+
+
+def _criar_c2(cfg: dict[str, Any], **kw: Any) -> Any:
+    """C2 com a API de paradas no próprio processo (banco recriado a partir do CSV)."""
+    from fastapi.testclient import TestClient
+
+    from src.agente.agente import C2
+    from src.paradas_api import db
+    from src.paradas_api.app import criar_app
+    from src.paradas_api.fonte import ClienteParadasHTTP
+
+    caminho_db = RUNS_LOCAL.parent / "paradas_avaliacao.sqlite"
+    csv_ = RAIZ / cfg["api_paradas"]["arquivo_csv"]
+    db.criar(caminho_db, csv_)
+    cliente = TestClient(criar_app(caminho_db, csv_))
+    fonte = ClienteParadasHTTP("http://testserver", cliente=cliente)
+    return C2(cfg, fonte=fonte, **kw)
 
 
 def _slug(modelo: str) -> str:
@@ -95,12 +153,21 @@ def _metricas(
     caso: Caso | None, item: dict[str, Any], saida: dict[str, Any], chunks: dict[str, dict]
 ) -> dict[str, Any]:
     if caso is None:
-        return _avaliar_sem_gabarito(item, saida)
-    gold = [chunks[g]["texto"] for g in caso.gold_v2 if g in chunks]
-    fornecidos = [
-        chunks[t["chunk_id"]]["texto"] for t in saida["trechos"] if t["chunk_id"] in chunks
-    ]
-    return avaliar_linha(caso, saida, gold, fornecidos)
+        m = _avaliar_sem_gabarito(item, saida)
+    else:
+        gold = [chunks[g]["texto"] for g in caso.gold_v2 if g in chunks]
+        fornecidos = [
+            chunks[t["chunk_id"]]["texto"] for t in saida["trechos"] if t["chunk_id"] in chunks
+        ]
+        m = avaliar_linha(caso, saida, gold, fornecidos)
+    if saida.get("roteamento") and item.get("requer_api") is not None:
+        m["roteamento_correto"] = saida["roteamento"]["precisa_agenda"] == item["requer_api"]
+        m["roteou_agenda"] = saida["roteamento"]["precisa_agenda"]
+        m["roteador_origem"] = saida["roteamento"]["origem"]
+    if item.get("api_esperada"):
+        horas, bairros = _contexto_agenda()
+        m["acerto_dinamica"] = avaliar_dinamica(item["api_esperada"], saida, horas, bairros)
+    return m
 
 
 def _gravar(nome: str, linhas: list[dict[str, Any]], govbr: dict[str, str]) -> None:
@@ -113,6 +180,12 @@ def _gravar(nome: str, linhas: list[dict[str, Any]], govbr: dict[str, str]) -> N
         with open(caminho, "w", encoding="utf-8", newline="\n") as f:
             for x in dados:
                 f.write(json.dumps(x, ensure_ascii=False) + "\n")
+
+
+def _hash_agente() -> str:
+    from src.agente.prompts import hash_prompts_agente
+
+    return hash_prompts_agente()
 
 
 def rodar(cfg: dict[str, Any], args: argparse.Namespace) -> None:
@@ -138,7 +211,7 @@ def rodar(cfg: dict[str, Any], args: argparse.Namespace) -> None:
     govbr = {i: c["texto"] for i, c in chunks.items() if not c.get("versionado", True)}
     llm = chamar_ollama(cfg, modelo)
     kw = {"llm": llm, "estruturada": estruturada}
-    pipe = C1(cfg, **kw) if args.config == "C1" else C0(cfg, **kw)
+    pipe = {"C0": C0, "C1": C1, "C2": _criar_c2}[args.config](cfg, **kw)
     # Aquecimento: carga do LLM na GPU e do modelo de embeddings na CPU fora da medição.
     llm([{"role": "user", "content": "Responda com um JSON vazio."}], {"type": "object"})
     if isinstance(pipe, C1):
@@ -158,6 +231,8 @@ def rodar(cfg: dict[str, Any], args: argparse.Namespace) -> None:
                     "id": item["id"],
                     "tipo": item["tipo"],
                     "pergunta": item["pergunta"],
+                    "requer_api": item.get("requer_api"),
+                    "api_esperada": item.get("api_esperada"),
                     "saida": saida,
                     "metricas": m,
                 }
@@ -165,10 +240,16 @@ def rodar(cfg: dict[str, Any], args: argparse.Namespace) -> None:
             metricas.append(m)
             latencias.append(s.latencia_s)
             r = s.resposta
+            extra = (
+                f" rot={m.get('roteou_agenda')}/{m.get('roteador_origem')}"
+                f" din={m.get('acerto_dinamica')}"
+                if s.roteamento or item.get("api_esperada")
+                else ""
+            )
             print(
-                f"  {item['id']:<8} {item['tipo']:<13} {s.origem:<12} {s.latencia_s:6.2f}s "
+                f"  {item['id']:<8} {item['tipo']:<13} {s.origem:<14} {s.latencia_s:6.2f}s "
                 f"recusa={bool(r and r.recusa)!s:<5} acur={m.get('acuracia')} "
-                f"cit={m.get('citacao_correta', m.get('citacao_verificavel'))}",
+                f"cit={m.get('citacao_correta', m.get('citacao_verificavel'))}{extra}",
                 flush=True,
             )
 
@@ -181,6 +262,7 @@ def rodar(cfg: dict[str, Any], args: argparse.Namespace) -> None:
         "digest": locais[modelo]["digest"],
         "estruturada": estruturada,
         "hash_prompts": prompt.hash_prompts(),
+        **({"hash_prompts_agente": _hash_agente()} if args.config == "C2" else {}),
         "teste_lock": LOCK.read_text(encoding="utf-8").split()[0],
         "retrieval": {k: cfg["retrieval"][k] for k in ("hibrido", "top_k_final", "limiar_recusa")},
         "llm": {k: cfg["llm"][k] for k in ("num_ctx", "temperature", "top_p", "seed", "think")},
@@ -202,16 +284,25 @@ def resumo(_cfg: dict[str, Any], _args: argparse.Namespace) -> None:
     casos = {c.id: c for c in carregar_congelado()}
     chunks = {c["chunk_id"]: c for c in denso.trechos_indexaveis()}
     govbr = {i: c["texto"] for i, c in chunks.items() if not c.get("versionado", True)}
+    extras = {x["id"]: x for x in _ler_jsonl(DINAMICAS_EXTRA)} if DINAMICAS_EXTRA.exists() else {}
     linhas = []
     for arq in sorted(RUNS_LOCAL.glob("*.jsonl")):
         arq_meta = RUNS / f"{arq.stem}.meta.json"
         if not arq_meta.exists():
             continue
         meta = json.loads(arq_meta.read_text(encoding="utf-8"))
-        with open(arq, encoding="utf-8") as f:
-            runs = [json.loads(x) for x in f if x.strip()]
+        runs = _ler_jsonl(arq)
         for x in runs:
             caso = casos.get(x["id"]) if meta["conjunto"] in ("dev", "test") else None
+            # Execuções anteriores à Fase 7 não gravavam o esperado da agenda.
+            if caso is not None:
+                x["requer_api"] = caso.requer_api
+                x["api_esperada"] = caso.api_esperada.model_dump() if caso.api_esperada else None
+            elif meta["conjunto"] == "calibracao":
+                x["requer_api"] = False
+            elif meta["conjunto"] == "dinamicas_extra":
+                x["requer_api"] = True
+                x["api_esperada"] = extras[x["id"]]["api_esperada"]
             x["metricas"] = _metricas(caso, x, x["saida"], chunks)
         _gravar(arq.stem, runs, govbr)
         meta["resumo"] = r = resumir(
@@ -240,6 +331,8 @@ def resumo(_cfg: dict[str, Any], _args: argparse.Namespace) -> None:
                 "recusa_dinamicas": fmt("recusa_dinamicas"),
                 "recusa_nega_regra": fmt("recusa_nega_regra"),
                 "citacao_verificavel": fmt("citacao_verificavel"),
+                "acerto_dinamicas": fmt("acerto_dinamicas"),
+                "roteamento_correto": fmt("roteamento_correto"),
                 "latencia_p50_s": r["latencia_p50_s"],
                 "latencia_p95_s": r["latencia_p95_s"],
                 "vram_pico_mib": meta["vram_pico_mib"],
@@ -260,8 +353,8 @@ def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     sub = ap.add_subparsers(dest="etapa", required=True)
     r = sub.add_parser("rodar")
-    r.add_argument("--config", choices=["C0", "C1"], required=True)
-    r.add_argument("--conjunto", choices=["dev", "test", "calibracao", "injecao"], required=True)
+    r.add_argument("--config", choices=["C0", "C1", "C2"], required=True)
+    r.add_argument("--conjunto", choices=CONJUNTOS, required=True)
     r.add_argument("--modelo")
     r.add_argument("--sem-estruturada", action="store_true")
     sub.add_parser("resumo")
