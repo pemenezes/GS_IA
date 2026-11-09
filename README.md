@@ -66,6 +66,18 @@ O benchmark grava `avaliacao/runs/benchmark_modelos.csv`. Feche programas que us
 - As **páginas explicativas do gov.br** estão sob licença CC BY-ND 3.0, então o texto delas não vai para o git. O script baixa as páginas para `base/local/` e gera `base/local/chunks_govbr.jsonl` na sua máquina. Elas podem ter mudado desde 07/11/2026; o hash original está em `base/fontes.csv`.
 - Os servidores da ANEEL (`www2.aneel.gov.br`, `git.aneel.gov.br`) bloqueiam clientes HTTP com um desafio da Cloudflare (erro 403). Os arquivos versionados foram obtidos por navegador e importados com `scripts/importar_download_navegador.py`, que mantém os bytes originais e o hash.
 
+## API de paradas programadas (simulada)
+
+```powershell
+.\.venv\Scripts\python.exe scripts\calibrar_paradas.py   # opcional: refaz a calibração (baixa 272 MB da ANEEL)
+.\.venv\Scripts\python.exe scripts\gerar_paradas.py      # gera dados/paradas_simuladas.csv e o SQLite
+.\.venv\Scripts\python.exe -m uvicorn src.paradas_api.app:app --port 8001
+```
+
+- Leitura: `GET /paradas?bairro=Mooca&data=2026-11-10`, `GET /bairros?q=jardim`, `GET /health`. A documentação interativa fica em `http://localhost:8001/docs`.
+- Escrita (`POST /paradas`, `PATCH /paradas/{id}`) exige o header `X-API-Key` igual a `PARADAS_API_KEY` do `.env`. Sem chave configurada, ou com o valor de exemplo, a escrita fica desligada.
+- Os dados são **simulados**, calibrados com interrupções programadas reais da Enel SP. Os detalhes estão em [`docs/dados_simulados.md`](docs/dados_simulados.md).
+
 Para executar os notebooks, ative o venv antes (`.\.venv\Scripts\Activate.ps1`), para que o kernel use as bibliotecas do projeto:
 
 ```powershell
