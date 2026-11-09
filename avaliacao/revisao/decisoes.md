@@ -121,7 +121,45 @@ pedir reparo quando a resposta tem mais palavras funcionais do inglês do que do
 regra não dispara em nenhuma das 181 respostas já gravadas do dev e da calibração (todos os
 modelos), então os números do dev não mudam; só a injeção foi rodada de novo.
 
-**Saídas versionadas e páginas gov.br:** em `avaliacao/runs/geracao/`, além das citações de fontes
-gov.br, qualquer campo que copie 60 caracteres seguidos de uma página gov.br fornecida ao modelo
-vira hash e tamanho (cópias de 69 caracteres ou mais são sempre detectadas). As saídas completas
-ficam em `avaliacao/runs/local/`, fora do git.
+**Saídas versionadas e páginas gov.br (Fase 5):** em `avaliacao/runs/geracao/`, além das
+citações de fontes gov.br, qualquer campo que copie 60 caracteres seguidos de uma página gov.br
+fornecida ao modelo vira hash e tamanho (cópias de 69 caracteres ou mais são sempre detectadas).
+As saídas completas ficam em `avaliacao/runs/local/`, fora do git.
+
+## API de paradas (09/11/2026, Fase 6)
+
+Decisões do Pedro: só a capital (96 distritos do IBGE, bairro = distrito); volume calibrado com
+as programadas da Enel SP em 2025 (793 paradas em 61 dias); suposições de tipo (60% manutenção,
+25% obra, 15% poda) e de cancelamento (5%). Detalhes em `docs/dados_simulados.md`.
+
+## Agente C2 (09/11/2026, Fase 7)
+
+Decisões do Pedro sobre o plano da fase:
+- **Aviso ao fim de toda resposta da agenda** (acrescentado pelo código): "Confirme na página de
+  manutenção programada da sua distribuidora, com o número da sua instalação." Sem mencionar que
+  os dados são simulados.
+- **Pergunta sem data:** consulta os próximos 7 dias.
+- **Conjunto extra de 13 perguntas dinâmicas** (`avaliacao/agente/dinamicas_extra.jsonl`), fora
+  das 60, com bairro, data e situação definidos à mão e os registros esperados calculados a partir
+  da agenda simulada.
+
+Ajustes feitos no dev e no conjunto extra (a primeira rodada do conjunto extra acertou 7/13):
+- **Consulta vazia é resposta, não recusa:** em 4 perguntas sem parada, o modelo escreveu "não há
+  parada programada", mas marcou `recusa=true` (e, numa delas, a recusa com números foi barrada
+  pelo validador). A regra 2 do prompt do C2 passou a dizer isso explicitamente e a permitir
+  resposta parcial quando só parte da pergunta tem base.
+- **Data pedida explícita:** no DX-01, o modelo leu 12/11 como "amanhã" e respondeu que não havia
+  parada depois de amanhã. A descrição da consulta passou a trazer o dia da semana da data pedida
+  e de hoje, e o prompt diz que os registros já são da data perguntada.
+- **Pergunta mista:** no DX-13, a pergunta inteira teve cosseno 0,567 (abaixo de τ) e nenhum
+  trecho de norma passou; o modelo inventou uma fonte. O roteador passou a devolver
+  `pergunta_normas` (a parte sobre regras, reescrita sozinha; cosseno 0,728), usada na busca das
+  normas só no caminho da agenda. O caminho sem agenda continua idêntico ao C1.
+- **Agenda sem bairro e sem data volta para as normas:** no dev, o roteador mandou T-023 e T-035
+  ("como faço pra empresa me avisar antes de desligar pra manutenção?") para a agenda, sem
+  bairro e sem data, e o C2 perguntou o bairro. Sem lugar e sem data não há consulta possível;
+  essas perguntas agora seguem o caminho das normas (idêntico ao C1). "Vai ter manutenção
+  amanhã?" (com data, sem bairro) continua pedindo o bairro.
+- Depois dos ajustes, o conjunto extra acertou 13/13. A parte de normas do DX-13 ainda cita a
+  regra de outra classe de consumidor ("3 dias úteis"), o mesmo erro do T-003 no C1; fica para
+  a Fase 8.

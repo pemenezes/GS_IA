@@ -123,6 +123,24 @@
     0.0
    ]
   },
+  "acerto_dinamicas": {
+   "k": 0,
+   "n": 0,
+   "taxa": null,
+   "ic95": [
+    0.0,
+    0.0
+   ]
+  },
+  "roteamento_correto": {
+   "k": 0,
+   "n": 0,
+   "taxa": null,
+   "ic95": [
+    0.0,
+    0.0
+   ]
+  },
   "latencia_p50_s": 4.74,
   "latencia_p95_s": 6.33,
   "por_tipo": {
