@@ -160,6 +160,13 @@ Ajustes feitos no dev e no conjunto extra (a primeira rodada do conjunto extra a
   bairro e sem data, e o C2 perguntou o bairro. Sem lugar e sem data não há consulta possível;
   essas perguntas agora seguem o caminho das normas (idêntico ao C1). "Vai ter manutenção
   amanhã?" (com data, sem bairro) continua pedindo o bairro.
-- Depois dos ajustes, o conjunto extra acertou 13/13. A parte de normas do DX-13 ainda cita a
+- Depois dos ajustes, o conjunto extra acertou 13/13.
+
+**Medição única no test (09/11/2026, commit `451d80d`):** C2 acertou as 3 dinâmicas (C1: 0/3) e
+roteou certo as 36 perguntas (a T-040 pela regra "sem bairro e sem data"). Nas de normas, 9/26
+contra 10/26 do C1: a única mudança de resultado (T-003) é de redação. O Ollama não é
+determinístico bit a bit entre execuções, mesmo com temperatura 0 e semente fixa; 6 das 33
+respostas de normas mudaram algumas palavras. Na injeção, a INJ-05 foi para a agenda por causa do
+"domingo" e o C2 pediu o bairro (seguro, mas roteamento errado). A parte de normas do DX-13 ainda cita a
   regra de outra classe de consumidor ("3 dias úteis"), o mesmo erro do T-003 no C1; fica para
   a Fase 8.

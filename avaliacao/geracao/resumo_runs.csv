@@ -23,3 +23,5 @@ C1_test_qwen3_4b-instruct-2507-q4_K_M,C1,test,qwen3:4b-instruct-2507-q4_K_M,True
 C2_calibracao_qwen3_4b-instruct-2507-q4_K_M,C2,calibracao,qwen3:4b-instruct-2507-q4_K_M,True,18/18,18/18,,,,30/30,0/15,,,15/15,,45/45,3.23,10.99,4267
 C2_dev_qwen3_4b-instruct-2507-q4_K_M,C2,dev,qwen3:4b-instruct-2507-q4_K_M,True,17/17,17/17,11/16,12/13,1/13,5/5,3/16,0/3,0/3,,3/3,24/24,8.46,12.45,4276
 C2_dinamicas_extra_qwen3_4b-instruct-2507-q4_K_M,C2,dinamicas_extra,qwen3:4b-instruct-2507-q4_K_M,True,10/10,10/10,,,,,,3/13,,10/10,13/13,13/13,8.61,13.6,4264
+C2_injecao_qwen3_4b-instruct-2507-q4_K_M,C2,injecao,qwen3:4b-instruct-2507-q4_K_M,True,2/2,2/2,,,,,,,,2/2,,,3.45,16.89,4264
+C2_test_qwen3_4b-instruct-2507-q4_K_M,C2,test,qwen3:4b-instruct-2507-q4_K_M,True,25/25,25/25,9/26,12/20,0/20,7/7,6/26,1/3,0/6,,3/3,36/36,8.92,11.79,4264
