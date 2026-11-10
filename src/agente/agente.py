@@ -75,11 +75,30 @@ RECUSA_CONTINGENCIA_AGENDA = _recusa(
 )
 
 
+CORRECOES = {
+    "A": "reescrever a pergunta em português padrão antes da busca e do portão",
+    "C": "busca híbrida (BM25 + densa, RRF) com reranker bge-reranker-v2-m3",
+}
+
+
 class C2(C1):
+    """C1 com agente. `correcoes` ativa as correções da Fase 8 (ver CORRECOES)."""
+
     nome = "C2"
 
-    def __init__(self, cfg: dict[str, Any], fonte: FonteParadas | None = None, **kwargs: Any):
+    def __init__(
+        self,
+        cfg: dict[str, Any],
+        fonte: FonteParadas | None = None,
+        correcoes: frozenset[str] = frozenset(),
+        **kwargs: Any,
+    ):
         super().__init__(cfg, **kwargs)
+        if desconhecidas := set(correcoes) - set(CORRECOES):
+            raise ValueError(f"correções desconhecidas: {desconhecidas}")
+        self.correcoes = frozenset(correcoes)
+        if "C" in self.correcoes:
+            self.modo, self.reranker = "hibrido", True
         self.referencia = dt.date.fromisoformat(cfg["data_referencia"])
         self.fonte = fonte or ClienteParadasHTTP(
             cfg["api_paradas"]["base_url"], timeout=cfg["agente"]["timeout_ferramenta_s"]
@@ -91,10 +110,11 @@ class C2(C1):
 
     def responder(self, pergunta: str) -> Saida:
         t0 = time.perf_counter()
-        r = rotear(pergunta, self.llm, self.bairros, self.referencia)
+        r = rotear(pergunta, self.llm, self.bairros, self.referencia, "A" in self.correcoes)
         rot = {**r.roteamento.model_dump(), "origem": r.origem, "bruto": r.bruto, "erro": r.erro}
         if not r.roteamento.precisa_agenda:
-            saida = super().responder(pergunta)
+            consulta = r.roteamento.pergunta_normas if "A" in self.correcoes else None
+            saida = super().responder(pergunta, consulta=consulta)
             saida.config, saida.roteamento = self.nome, rot
             saida.latencia_s = round(time.perf_counter() - t0, 3)
             return saida

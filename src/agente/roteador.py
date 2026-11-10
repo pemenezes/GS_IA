@@ -63,9 +63,11 @@ def por_regras(pergunta: str, bairros: list[str]) -> Roteamento:
     )
 
 
-def rotear(pergunta: str, llm: Any, bairros: list[str], referencia: Any) -> ResultadoRoteador:
+def rotear(
+    pergunta: str, llm: Any, bairros: list[str], referencia: Any, reescrever: bool = False
+) -> ResultadoRoteador:
     try:
-        corpo = llm(prompts.mensagens_roteador(pergunta), SCHEMA_ROTEADOR)
+        corpo = llm(prompts.mensagens_roteador(pergunta, reescrever), SCHEMA_ROTEADOR)
         bruto = corpo["message"]["content"]
         rot = Roteamento.model_validate_json(bruto)
     except (ValidationError, KeyError, ValueError) as e:
@@ -82,6 +84,12 @@ def rotear(pergunta: str, llm: Any, bairros: list[str], referencia: Any) -> Resu
         if not rot.bairro and not rot.data and resolver_data(pergunta, referencia) is None:
             # Sem lugar e sem data não há consulta à agenda: é pergunta sobre a regra
             # ("como faço para ser avisado antes de uma manutenção?").
-            rot = Roteamento(precisa_agenda=False, precisa_normas=True, bairro=None, data=None)
+            rot = Roteamento(
+                precisa_agenda=False,
+                precisa_normas=True,
+                bairro=None,
+                data=None,
+                pergunta_normas=rot.pergunta_normas,
+            )
             origem = "llm+regras"
     return ResultadoRoteador(rot, origem, bruto)

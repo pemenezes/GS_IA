@@ -156,18 +156,21 @@ class C1(_Base):
         self.retriever = retriever
         self.tau = cfg["retrieval"]["limiar_recusa"]
         self.modo = "hibrido" if cfg["retrieval"]["hibrido"] else "denso"
+        self.reranker: bool | None = None  # None: segue retrieval.reranker do config
 
     def recuperar(self, pergunta: str) -> tuple[list[Any], float]:
-        cands = self.retriever.buscar(pergunta, modo=self.modo)
-        if self.modo == "denso" and cands:
+        cands = self.retriever.buscar(pergunta, modo=self.modo, reranker=self.reranker)
+        if self.modo == "denso" and not self.reranker and cands:
             nota = cands[0].score_denso
         else:
+            # O portão usa sempre o cosseno denso do melhor trecho (τ calibrado nele).
             nota = self.retriever.melhor_cosseno(pergunta)
         return cands, float(nota)
 
-    def responder(self, pergunta: str) -> Saida:
+    def responder(self, pergunta: str, consulta: str | None = None) -> Saida:
+        """`consulta` substitui a pergunta só na busca e no portão (correção A do C2)."""
         t0 = time.perf_counter()
-        cands, nota = self.recuperar(pergunta)
+        cands, nota = self.recuperar(consulta or pergunta)
         trechos = [{"chunk_id": c.chunk_id, "nota": round(float(c.score), 4)} for c in cands]
         saida = Saida(self.nome, None, "portao", 0.0, round(nota, 4), trechos)
         if nota < self.tau:

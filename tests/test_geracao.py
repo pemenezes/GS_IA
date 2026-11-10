@@ -101,7 +101,7 @@ class _Retriever:
     def __init__(self, nota):
         self.nota = nota
 
-    def buscar(self, pergunta, modo="denso"):
+    def buscar(self, pergunta, modo="denso", reranker=None):
         return [
             SimpleNamespace(
                 chunk=CHUNK, chunk_id="D01-art362", score=self.nota, score_denso=self.nota

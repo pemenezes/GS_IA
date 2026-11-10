@@ -125,7 +125,10 @@ class _Retriever:
     def __init__(self, nota=0.4):
         self.nota, self.consultas = nota, []
 
-    def buscar(self, pergunta, modo="denso"):
+    def melhor_cosseno(self, pergunta):
+        return self.nota
+
+    def buscar(self, pergunta, modo="denso", reranker=None):
         self.consultas.append(pergunta)
         chunk = {"chunk_id": "D01-x", "fonte": "REN", "texto": "Texto qualquer da norma."}
         return [
@@ -212,6 +215,22 @@ def test_c2_pergunta_mista_busca_normas_pela_parte_reescrita():
     )
     assert ret.consultas == ["A distribuidora tem que avisar antes?"]
     assert [t["chunk_id"] for t in s.trechos] == ["consulta-lapa-20261110", "D01-x"]
+
+
+def test_correcoes_a_e_c():
+    rot = json.loads(_rot(agenda=False, normas=True))
+    rot["pergunta_normas"] = "Quanto tempo a distribuidora tem para religar a luz?"
+    ret = _Retriever(nota=0.4)
+    c2 = C2(CFG, fonte=_Fonte(), retriever=ret, llm=_LLM([json.dumps(rot)]), correcoes={"A"})
+    c2.responder("quantu tempo eles tem pra voutar com a lus")
+    assert ret.consultas == ["Quanto tempo a distribuidora tem para religar a luz?"]
+    sem_a = _Retriever(nota=0.4)
+    C2(CFG, fonte=_Fonte(), retriever=sem_a, llm=_LLM([json.dumps(rot)])).responder("x?")
+    assert sem_a.consultas == ["x?"]
+    c = C2(CFG, fonte=_Fonte(), retriever=ret, llm=_LLM([]), correcoes={"C"})
+    assert (c.modo, c.reranker) == ("hibrido", True)
+    with pytest.raises(ValueError):
+        C2(CFG, fonte=_Fonte(), retriever=ret, llm=_LLM([]), correcoes={"Z"})
 
 
 def test_c2_pergunta_de_normas_segue_o_caminho_do_c1():

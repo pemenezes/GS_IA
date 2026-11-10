@@ -119,8 +119,11 @@ def _slug(modelo: str) -> str:
     return modelo.replace(":", "_").replace("/", "_").replace(".", "")
 
 
-def _nome_run(config: str, conjunto: str, modelo: str, estruturada: bool) -> str:
-    return f"{config}_{conjunto}_{_slug(modelo)}{'' if estruturada else '_livre'}"
+def _nome_run(
+    config: str, conjunto: str, modelo: str, estruturada: bool, correcoes: str = ""
+) -> str:
+    sufixo = ("" if estruturada else "_livre") + (f"_corr{correcoes}" if correcoes else "")
+    return f"{config}_{conjunto}_{_slug(modelo)}{sufixo}"
 
 
 def _avaliar_sem_gabarito(item: dict[str, Any], saida: dict[str, Any]) -> dict[str, Any]:
@@ -188,12 +191,21 @@ def _hash_agente() -> str:
     return hash_prompts_agente()
 
 
+def _hash_reescrita() -> str:
+    from src.agente.prompts import hash_prompt_reescrita
+
+    return hash_prompt_reescrita()
+
+
 def rodar(cfg: dict[str, Any], args: argparse.Namespace) -> None:
     modelo = args.modelo or cfg["llm"]["modelo"]
     estruturada = not args.sem_estruturada and cfg["geracao"]["estruturada"]
     if args.conjunto == "test" and (modelo, estruturada) != (cfg["llm"]["modelo"], True):
         raise SystemExit("o test só roda com a configuração escolhida no config.yaml")
-    nome = _nome_run(args.config, args.conjunto, modelo, estruturada)
+    correcoes = "".join(sorted(set(args.correcoes or "")))
+    if correcoes and args.config != "C2":
+        raise SystemExit("as correções da Fase 8 valem só para o C2")
+    nome = _nome_run(args.config, args.conjunto, modelo, estruturada, correcoes)
     destino = RUNS / f"{nome}.jsonl"
     if args.conjunto == "test" and destino.exists():
         raise SystemExit(f"{destino.name} já existe: o test roda uma única vez")
@@ -211,6 +223,8 @@ def rodar(cfg: dict[str, Any], args: argparse.Namespace) -> None:
     govbr = {i: c["texto"] for i, c in chunks.items() if not c.get("versionado", True)}
     llm = chamar_ollama(cfg, modelo)
     kw = {"llm": llm, "estruturada": estruturada}
+    if correcoes:
+        kw["correcoes"] = frozenset(correcoes)
     pipe = {"C0": C0, "C1": C1, "C2": _criar_c2}[args.config](cfg, **kw)
     # Aquecimento: carga do LLM na GPU e do modelo de embeddings na CPU fora da medição.
     llm([{"role": "user", "content": "Responda com um JSON vazio."}], {"type": "object"})
@@ -263,6 +277,16 @@ def rodar(cfg: dict[str, Any], args: argparse.Namespace) -> None:
         "estruturada": estruturada,
         "hash_prompts": prompt.hash_prompts(),
         **({"hash_prompts_agente": _hash_agente()} if args.config == "C2" else {}),
+        **(
+            {
+                "correcoes": correcoes,
+                "hash_prompt_reescrita": _hash_reescrita(),
+                # O test já tinha sido visto quando as correções foram feitas (Fase 8).
+                "pos_correcao": args.conjunto == "test",
+            }
+            if correcoes
+            else {}
+        ),
         "teste_lock": LOCK.read_text(encoding="utf-8").split()[0],
         "retrieval": {k: cfg["retrieval"][k] for k in ("hibrido", "top_k_final", "limiar_recusa")},
         "llm": {k: cfg["llm"][k] for k in ("num_ctx", "temperature", "top_p", "seed", "think")},
@@ -321,6 +345,7 @@ def resumo(_cfg: dict[str, Any], _args: argparse.Namespace) -> None:
                 "conjunto": meta["conjunto"],
                 "modelo": meta["modelo"],
                 "estruturada": meta["estruturada"],
+                "correcoes": meta.get("correcoes", ""),
                 "json_valido_1a": fmt("json_valido_1a"),
                 "regras_1a": fmt("regras_1a"),
                 "acuracia": fmt("acuracia"),
@@ -357,6 +382,7 @@ def main() -> int:
     r.add_argument("--conjunto", choices=CONJUNTOS, required=True)
     r.add_argument("--modelo")
     r.add_argument("--sem-estruturada", action="store_true")
+    r.add_argument("--correcoes", help="correções da Fase 8 no C2: A, C ou AC")
     sub.add_parser("resumo")
     args = ap.parse_args()
     cfg = carregar_config()

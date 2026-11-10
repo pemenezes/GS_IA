@@ -131,9 +131,28 @@ def consulta_vazia_como_trecho(bairro: str, inicio: dt.date, fim: dt.date) -> di
     }
 
 
-def mensagens_roteador(pergunta: str) -> list[dict[str, str]]:
+# Correção A (Fase 8): a parte sobre regras vem sempre reescrita em português padrão, para a busca
+# e o portão não sofrerem com erros de grafia da voz e com a linguagem coloquial.
+SISTEMA_ROTEADOR_REESCRITA = SISTEMA_ROTEADOR.replace(
+    "- pergunta_normas: se precisa_agenda e precisa_normas forem true, a parte da pergunta "
+    "sobre regras, reescrita como uma pergunta completa e sem o bairro e a data; senão, null.",
+    "- pergunta_normas: se precisa_normas for true, a parte da pergunta sobre regras, reescrita "
+    "como uma pergunta completa em português padrão: corrija erros de grafia e de digitação, "
+    "troque gírias por palavras comuns, mantenha todos os detalhes do caso (quem, o quê, "
+    "quanto tempo) e tire o bairro e a data; senão, null.",
+).replace(
+    '"pergunta_normas": null}\nPergunta: Vai ter manutenção',
+    '"pergunta_normas": "Tenho direito a ressarcimento da geladeira que queimou depois de uma '
+    'queda de energia?"}\nPergunta: Vai ter manutenção',
+)
+assert "corrija erros de grafia" in SISTEMA_ROTEADOR_REESCRITA
+assert "Tenho direito a ressarcimento da geladeira" in SISTEMA_ROTEADOR_REESCRITA
+
+
+def mensagens_roteador(pergunta: str, reescrever: bool = False) -> list[dict[str, str]]:
+    sistema = SISTEMA_ROTEADOR_REESCRITA if reescrever else SISTEMA_ROTEADOR
     return [
-        {"role": "system", "content": SISTEMA_ROTEADOR},
+        {"role": "system", "content": sistema},
         {"role": "user", "content": f"Pergunta: {pergunta}"},
     ]
 
@@ -161,3 +180,7 @@ def mensagens_c2(
 def hash_prompts_agente() -> str:
     texto = SISTEMA_ROTEADOR + SISTEMA_C2 + json.dumps([TIPOS, STATUS], ensure_ascii=False)
     return hashlib.sha256(texto.encode()).hexdigest()[:12]
+
+
+def hash_prompt_reescrita() -> str:
+    return hashlib.sha256(SISTEMA_ROTEADOR_REESCRITA.encode()).hexdigest()[:12]
