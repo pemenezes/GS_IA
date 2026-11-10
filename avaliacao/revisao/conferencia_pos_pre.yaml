@@ -1,0 +1,20 @@
+# Pré-classificação da conferência pós-correção (Fase 8): C2 com as correções A e C, no test.
+# Só as respostas cujo sentido mudou em relação à conferência do C2 original. As outras herdam o
+# veredito do C2 original (lista em herdadas).
+status: pre_classificado
+herdadas:
+  mesma_resposta: [T-005, T-008, T-009]
+  mesmo_sentido: [T-002, T-003, T-006, T-013, T-015, T-021, T-022, T-026, T-030, T-033]
+  continuam_recusadas: [T-024, T-036, T-040]
+itens:
+  C2_AC:
+    T-007: {veredito: incorreta, falso: sim, nota: "Agora afirma que a distribuidora PODE negar, citando a alínea b do item 14 do PRODIST Módulo 9, que foi revogada pelo art. 20 da REN 1.137/2025. O trecho trazia um ALERTA dizendo isso, e o modelo o ignorou. Antes, o C2 recusava."}
+    T-011: {veredito: correta, falso: nao, nota: "Agora dá o critério geral (meio salário mínimo por pessoa) e apresenta os 3 salários mínimos como exceção. Antes: incorreta."}
+    T-018: {veredito: incorreta, falso: sim, nota: "Agora diz que o CDC NÃO obriga a continuidade, com o art. 22 do CDC entre os trechos fornecidos. Antes: correta."}
+    T-020: {veredito: incorreta, falso: sim, nota: "A reescrita trocou 'cortaram por erro' por 'interrupção programada', e a resposta diz que não há prazo fixo. Na suspensão indevida, são 4 horas. Antes: correta."}
+    T-028: {veredito: parcial, falso: sim, nota: "Começa com 'Não, não é uma taxa a mais', mas agora reconhece uma cobrança adicional proporcional ao consumo; não diz que vem destacada na fatura. Antes: incorreta."}
+    T-032: {veredito: correta, falso: nao, nota: "Pergunta de voz que o portão barrava; agora responde 4 horas na suspensão indevida, citando o art. 362."}
+    T-034: {veredito: incorreta, falso: sim, nota: "Pergunta de voz que o portão barrava; agora responde com os prazos de solução de reclamação (5 e 10 dias úteis) em vez da verificação em 1 dia útil para geladeira com medicamento. A reescrita tirou a insulina da pergunta."}
+    T-037: {veredito: correta, falso: nao, nota: "Agora aplica a compensação por violação do limite do DISE em situação de emergência (item 220-A). Não diz o limite de 24 horas, mas a conclusão está certa. Antes: incorreta."}
+    T-038: {veredito: correta, falso: nao, nota: "Diz que tem direito e lista o relatório e o atestado médicos e o comprovante do CadÚnico; não repete o limite de 3 salários mínimos, mas responde ao caso de 2 salários mínimos."}
+    T-039: {veredito: correta, falso: nao, nota: "Agora dá os dois prazos: 15 dias para o resultado e 20 dias para o pagamento. Antes: parcial."}

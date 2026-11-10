@@ -92,29 +92,64 @@ def _bloco(cfg: str, caso, x: dict, pre: dict, govbr: set[str], mascarar: bool) 
     return "\n\n".join(linhas)
 
 
+CABECALHO_POS = """# Conferência pós-correção do test (Fase 8): C2 com as correções A e C
+
+**Para:** Pedro. **Itens:** {n}. São as respostas do C2 com as correções A (reescrita da pergunta)
+e C (busca híbrida com reranker) cujo **sentido mudou** em relação à conferência do C2 original.
+Os critérios são os mesmos. Responda no chat só com as discordâncias.
+
+As demais herdam o veredito que você já deu ao C2 original:
+- **mesma resposta:** {mesma};
+- **redação diferente, mesmo sentido:** {sentido};
+- **continuam recusadas:** {recusadas}.
+
+O test já tinha sido visto quando as correções foram feitas; por isso esta medição é rotulada
+"pós-correção" e não substitui o placar oficial.
+{aviso}
+"""
+
+
 def main() -> int:
     if hasattr(sys.stdout, "reconfigure"):
         sys.stdout.reconfigure(encoding="utf-8")
+    pos = "--pos-correcao" in sys.argv
     casos = {c.id: c for c in carregar_congelado("test")}
-    pre = yaml.safe_load(PRE.read_text(encoding="utf-8"))["itens"]
+    arq_pre = PRE.with_name("conferencia_pos_pre.yaml") if pos else PRE
+    dados = yaml.safe_load(arq_pre.read_text(encoding="utf-8"))
+    pre = dados["itens"]
     govbr = {c["chunk_id"] for c in denso.trechos_indexaveis() if not c.get("versionado", True)}
-    runs = {cfg: _ler(f"{cfg}_test_{Q}") for cfg in ("C0", "C1", "C2")}
-    secoes = [
-        ("C2", "C2", "## 1. C2: respostas dadas às perguntas respondíveis"),
-        ("C1", "C1", "## 2. C1: só as respostas que diferem do C2"),
-        ("C0", "C0", "## 3. C0 (sem a base): respostas dadas"),
-        ("C0_recusas", "C0", "## 4. C0: recusas de perguntas respondíveis"),
-    ]
+    if pos:
+        runs = {"C2_AC": _ler(f"C2_test_{Q}_corrAC")}
+        secoes = [("C2_AC", "C2_AC", "## Respostas do C2 + A + C cujo sentido mudou")]
+        saida = SAIDA.with_name("conferencia_pos_correcao.md")
+        saida_local = SAIDA_LOCAL.with_name("conferencia_pos_correcao_completa.md")
+        h = dados["herdadas"]
+        cabecalho = CABECALHO_POS.format(
+            n="{n}",
+            mesma=", ".join(h["mesma_resposta"]),
+            sentido=", ".join(h["mesmo_sentido"]),
+            recusadas=", ".join(h["continuam_recusadas"]),
+            aviso="{aviso}",
+        )
+    else:
+        runs = {cfg: _ler(f"{cfg}_test_{Q}") for cfg in ("C0", "C1", "C2")}
+        secoes = [
+            ("C2", "C2", "## 1. C2: respostas dadas às perguntas respondíveis"),
+            ("C1", "C1", "## 2. C1: só as respostas que diferem do C2"),
+            ("C0", "C0", "## 3. C0 (sem a base): respostas dadas"),
+            ("C0_recusas", "C0", "## 4. C0: recusas de perguntas respondíveis"),
+        ]
+        saida, saida_local, cabecalho = SAIDA, SAIDA_LOCAL, CABECALHO
     n = sum(len(pre[k]) for k, _, _ in secoes)
-    for destino, mascarar in ((SAIDA, True), (SAIDA_LOCAL, False)):
-        partes = [CABECALHO.format(n=n, aviso=AVISO_VERSIONADO if mascarar else "")]
+    for destino, mascarar in ((saida, True), (saida_local, False)):
+        partes = [cabecalho.format(n=n, aviso=AVISO_VERSIONADO if mascarar else "")]
         for chave, cfg, titulo in secoes:
             partes.append(titulo)
             for id_, p in pre[chave].items():
                 partes.append(_bloco(cfg, casos[id_], runs[cfg][id_], p, govbr, mascarar))
         destino.parent.mkdir(parents=True, exist_ok=True)
         destino.write_text("\n\n".join(partes) + "\n", encoding="utf-8", newline="\n")
-    print(f"{n} itens em {SAIDA.relative_to(RAIZ)} e {SAIDA_LOCAL.relative_to(RAIZ)}")
+    print(f"{n} itens em {saida.relative_to(RAIZ)} e {saida_local.relative_to(RAIZ)}")
     return 0
 
 

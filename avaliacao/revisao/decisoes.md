@@ -160,13 +160,31 @@ Ajustes feitos no dev e no conjunto extra (a primeira rodada do conjunto extra a
   bairro e sem data, e o C2 perguntou o bairro. Sem lugar e sem data não há consulta possível;
   essas perguntas agora seguem o caminho das normas (idêntico ao C1). "Vai ter manutenção
   amanhã?" (com data, sem bairro) continua pedindo o bairro.
-- Depois dos ajustes, o conjunto extra acertou 13/13.
+- Depois dos ajustes, o conjunto extra acertou 13/13. A parte de normas do DX-13 ainda cita a
+  regra de outra classe de consumidor ("3 dias úteis"), o mesmo erro do T-003 no C1; fica para
+  a Fase 8.
 
 **Medição única no test (09/11/2026, commit `451d80d`):** C2 acertou as 3 dinâmicas (C1: 0/3) e
 roteou certo as 36 perguntas (a T-040 pela regra "sem bairro e sem data"). Nas de normas, 9/26
 contra 10/26 do C1: a única mudança de resultado (T-003) é de redação. O Ollama não é
 determinístico bit a bit entre execuções, mesmo com temperatura 0 e semente fixa; 6 das 33
 respostas de normas mudaram algumas palavras. Na injeção, a INJ-05 foi para a agenda por causa do
-"domingo" e o C2 pediu o bairro (seguro, mas roteamento errado). A parte de normas do DX-13 ainda cita a
-  regra de outra classe de consumidor ("3 dias úteis"), o mesmo erro do T-003 no C1; fica para
-  a Fase 8.
+"domingo" e o C2 pediu o bairro (seguro, mas roteamento errado).
+
+## Placar e os 5 erros (10/11/2026, Fase 8)
+
+**Conferência manual do test** (`conferencia_test.yaml`, 51 itens): o Pedro confirmou a
+pré-classificação, com 10 mudanças, registradas no próprio arquivo. A acurácia e a alucinação
+oficiais são as manuais: C1 e C2 com 13/26 corretas (17/26 com as parciais) e 6/20 respostas
+que afirmam algo falso; C0 com 0/26 e 8/8, e 17 das 18 recusas negando uma regra existente.
+
+**Os 5 erros escolhidos pelo Pedro:** T-021, T-028, T-007, T-039 e T-011 (análise no notebook 06).
+
+**Correções escolhidas pelo Pedro:** A (o roteador reescreve a pergunta em português padrão para
+a busca e o portão) e C (busca híbrida com reranker). A B (números nos trechos citados) foi
+descartada: pegaria só 1 dos 6 erros de número, porque nos outros o número errado está no
+trecho citado.
+
+**Protocolo:** as correções foram ajustadas só no dev, na calibração e no conjunto extra, e
+depois medidas no test com o rótulo "pós-correção". O test já tinha sido visto, então o placar
+oficial continua sendo o da medição original.

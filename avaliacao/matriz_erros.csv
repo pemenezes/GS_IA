@@ -1,3 +1,3 @@
 config,1. recuperação,2. fragmentação,3. recusa indevida,4. aceite indevido (não consta),5. número alterado,6. citação não sustenta,7. roteador/ferramenta,8. regra obsoleta,total
-C1,4,1,6,0,0,2,3,0,16
-C2,4,1,6,0,0,2,0,0,13
+C1,3,1,6,0,1,2,3,0,16
+C2,3,1,6,0,1,2,0,0,13

@@ -13,8 +13,8 @@ falhas:
           evidencia: "Veio o art. 621 sem o inciso VIII (revogado); o trecho da revogação (D06-art19) não veio. O LLM concluiu que faltava informação."}
   T-011: {veredito: incorreta, categoria: 1, secundaria: 6, gold_no_top3: nao, nota: 0.7085,
           evidencia: "O critério geral (meio salário mínimo) não veio; veio o § 1º, critério excepcional de 3 salários mínimos, e o modelo o apresentou como regra geral."}
-  T-021: {veredito: parcial, categoria: 1, secundaria: 5, gold_no_top3: nao, nota: 0.7215,
-          evidencia: "O art. 360 da REN 1.000 e a cláusula 6.3 do contrato de adesão (15 dias de aviso por inadimplemento) não vieram; com páginas do gov.br sobre corte, o modelo escreveu 'três dias'."}
+  T-021: {veredito: parcial, categoria: 5, secundaria: 6, gold_no_top3: nao, nota: 0.7215,
+          evidencia: "O gold (art. 360 e cláusula 6.3) não veio, mas a página do gov.br D14-q10, em 2º, traz na mesma frase os dois prazos: 3 dias para razões técnicas ou de segurança e 15 dias para falta de pagamento. O modelo pegou o prazo da situação errada. A página não estava entre os equivalentes do gabarito."}
   T-024: {veredito: recusa, categoria: 3, secundaria: 1, gold_no_top3: nao, nota: 0.6017,
           evidencia: "Pergunta coloquial ('sou aposentado e recebo o BPC'); nota logo abaixo de τ e gold fora do top-3."}
   T-028: {veredito: incorreta, categoria: 6, secundaria: null, gold_no_top3: sim, nota: 0.7021,
@@ -22,7 +22,7 @@ falhas:
   T-032: {veredito: recusa, categoria: 3, secundaria: null, gold_no_top3: sim, nota: 0.5895,
           evidencia: "Voz com erros de grafia ('lus', 'quantu'). O gold veio em 1º, mas a nota ficou abaixo de τ: falha só do portão."}
   T-033: {veredito: parcial, categoria: 1, secundaria: 5, gold_no_top3: nao, nota: 0.6494,
-          evidencia: "Versão de voz da T-021; o art. 360 não veio e o modelo escreveu '5 dias úteis', número de outro trecho."}
+          evidencia: "Versão de voz da T-021; nem o art. 360 nem a página D14-q10 vieram, e o modelo escreveu '5 dias úteis', número de outro trecho."}
   T-034: {veredito: recusa, categoria: 3, secundaria: 1, gold_no_top3: nao, nota: 0.5954,
           evidencia: "Voz ('geladera', 'insolina', 'impresa'); nota abaixo de τ e gold fora do top-3."}
   T-036: {veredito: recusa, categoria: 3, secundaria: 1, gold_no_top3: nao, nota: 0.5426,
