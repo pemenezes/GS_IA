@@ -1,6 +1,7 @@
 """Test novo, T2 (Fase 8B): 24 perguntas escritas antes das melhorias e medidas uma única vez.
 
-  python scripts/montar_teste2.py
+  python scripts/montar_teste2.py              # candidatas e documento de revisão
+  python scripts/montar_teste2.py --congelar   # depois da revisão: teste2.jsonl e teste2.lock
 
 O gabarito de cada pergunta respondível vem do texto dos trechos indicados (lidos na base) e já
 inclui os trechos equivalentes: os que trazem o mesmo fato-chave entre os 15 mais próximos do
@@ -23,7 +24,14 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 from fastapi.testclient import TestClient  # noqa: E402
 
-from src.avaliacao.casos import CANDIDATAS2, Caso, gravar  # noqa: E402
+from src.avaliacao.casos import (  # noqa: E402
+    CANDIDATAS2,
+    LOCK2,
+    TESTE2,
+    Caso,
+    carregar,
+    gravar,
+)
 from src.avaliacao.ruido import ruido_de_voz  # noqa: E402
 from src.config import RAIZ, carregar_config  # noqa: E402
 from src.paradas_api.app import criar_app  # noqa: E402
@@ -129,8 +137,9 @@ RESPONDIVEIS = [
         [],
         "Não. Pelo art. 42 do CDC, na cobrança de débitos o consumidor inadimplente não pode ser "
         "exposto a ridículo nem submetido a constrangimento ou ameaça.",
-        ["ridículo"],
-        "",
+        ["ridicul"],
+        "Fato-chave do Pedro: 'o cliente não é ridicularizado'. A raiz 'ridicul' reconhece "
+        "'ridículo' e 'ridicularizado'; a negação é conferida na revisão manual.",
     ),
     (
         "T2-08",
@@ -144,9 +153,9 @@ RESPONDIVEIS = [
         "Não. A distribuidora não pode condicionar a alteração de titularidade ao pagamento de "
         "débito de titularidade de terceiros, nem exigir que você assine termo assumindo essa "
         "dívida.",
-        ["terceiros"],
-        "A página D14-q04 fala em 'moradores anteriores' em vez de 'terceiros'; a conferência "
-        "manual é a referência.",
+        ["moradores anteriores"],
+        "Fato-chave ajustado pelo Pedro ('moradores anteriores', como na página D14-q04); a "
+        "conferência manual é a referência.",
     ),
     (
         "T2-09",
@@ -436,9 +445,24 @@ def _revisao(casos: list[Caso], chunks: dict, govbr: set[str], mascarar: bool) -
     return "\n".join(linhas) + "\n"
 
 
+def congelar() -> int:
+    """Grava avaliacao/teste2.jsonl (split test2) e o hash, depois da revisão do Pedro."""
+    if TESTE2.exists():
+        print(f"{TESTE2.relative_to(RAIZ)} já existe: o T2 está congelado. Nada feito.")
+        return 1
+    casos = [c.model_copy(update={"split": "test2"}) for c in carregar(CANDIDATAS2)]
+    gravar(casos, TESTE2)
+    sha = hashlib.sha256(TESTE2.read_bytes()).hexdigest()
+    LOCK2.write_text(f"{sha}  teste2.jsonl\n", encoding="utf-8", newline="\n")
+    print(f"{TESTE2.relative_to(RAIZ)}: {len(casos)} perguntas; sha256 {sha[:12]}")
+    return 0
+
+
 def main() -> int:
     if hasattr(sys.stdout, "reconfigure"):
         sys.stdout.reconfigure(encoding="utf-8")
+    if "--congelar" in sys.argv:
+        return congelar()
     cfg = carregar_config()
     casos = montar(cfg)
     chunks = {c["chunk_id"]: c for c in denso.trechos_indexaveis()}

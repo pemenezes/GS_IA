@@ -86,7 +86,9 @@ Composição: 7 diretas, 5 coloquiais, 3 de voz (versões das coloquiais T2-08 a
 
 **Gabarito:** Não. Pelo art. 42 do CDC, na cobrança de débitos o consumidor inadimplente não pode ser exposto a ridículo nem submetido a constrangimento ou ameaça.
 
-**Fatos-chave:** ridículo
+**Fatos-chave:** ridicul
+
+*Fato-chave do Pedro: 'o cliente não é ridicularizado'. A raiz 'ridicul' reconhece 'ridículo' e 'ridicularizado'; a negação é conferida na revisão manual.*
 
 - **Trecho gold `D10-art42`:** CDC (Lei 8.078/1990) > TÍTULO I – Dos Direitos do Consumidor > CAPÍTULO V – Das Práticas Comerciais > SEÇÃO V – Da Cobrança de Dívidas > Art. 42 Art. 42. Na cobrança de débitos, o consumidor inadimplente não será exposto a ridículo, nem será submetido a qualquer tipo de constrangimento ou ameaça. Parágrafo único. O consumidor cobrado em quantia indevida tem direito à repetição do indébito, por valor igual ao dobro do que pagou em excesso, acrescido de correção monetária e juros legais, salvo hipótese de engano justificável.
 
@@ -96,9 +98,9 @@ Composição: 7 diretas, 5 coloquiais, 3 de voz (versões das coloquiais T2-08 a
 
 **Gabarito:** Não. A distribuidora não pode condicionar a alteração de titularidade ao pagamento de débito de titularidade de terceiros, nem exigir que você assine termo assumindo essa dívida.
 
-**Fatos-chave:** terceiros
+**Fatos-chave:** moradores anteriores
 
-*A página D14-q04 fala em 'moradores anteriores' em vez de 'terceiros'; a conferência manual é a referência.*
+*Fato-chave ajustado pelo Pedro ('moradores anteriores', como na página D14-q04); a conferência manual é a referência.*
 
 - **Trecho gold `D01-art346-p1`:** REN 1.000/2021 > TÍTULO I – PARTE GERAL > CAPÍTULO XII – DO INADIMPLEMENTO > Seção IV – Das Restrições pelo Inadimplemento > Art. 346 Art. 346. Quando o consumidor e demais usuários solicitarem os serviços dispostos nesta Resolução, a exemplo de conexão nova, alteração de titularidade, religação, aumento de carga e a contratação de fornecimentos especiais, a distribuidora não pode exigir ou condicionar a execução: I - ao pagamento de débito não autorizado pelo consumidor e demais usuários ou de débito de titularidade de terceiros; II - à assinatura de qualquer termo em que o consumidor e demais usuários assumam a responsabilidade por débito de titularidade de terceiros, a exemplo de termo de aceite, de assunção, de responsabilidade ou de confissão de dívida; ou III - à transferência em sistema de débitos de titularidade de terceiros para o titular ou novo titular das instalações. § 1º O 
 
@@ -166,7 +168,7 @@ Composição: 7 diretas, 5 coloquiais, 3 de voz (versões das coloquiais T2-08 a
 
 **Gabarito:** Não. A distribuidora não pode condicionar a alteração de titularidade ao pagamento de débito de titularidade de terceiros, nem exigir que você assine termo assumindo essa dívida.
 
-**Fatos-chave:** terceiros
+**Fatos-chave:** moradores anteriores
 
 *Versão com ruído de voz de T2-08.*
 

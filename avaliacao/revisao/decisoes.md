@@ -188,3 +188,18 @@ trecho citado.
 **Protocolo:** as correções foram ajustadas só no dev, na calibração e no conjunto extra, e
 depois medidas no test com o rótulo "pós-correção". O test já tinha sido visto, então o placar
 oficial continua sendo o da medição original.
+
+## Etapa de melhoria e test novo T2 (10/11/2026, Fase 8B)
+
+**Decisão do Pedro:** em vez da LoRA, melhorar o pipeline (correções D, E e F; A só para voz)
+e testar modelos que raciocinam melhor (qwen3 4B q8, 4B thinking, 8B e qwen3.5 9B), aceitando
+respostas mais lentas e até 4 chamadas ao LLM por pergunta. Para medir o ganho sem o viés do
+test já visto, um test novo (T2, 24 perguntas) foi escrito, revisado pelo Pedro e congelado
+**antes** de qualquer ajuste.
+
+**Revisão do T2:** o Pedro aprovou as 24 perguntas e os gabaritos, com dois ajustes de
+fato-chave: T2-07 ("o cliente não é ridicularizado", registrado como a raiz "ridicul", que
+reconhece "ridículo" e "ridicularizado") e T2-08 ("moradores anteriores", também na versão de
+voz T2-13). Congelado em `avaliacao/teste2.jsonl` (sha256 `2bfa246b`). Um primeiro
+congelamento, feito por engano antes de os dois ajustes entrarem no arquivo, foi desfeito antes
+de qualquer execução sobre o T2.
