@@ -1,0 +1,79 @@
+config,split,metrica,fonte,k,n,taxa,ic95_inf,ic95_sup
+C0,test,JSON válido na 1ª tentativa,automática,36,36,1.0,0.904,1.0
+C0,test,acurácia automática (fatos-chave),automática,0,26,0.0,0.0,0.129
+C0,test,citação correta (gold v2 e verificável),automática,0,8,0.0,0.0,0.324
+C0,test,suspeita automática de alucinação,automática,3,8,0.375,0.137,0.694
+C0,test,recusa correta (não consta e fora do domínio),automática,7,7,1.0,0.646,1.0
+C0,test,recusa indevida (respondíveis),automática,18,26,0.692,0.5,0.835
+C0,test,recusa que nega regra (heurística),automática,14,18,0.778,0.548,0.91
+C0,test,acerto nas dinâmicas (agenda),automática,0,3,0.0,0.0,0.562
+C0,test,latência p50 (s),medida,,,4.46,,
+C0,test,latência p95 (s),medida,,,5.21,,
+C0,test,VRAM de pico (MiB),medida,,,4168,,
+C1,test,JSON válido na 1ª tentativa,automática,23,23,1.0,0.857,1.0
+C1,test,acurácia automática (fatos-chave),automática,10,26,0.385,0.224,0.575
+C1,test,citação correta (gold v2 e verificável),automática,12,20,0.6,0.387,0.781
+C1,test,suspeita automática de alucinação,automática,0,20,0.0,0.0,0.161
+C1,test,recusa correta (não consta e fora do domínio),automática,7,7,1.0,0.646,1.0
+C1,test,recusa indevida (respondíveis),automática,6,26,0.231,0.11,0.421
+C1,test,recusa que nega regra (heurística),automática,0,6,0.0,0.0,0.39
+C1,test,acerto nas dinâmicas (agenda),automática,0,3,0.0,0.0,0.562
+C1,test,latência p50 (s),medida,,,5.48,,
+C1,test,latência p95 (s),medida,,,8.25,,
+C1,test,VRAM de pico (MiB),medida,,,4176,,
+C2,test,JSON válido na 1ª tentativa,automática,25,25,1.0,0.867,1.0
+C2,test,acurácia automática (fatos-chave),automática,9,26,0.346,0.194,0.538
+C2,test,citação correta (gold v2 e verificável),automática,12,20,0.6,0.387,0.781
+C2,test,suspeita automática de alucinação,automática,0,20,0.0,0.0,0.161
+C2,test,recusa correta (não consta e fora do domínio),automática,7,7,1.0,0.646,1.0
+C2,test,recusa indevida (respondíveis),automática,6,26,0.231,0.11,0.421
+C2,test,recusa que nega regra (heurística),automática,0,6,0.0,0.0,0.39
+C2,test,acerto nas dinâmicas (agenda),automática,3,3,1.0,0.438,1.0
+C2,test,roteamento correto,automática,36,36,1.0,0.904,1.0
+C2,test,latência p50 (s),medida,,,8.92,,
+C2,test,latência p95 (s),medida,,,11.79,,
+C2,test,VRAM de pico (MiB),medida,,,4264,,
+C0,dev,JSON válido na 1ª tentativa,automática,24,24,1.0,0.862,1.0
+C0,dev,acurácia automática (fatos-chave),automática,0,16,0.0,0.0,0.194
+C0,dev,citação correta (gold v2 e verificável),automática,0,2,0.0,0.0,0.658
+C0,dev,suspeita automática de alucinação,automática,1,2,0.5,0.095,0.905
+C0,dev,recusa correta (não consta e fora do domínio),automática,5,5,1.0,0.566,1.0
+C0,dev,recusa indevida (respondíveis),automática,14,16,0.875,0.64,0.965
+C0,dev,recusa que nega regra (heurística),automática,13,14,0.929,0.685,0.987
+C0,dev,acerto nas dinâmicas (agenda),automática,0,3,0.0,0.0,0.562
+C0,dev,latência p50 (s),medida,,,4.79,,
+C0,dev,latência p95 (s),medida,,,5.62,,
+C0,dev,VRAM de pico (MiB),medida,,,4165,,
+C1,dev,JSON válido na 1ª tentativa,automática,14,14,1.0,0.785,1.0
+C1,dev,acurácia automática (fatos-chave),automática,11,16,0.688,0.444,0.858
+C1,dev,citação correta (gold v2 e verificável),automática,12,13,0.923,0.667,0.986
+C1,dev,suspeita automática de alucinação,automática,1,13,0.077,0.014,0.333
+C1,dev,recusa correta (não consta e fora do domínio),automática,5,5,1.0,0.566,1.0
+C1,dev,recusa indevida (respondíveis),automática,3,16,0.188,0.066,0.43
+C1,dev,recusa que nega regra (heurística),automática,0,3,0.0,0.0,0.562
+C1,dev,acerto nas dinâmicas (agenda),automática,0,3,0.0,0.0,0.562
+C1,dev,latência p50 (s),medida,,,5.19,,
+C1,dev,latência p95 (s),medida,,,9.55,,
+C1,dev,VRAM de pico (MiB),medida,,,4162,,
+C2,dev,JSON válido na 1ª tentativa,automática,17,17,1.0,0.816,1.0
+C2,dev,acurácia automática (fatos-chave),automática,11,16,0.688,0.444,0.858
+C2,dev,citação correta (gold v2 e verificável),automática,12,13,0.923,0.667,0.986
+C2,dev,suspeita automática de alucinação,automática,1,13,0.077,0.014,0.333
+C2,dev,recusa correta (não consta e fora do domínio),automática,5,5,1.0,0.566,1.0
+C2,dev,recusa indevida (respondíveis),automática,3,16,0.188,0.066,0.43
+C2,dev,recusa que nega regra (heurística),automática,0,3,0.0,0.0,0.562
+C2,dev,acerto nas dinâmicas (agenda),automática,3,3,1.0,0.438,1.0
+C2,dev,roteamento correto,automática,24,24,1.0,0.862,1.0
+C2,dev,latência p50 (s),medida,,,8.46,,
+C2,dev,latência p95 (s),medida,,,12.45,,
+C2,dev,VRAM de pico (MiB),medida,,,4276,,
+C0,test,acurácia manual (corretas),manual,0,26,0.0,0.0,0.129
+C0,test,acurácia manual (corretas + parciais),manual,6,26,0.231,0.11,0.421
+C0,test,alucinação manual (respostas dadas que afirmam algo falso),manual,8,8,1.0,0.676,1.0
+C0,test,recusa que nega regra existente,manual,17,18,0.944,0.742,0.99
+C1,test,acurácia manual (corretas),manual,13,26,0.5,0.321,0.679
+C1,test,acurácia manual (corretas + parciais),manual,17,26,0.654,0.462,0.806
+C1,test,alucinação manual (respostas dadas que afirmam algo falso),manual,6,20,0.3,0.145,0.519
+C2,test,acurácia manual (corretas),manual,13,26,0.5,0.321,0.679
+C2,test,acurácia manual (corretas + parciais),manual,17,26,0.654,0.462,0.806
+C2,test,alucinação manual (respostas dadas que afirmam algo falso),manual,6,20,0.3,0.145,0.519

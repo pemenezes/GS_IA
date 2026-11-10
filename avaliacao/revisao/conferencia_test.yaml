@@ -1,0 +1,69 @@
+# Conferência manual do test (Fase 8): versão final.
+# Revisor: Pedro Menezes (RM97432), 10/11/2026, a partir de conferencia_pre.yaml.
+# Mudanças do Pedro em relação à pré-classificação:
+# - C2 T-003: incorreta -> parcial (acerta que há aviso prévio; erra ao exigir cadastro e ao usar
+#   "3 dias úteis", que é a regra de outra classe de consumidor; afirma algo falso: sim)
+# - C2 T-018: parcial -> correta
+# - C2 T-021 e T-033: incorreta -> parcial (acertam que não podem cortar sem aviso; erram os dias)
+# - C0 T-002, T-033 e T-038: incorreta -> parcial
+# - C0 T-007 (recusa): veredito parcial (conteúdo na direção do gabarito)
+# - C0 T-003 (recusa): confirmada como errada (nega uma regra que existe)
+# Nas parciais que erram números, "falso" continua "sim" (decisão do Pedro, 10/11/2026).
+status: aprovado
+itens:
+  C2:
+    T-002: {veredito: correta, falso: nao}
+    T-003: {veredito: parcial, falso: sim}
+    T-005: {veredito: correta, falso: nao}
+    T-006: {veredito: correta, falso: nao}
+    T-008: {veredito: correta, falso: nao}
+    T-009: {veredito: correta, falso: nao}
+    T-011: {veredito: incorreta, falso: sim}
+    T-013: {veredito: correta, falso: nao}
+    T-015: {veredito: correta, falso: nao}
+    T-018: {veredito: correta, falso: nao}
+    T-020: {veredito: correta, falso: nao}
+    T-021: {veredito: parcial, falso: sim}
+    T-022: {veredito: correta, falso: nao}
+    T-026: {veredito: correta, falso: nao}
+    T-028: {veredito: incorreta, falso: sim}
+    T-030: {veredito: correta, falso: nao}
+    T-033: {veredito: parcial, falso: sim}
+    T-037: {veredito: incorreta, falso: sim}
+    T-038: {veredito: correta, falso: nao}
+    T-039: {veredito: parcial, falso: nao}
+  # C1: respostas iguais às do C2 herdam o veredito do C2; só as 5 que diferem foram conferidas.
+  C1:
+    T-003: {veredito: parcial, falso: sim}
+    T-020: {veredito: correta, falso: nao}
+    T-028: {veredito: incorreta, falso: sim}
+    T-030: {veredito: correta, falso: nao}
+    T-037: {veredito: incorreta, falso: sim}
+  C0:
+    T-002: {veredito: parcial, falso: sim}
+    T-009: {veredito: parcial, falso: sim}
+    T-015: {veredito: incorreta, falso: sim}
+    T-018: {veredito: parcial, falso: sim}
+    T-021: {veredito: incorreta, falso: sim}
+    T-028: {veredito: incorreta, falso: sim}
+    T-033: {veredito: parcial, falso: sim}
+    T-038: {veredito: parcial, falso: sim}
+  C0_recusas:
+    T-003: {nega_regra: sim}
+    T-005: {nega_regra: sim}
+    T-006: {nega_regra: sim}
+    T-007: {nega_regra: nao, veredito: parcial}
+    T-008: {nega_regra: sim}
+    T-011: {nega_regra: sim}
+    T-013: {nega_regra: sim}
+    T-020: {nega_regra: sim}
+    T-022: {nega_regra: sim}
+    T-024: {nega_regra: sim}
+    T-026: {nega_regra: sim}
+    T-030: {nega_regra: sim}
+    T-032: {nega_regra: sim}
+    T-034: {nega_regra: sim}
+    T-036: {nega_regra: sim}
+    T-037: {nega_regra: sim}
+    T-039: {nega_regra: sim}
+    T-040: {nega_regra: sim}

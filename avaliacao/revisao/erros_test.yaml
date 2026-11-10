@@ -1,0 +1,35 @@
+# Falhas do C2 no test (respondíveis não corretas na conferência manual), Fase 8.
+# Categoria principal e secundária pela taxonomia da seção 7.4 do plano:
+#   1 recuperação | 2 fragmentação | 3 recusa indevida | 4 aceite indevido em "não consta"
+#   5 número/prazo alterado | 6 citação não sustenta a resposta | 7 roteador/ferramenta
+#   8 regra obsoleta
+# O C1 tem as mesmas 13 falhas (mesma busca, mesmo portão, respostas iguais ou equivalentes)
+# e mais as 3 dinâmicas, que não consegue responder sem a agenda.
+# Evidência: posição do gold nos 3 trechos recuperados e nota do portão (τ = 0,6038).
+falhas:
+  T-003: {veredito: parcial, categoria: 6, secundaria: 5, gold_no_top3: sim, nota: 0.7476,
+          evidencia: "O item 196 tem quatro regras; o modelo aplicou a de unidades comerciais/industriais (3 dias úteis com cadastro) à residência comum (72 horas)."}
+  T-007: {veredito: recusa, categoria: 3, secundaria: 8, gold_no_top3: sim, nota: 0.6184,
+          evidencia: "Veio o art. 621 sem o inciso VIII (revogado); o trecho da revogação (D06-art19) não veio. O LLM concluiu que faltava informação."}
+  T-011: {veredito: incorreta, categoria: 1, secundaria: 6, gold_no_top3: nao, nota: 0.7085,
+          evidencia: "O critério geral (meio salário mínimo) não veio; veio o § 1º, critério excepcional de 3 salários mínimos, e o modelo o apresentou como regra geral."}
+  T-021: {veredito: parcial, categoria: 1, secundaria: 5, gold_no_top3: nao, nota: 0.7215,
+          evidencia: "O art. 360 da REN 1.000 e a cláusula 6.3 do contrato de adesão (15 dias de aviso por inadimplemento) não vieram; com páginas do gov.br sobre corte, o modelo escreveu 'três dias'."}
+  T-024: {veredito: recusa, categoria: 3, secundaria: 1, gold_no_top3: nao, nota: 0.6017,
+          evidencia: "Pergunta coloquial ('sou aposentado e recebo o BPC'); nota logo abaixo de τ e gold fora do top-3."}
+  T-028: {veredito: incorreta, categoria: 6, secundaria: null, gold_no_top3: sim, nota: 0.7021,
+          evidencia: "O gold (adicional destacado na fatura) veio em 3º; o modelo seguiu a página do gov.br ('forma diferente de apresentar um custo que já estava na conta') e inverteu o sentido."}
+  T-032: {veredito: recusa, categoria: 3, secundaria: null, gold_no_top3: sim, nota: 0.5895,
+          evidencia: "Voz com erros de grafia ('lus', 'quantu'). O gold veio em 1º, mas a nota ficou abaixo de τ: falha só do portão."}
+  T-033: {veredito: parcial, categoria: 1, secundaria: 5, gold_no_top3: nao, nota: 0.6494,
+          evidencia: "Versão de voz da T-021; o art. 360 não veio e o modelo escreveu '5 dias úteis', número de outro trecho."}
+  T-034: {veredito: recusa, categoria: 3, secundaria: 1, gold_no_top3: nao, nota: 0.5954,
+          evidencia: "Voz ('geladera', 'insolina', 'impresa'); nota abaixo de τ e gold fora do top-3."}
+  T-036: {veredito: recusa, categoria: 3, secundaria: 1, gold_no_top3: nao, nota: 0.5426,
+          evidencia: "Versão de voz da T-024 ('aposentadu', 'disconto', 'lus'); nota bem abaixo de τ."}
+  T-037: {veredito: incorreta, categoria: 1, secundaria: 6, gold_no_top3: nao, nota: 0.6255,
+          evidencia: "A tabela do limite do DISE (24 horas) não veio; com o art. 621 (ressarcimento de danos), o modelo tratou a interrupção longa como dano elétrico."}
+  T-039: {veredito: parcial, categoria: 2, secundaria: null, gold_no_top3: sim, nota: 0.7097,
+          evidencia: "Veio o item 50 (resultado em 15 dias), mas não o trecho com o prazo de pagamento (20 dias); o modelo respondeu a parte que tinha e disse o que faltava."}
+  T-040: {veredito: recusa, categoria: 3, secundaria: null, gold_no_top3: sim, nota: 0.5933,
+          evidencia: "Multi-trecho; os 3 trechos gold vieram no top-3, mas a nota ficou abaixo de τ: falha só do portão."}
