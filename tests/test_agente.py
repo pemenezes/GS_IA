@@ -233,6 +233,79 @@ def test_correcoes_a_e_c():
         C2(CFG, fonte=_Fonte(), retriever=ret, llm=_LLM([]), correcoes={"Z"})
 
 
+def test_correcao_d_marca_incisos_revogados_e_padrao_nao_muda():
+    from src.rag.prompt import formatar_trecho, marcar_revogados, ordenar_por_confiabilidade
+
+    texto = "Art. 9. Pode:\nVII - um;\nIX - dois;\nXII - tres."
+    assert marcar_revogados(texto).split("\n")[2:4] == ["VIII - (revogado)", "IX - dois;"]
+    assert "XI - (revogado)" in marcar_revogados(texto)
+    chunk = {
+        "chunk_id": "x",
+        "fonte": "REN",
+        "texto": texto,
+        "notas_redacao": ["(Revogado pela REN ANEEL 1.137, DE 21.10.2025)"],
+    }
+    assert "VIII - (revogado)" not in formatar_trecho(chunk)
+    assert "VIII - (revogado)" in formatar_trecho(chunk, notas=True)
+    sem_nota = {**chunk, "notas_redacao": []}
+    assert "(revogado)" not in formatar_trecho(sem_nota, notas=True)
+    com_alerta = {**chunk, "chunk_id": "y", "alerta": "página antiga"}
+    assert [c["chunk_id"] for c in ordenar_por_confiabilidade([com_alerta, chunk])] == ["x", "y"]
+
+
+def _rnorma(texto="A luz volta em 24 horas."):
+    return json.dumps(
+        {
+            "resposta": texto,
+            "recusa": False,
+            "motivo_recusa": None,
+            "fontes": [
+                {"tipo": "norma", "id": "D01-x", "trecho_citado": "Texto qualquer da norma."}
+            ],
+            "confianca": "alta",
+        }
+    )
+
+
+def test_correcao_f_autoverificacao():
+    ret = _Retriever(nota=0.9)
+    ret_chunk = "Texto qualquer da norma. Prazo de 24 horas."
+    ret.buscar = lambda p, modo="denso", reranker=None: [
+        SimpleNamespace(
+            chunk={"chunk_id": "D01-x", "fonte": "REN", "texto": ret_chunk},
+            chunk_id="D01-x",
+            score=0.9,
+            score_denso=0.9,
+        )
+    ]
+    rot = _rot(agenda=False, normas=True)
+    ruim = json.dumps({"ok": False, "problemas": ["o prazo vale para outra situação"]})
+    bom = json.dumps({"ok": True, "problemas": []})
+    llm = _LLM([rot, _rnorma(), ruim, _rnorma()])
+    s = C2(CFG, fonte=_Fonte(), retriever=ret, llm=llm, correcoes={"F"}).responder("prazo?")
+    assert s.origem == "reparo" and len(llm.chamadas) == 4
+    assert "outra situação" in llm.chamadas[3][-1]["content"]
+    llm = _LLM([rot, _rnorma(), bom])
+    s = C2(CFG, fonte=_Fonte(), retriever=ret, llm=llm, correcoes={"F"}).responder("prazo?")
+    assert s.origem == "llm" and s.verificacoes[0]["ok"]
+    llm = _LLM([rot, "{}", _rnorma(), ruim])
+    s = C2(CFG, fonte=_Fonte(), retriever=ret, llm=llm, correcoes={"F"}).responder("prazo?")
+    assert s.origem == "contingencia" and len(llm.chamadas) == 4
+    llm = _LLM([rot, _rnorma(), "não é json"])
+    s = C2(CFG, fonte=_Fonte(), retriever=ret, llm=llm, correcoes={"F"}).responder("prazo?")
+    assert s.origem == "llm" and s.verificacoes[0]["erro"]
+
+
+def test_correcao_v_reescreve_so_voz():
+    rot = json.loads(_rot(agenda=False, normas=True))
+    rot["pergunta_normas"] = "Pergunta reescrita?"
+    for origem, esperado in (("voz", "Pergunta reescrita?"), ("texto", "orig")):
+        ret = _Retriever(nota=0.4)
+        c2 = C2(CFG, fonte=_Fonte(), retriever=ret, llm=_LLM([json.dumps(rot)]), correcoes={"V"})
+        c2.responder("orig", origem=origem)
+        assert ret.consultas == [esperado]
+
+
 def test_c2_pergunta_de_normas_segue_o_caminho_do_c1():
     llm = _LLM([_rot(agenda=False, normas=True)])
     s = _c2(llm, _Fonte()).responder("Qual o prazo para religar a luz?")

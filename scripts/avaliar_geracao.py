@@ -20,6 +20,7 @@ import csv
 import dataclasses
 import datetime as dt
 import functools
+import hashlib
 import json
 import sys
 import time
@@ -28,7 +29,13 @@ from typing import Any
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
-from src.avaliacao.casos import LOCK, Caso, carregar_congelado  # noqa: E402
+from src.avaliacao.casos import (  # noqa: E402
+    LOCK,
+    LOCK2,
+    Caso,
+    carregar_congelado,
+    carregar_test2,
+)
 from src.avaliacao.geracao import (  # noqa: E402
     avaliar_dinamica,
     avaliar_linha,
@@ -47,7 +54,8 @@ RESUMO = RAIZ / "avaliacao" / "geracao"
 CALIBRACAO = RAIZ / "avaliacao" / "retrieval" / "calibracao.jsonl"
 INJECAO = RESUMO / "injecao.jsonl"
 DINAMICAS_EXTRA = RAIZ / "avaliacao" / "agente" / "dinamicas_extra.jsonl"
-CONJUNTOS = ["dev", "test", "calibracao", "injecao", "dinamicas_extra"]
+CONJUNTOS = ["dev", "test", "test2", "calibracao", "injecao", "dinamicas_extra"]
+UNICA_VEZ = ("test", "test2")  # conjuntos medidos uma única vez por configuração
 
 
 def _ler_jsonl(arq: Path) -> list[dict[str, Any]]:
@@ -57,17 +65,19 @@ def _ler_jsonl(arq: Path) -> list[dict[str, Any]]:
 
 def _itens(conjunto: str) -> list[dict[str, Any]]:
     """Perguntas do conjunto: id, tipo, pergunta, Caso (dev e test) e o esperado da agenda."""
-    if conjunto in ("dev", "test"):
+    if conjunto in ("dev", "test", "test2"):
+        casos = carregar_test2() if conjunto == "test2" else carregar_congelado(conjunto)
         return [
             {
                 "id": c.id,
                 "tipo": c.tipo,
                 "pergunta": c.pergunta,
+                "origem": c.origem,
                 "caso": c,
                 "requer_api": c.requer_api,
                 "api_esperada": c.api_esperada.model_dump() if c.api_esperada else None,
             }
-            for c in carregar_congelado(conjunto)
+            for c in casos
         ]
     if conjunto == "dinamicas_extra":
         return [{**x, "caso": None} for x in _ler_jsonl(DINAMICAS_EXTRA)]
@@ -200,14 +210,22 @@ def _hash_reescrita() -> str:
 def rodar(cfg: dict[str, Any], args: argparse.Namespace) -> None:
     modelo = args.modelo or cfg["llm"]["modelo"]
     estruturada = not args.sem_estruturada and cfg["geracao"]["estruturada"]
-    if args.conjunto == "test" and (modelo, estruturada) != (cfg["llm"]["modelo"], True):
+    if args.conjunto in UNICA_VEZ and (modelo, estruturada) != (cfg["llm"]["modelo"], True):
         raise SystemExit("o test só roda com a configuração escolhida no config.yaml")
     correcoes = "".join(sorted(set(args.correcoes or "")))
     if correcoes and args.config != "C2":
         raise SystemExit("as correções da Fase 8 valem só para o C2")
+    # Modelos que pensam escrevem mais: o contexto e a saída podem ser aumentados.
+    if args.think:
+        cfg["llm"]["think"] = True
+    for chave in ("num_ctx", "num_predict"):
+        if getattr(args, chave):
+            cfg["llm"][chave] = getattr(args, chave)
     nome = _nome_run(args.config, args.conjunto, modelo, estruturada, correcoes)
+    if args.think:
+        nome += "_think"
     destino = RUNS / f"{nome}.jsonl"
-    if args.conjunto == "test" and destino.exists():
+    if args.conjunto in UNICA_VEZ and destino.exists():
         raise SystemExit(f"{destino.name} já existe: o test roda uma única vez")
 
     host = cfg["llm"]["host"]
@@ -236,7 +254,7 @@ def rodar(cfg: dict[str, Any], args: argparse.Namespace) -> None:
     mon = MonitorVRAM()
     with mon:
         for item in itens:
-            s = pipe.responder(item["pergunta"])
+            s = pipe.responder(item["pergunta"], origem=item.get("origem") or "texto")
             saida = dataclasses.asdict(s)
             saida["resposta"] = s.resposta.model_dump() if s.resposta else None
             m = _metricas(item["caso"], item, saida, chunks)
@@ -289,7 +307,14 @@ def rodar(cfg: dict[str, Any], args: argparse.Namespace) -> None:
         ),
         "teste_lock": LOCK.read_text(encoding="utf-8").split()[0],
         "retrieval": {k: cfg["retrieval"][k] for k in ("hibrido", "top_k_final", "limiar_recusa")},
-        "llm": {k: cfg["llm"][k] for k in ("num_ctx", "temperature", "top_p", "seed", "think")},
+        "llm": {
+            k: cfg["llm"][k]
+            for k in ("num_ctx", "num_predict", "temperature", "top_p", "seed", "think")
+        },
+        "teste2_lock": LOCK2.read_text(encoding="utf-8").split()[0] if LOCK2.exists() else None,
+        "hash_prompt_verificacao": hashlib.sha256(prompt.SISTEMA_VERIFICACAO.encode()).hexdigest()[
+            :12
+        ],
         "ollama": llm_ollama.versao(host),
         "vram_pico_mib": mon.pico,
         "data_hora": dt.datetime.now().isoformat(timespec="seconds"),
@@ -306,6 +331,8 @@ def rodar(cfg: dict[str, Any], args: argparse.Namespace) -> None:
 def resumo(_cfg: dict[str, Any], _args: argparse.Namespace) -> None:
     """Recalcula as métricas de todas as execuções a partir das saídas completas e tabula."""
     casos = {c.id: c for c in carregar_congelado()}
+    if LOCK2.exists():
+        casos |= {c.id: c for c in carregar_test2()}
     chunks = {c["chunk_id"]: c for c in denso.trechos_indexaveis()}
     govbr = {i: c["texto"] for i, c in chunks.items() if not c.get("versionado", True)}
     extras = {x["id"]: x for x in _ler_jsonl(DINAMICAS_EXTRA)} if DINAMICAS_EXTRA.exists() else {}
@@ -317,7 +344,7 @@ def resumo(_cfg: dict[str, Any], _args: argparse.Namespace) -> None:
         meta = json.loads(arq_meta.read_text(encoding="utf-8"))
         runs = _ler_jsonl(arq)
         for x in runs:
-            caso = casos.get(x["id"]) if meta["conjunto"] in ("dev", "test") else None
+            caso = casos.get(x["id"]) if meta["conjunto"] in ("dev", "test", "test2") else None
             # Execuções anteriores à Fase 7 não gravavam o esperado da agenda.
             if caso is not None:
                 x["requer_api"] = caso.requer_api
@@ -382,7 +409,10 @@ def main() -> int:
     r.add_argument("--conjunto", choices=CONJUNTOS, required=True)
     r.add_argument("--modelo")
     r.add_argument("--sem-estruturada", action="store_true")
-    r.add_argument("--correcoes", help="correções da Fase 8 no C2: A, C ou AC")
+    r.add_argument("--correcoes", help="correções no C2 (letras de agente.CORRECOES, ex.: CDEFV)")
+    r.add_argument("--think", action="store_true", help="liga o modo pensando do modelo")
+    r.add_argument("--num-ctx", type=int, dest="num_ctx")
+    r.add_argument("--num-predict", type=int, dest="num_predict")
     sub.add_parser("resumo")
     args = ap.parse_args()
     cfg = carregar_config()

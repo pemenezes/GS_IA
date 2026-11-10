@@ -11,6 +11,8 @@ from collections.abc import Callable
 from dataclasses import dataclass, field
 from typing import Any, Literal
 
+from pydantic import BaseModel, ValidationError
+
 from src.rag import llm_ollama, prompt
 from src.rag.schema import Resposta, classificar_saida, schema_para_llm
 from src.rag.validador import Verificacao, validar
@@ -64,6 +66,16 @@ class Saida:
     # C2: decisão do roteador e consultas feitas à agenda de paradas.
     roteamento: dict[str, Any] | None = None
     consultas: list[dict[str, Any]] = field(default_factory=list)
+    # Correção F (Fase 8B): resultado da autoverificação.
+    verificacoes: list[dict[str, Any]] = field(default_factory=list)
+
+
+class VerificacaoLLM(BaseModel):
+    ok: bool
+    problemas: list[str]
+
+
+SCHEMA_VERIFICACAO = schema_para_llm(VerificacaoLLM)
 
 
 def chamar_ollama(cfg: dict[str, Any], modelo: str | None = None) -> ChamarLLM:
@@ -127,7 +139,7 @@ class C0(_Base):
 
     nome = "C0"
 
-    def responder(self, pergunta: str) -> Saida:
+    def responder(self, pergunta: str, origem: str = "texto") -> Saida:
         t0 = time.perf_counter()
         msgs = prompt.mensagens_c0(pergunta, self.data, self._schema_no_texto())
         corpo, dur = self._gerar(msgs)
@@ -157,6 +169,10 @@ class C1(_Base):
         self.tau = cfg["retrieval"]["limiar_recusa"]
         self.modo = "hibrido" if cfg["retrieval"]["hibrido"] else "denso"
         self.reranker: bool | None = None  # None: segue retrieval.reranker do config
+        # Correções da Fase 8B (ligadas pelo C2): D e E no formato dos trechos, F na verificação.
+        self.formato: dict[str, bool] = {}
+        self.ordenar = False
+        self.verificar = False
 
     def recuperar(self, pergunta: str) -> tuple[list[Any], float]:
         cands = self.retriever.buscar(pergunta, modo=self.modo, reranker=self.reranker)
@@ -167,7 +183,7 @@ class C1(_Base):
             nota = self.retriever.melhor_cosseno(pergunta)
         return cands, float(nota)
 
-    def responder(self, pergunta: str, consulta: str | None = None) -> Saida:
+    def responder(self, pergunta: str, consulta: str | None = None, origem: str = "texto") -> Saida:
         """`consulta` substitui a pergunta só na busca e no portão (correção A do C2)."""
         t0 = time.perf_counter()
         cands, nota = self.recuperar(consulta or pergunta)
@@ -179,12 +195,39 @@ class C1(_Base):
             return saida
 
         chunks = {c.chunk_id: c.chunk for c in cands}
+        lista = [c.chunk for c in cands]
+        if self.ordenar:
+            lista = prompt.ordenar_por_confiabilidade(lista)
         msgs = prompt.mensagens_c1(
-            pergunta, [c.chunk for c in cands], self.data, self._schema_no_texto()
+            pergunta, lista, self.data, self._schema_no_texto(), **self.formato
         )
         self._gerar_com_reparo(msgs, chunks, pergunta, saida, RECUSA_CONTINGENCIA)
         saida.latencia_s = round(time.perf_counter() - t0, 3)
         return saida
+
+    def _verificar(
+        self, pergunta: str, resposta: Resposta, chunks: dict[str, dict[str, Any]], saida: Saida
+    ) -> list[str]:
+        """Correção F: o LLM confere a resposta contra os trechos citados; devolve os problemas.
+
+        Se a verificação falhar (rede, JSON), a resposta segue: a verificação não pode bloquear.
+        """
+        citados = [chunks[f.id] for f in resposta.fontes if f.id in chunks]
+        msgs = prompt.mensagens_verificacao(pergunta, citados, resposta.resposta, **self.formato)
+        t0 = time.perf_counter()
+        registro: dict[str, Any] = {"ok": True, "problemas": [], "bruto": "", "erro": ""}
+        try:
+            corpo = self.llm(msgs, SCHEMA_VERIFICACAO)
+            registro["bruto"] = corpo["message"]["content"]
+            v = VerificacaoLLM.model_validate_json(registro["bruto"])
+            registro.update(ok=v.ok, problemas=[] if v.ok else v.problemas or ["revise a resposta"])
+        except (ValidationError, KeyError, ValueError) as e:
+            registro["erro"] = str(e)[:300]
+        except Exception as e:  # noqa: BLE001
+            registro["erro"] = repr(e)[:300]
+        registro["duracao_s"] = round(time.perf_counter() - t0, 3)
+        saida.verificacoes.append(registro)
+        return registro["problemas"]
 
     def _gerar_com_reparo(
         self,
@@ -194,18 +237,31 @@ class C1(_Base):
         saida: Saida,
         contingencia: Resposta,
     ) -> None:
-        """Gera, valida e tenta um reparo; se falhar de novo, usa a recusa de contingência."""
-        for n in range(2):
+        """Gera, valida e tenta um reparo; se falhar de novo, usa a recusa de contingência.
+
+        Com `verificar` (correção F), a primeira resposta válida passa pela autoverificação; os
+        problemas apontados viram o reparo. Há um único reparo, por validação ou por
+        verificação; se ele já foi gasto, o sistema recusa.
+        """
+        reparo_usado = verificado = False
+        while True:
             corpo, dur = self._gerar(msgs)
             conteudo = corpo["message"]["content"]
             v = validar(conteudo, chunks, pergunta, self.data)
             saida.tentativas.append(_tentativa(corpo, v, dur))
-            if v.ok:
-                saida.resposta, saida.origem = v.resposta, ("llm" if n == 0 else "reparo")
+            problemas = v.erros
+            if v.ok and self.verificar and not verificado and not v.resposta.recusa:
+                verificado = True
+                problemas = self._verificar(pergunta, v.resposta, chunks, saida)
+            if not problemas:
+                saida.resposta, saida.origem = v.resposta, ("reparo" if reparo_usado else "llm")
                 return
+            if reparo_usado:
+                saida.resposta, saida.origem = contingencia, "contingencia"
+                return
+            reparo_usado = True
             msgs = [
                 *msgs,
                 {"role": "assistant", "content": conteudo},
-                prompt.mensagem_reparo(v.erros),
+                prompt.mensagem_reparo(problemas),
             ]
-        saida.resposta, saida.origem = contingencia, "contingencia"

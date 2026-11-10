@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import hashlib
 import json
+import re
 from typing import Any
 
 _CABECALHO = """Você é o Luz Cidadã, um assistente informativo sobre direitos do consumidor de \
@@ -67,15 +68,84 @@ O JSON deve seguir exatamente este JSON Schema:
 {schema}"""
 
 
-def formatar_trecho(chunk: dict[str, Any]) -> str:
-    """Um trecho como o modelo o vê: id, documento, alerta (se houver) e o texto com o caminho."""
+_ROMANOS = [
+    (100, "C"),
+    (90, "XC"),
+    (50, "L"),
+    (40, "XL"),
+    (10, "X"),
+    (9, "IX"),
+    (5, "V"),
+    (4, "IV"),
+    (1, "I"),
+]
+_INCISO = re.compile(r"^([IVXLC]+) - ", re.MULTILINE)
+
+
+def _romano(n: int) -> str:
+    saida = ""
+    for valor, letra in _ROMANOS:
+        while n >= valor:
+            saida, n = saida + letra, n - valor
+    return saida
+
+
+def _inteiro(r: str) -> int:
+    valores = {"I": 1, "V": 5, "X": 10, "L": 50, "C": 100}
+    total = 0
+    for a, b in zip(r, r[1:] + " ", strict=True):
+        total += -valores[a] if b != " " and valores[a] < valores[b] else valores[a]
+    return total
+
+
+def marcar_revogados(texto: str) -> str:
+    """Insere "N - (revogado)" onde a numeração de incisos pula (VII -> IX) dentro do trecho.
+
+    O texto compilado da ANEEL traz os incisos revogados tachados, e a extração os remove; sem a
+    marca, o modelo vê a lista pular sem saber por quê.
+    """
+    linhas, saida, anterior = texto.split("\n"), [], None
+    for linha in linhas:
+        m = _INCISO.match(linha)
+        if m:
+            atual = _inteiro(m[1])
+            if anterior is not None and atual > anterior + 1:
+                saida += [f"{_romano(n)} - (revogado)" for n in range(anterior + 1, atual)]
+            anterior = atual
+        saida.append(linha)
+    return "\n".join(saida)
+
+
+def formatar_trecho(chunk: dict[str, Any], notas: bool = False, alerta_forte: bool = False) -> str:
+    """Um trecho como o modelo o vê: id, documento, alerta (se houver) e o texto com o caminho.
+
+    `notas` (correção D, Fase 8B) mostra as notas de revogação e marca os incisos revogados;
+    `alerta_forte` (correção E) reforça o alerta de página desatualizada ou de parte revogada.
+    """
     linhas = [f"[{chunk['chunk_id']}] Documento: {chunk['fonte']}"]
     if chunk.get("data_publicacao"):
         linhas.append(f"Publicado em: {chunk['data_publicacao']}")
     if chunk.get("alerta"):
-        linhas.append(f"ALERTA: {chunk['alerta']}")
-    linhas.append(chunk["texto"])
+        if alerta_forte:
+            linhas.append(
+                "ATENÇÃO, PARTE DESTE TRECHO PODE ESTAR REVOGADA OU DESATUALIZADA: "
+                f"{chunk['alerta']} Não use a parte revogada; em conflito, siga o ato normativo "
+                "vigente."
+            )
+        else:
+            linhas.append(f"ALERTA: {chunk['alerta']}")
+    texto = chunk["texto"]
+    revogacoes = [n for n in chunk.get("notas_redacao") or [] if "revogad" in n.lower()]
+    if notas and revogacoes:
+        texto = marcar_revogados(texto)
+        linhas.append("Notas de redação: " + " ".join(dict.fromkeys(revogacoes)))
+    linhas.append(texto)
     return "\n".join(linhas)
+
+
+def ordenar_por_confiabilidade(chunks: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    """Correção E: atos normativos primeiro, trechos com alerta de desatualização por último."""
+    return sorted(chunks, key=lambda c: bool(c.get("alerta")))
 
 
 def mensagens_c1(
@@ -83,11 +153,12 @@ def mensagens_c1(
     chunks: list[dict[str, Any]],
     data: str,
     schema_no_texto: dict[str, Any] | None = None,
+    **formato: bool,
 ) -> list[dict[str, str]]:
     sistema = SISTEMA_C1.format(data=data)
     if schema_no_texto is not None:
         sistema += _SEM_FORMATO.format(schema=json.dumps(schema_no_texto, ensure_ascii=False))
-    trechos = "\n\n".join(formatar_trecho(c) for c in chunks)
+    trechos = "\n\n".join(formatar_trecho(c, **formato) for c in chunks)
     usuario = f"TRECHOS:\n{trechos}\n\nPERGUNTA DO USUÁRIO:\n{pergunta}"
     return [{"role": "system", "content": sistema}, {"role": "user", "content": usuario}]
 
@@ -100,6 +171,33 @@ def mensagens_c0(
         sistema += _SEM_FORMATO.format(schema=json.dumps(schema_no_texto, ensure_ascii=False))
     usuario = f"PERGUNTA DO USUÁRIO:\n{pergunta}"
     return [{"role": "system", "content": sistema}, {"role": "user", "content": usuario}]
+
+
+SISTEMA_VERIFICACAO = """Você confere respostas de um assistente sobre direitos do consumidor de \
+energia elétrica. Recebe a PERGUNTA, os TRECHOS citados pela resposta e a RESPOSTA. Verifique, \
+usando só os trechos:
+1. Cada número, prazo ou valor da resposta vale para a situação da pergunta? Um mesmo trecho pode \
+trazer prazos diferentes para situações diferentes (por exemplo, um prazo para razões técnicas e \
+outro para falta de pagamento, ou um para residências e outro para comércio).
+2. A resposta usa alguma regra que o trecho indica como revogada ou desatualizada?
+3. A resposta apresenta uma exceção (por exemplo, um caso "excepcional") como se fosse a regra \
+geral?
+4. A resposta contradiz o trecho ou afirma algo que ele não diz?
+Se a resposta passou nas 4 verificações, use ok=true e problemas vazia. Senão, ok=false e liste em \
+problemas, de forma curta e específica, o que corrigir (por exemplo: "o trecho dá 15 dias para \
+falta de pagamento; 3 dias úteis é para razões técnicas"). Responda APENAS no formato JSON do \
+schema fornecido."""
+
+
+def mensagens_verificacao(
+    pergunta: str, chunks: list[dict[str, Any]], resposta: str, **formato: bool
+) -> list[dict[str, str]]:
+    trechos = "\n\n".join(formatar_trecho(c, **formato) for c in chunks)
+    usuario = f"PERGUNTA:\n{pergunta}\n\nTRECHOS:\n{trechos}\n\nRESPOSTA:\n{resposta}"
+    return [
+        {"role": "system", "content": SISTEMA_VERIFICACAO},
+        {"role": "user", "content": usuario},
+    ]
 
 
 def mensagem_reparo(erros: list[str]) -> dict[str, str]:

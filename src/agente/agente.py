@@ -22,6 +22,7 @@ from src.agente.roteador import rotear
 from src.paradas_api.fonte import ClienteParadasHTTP, FonteParadas
 from src.paradas_api.gerador import carregar_distritos
 from src.rag.pipeline import C1, Saida
+from src.rag.prompt import ordenar_por_confiabilidade
 from src.rag.schema import Resposta
 
 DIAS_SEM_DATA = 7
@@ -78,6 +79,11 @@ RECUSA_CONTINGENCIA_AGENDA = _recusa(
 CORRECOES = {
     "A": "reescrever a pergunta em português padrão antes da busca e do portão",
     "C": "busca híbrida (BM25 + densa, RRF) com reranker bge-reranker-v2-m3",
+    # Fase 8B:
+    "D": "mostrar as notas de revogação e marcar os incisos revogados nos trechos",
+    "E": "atos normativos antes de páginas com alerta, e alerta reforçado",
+    "F": "autoverificação da resposta contra os trechos citados (uma chamada a mais)",
+    "V": "reescrever a pergunta (como na A) só quando a origem é voz",
 }
 
 
@@ -99,6 +105,11 @@ class C2(C1):
         self.correcoes = frozenset(correcoes)
         if "C" in self.correcoes:
             self.modo, self.reranker = "hibrido", True
+        if "D" in self.correcoes:
+            self.formato["notas"] = True
+        if "E" in self.correcoes:
+            self.formato["alerta_forte"], self.ordenar = True, True
+        self.verificar = "F" in self.correcoes
         self.referencia = dt.date.fromisoformat(cfg["data_referencia"])
         self.fonte = fonte or ClienteParadasHTTP(
             cfg["api_paradas"]["base_url"], timeout=cfg["agente"]["timeout_ferramenta_s"]
@@ -108,12 +119,14 @@ class C2(C1):
         except Exception:  # noqa: BLE001 (API fora do ar: usa a lista local do IBGE)
             self.bairros = carregar_distritos()
 
-    def responder(self, pergunta: str) -> Saida:
+    def responder(self, pergunta: str, origem: str = "texto") -> Saida:
+        """`origem` ("texto", "voz" ou "ocr") vem do contrato do serviço (Apêndice B.3)."""
         t0 = time.perf_counter()
-        r = rotear(pergunta, self.llm, self.bairros, self.referencia, "A" in self.correcoes)
+        reescrever = "A" in self.correcoes or ("V" in self.correcoes and origem == "voz")
+        r = rotear(pergunta, self.llm, self.bairros, self.referencia, reescrever)
         rot = {**r.roteamento.model_dump(), "origem": r.origem, "bruto": r.bruto, "erro": r.erro}
         if not r.roteamento.precisa_agenda:
-            consulta = r.roteamento.pergunta_normas if "A" in self.correcoes else None
+            consulta = r.roteamento.pergunta_normas if reescrever else None
             saida = super().responder(pergunta, consulta=consulta)
             saida.config, saida.roteamento = self.nome, rot
             saida.latencia_s = round(time.perf_counter() - t0, 3)
@@ -196,7 +209,11 @@ class C2(C1):
         else:
             periodo = f"período pedido: de {_dia(dias[0])} a {_dia(dias[-1])}"
         descricao = f"bairro {bairro.nome}; {periodo}; hoje é {_dia(self.referencia)}"
-        msgs = prompts.mensagens_c2(pergunta, registros, normas, self.data, descricao)
+        if self.ordenar:
+            normas = ordenar_por_confiabilidade(normas)
+        msgs = prompts.mensagens_c2(
+            pergunta, registros, normas, self.data, descricao, **self.formato
+        )
         chunks = {c["chunk_id"]: c for c in registros + normas}
         self._gerar_com_reparo(msgs, chunks, pergunta, saida, RECUSA_CONTINGENCIA_AGENDA)
         if saida.resposta is not None and not saida.resposta.recusa:

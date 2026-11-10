@@ -163,13 +163,14 @@ def mensagens_c2(
     chunks: list[dict[str, Any]],
     data: str,
     descricao_consulta: str,
+    **formato: bool,
 ) -> list[dict[str, str]]:
     partes = [
         f"REGISTROS DA AGENDA ({descricao_consulta}):\n"
         + "\n\n".join(f"[{r['chunk_id']}]\n{r['texto']}" for r in registros)
     ]
     if chunks:
-        partes.append("TRECHOS:\n" + "\n\n".join(formatar_trecho(c) for c in chunks))
+        partes.append("TRECHOS:\n" + "\n\n".join(formatar_trecho(c, **formato) for c in chunks))
     partes.append(f"PERGUNTA DO USUÁRIO:\n{pergunta}")
     return [
         {"role": "system", "content": SISTEMA_C2.format(data=data)},
