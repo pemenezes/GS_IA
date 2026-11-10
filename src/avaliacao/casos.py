@@ -14,6 +14,10 @@ from src.config import RAIZ
 TESTE = RAIZ / "avaliacao" / "teste.jsonl"
 CANDIDATAS = RAIZ / "avaliacao" / "teste_candidatas.jsonl"
 LOCK = RAIZ / "avaliacao" / "teste.lock"
+# Test novo (Fase 8B): escrito e congelado antes das melhorias, medido uma única vez no fim.
+TESTE2 = RAIZ / "avaliacao" / "teste2.jsonl"
+CANDIDATAS2 = RAIZ / "avaliacao" / "teste2_candidatas.jsonl"
+LOCK2 = RAIZ / "avaliacao" / "teste2.lock"
 
 Tipo = Literal[
     "direta", "coloquial", "ruido", "multi_trecho", "nao_consta", "fora_dominio", "dinamica"
@@ -41,7 +45,7 @@ class ApiEsperada(BaseModel):
 
 class Caso(BaseModel):
     id: str
-    split: Literal["dev", "test", "pendente"] = "pendente"
+    split: Literal["dev", "test", "test2", "pendente"] = "pendente"
     tipo: Tipo
     grupo: str
     tema: str
@@ -99,6 +103,14 @@ def carregar_congelado(split: str | None = None) -> list[Caso]:
         raise RuntimeError("avaliacao/teste.jsonl mudou depois de congelado (hash diferente)")
     casos = carregar(TESTE)
     return [c for c in casos if split is None or c.split == split]
+
+
+def carregar_test2() -> list[Caso]:
+    """Test novo congelado; falha se o arquivo não bater com o hash de teste2.lock."""
+    sha = hashlib.sha256(TESTE2.read_bytes()).hexdigest()
+    if sha != LOCK2.read_text(encoding="utf-8").split()[0]:
+        raise RuntimeError("avaliacao/teste2.jsonl mudou depois de congelado (hash diferente)")
+    return carregar(TESTE2)
 
 
 def gravar(casos: list[Caso], caminho: Path) -> None:
