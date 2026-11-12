@@ -1,0 +1,50 @@
+# Conferência da correção M (multiconsulta) no test e no T2 (Fase 8B, opção B). Feita pelo
+# ASSISTENTE em 12/11/2026, relendo as respostas que mudaram em relação ao C2 original; as que não
+# mudaram herdam o veredito das conferências anteriores. Pendente de validação do Pedro.
+# Atenção: a correção M foi escolhida medindo a busca no test e no T2; os números são pós-correção.
+status: conferido_assistente
+test:
+  herdadas: [T-005, T-008, T-013, T-040]
+  itens:
+    T-002: {veredito: correta, falso: nao}
+    T-003: {veredito: correta, falso: nao, nota: "Agora: 72 horas para residência comum; 5 dias úteis para equipamento vital ou serviço essencial."}
+    T-006: {veredito: correta, falso: nao}
+    T-007: {veredito: parcial, falso: sim, nota: "Conclui 'não pode negar', mas apresenta a alínea revogada do item 14 do PRODIST como exceção válida."}
+    T-009: {veredito: correta, falso: nao}
+    T-011: {veredito: correta, falso: nao, nota: "Critério geral (meio salário mínimo) e a exceção de 3 salários mínimos."}
+    T-015: {veredito: correta, falso: nao}
+    T-018: {veredito: correta, falso: nao}
+    T-020: {veredito: correta, falso: nao}
+    T-021: {veredito: parcial, falso: sim, nota: "Continua 'três dias' (o prazo de razões técnicas) em vez de 15 dias."}
+    T-022: {veredito: correta, falso: nao}
+    T-024: {veredito: correta, falso: nao, nota: "Antes recusada pelo portão."}
+    T-026: {veredito: correta, falso: nao}
+    T-028: {veredito: parcial, falso: sim, nota: "Começa com 'Não', mas agora diz que há valor extra destacado na fatura."}
+    T-030: {veredito: correta, falso: nao}
+    T-032: {veredito: correta, falso: nao, nota: "Voz; antes recusada pelo portão."}
+    T-033: {veredito: parcial, falso: sim, nota: "Voz; 'três dias' de aviso."}
+    T-034: {veredito: incorreta, falso: sim, nota: "Voz; antes recusada. Responde com prazos de resposta ao ressarcimento (15 e 30 dias), não a verificação em 1 dia útil."}
+    T-036: {veredito: correta, falso: nao, nota: "Voz; antes recusada pelo portão."}
+    T-037: {veredito: incorreta, falso: sim, nota: "Usa o art. 353 (suspensão por emergência) e diz que não há compensação."}
+    T-038: {veredito: correta, falso: nao}
+    T-039: {veredito: correta, falso: nao, nota: "15 dias e 20 dias."}
+test2:
+  herdadas: [T2-02]
+  itens:
+    T2-01: {veredito: correta, falso: nao}
+    T2-03: {veredito: incorreta, falso: sim, nota: "Usa o art. 243 (reparo da medição externa)."}
+    T2-04: {veredito: correta, falso: nao, nota: "Agora com o art. 357."}
+    T2-05: {veredito: correta, falso: nao}
+    T2-06: {veredito: correta, falso: nao}
+    T2-07: {veredito: correta, falso: nao, nota: "Antes recusada pelo portão."}
+    T2-08: {veredito: correta, falso: nao}
+    T2-09: {veredito: correta, falso: nao}
+    T2-10: {veredito: incorreta, falso: sim, nota: "Continua 'ainda pode cortar'; o art. 357 não veio nesta pergunta."}
+    T2-11: {veredito: parcial, falso: nao}
+    T2-12: {veredito: incorreta, falso: sim, nota: "Continua usando a exceção de 15 a 47 dias."}
+    T2-13: {veredito: correta, falso: nao}
+    T2-14: {veredito: correta, falso: nao}
+    T2-15: {veredito: parcial, falso: sim, nota: "Voz; antes recusada. Conclusão certa (não pode cortar), mas diz que o corte 'só é permitido após 90 dias'."}
+    T2-16: {veredito: correta, falso: nao}
+    T2-17: {veredito: parcial, falso: sim, nota: "Dobro, correção e juros certos; o prazo de 36 ciclos é do art. 324 (erro do consumidor)."}
+    T2-18: {veredito: correta, falso: nao}

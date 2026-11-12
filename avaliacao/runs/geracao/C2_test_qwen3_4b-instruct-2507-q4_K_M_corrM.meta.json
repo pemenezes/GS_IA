@@ -1,0 +1,205 @@
+{
+ "run": "C2_test_qwen3_4b-instruct-2507-q4_K_M_corrM",
+ "config": "C2",
+ "conjunto": "test",
+ "modelo": "qwen3:4b-instruct-2507-q4_K_M",
+ "digest": "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0",
+ "estruturada": true,
+ "hash_prompts": "0be3168f3345",
+ "hash_prompts_agente": "0a8dbf57b98c",
+ "correcoes": "M",
+ "hash_prompt_reescrita": "63b5c0232988",
+ "pos_correcao": true,
+ "teste_lock": "41ec971221d50bf73c3a548db89b77cbd462baa4995cfcc56e40a5487bb49ccd",
+ "retrieval": {
+  "hibrido": false,
+  "top_k_final": 3,
+  "limiar_recusa": 0.6038
+ },
+ "llm": {
+  "num_ctx": 6144,
+  "num_predict": 1024,
+  "temperature": 0.0,
+  "top_p": 1.0,
+  "seed": 42,
+  "think": false
+ },
+ "teste2_lock": "2bfa246b29e273e69e122075c866fa8d2da479bbc555cbdf2b2ddd3a79534480",
+ "hash_prompt_verificacao": "c43db4db3661",
+ "ollama": "0.40.16",
+ "vram_pico_mib": 5587,
+ "data_hora": "2026-11-12T08:49:31",
+ "resumo": {
+  "n": 36,
+  "json_valido_1a": {
+   "k": 27,
+   "n": 27,
+   "taxa": 1.0,
+   "ic95": [
+    0.8754409628553641,
+    1.0
+   ]
+  },
+  "regras_1a": {
+   "k": 27,
+   "n": 27,
+   "taxa": 1.0,
+   "ic95": [
+    0.8754409628553641,
+    1.0
+   ]
+  },
+  "valida_final": {
+   "k": 36,
+   "n": 36,
+   "taxa": 1.0,
+   "ic95": [
+    0.9035781695514236,
+    1.0
+   ]
+  },
+  "acuracia": {
+   "k": 12,
+   "n": 26,
+   "taxa": 0.462,
+   "ic95": [
+    0.28755582695234905,
+    0.6454236379556988
+   ]
+  },
+  "citacao_correta": {
+   "k": 18,
+   "n": 25,
+   "taxa": 0.72,
+   "ic95": [
+    0.5242302810344169,
+    0.8571632616261843
+   ]
+  },
+  "alucinacao": {
+   "k": 0,
+   "n": 25,
+   "taxa": 0.0,
+   "ic95": [
+    0.0,
+    0.13319649395317873
+   ]
+  },
+  "recusa_correta": {
+   "k": 7,
+   "n": 7,
+   "taxa": 1.0,
+   "ic95": [
+    0.6456611570247934,
+    1.0
+   ]
+  },
+  "recusa_indevida": {
+   "k": 1,
+   "n": 26,
+   "taxa": 0.038,
+   "ic95": [
+    0.0068218089769898765,
+    0.18893176991958405
+   ]
+  },
+  "citacao_verificavel": {
+   "k": 0,
+   "n": 0,
+   "taxa": null,
+   "ic95": [
+    0.0,
+    0.0
+   ]
+  },
+  "recusa_nega_regra": {
+   "k": 0,
+   "n": 1,
+   "taxa": 0.0,
+   "ic95": [
+    0.0,
+    0.7934567085261071
+   ]
+  },
+  "recusa_dinamicas": {
+   "k": 1,
+   "n": 3,
+   "taxa": 0.333,
+   "ic95": [
+    0.0614903152761605,
+    0.7923450448735121
+   ]
+  },
+  "acerto_dinamicas": {
+   "k": 3,
+   "n": 3,
+   "taxa": 1.0,
+   "ic95": [
+    0.43849391955098227,
+    1.0
+   ]
+  },
+  "roteamento_correto": {
+   "k": 36,
+   "n": 36,
+   "taxa": 1.0,
+   "ic95": [
+    0.9035781695514236,
+    1.0
+   ]
+  },
+  "latencia_p50_s": 15.6,
+  "latencia_p95_s": 18.48,
+  "por_tipo": {
+   "direta": {
+    "n": 11,
+    "recusou": 0,
+    "acuracia": 7,
+    "citacao_correta": 10,
+    "alucinacao": 0
+   },
+   "coloquial": {
+    "n": 7,
+    "recusou": 0,
+    "acuracia": 3,
+    "citacao_correta": 4,
+    "alucinacao": 0
+   },
+   "ruido": {
+    "n": 4,
+    "recusou": 0,
+    "acuracia": 1,
+    "citacao_correta": 2,
+    "alucinacao": 0
+   },
+   "multi_trecho": {
+    "n": 4,
+    "recusou": 1,
+    "acuracia": 1,
+    "citacao_correta": 2,
+    "alucinacao": 0
+   },
+   "nao_consta": {
+    "n": 4,
+    "recusou": 4,
+    "acuracia": 0,
+    "citacao_correta": 0,
+    "alucinacao": 0
+   },
+   "fora_dominio": {
+    "n": 3,
+    "recusou": 3,
+    "acuracia": 0,
+    "citacao_correta": 0,
+    "alucinacao": 0
+   },
+   "dinamica": {
+    "n": 3,
+    "recusou": 1,
+    "acuracia": 0,
+    "citacao_correta": 0,
+    "alucinacao": 0
+   }
+  }
+ }
+}
