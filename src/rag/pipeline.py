@@ -173,8 +173,23 @@ class C1(_Base):
         self.formato: dict[str, bool] = {}
         self.ordenar = False
         self.verificar = False
+        # Correção M (opção B da Fase 8B): reformulações pelo LLM, reranker e k trechos; o
+        # portão usa o maior cosseno entre a pergunta e as reformulações, com τ próprio.
+        self.multiconsulta: dict[str, Any] | None = None
+        self.ultimas_reformulacoes: list[str] = []
 
     def recuperar(self, pergunta: str) -> tuple[list[Any], float]:
+        if self.multiconsulta:
+            from src.rag.multiconsulta import buscar_multi, reformular
+
+            self.ultimas_reformulacoes = reformular(pergunta, self.llm)
+            return buscar_multi(
+                self.retriever,
+                [pergunta, *self.ultimas_reformulacoes],
+                k=self.multiconsulta["k"],
+                reranker=True,
+                pergunta_reranker=pergunta,
+            )
         cands = self.retriever.buscar(pergunta, modo=self.modo, reranker=self.reranker)
         if self.modo == "denso" and not self.reranker and cands:
             nota = cands[0].score_denso
@@ -189,7 +204,10 @@ class C1(_Base):
         cands, nota = self.recuperar(consulta or pergunta)
         trechos = [{"chunk_id": c.chunk_id, "nota": round(float(c.score), 4)} for c in cands]
         saida = Saida(self.nome, None, "portao", 0.0, round(nota, 4), trechos)
-        if nota < self.tau:
+        if self.multiconsulta:
+            saida.consultas.append({"reformulacoes": self.ultimas_reformulacoes})
+        tau = self.multiconsulta["tau"] if self.multiconsulta else self.tau
+        if nota < tau:
             saida.resposta = RECUSA_PORTAO
             saida.latencia_s = round(time.perf_counter() - t0, 3)
             return saida

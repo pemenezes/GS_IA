@@ -1,0 +1,607 @@
+{
+ "Depois que a conta atrasada é paga, qual é o prazo para a distribuidora fazer a religação normal de uma casa em área urbana?": [
+  "Após o pagamento da fatura vencida, qual é o prazo máximo para que a distribuidora realize a religação do fornecimento de energia elétrica em uma residência localizada em área urbana, de acordo com as normas regulamentadoras da ANEEL e do PRODIST?",
+  "Em caso de inadimplemento pago, qual é o tempo máximo para a distribuidora restabelecer o fornecimento de energia elétrica em uma casa situada em zona urbana, conforme o REN 1.000/2021 da ANEEL e os princípios do PRODIST?",
+  "Quando a conta atrasada é quitada, qual é o prazo máximo para a distribuidora realizar a religação do serviço de energia elétrica em uma residência em área urbana, conforme as diretrizes do REN 1.000/2021 e do PRODIST?"
+ ],
+ "A distribuidora pode cortar a energia por falta de pagamento numa sexta-feira?": [
+  "A distribuidora pode suspender o fornecimento de energia elétrica por inadimplemento em um dia útil, como sexta-feira?",
+  "É permitido que a distribuidora interrompa o fornecimento de energia por falta de pagamento em uma sexta-feira, conforme previsto nas normas de direitos do consumidor?",
+  "A suspensão do fornecimento de energia elétrica por inadimplemento pode ocorrer em sexta-feira, de acordo com as regras da REN 1.000/2021 da ANEEL e do PRODIST?"
+ ],
+ "Com quanta antecedência a distribuidora precisa avisar uma residência comum sobre uma interrupção programada?": [
+  "Qual o prazo mínimo de aviso que a distribuidora deve dar a um consumidor residencial sobre uma interrupção de fornecimento programada?",
+  "Em que período a distribuidora deve notificar uma residência comum antes de suspender o fornecimento de energia elétrica?",
+  "Qual a exigência de antecedência para que a distribuidora informe um usuário residencial sobre uma interrupção de energia programada?"
+ ],
+ "Quando falta energia, em quanto tempo a distribuidora deve informar a causa e a previsão de volta?": [
+  "Quando ocorre interrupção no fornecimento de energia, em qual prazo a distribuidora deve comunicar a causa e a previsão de restabelecimento do serviço?",
+  "Em caso de falta de energia, qual o tempo máximo para que a distribuidora informe a origem do problema e a estimativa de retorno do fornecimento?",
+  "Diante de uma interrupção no fornecimento de energia elétrica, qual o prazo determinado pela norma para que a distribuidora informe a causa e a previsão de recuperação do serviço?"
+ ],
+ "Se a distribuidora ultrapassa os limites de interrupção da minha casa, em quanto tempo a compensação deve aparecer na fatura?": [
+  "Em caso de a distribuidora realizar uma interrupção de fornecimento que exceda os limites estabelecidos para o consumidor residencial, em que prazo a compensação deverá ser refletida na fatura seguinte?",
+  "Se a distribuidora suspender o fornecimento de energia elétrica além do limite permitido para residências, qual o prazo máximo para que a compensação seja creditada na próxima fatura?",
+  "Ao ocorrer uma interrupção de energia elétrica que ultrapasse os limites autorizados para consumidores residenciais, em que período a compensação deve ser registrada na fatura do próximo ciclo de cobrança?"
+ ],
+ "Qual é o prazo para pedir à distribuidora o ressarcimento de um aparelho danificado por problema na rede?": [
+  "Qual é o prazo para solicitar ao fornecedor de energia elétrica o ressarcimento de um aparelho danificado por falha na rede de distribuição?",
+  "Em que período a distribuidora deve atender a solicitação de ressarcimento por dano causado por problema na rede de distribuição de energia elétrica?",
+  "Qual é o tempo máximo para que a distribuidora realize o ressarcimento de um aparelho danificado devido a defeito na rede de distribuição de energia elétrica?"
+ ],
+ "A distribuidora pode negar o ressarcimento de um aparelho queimado dizendo que a cidade estava em situação de emergência decretada?": [
+  "A distribuidora pode recusar o ressarcimento de um aparelho danificado por fogo, alegando que a cidade estava em situação de emergência declarada?",
+  "É possível que a distribuidora negue o ressarcimento de um aparelho queimado, justificando a situação com o decreto de emergência urbana?",
+  "A distribuidora pode se eximir do dever de ressarcir um aparelho queimado, argumentando que a região estava em estado de emergência oficialmente declarada?"
+ ],
+ "Qual é o custo de disponibilidade mínimo cobrado de uma casa com ligação monofásica?": [
+  "Qual é o valor do custo de disponibilidade mínimo aplicado a uma residência com ligação monofásica, conforme as normas de tarifa de energia elétrica da ANEEL?",
+  "Em uma casa com ligação monofásica, qual é o valor do custo de disponibilidade mínimo que deve ser cobrado pelo fornecedor de energia elétrica?",
+  "De acordo com a REN 1.000/2021 da ANEEL e os critérios de tarifa social, qual é o custo de disponibilidade mínimo cobrado para residências com ligação monofásica?"
+ ],
+ "Se a distribuidora não consegue fazer a leitura do medidor por causa de uma calamidade pública, como a conta é calculada?": [
+  "Em caso de calamidade pública que impede a leitura do medidor pelo fornecedor, como é feito o cálculo da fatura de energia elétrica segundo a REN 1.000/2021 da ANEEL?",
+  "Diante de uma calamidade pública que impossibilita a leitura do medidor, qual é o procedimento para a elaboração da conta de energia elétrica, conforme as normas de direito do consumidor e da tarifa social?",
+  "Se a distribuidora não consegue realizar a leitura do medidor devido a uma calamidade pública, como a fatura é calculada de acordo com as regras estabelecidas pela ANEEL e pelo PRODIST?"
+ ],
+ "Qual é o desconto da Tarifa Social de Energia Elétrica?": [
+  "Qual é o valor do desconto aplicado na tarifa social de energia elétrica conforme a REN 1.000/2021 da ANEEL?",
+  "Qual é a alíquota de desconto prevista na tarifa social de energia elétrica, de acordo com as normas do PRODIST e da REN 1.000/2021?",
+  "Qual é o percentual de desconto concedido para os consumidores que se enquadram na tarifa social de energia elétrica, conforme a legislação vigente da ANEEL e do CDC?"
+ ],
+ "Qual é o critério de renda do CadÚnico para ter direito à Tarifa Social de Energia Elétrica?": [
+  "Qual é o limite de renda mensal estabelecido pelo CadÚnico para que um consumidor tenha direito à Tarifa Social de Energia Elétrica, conforme as normas vigentes da ANEEL e do PRODIST?",
+  "De acordo com o CadÚnico, qual é o critério de renda familiar para o acesso à Tarifa Social de Energia Elétrica, considerando as regras do REN 1.000/2021 e do CDC?",
+  "O que determina o valor de renda mensal para a qual uma família pode ter direito à Tarifa Social de Energia Elétrica, com base no CadÚnico e nas normas do PRODIST e da ANEEL?"
+ ],
+ "Famílias indígenas e quilombolas inscritas no CadÚnico têm desconto de 100% na conta de luz até quantos kWh por mês?": [
+  "Quais são os limites de consumo mensal, em kWh, acima dos quais as famílias indígenas e quilombolas inscritas no CadÚnico não são elegíveis para o desconto de 100% na tarifa de energia elétrica, de acordo com as normas regulamentadoras da ANEEL e do PRODIST?",
+  "O desconto de 100% para famílias indígenas e quilombolas no CadÚnico na conta de luz é válido até qual quantidade de kWh mensal, conforme as diretrizes do REN 1.000/2021 e do Programa de Tarifa Social?",
+  "Em que limite mensal de consumo (em kWh) o benefício de desconto total (100%) na conta de energia elétrica é aplicado às famílias indígenas e quilombolas inscritas no CadÚnico, de acordo com as normas do PRODIST e do CDC?"
+ ],
+ "Para uma família da tarifa social (baixa renda), quanto tempo depois do vencimento da conta a energia pode ser cortada por falta de pagamento?": [
+  "Qual é o prazo máximo, para uma família inscrita na tarifa social de energia elétrica, para que o fornecimento de energia seja suspensão devido a inadimplemento da fatura?",
+  "Em caso de inadimplemento da fatura, qual é o período máximo permitido, para consumidores de tarifa social (baixa renda), até o momento em que a ANEEL ou o PRODIST pode suspender o fornecimento de energia elétrica?",
+  "Para famílias que fazem parte da tarifa social de energia elétrica, qual é o limite de tempo após o vencimento da conta para que a energia seja interrompida por falta de pagamento, conforme as normas do REN 1.000/2021 e do PRODIST?"
+ ],
+ "Quem tem em casa pessoa que usa equipamento vital dependente de energia recebe aviso de interrupção programada com quanto tempo de antecedência?": [
+  "Quem reside em uma residência com pessoa que depende de energia elétrica para o funcionamento de um equipamento vital deve receber aviso prévio de suspensão do fornecimento de energia com qual período de antecedência, de acordo com a normativa vigente?",
+  "Em caso de residência com morador que utiliza equipamento essencial e dependente de energia elétrica, qual o prazo mínimo de aviso prévio que deve ser dado antes da interrupção programada do fornecimento de energia?",
+  "Para consumidores que residem em imóveis com pessoa que depende de energia elétrica para o funcionamento de um equipamento vital, a ANEEL estabelece um período mínimo de aviso prévio antes da suspensão do fornecimento de energia elétrica. Qual é esse período?"
+ ],
+ "O que significa a bandeira tarifária verde na conta de luz?": [
+  "O que a bandeira tarifária verde indica na fatura de energia elétrica?",
+  "Qual o significado da bandeira verde na tarifa de energia elétrica apresentada na conta?",
+  "O que representa a bandeira verde na fatura de energia elétrica do consumidor?"
+ ],
+ "Até qual potência instalada a geração de energia de uma casa é considerada microgeração distribuída?": [
+  "Qual é a potência máxima instalada para que a produção de energia elétrica em uma residência seja classificada como microgeração distribuída, de acordo com as normas regulatórias da ANEEL?",
+  "De acordo com a REN 1.000/2021 da ANEEL, até que potência instalada a geração de energia em uma casa é considerada microgeração distribuída?",
+  "Qual é o limite de potência instalada que define a classificação de uma instalação residencial como microgeração distribuída, conforme as diretrizes do PRODIST e da REN 1.000/2021?"
+ ],
+ "Em quanto tempo a ouvidoria da distribuidora deve responder à minha reclamação?": [
+  "Qual é o prazo máximo para a distribuidora responder a uma reclamação apresentada por meio da sua ouvidoria?",
+  "De acordo com a norma regulamentadora, em quantos dias a distribuidora deve responder a uma solicitação de atendimento por meio da sua ouvidoria?",
+  "Qual é o tempo limite para a distribuidora responder a uma reclamação feita via ouvidoria, conforme as normas de direitos do consumidor de energia elétrica?"
+ ],
+ "O Código de Defesa do Consumidor obriga a empresa de energia a fornecer o serviço de forma contínua?": [
+  "O Código de Defesa do Consumidor exige que a empresa de energia elétrica mantenha o fornecimento de serviço contínuo, mesmo diante de inadimplementos?",
+  "De acordo com o Código de Defesa do Consumidor, é obrigatório que a distribuidora de energia mantenha o serviço de energia elétrica em operação contínua?",
+  "A Lei do Consumidor prevê que a empresa de energia elétrica deve garantir o fornecimento contínuo do serviço, mesmo em caso de atraso na fatura?"
+ ],
+ "Paguei hoje de manhã a conta de luz que estava atrasada, moro na capital. Até quando a empresa tem que religar a minha energia?": [
+  "A minha conta de energia elétrica estava vencida e não paga, e hoje de manhã já efetuei o pagamento. Como moro na capital, até quando a empresa deve restaurar o fornecimento de energia?",
+  "Paguei hoje de manhã a fatura de luz que estava em atraso, e estou buscando saber até que momento a empresa deve realizar a religação do fornecimento de energia, considerando que moro na região da capital?",
+  "Após pagar hoje de manhã a conta de luz com inadimplemento, qual o prazo máximo para a empresa religar a energia elétrica em minha residência, localizada na capital do país?"
+ ],
+ "Cortaram a luz da minha casa mas eu estava com tudo pago, foi erro deles. Quanto tempo eles têm pra voltar com a luz?": [
+  "A empresa de energia suspendeu o fornecimento da minha residência, apesar de terem todos os pagamentos realizados; trata-se de um erro operacional. Qual o prazo máximo para que a empresa restabeleça o fornecimento de energia?",
+  "O fornecimento de energia foi interrompido em minha residência, mesmo com a conta totalmente paga. Isso foi um erro da empresa. De acordo com a norma vigente, qual o prazo máximo para a ANEEL ou o PRODIST restabelecer o serviço?",
+  "Foi cometido um erro na operação de fornecimento de energia elétrica: a luz foi cortada, mas eu não tenho inadimplemento. Qual o tempo máximo que a empresa tem para reativar o serviço de energia elétrica, conforme a REN 1.000/2021 da ANEEL e o PRODIST?"
+ ],
+ "Chegou um papel dizendo que vão cortar minha luz por causa de conta atrasada. Eles podem cortar sem me avisar antes? Quantos dias de aviso eu tenho?": [
+  "Recebi um documento informando que a minha luz será interrompida por inadimplemento da fatura. É possível que a empresa suspenda o fornecimento sem aviso prévio? Qual o prazo mínimo de aviso exigido pela legislação?",
+  "Foi entregue um aviso dizendo que a energia será suspensa por falta de pagamento da conta. O fornecimento pode ser interrompido sem prévio aviso? De acordo com a REN 1.000/2021 e o CDC, qual o número mínimo de dias de aviso obrigatório?",
+  "Um documento chegou afirmando que a luz será cortada por conta atrasada. A suspensão do fornecimento pode ocorrer sem aviso prévio? Qual o prazo legal de aviso previsto para esse tipo de medida?"
+ ],
+ "Minha geladeira queimou quando a luz voltou e eu guardo insulina nela. Depois que eu reclamar, quanto tempo a empresa tem pra vir ver a geladeira?": [
+  "Após a restauração do fornecimento de energia, minha geladeira foi danificada por causa do desligamento. Como guardo insulina nela, o problema é considerado grave. Após minha reclamação formal, qual o prazo máximo que a empresa de energia tem para enviar um técnico para verificar e avaliar o dano causado pela interrupção do fornecimento?",
+  "Minha geladeira queimou quando a luz foi restabelecida, pois guardo insulina nela. Após apresentar uma reclamação, qual o prazo estabelecido pela ANEEL (REN 1.000/2021) ou pelo PRODIST para que a empresa de energia envie um profissional para analisar o dano causado pela suspensão do fornecimento?",
+  "Durante a interrupção do fornecimento de energia, minha geladeira foi danificada ao voltar a funcionar. Como a geladeira armazena insulina, o evento é considerado de risco à saúde. Após a reclamação, qual o prazo máximo previsto em normas de direito do consumidor (como a REN 1.000/2021 da ANEEL ou o PRODIST) para que a empresa de energia envie um técnico para verificar o dano e avaliar a responsabilidade?"
+ ],
+ "Minha mãe usa um concentrador de oxigênio em casa. Como faço pra empresa de luz me avisar antes de desligar a energia pra manutenção, e com quanto tempo de antecedência?": [
+  "Minha mãe utiliza um concentrador de oxigênio em casa. Como posso solicitar à empresa de energia o aviso prévio sobre a suspensão do fornecimento de energia para manutenção, e qual o prazo mínimo de antecedência exigido pela norma?",
+  "Existe uma exigência legal para que a empresa de energia informe os consumidores sobre a suspensão do fornecimento de energia para manutenção, especialmente em casos de uso de aparelhos essenciais como o concentrador de oxigênio? Qual o prazo mínimo de aviso previsto na regulamentação?",
+  "Como proceder para que a empresa de energia de minha residência me informe com antecedência sobre a suspensão do fornecimento de energia para manutenção, considerando que minha mãe usa um concentrador de oxigênio? Qual o tempo mínimo de aviso estabelecido pela norma de direitos do consumidor?"
+ ],
+ "Sou aposentado e recebo o BPC. Eu tenho direito a algum desconto na conta de luz?": [
+  "Como aposentado e beneficiário do BPC, tenho direito a um desconto na tarifa de energia elétrica conforme as normas de direitos do consumidor?",
+  "Como pessoa com renda baixa, aposentado e recebedor do BPC, posso ter uma redução na conta de luz de acordo com a tarifa social estabelecida pela ANEEL?",
+  "Existe um desconto na conta de energia elétrica para aposentados que recebem o BPC, conforme previsto no REN 1.000/2021 e no PRODIST?"
+ ],
+ "Minha família ganha um pouco mais de meio salário mínimo por pessoa e está no CadÚnico, então não pega a tarifa social. Existe outro desconto na conta de luz pra gente?": [
+  "Minha família tem renda de cerca de meio salário mínimo por pessoa e está inscrita no CadÚnico, mas não recebe a tarifa social. Existe outra forma de desconto na conta de energia elétrica para famílias com essa condição de renda?",
+  "Como minha família tem renda próxima de um salário mínimo por pessoa e está no CadÚnico, não tem acesso à tarifa social. Há algum outro benefício ou desconto na fatura de luz para pessoas com essa situação econômica?",
+  "Estamos no CadÚnico e a família tem renda de aproximadamente meio salário mínimo por pessoa. Como não recebemos a tarifa social, existe outro tipo de desconto na conta de energia elétrica para famílias com essa condição de renda?"
+ ],
+ "Com a enchente o pessoal da empresa não conseguiu ler meu relógio de luz e a conta veio estimada. Como é que eles calculam esse valor?": [
+  "Durante a enchente, a equipe da empresa não conseguiu realizar a leitura do relógio de energia elétrica do meu imóvel, resultando em uma estimativa da fatura. Como é feito o cálculo da conta estimada?",
+  "Por causa da enchente, a equipe de atendimento não pôde acessar o relógio de luz do meu imóvel, e a fatura foi emitida com valor estimado. Qual é o procedimento utilizado para calcular esse valor estimado?",
+  "Na ocasião da enchente, a leitura do relógio de energia elétrica do meu imóvel não foi possível, e a conta foi emitida com valor estimado. Como a empresa realiza esse cálculo de fatura estimada?"
+ ],
+ "Acabou a luz no meu bairro faz meia hora e ninguém fala nada. A empresa não tem obrigação de avisar o que aconteceu?": [
+  "A suspensão do fornecimento de energia elétrica no meu bairro ocorreu há meia hora e não há comunicação oficial sobre o evento. De acordo com a REN 1.000/2021 da ANEEL, a empresa de energia elétrica tem obrigação de notificar os consumidores sobre interrupções no fornecimento, especialmente quando ocorrem em larga escala?",
+  "O fornecimento de energia elétrica foi interrompido no meu bairro há meia hora e não há nenhuma comunicação da empresa. A norma regulamentadora da ANEEL (REN 1.000/2021) prevê que a empresa deve informar os consumidores sobre interrupções de serviço, especialmente em casos de suspensão coletiva?",
+  "Há meia hora, a luz foi cortada no meu bairro e ninguém me informou sobre o ocorrido. A legislação do setor de energia elétrica, como a REN 1.000/2021 da ANEEL, exige que a empresa de energia elétrica notifique os consumidores antes ou imediatamente após a suspensão do fornecimento, especialmente em áreas amplas?"
+ ],
+ "Minha conta veio com bandeira vermelha. Isso é uma taxa a mais que vão me cobrar?": [
+  "Minha conta de energia elétrica está com bandeira vermelha. Isso significa que estou sendo cobrado com uma taxa adicional, acima do valor da tarifa básica?",
+  "A bandeira vermelha na minha conta de energia elétrica indica uma cobrança extra? Ou é apenas uma indicação de que a tarifa está mais alta?",
+  "A bandeira vermelha na minha fatura de energia elétrica é uma taxa adicional que me cobram, ou apenas uma referência ao nível de custo da tarifa?"
+ ],
+ "Tô pensando em colocar placa solar no telhado de casa. Até que tamanho de sistema conta como microgeração?": [
+  "Quais são os limites de potência para que um sistema solar instalado em residência seja considerado microgeração, segundo a normativa vigente da ANEEL?",
+  "Qual é o valor máximo de potência em kilowatts (kW) que um sistema fotovoltaico residencial deve ter para ser classificado como microgeração, de acordo com a REN 1.000/2021 da ANEEL?",
+  "O que define o limite de potência para classificar um sistema solar doméstico como microgeração, conforme as normas de energia elétrica da ANEEL e do PRODIST?"
+ ],
+ "Faz dois anos que minha TV queimou por causa de uma queda de energia. Ainda dá tempo de pedir pra empresa pagar?": [
+  "Há dois anos que minha televisão foi danificada por uma interrupção de energia elétrica. Ainda é possível exigir que a empresa de energia elétrica assuma a responsabilidade pelo dano?",
+  "Desde há dois anos, minha TV foi danificada por uma queda de energia. Existe ainda a possibilidade de solicitar que a empresa de energia elétrica pague o valor do dano causado?",
+  "Minha televisão queimou há dois anos devido a uma interrupção de energia. Ainda é possível pedir que a empresa de energia elétrica assuma a responsabilidade e pague o valor do dano?"
+ ],
+ "paguei hoje manha a conta de lus que tava atrasado moro na capital ate quando a impresa tem que religa a minha enegia": [
+  "Paguei hoje de manhã a fatura de luz que estava atrasada, moro na capital. Até quando a empresa tem que reativar a energia?",
+  "Fiz o pagamento hoje de manhã da conta de energia elétrica que estava vencida, resido na capital. Qual o prazo máximo para a reativação do fornecimento?",
+  "Paguei hoje pela conta de luz que estava em atraso, moro na região da capital. Até quando a distribuidora deve reativar a energia elétrica em minha residência?"
+ ],
+ "cortaram lus da minha casa mas eu tava com tudo pago foi erro deles quantu tempo eles tem pra voltar com a lus": [
+  "A ANEEL (REN 1.000/2021) prevê que, em caso de suspensão do fornecimento de energia elétrica por erro da distribuidora, o fornecimento deve ser restabelecido dentro de até 72 horas após a notificação do erro, desde que o consumidor tenha cumprido todos os seus obrigações de pagamento.",
+  "O fornecimento de energia elétrica foi interrompido por erro da empresa distribuidora, mas o consumidor está com todas as faturas pagas. De acordo com o PRODIST e a REN 1.000/2021 da ANEEL, qual é o prazo máximo para que a distribuidora restabeleça o fornecimento?",
+  "A minha conta de energia elétrica foi suspensa por erro da empresa, mas eu já paguei tudo. O que prevê a REN 1.000/2021 da ANEEL e o PRODIST sobre o prazo para a restabelecimento do fornecimento em caso de erro de suspensão?"
+ ],
+ "chegou um papel dizendo que vao cortar minha lus por causa de conta atrasado eles podem cortar sem me avisar antes quantos dias aviso eu tenho": [
+  "Chegou um documento informando que a luz será suspensa por inadimplemento da fatura; é possível que a suspensão ocorra sem aviso prévio? Qual o prazo mínimo de aviso que o fornecedor deve dar antes de suspender o fornecimento de energia elétrica?",
+  "Recebi uma notificação dizendo que vou perder o fornecimento de energia elétrica por conta vencida e não paga. O fornecedor pode suspender o serviço sem me avisar com antecedência? De acordo com a norma, qual o número mínimo de dias de aviso obrigatório para a suspensão do fornecimento de energia elétrica?",
+  "Fui notificado de que minha conta de energia elétrica está vencida e que, por isso, a luz será cortada. O fornecedor pode realizar a suspensão do fornecimento sem me informar com antecedência? Qual o prazo legal de aviso previsto na regulamentação para essa situação?"
+ ],
+ "minha geladera queimou quando a lus voltou e eu guardo insolina nela depois que eu reclamar quantu tempo a impresa tem pra vir ver geladera": [
+  "Minha geladeira queimou quando a luz voltou e eu guardei insumo nela; após reclamar, qual o prazo máximo para a empresa vir ver a geladeira?",
+  "A geladeira queimou quando a luz foi restabelecida e eu armeei insumos dentro dela; após apresentar reclamação, qual o tempo máximo que a distribuidora tem para comparecer e verificar o problema?",
+  "Quando a luz voltou, minha geladeira queimou e eu guardei insumos dentro dela; após reclamar, qual o prazo máximo para a empresa de energia vir verificar a geladeira?"
+ ],
+ "minha mae usa um concentrado de oxigenu em casa como faco pra impresa de lus me avisar antes de desligar a enegia pra manutensao com quantu tempo de antecedencia": [
+  "Minha mãe utiliza um concentrado de oxigênio em casa, como posso solicitar aviso prévio para a ANEEL antes de a energia ser suspensa para manutenção, com qual período de antecedência?",
+  "Como posso garantir que minha mãe, que usa oxigênio concentrado em casa, seja notificada com antecedência antes da suspensão do fornecimento de energia para manutenção, conforme previsto nas normas de direitos do consumidor?",
+  "Existe uma exigência legal para que os fornecedores de energia elétrica notifiquem os consumidores que utilizam equipamentos médicos, como oxigênio concentrado, antes de suspender o fornecimento de energia para manutenção? Qual o prazo mínimo de antecedência que deve ser observado?"
+ ],
+ "sou aposentadu e recebo o bpc eu tenho direito algum disconto na conta de lus": [
+  "Sou aposentada e recebo o BPC, tenho direito a algum desconto na minha conta de luz segundo a tarifa social da ANEEL?",
+  "Como aposentada e beneficiária do BPC, posso ter um desconto na minha conta de energia elétrica por meio de uma tarifa social estabelecida pela ANEEL?",
+  "Como pessoa aposentada que recebe o BPC, existe um desconto na conta de luz para quem está inscrito no programa de tarifa social da ANEEL?"
+ ],
+ "Fiquei sem luz por 30 horas na minha casa, na cidade, depois de um temporal em que foi decretada situação de emergência. A distribuidora tem que me compensar?": [
+  "Durante um temporal que gerou declaração de situação de emergência na minha cidade, fui afetado por uma interrupção do fornecimento de energia elétrica por um período de 30 horas. A distribuidora de energia é obrigada a me compensar por esse serviço interrompido?",
+  "Após um evento climático que gerou declaração de emergência, minha residência ficou sem energia por 30 horas. De acordo com a REN 1.000/2021 da ANEEL e o PRODIST, a distribuidora tem obrigação de compensar o consumidor por essa interrupção?",
+  "Na minha cidade, um temporal provocou a declaração de situação de emergência, resultando em interrupção do fornecimento de energia elétrica por 30 horas. O fornecimento foi interrompido de forma prolongada e não foi comunicado com antecedência. A distribuidora está obrigada a me compensar por esse evento?"
+ ],
+ "Minha filha usa aparelho elétrico no tratamento em casa e nossa renda é de dois salários mínimos, estamos no CadÚnico. Temos direito à tarifa social? Que documento a empresa pede?": [
+  "Minha filha utiliza um aparelho elétrico para tratamento domiciliar e nossa renda é equivalente a dois salários mínimos. Estamos inscritos no CadÚnico. Nesse caso, temos direito à tarifa social de energia elétrica? Qual o documento que a empresa de energia deve apresentar para comprovar essa condição?",
+  "Nossa família possui um aparelho elétrico essencial para tratamento médico em casa. A renda familiar é de dois salários mínimos e estamos registrados no CadÚnico. De acordo com a norma vigente, temos direito à tarifa social de energia elétrica? Quais os documentos exigidos pela empresa para a concessão dessa tarifa?",
+  "Estamos no CadÚnico e nossa renda é de dois salários mínimos. A filha utiliza um aparelho elétrico para tratamento domiciliar. A empresa de energia elétrica oferece tarifa social para casos como esse? Qual o documento oficial que a empresa exige para que a tarifa seja concedida?"
+ ],
+ "Pedi o ressarcimento um mês depois que meu aparelho queimou. Quanto tempo a empresa tem para me dar o resultado e, se aprovar, para pagar?": [
+  "Após o dano de meu aparelho, solicitei o ressarcimento um mês após o evento. Qual é o prazo máximo que a empresa tem para me comunicar a decisão e, em caso de aprovação, para efetuar o pagamento?",
+  "Quando meu aparelho queimou, apresentei uma solicitação de ressarcimento um mês após o evento. De acordo com a norma vigente, qual é o prazo máximo para a empresa responder e, se a solicitação for aprovada, para efetuar o pagamento?",
+  "Em decorrência do dano de um aparelho, solicitei o ressarcimento com um mês de atraso. Qual é o prazo máximo para a empresa emitir a resposta e, se a solicitação for aprovada, para efetuar o pagamento do ressarcimento?"
+ ],
+ "Vai ter manutenção programada na minha rua. Moro numa casa comum, mas meu pai usa respirador. Com quanto tempo de antecedência eu devo ser avisado?": [
+  "Em uma casa comum, onde meu pai utiliza um respirador, qual o prazo mínimo de aviso que devo receber antes de uma manutenção programada na minha rua?",
+  "Como deve ser o aviso prévio para manutenção elétrica em uma rua onde moro em casa comum e meu pai depende de um respirador para a respiração?",
+  "Se houver manutenção programada na minha rua e moro em uma casa comum com um familiar que usa respirador, qual o tempo mínimo de antecedência que devo ser informado?"
+ ],
+ "O Desconto Social na conta de luz já está valendo? Desde quando entra na fatura e até quanto de consumo ele cobre?": [
+  "O desconto social na fatura de energia elétrica já está ativo? A partir de quando ele é aplicado na conta e até qual volume de consumo ele se aplica?",
+  "O benefício de desconto social na conta de luz está vigente atualmente? Em qual período ele é considerado na fatura e até que quantidade de kWh ele é concedido?",
+  "O desconto social na conta de energia elétrica já está em vigor? Desde quando ele é incluído na fatura e até que nível de consumo ele é aplicado?"
+ ],
+ "Já reclamei na distribuidora e na ouvidoria dela e nada foi resolvido. Para onde posso ir agora e qual telefone eu ligo?": [
+  "Já solicitei ao fornecedor de distribuição e à sua ouvidoria, mas não houve resposta ou solução. Em que órgão devidamente competente posso recorrer e qual número de telefone devo ligar?",
+  "Após múltiplas reclamações à distribuidora e à sua ouvidoria, não houve resolução. Para onde devo ir como próximo passo e qual contato oficial devo fazer?",
+  "Reclamei já na distribuidora e na sua ouvidoria, mas não houve resposta. Qual é o órgão competente para seguir com a reclamação e qual é o telefone oficial a ser ligado?"
+ ],
+ "Em quanto tempo a distribuidora deve fazer a troca de titularidade da conta de luz de uma casa na área urbana?": [
+  "Qual o prazo máximo em que a distribuidora deve efetuar a alteração de titularidade de uma conta de energia elétrica em imóvel localizado em área urbana?",
+  "De acordo com a REN 1.000/2021 da ANEEL, em que período a distribuidora deve realizar a mudança de titularidade de uma conta de luz em residência urbana?",
+  "Qual o tempo máximo para que a distribuidora realize a alteração de titularidade de uma conta de energia elétrica em imóvel situado em zona urbana, conforme as normas vigentes?"
+ ],
+ "Quantas opções de data de vencimento da fatura a distribuidora deve oferecer ao consumidor?": [
+  "Qual o número de opções de data de vencimento da fatura que a distribuidora deve apresentar ao consumidor, de acordo com a REN 1.000/2021 da ANEEL?",
+  "De acordo com a norma REN 1.000/2021 da ANEEL, quantas opções de data de vencimento a distribuidora deve oferecer ao consumidor final?",
+  "A distribuidora é obrigada a oferecer quantas opções de data de vencimento da fatura ao consumidor, conforme o disposto na REN 1.000/2021 da ANEEL?"
+ ],
+ "De quanto em quanto tempo a distribuidora deve fazer a leitura do medidor de uma casa?": [
+  "Qual é a periodicidade com que a distribuidora deve realizar a leitura do medidor de energia em uma residência?",
+  "Com que frequência a empresa de distribuição deve efetuar a leitura do medidor instalado em uma casa?",
+  "A distribuidora é obrigada a realizar a leitura do medidor de energia de uma residência a cada quanto tempo?"
+ ],
+ "Depois de quanto tempo do vencimento de uma conta não paga a distribuidora não pode mais cortar a luz por causa dela?": [
+  "Qual o prazo máximo após o vencimento de uma fatura não paga que a distribuidora não pode mais suspender o fornecimento de energia elétrica por inadimplemento?",
+  "De acordo com a REN 1.000/2021 da ANEEL e o PRODIST, após quantos dias do vencimento de uma conta atrasada a distribuidora está obrigada a manter o fornecimento de energia elétrica?",
+  "Em que período, após o vencimento da fatura, a distribuidora não pode mais suspender o fornecimento de energia elétrica por inadimplemento, conforme as normas do PRODIST e da REN 1.000/2021 da ANEEL?"
+ ],
+ "Com quantos dias de antecedência a conta de luz de uma casa deve ser entregue antes do vencimento?": [
+  "De acordo com a REN 1.000/2021 da ANEEL, qual o prazo mínimo de antecedência para a entrega da fatura de energia elétrica para uma residência, antes do vencimento da mesma?",
+  "A tarifa social de energia elétrica, conforme o PRODIST e a REN 1.000/2021, exige que a fatura seja entregue com quantos dias de antecedência ao vencimento?",
+  "Em relação à norma regulamentadora da energia elétrica (REN 1.000/2021), qual o número de dias que a empresa de distribuição deve antecipar a entrega da conta de luz para uma residência antes do vencimento?"
+ ],
+ "Se a vistoria da entrada de energia de uma ligação nova for reprovada, em quanto tempo a distribuidora deve entregar o relatório com os motivos?": [
+  "Se a vistoria da entrada de energia de uma ligação nova for reprovada, em quanto tempo a distribuidora deve entregar o relatório com os motivos da rejeição?",
+  "Em caso de rejeição da vistoria da entrada de energia para uma nova ligação, qual o prazo máximo para a distribuidora enviar o relatório com os fundamentos da avaliação?",
+  "Quando a vistoria da entrada de energia de uma nova ligação é reprovada, qual o prazo para a distribuidora comunicar os motivos da não aprovação?"
+ ],
+ "Na hora de cobrar uma conta de luz atrasada, a empresa pode me humilhar ou me ameaçar?": [
+  "Durante o processo de cobrança de uma fatura de energia elétrica vencida, a empresa de distribuição pode utilizar atitudes que envolvam humilhação ou ameaças?",
+  "Ao cobrar uma conta de luz com inadimplemento, é permitido que a empresa de energia elétrica utilize linguagem depreciativa ou ameaças contra o consumidor?",
+  "Em caso de fatura de energia elétrica não paga, a empresa pode aplicar pressões psicológicas ou ameaças ao consumidor durante a cobrança?"
+ ],
+ "Aluguei uma casa e o morador antigo deixou conta de luz atrasada. A empresa pode me obrigar a pagar essa dívida pra passar a conta pro meu nome?": [
+  "O proprietário anterior da casa deixou a conta de energia elétrica em atraso. A empresa de energia pode me obrigar a assumir essa dívida para que eu assuma o nome da conta?",
+  "Como titular do aluguel de uma casa, estou sendo questionado sobre assumir uma dívida de energia elétrica deixada pelo morador anterior. A empresa de energia pode me cobrar essa dívida para transferir a conta para o meu nome?",
+  "O antigo morador da casa que aluguei deixou a conta de luz vencida. A empresa de energia pode me obrigar a pagar essa fatura atrasada para que eu assuma a conta de energia elétrica no nome do meu aluguel?"
+ ],
+ "A conta de luz veio com um valor cobrado a mais e eu já paguei. Eles só me devolvem o que paguei a mais ou tem alguma coisa além disso?": [
+  "A fatura de energia elétrica apresentou um valor excedente que já foi pago, e agora a empresa está solicitando a devolução apenas do valor pago. Existe alguma obrigação adicional além da devolução do valor excedente?",
+  "Ao receber uma fatura de energia elétrica com um valor acima do devido, já pago, a empresa me informou que retornará apenas o valor pago. Há, segundo a norma, alguma outra obrigação de devolução ou compensação?",
+  "Fui notificado de uma cobrança excessiva em minha conta de energia elétrica, que já foi paga integralmente. A empresa afirma que me devolverá apenas o valor pago. De acordo com a REN 1.000/2021 da ANEEL e o CDC, há alguma obrigação adicional que deveria ser cumprida além da devolução do valor excedente?"
+ ],
+ "Tenho uma conta de luz de quatro meses atrás que ficou sem pagar. A empresa ainda pode cortar minha luz por causa dela?": [
+  "A empresa de energia elétrica ainda pode suspender o fornecimento de energia elétrica por conta de uma fatura vencida e não paga de quatro meses atrás?",
+  "Em caso de inadimplemento de quatro meses, a concessionária de energia elétrica tem o direito de suspender o fornecimento de energia elétrica a um consumidor?",
+  "Com uma fatura de energia elétrica atrasada por quatro meses, é possível que a empresa de energia elétrica ainda corte a luz do consumidor?"
+ ],
+ "Minha conta vence antes do meu salário cair. Posso pedir pra mudar o dia do vencimento?": [
+  "Minha fatura de energia elétrica vence antes do meu salário ser pago. É possível solicitar a alteração do dia de vencimento da conta?",
+  "A data de vencimento da minha conta de energia elétrica está antecipada em relação ao meu pagamento de salário. Existe a possibilidade de mudar esse dia de vencimento?",
+  "O vencimento da minha fatura de energia elétrica ocorre antes do meu salário ser depositado. Posso pedir para que o dia de vencimento da conta seja alterado para um dia posterior ao recebimento do salário?"
+ ],
+ "Minha conta deste mês veio com 40 dias de consumo. A leitura do relógio não tinha que ser feita todo mês?": [
+  "A minha conta deste mês apresenta um consumo de 40 dias, o que me leva a questionar se a leitura do relógio deveria ser realizada mensalmente, conforme previsto nas normas de fornecimento de energia elétrica?",
+  "O consumo registrado na minha fatura deste mês corresponde a 40 dias, o que me faz dúvidar se a leitura do relógio é obrigatória a cada mês, conforme estabelecido pelo REN 1.000/2021 da ANEEL e outras normas de direito do consumidor?",
+  "A fatura deste mês indica um consumo de 40 dias, o que me leva a questionar se a leitura do relógio é obrigatória mensalmente, conforme o disposto no REN -1.000/2021 e no Código de Defesa do Consumidor (CDC)?"
+ ],
+ "aluguei uma casa o morador antigo deixou conta de lus atrasado a impresa pode me obrigar a pagar essa divida pra passar a conta pro meu nome": [
+  "O morador anterior deixou uma conta de luz com inadimplemento, e a empresa de distribuição pode me obrigar a assumir essa dívida para que eu possa assumir a conta no meu nome?",
+  "Como o antigo morador deixou a conta de energia elétrica com fatura vencida e não paga, a distribuidora pode me cobrar essa dívida para que eu possa assumir a titularidade da conta?",
+  "O proprietário anterior deixou uma conta de luz com inadimplemento, e a empresa de distribuição pode me obrigar a pagar essa dívida para que eu possa passar a conta ao meu nome?"
+ ],
+ "conta de lus veio com um valor cobrado a mais e eu ja paguei eles so me devolvem o que paguei a mais ou tem alguma coisa alem disso": [
+  "A fatura de energia elétrica que recebi apresentou um valor adicionado sem justificativa, e já efeci o pagamento. O fornecedor me devolve apenas o valor excedente, ou há outra obrigação legal que me deveriam cumprir?",
+  "A conta de luz apresentou um acréscimo indevido, e já paguei. O fornecedor me devolve apenas o valor excedente, ou há outra responsabilidade prevista na norma de direitos do consumidor que me deveriam garantir?",
+  "A fatura de energia elétrica que recebi tem um valor cobrado a mais, e já efeci o pagamento. O fornecedor me devolve apenas o valor excedente, ou há outra obrigação prevista na legislação de direitos do consumidor que me deveriam assegurar?"
+ ],
+ "tenho uma conta de lus de quatro meses atras ficou sem pagar a impresa ainda pode cortar minha lus por causa dela": [
+  "Tenho uma conta de luz com quatro meses de atraso, ainda não paguei a fatura, pode haver suspensão do fornecimento por esse inadimplemento?",
+  "A minha conta de energia elétrica tem quatro meses de fatura vencida e não paga, é possível que a empresa de energia me corte a luz por esse motivo?",
+  "Estou com uma conta de luz com quatro meses de inadimplemento e ainda não paguei a fatura, posso ser suspensão do fornecimento de energia elétrica por isso?"
+ ],
+ "Comprei um apartamento e quero passar a conta de luz pro meu nome. Em quanto tempo a distribuidora tem que fazer a troca e ela pode exigir que eu pague as contas atrasadas do antigo dono?": [
+  "Ao adquirir um apartamento, desejo transferir a conta de energia elétrica para o meu nome. Qual o prazo máximo que a distribuidora tem para efetuar essa alteração de titularidade, e é possível que ela exija o pagamento das faturas vencidas e não pagas do antigo proprietário?",
+  "Como novo proprietário de um imóvel, pretendo mudar o nome da conta de luz para o meu. Em que período a distribuidora deve realizar essa alteração de titularidade, e pode ela cobrar as contas atrasadas do anterior titular?",
+  "Tenho adquirido um apartamento e gostaria de transferir a conta de energia elétrica para o meu nome. Qual o tempo máximo que a distribuidora tem para efetuar essa mudança, e é válido que ela exija o pagamento das faturas vencidas do antigo dono?"
+ ],
+ "Descobri que a empresa me cobrou a mais na conta de luz. Quanto ela tem que me devolver, com qual correção e até quando?": [
+  "A empresa de energia elétrica me cobrou um valor excedente na minha fatura. Qual é o valor de devolução, qual a correção aplicável e até que data essa devolução deve ser efetuada?",
+  "Identifiquei um erro de cobrança na minha conta de energia elétrica. Quanto devo receber de devolução, qual a base jurídica para a correção e qual o prazo máximo para a restituição?",
+  "Fui notificado de uma cobrança incorreta na minha conta de luz. Qual o valor exato que devo receber de restituição, qual a natureza da correção e até quando a empresa deve efetuar o pagamento?"
+ ],
+ "Tenho placa solar em casa. Por quanto tempo valem os créditos de energia que sobram e o que acontece com eles quando vencem?": [
+  "Com uma placa solar instalada em minha residência, por quanto tempo os créditos de energia gerados e não utilizados permanecem válidos, e qual é a consequência quando esse prazo expira?",
+  "Ao possuir um sistema solar em minha casa, quais são os prazos de validade dos créditos de energia acumulados, e o que ocorre com esses créditos ao final do período estipulado?",
+  "Posso conservar os créditos de energia gerados pelo meu sistema solar em casa por um período determinado? E o que acontece com esses créditos quando esse período termina?"
+ ],
+ "Quanto custa hoje o kWh da Enel em São Paulo?": [
+  "Qual é o valor atual do kilowatt-hora da Enel para residências em São Paulo, conforme a tarifa vigente no momento?",
+  "O que custa um kWh da Enel em São Paulo no período atual, considerando as tarifas de energia elétrica em vigor?",
+  "Qual é o preço do kWh da Enel para consumidores residenciais em São Paulo, no mês de abril de 2025?"
+ ],
+ "Qual é a bandeira tarifária deste mês e quanto ela acrescenta por kWh?": [
+  "Qual é a bandeira tarifária ativa neste mês e qual é o valor adicional por kWh cobrado nessa bandeira?",
+  "Em que bandeira tarifária o consumidor está inserido neste mês e qual o acréscimo de valor por unidade de energia (kWh) nessa condição?",
+  "Qual é a bandeira tarifária vigente neste mês e qual o valor extra por kWh que ela impõe ao consumidor?"
+ ],
+ "Quanto eu vou receber de indenização por dano moral por ter ficado dois dias sem luz?": [
+  "Qual é o valor da indenização por dano moral decorrente da suspensão do fornecimento de energia elétrica por dois dias?",
+  "Em caso de interrupção do fornecimento de energia elétrica por período de dois dias, qual o valor de indenização por dano moral previsto no regime de direitos do consumidor?",
+  "Qual o valor de indenização por dano moral que devo receber por ter ficado sem energia elétrica por dois dias?"
+ ],
+ "Qual é o telefone do Procon de São Paulo?": [
+  "Qual é o número de contato do Procon para o estado de São Paulo?",
+  "O que é o telefone do órgão de defesa do consumidor no estado de São Paulo?",
+  "Como entrar em contato com o Procon de São Paulo para auxílio no direito do consumidor?"
+ ],
+ "Qual é o valor da contribuição de iluminação pública cobrada na conta em São Paulo?": [
+  "Qual é o valor da contribuição de iluminação pública prevista na tarifa de energia elétrica para residências em São Paulo, conforme as normas da ANEEL e do PRODIST?",
+  "Em São Paulo, qual é o valor da contribuição de iluminação pública que é incluída na fatura de energia elétrica de consumidores residenciais?",
+  "De acordo com a regulamentação da ANEEL e do PRODIST, qual é o valor da contribuição de ilumina-ção pública cobrado na conta de energia elétrica para residências no estado de São Paulo?"
+ ],
+ "Quantas famílias recebem a Tarifa Social de Energia no estado de São Paulo?": [
+  "Quantas famílias estão beneficiadas pela Tarifa Social de Energia no estado de São Paulo, de acordo com as normas regulamentadoras da ANEEL e do PRODIST?",
+  "Em São Paulo, quantas famílias estão inscritas no programa de Tarifa Social de Energia, conforme o REN 1.000/2021 e as diretrizes do CDC?",
+  "Qual é o número de famílias que recebem a Tarifa Social de Energia no estado de São Paulo, conforme as regras estabelecidas pelo PRODIST e a legislação da ANEEL?"
+ ],
+ "A Sabesp pode cortar minha água por conta atrasada?": [
+  "A Sabesp pode suspender o fornecimento de água por inadimplemento de fatura vencida e não paga?",
+  "É possível que a Sabesp interrompa o serviço de água devido a uma conta atrasada?",
+  "A Sabesp tem o direito de suspender o fornecimento de água em caso de inadimplemento da tarifa de água?"
+ ],
+ "Minha internet caiu ontem. A operadora tem que me dar desconto na mensalidade?": [
+  "A operadora de internet me deve desconto na fatura mensal caso o serviço tenha sido interrompido por causa de falha técnica ou inadimplência do consumidor?",
+  "Em caso de interrupção do serviço de internet, a operadora está obrigada a conceder um desconto na mensalidade devido à falha no fornecimento?",
+  "Se a conexão de internet foi interrompida ontem, a operadora deve ajustar a fatura com desconto por esse evento de interrupção?"
+ ],
+ "Como faço para parcelar o IPVA do meu carro?": [
+  "Como posso realizar a parcelamento da contribuição de imposto sobre a propriedade de veículos automotores (IPVA) do meu automóvel?",
+  "Existe algum procedimento para dividir o valor do IPVA do meu carro em parcelas?",
+  "Como posso efetuar o pagamento do IPVA do meu veículo em parcelas?"
+ ],
+ "Qual é a previsão do tempo para amanhã em São Paulo?": [
+  "Qual é a previsão do tempo para amanhã em São Paulo?",
+  "Qual é a previsão climática para o dia de amanhã na cidade de São Paulo?",
+  "O que diz o tempo para amanhã em São Paulo?"
+ ],
+ "Como peço aposentadoria por idade no INSS?": [
+  "Como solicitar a aposentadoria por idade no INSS?",
+  "Qual o procedimento para obter a aposentadoria por idade no Instituto Nacional do Seguro Social?",
+  "Como faço a solicitação da aposentadoria por idade no INSS?"
+ ],
+ "Me passa uma receita de bolo de cenoura com cobertura de chocolate?": [
+  "Poderia me passar uma receita de bolo de cenoura com cobertura de chocolate?",
+  "Gostaria de uma receita para fazer bolo de cenoura com cobertura de chocolate?",
+  "Me ajuda a encontrar uma receita de bolo de cenoura com cobertura de chocolate?"
+ ],
+ "Qual é o horário de funcionamento da agência de atendimento presencial da Enel no centro de São Paulo?": [
+  "Qual é o horário de funcionamento da agência presencial da Enel localizada no centro de São Paulo?",
+  "Em que horário a agência de atendimento da Enel no centro de São Paulo está aberta ao público?",
+  "A Enel possui agência presencial no centro de São Paulo. Quais são os horários de funcionamento dessa unidade?"
+ ],
+ "Quantas reclamações contra a Enel a ANEEL recebeu em 2025?": [
+  "Qual o número total de reclamações apresentadas à ANEEL contra a Enel no ano de 2025?",
+  "Quantas denúncias foram registradas pela ANEEL relacionadas à Enel no período de 2025?",
+  "A ANEEL registrou quantas reclamações específicas contra a empresa Enel em 2025?"
+ ],
+ "Como faço para tirar a segunda via do RG?": [
+  "Como solicito a segunda via do registro geral do consumidor de energia elétrica?",
+  "Como obter uma cópia complementar do registro de titularidade de energia elétrica?",
+  "Como faço para receber uma cópia da documentação de identificação do consumidor de energia elétrica?"
+ ],
+ "A operadora de TV por assinatura pode cobrar multa se eu cancelar antes de um ano?": [
+  "A empresa de TV por assinatura pode aplicar uma multa caso o consumidor deseje cancelar o serviço antes do término de um ano de contrato?",
+  "É possível que a operadora de serviço de TV por assinatura cobre uma penalidade por cancelamento antecipado antes do prazo de um ano?",
+  "Ao cancelar um contrato de TV por assinatura antes do vencimento de um ano, a operadora pode cobrar uma multa de acordo com a norma de direitos do consumidor?"
+ ],
+ "Qual é o prazo para a religação de urgência de uma casa em área rural?": [
+  "Qual é o prazo máximo para a restauração do fornecimento de energia elétrica em caso de suspensão por inadimplemento, em residências localizadas em áreas rurais, sob o regime de religação de urgência?",
+  "Em áreas rurais, qual é o tempo limite para a ANEEL realizar a religação de energia elétrica em situação de emergência devido a inadimplemento da fatura?",
+  "Qual é o prazo para a ANEEL restabelecer o fornecimento de energia elétrica em residências rurais, em caso de religação de urgência decorrente de fatura vencida e não paga?"
+ ],
+ "Se eu pagar a conta de luz com atraso, a distribuidora pode cobrar multa e juros?": [
+  "Se houver inadimplemento na fatura de energia elétrica, a distribuidora pode aplicar multa e juros sobre o valor da conta vencida e não paga?",
+  "Ao não quitar a fatura de luz dentro do prazo estipulado, a distribuidora está autorizada a cobrar multa e juros sobre o valor da conta atrasada?",
+  "Em caso de atraso no pagamento da conta de energia elétrica, a distribuidora pode cobrar multa e juros conforme previsto na tarifa social ou nas normas de direito do consumidor?"
+ ],
+ "Depois que eu reclamo do medidor, em quanto tempo a distribuidora tem que verificar?": [
+  "Após a minha reclamação sobre o medidor, em quanto tempo a distribuidora é obrigada a realizar a verificação do mesmo?",
+  "Quando a distribuidora deve efetuar a avaliação do medidor após uma reclamação formalizada?",
+  "Em que prazo a distribuidora deve verificar o medidor após a apresentação de uma reclamação?"
+ ],
+ "O que é minigeração distribuída?": [
+  "O que é a minigeração distribuída segundo a norma REN 1.000/2021 da ANEEL?",
+  "Qual é a definição de minigeração distribuída no contexto da regulamentação de energia elétrica brasileira?",
+  "O que significa minigeração distribuída no âmbito do sistema de distribuição de energia elétrica no Brasil?"
+ ],
+ "Quando eu peço o desligamento definitivo, em quanto tempo sai a fatura final?": [
+  "Quando solicito a suspensão definitiva do fornecimento de energia elétrica, em quanto tempo é emitida a fatura final de consumo?",
+  "Ao pedir o desligamento definitivo da conta de energia elétrica, qual o prazo máximo para a emissão da fatura de encerramento do serviço?",
+  "Em caso de solicitação de desligamento definitivo da energia elétrica, qual o tempo máximo para a emissão da fatura final de consumo?"
+ ],
+ "A distribuidora pode se recusar a receber meu pedido de ressarcimento de danos?": [
+  "A distribuidora pode negar a aceitação de meu pedido de ressarcimento de danos decorrentes de ato ilícito ou falha no fornecimento de energia elétrica?",
+  "É possível que a distribuidora refuse a recepção de uma solicitação de indenização por danos causados por sua atuação ou inadimplência no serviço de energia?",
+  "A distribuidora pode se recusar a receber uma solicitação de reparação de danos decorrentes de falha no serviço de energia elétrica, conforme previsto nas normas de direitos do consumidor?"
+ ],
+ "O que precisa constar no documento com o resultado da análise do ressarcimento?": [
+  "Quais elementos devem estar incluídos no documento que comprova o resultado da análise de ressarcimento?",
+  "O que deve ser especificado no comprovante do resultado da análise de ressarcimento?",
+  "Quais informações devem ser registradas no documento que apresenta o resultado da análise de ressarcimento?"
+ ],
+ "A ouvidoria da distribuidora pode prorrogar o prazo para me responder?": [
+  "A ouvidoria da distribuidora pode estender o prazo para responder a minha solicitação?",
+  "A unidade de atendimento da distribuidora pode prorrogar o tempo de resposta à minha solicitação?",
+  "A ouvidoria da distribuidora pode adiar a resposta à minha solicitação, por motivos de carga de trabalho ou análise?"
+ ],
+ "Quais formas de ressarcimento a distribuidora pode escolher quando aprova o pedido?": [
+  "Quais opções de compensação a distribuidora pode adotar quando aceita o pedido de restituição?",
+  "Quais mecanismos de ressarcimento a distribuidora pode aplicar ao aprovar a solicitação?",
+  "Quais alternativas de reintegração de valor a distribuidora pode escolher ao validar o pedido?"
+ ],
+ "A distribuidora tem que mostrar no site quantas casas estão sem energia em cada bairro?": [
+  "A distribuidora é obrigada, por meio de sua plataforma digital, a divulgar, em cada bairro, o número de residências afetadas pela interrupção do fornecimento de energia?",
+  "O site da distribuidora deve indicar, de forma clara e atualizada, quantos imóveis estão sem energia em cada região territorial?",
+  "É exigido, por norma regulatória, que a distribuidora exiba, no seu site, o número de casas sem energia em cada bairro?"
+ ],
+ "Quais são as cores das bandeiras tarifárias?": [
+  "Quais são as cores das bandeiras indicadas na tarifa de energia elétrica para o período de vigência da tarifa social?",
+  "O que significam as cores das bandeiras tarifárias definidas pelo REN 1.000/2021 da ANEEL?",
+  "Quais são as cores utilizadas nas bandeiras tarifárias de energia elétrica, conforme regulamentação da ANEEL e do PRODIST?"
+ ],
+ "A tarifa social pode ser aplicada em mais de uma casa da mesma família?": [
+  "A tarifa social de energia elétrica pode ser utilizada para mais de uma unidade residencial pertencente à mesma família?",
+  "É possível que a tarifa social de energia elétrica seja atribuída a mais de uma residência dentro de uma mesma família?",
+  "O benefício da tarifa social de energia elétrica pode ser aplicado a múltiplas casas pertencentes à mesma família?"
+ ],
+ "Preciso pedir a tarifa social ou ela é concedida automaticamente?": [
+  "A tarifa social de energia elétrica é concedida automaticamente ao consumidor, ou é necessário solicitar ativamente?",
+  "O consumidor deve solicitar a tarifa social de energia elétrica, ou ela é atribuída automaticamente com base em critérios de renda?",
+  "É possível que a tarifa social de energia elétrica seja concedida automaticamente, ou é obrigatório o pedido formal do consumidor?"
+ ],
+ "Que informações eu preciso dar quando peço ressarcimento de um aparelho queimado?": [
+  "Quais dados são obrigatórios para solicitar o ressarcimento de um aparelho danificado por fogo?",
+  "O que devo fornecer para pedir indenização por um aparelho queimado?",
+  "Quais informações devem ser apresentadas em uma solicitação de ressarcimento por aparelho queimado?"
+ ],
+ "Posso pedir para parar de receber SMS da distribuidora sobre falta de energia?": [
+  "É possível solicitar a suspensão do envio de mensagens SMS pela distribuidora relacionadas à falta de energia em minha conta?",
+  "Posso exigir que a distribuidora interrompa os avisos por SMS sobre interrupção do fornecimento de energia?",
+  "Existe a possibilidade de solicitar a paralisação dos SMS enviados pela distribuidora sobre ausência de energia em minha residência?"
+ ],
+ "A Comgás pode cortar o gás se eu atrasar a conta?": [
+  "A Comgás pode suspender o fornecimento de gás, em caso de inadimplemento da fatura?",
+  "Em caso de fatura vencida e não paga, a Comgás tem o direito de interromper o fornecimento de gás?",
+  "A Comgás pode realizar a suspensão do fornecimento de gás por inadimplemento da conta?"
+ ],
+ "Como pagar o IPTU parcelado em São Paulo?": [
+  "Como efetuar o pagamento do IPTU em parcelas no município de São Paulo?",
+  "Qual é o procedimento para pagar o imposto predial e territorial urbano (IPTU) em parcelas em São Paulo?",
+  "Como realizar o pagamento do IPTU com parcelamento no estado de São Paulo?"
+ ],
+ "Como recorrer de uma multa de trânsito?": [
+  "Como apresentar uma reclamação contra uma multa de trânsito emitida por órgão público?",
+  "Qual o procedimento para contestar uma multa de trânsito devidamente aplicada?",
+  "Como fazer uma reclamação formal contra uma multa de trânsito?"
+ ],
+ "Quanto tempo demora para tirar o passaporte?": [
+  "Qual o prazo para a liberação do documento de identificação nacional do cidadão?",
+  "Em quantos dias é possível obter o passaporte após a solicitação?",
+  "O que diz a norma sobre o tempo de processamento para a emissão do passaporte?"
+ ],
+ "Qual time ganhou o campeonato brasileiro do ano passado?": [
+  "Qual equipe venceu o Campeonato Brasileiro de futebol em 2023?",
+  "Quem foi campeão da Série A do Brasileiro no ano passado?",
+  "Qual time conquistou o título do Campeonato Brasileiro de 2023?"
+ ],
+ "Me conta uma piada curta.": [
+  "Me conta uma piada curta, por favor.",
+  "Pode me dar uma piada curta?",
+  "Dá uma piada curta pra mim?"
+ ],
+ "Escreva uma função em Python que ordena uma lista.": [
+  "Crie uma função em Python que realize a ordenação de uma lista de elementos.",
+  "Desenvolva uma função em Python para ordenar os itens de uma lista de forma crescente.",
+  "Implemente uma função em Python que organize uma lista em ordem ascendente."
+ ],
+ "Vai chover no fim de semana em Santos?": [
+  "Vai chover no fim de semana em Santos?",
+  "Haverá chuva no fim de semana em Santos?",
+  "A previsão do tempo indica chuva no fim de semana em Santos?"
+ ],
+ "Como faço para trocar a resistência do chuveiro elétrico?": [
+  "Como proceder para substituir a resistência do chuveiro elétrico?",
+  "Qual é o passo a passo para trocar a resistência de um chuveiro elétrico?",
+  "Como realizar a substituição da resistência em um chuveiro elétrico?"
+ ],
+ "Qual a melhor marca de geladeira que gasta pouca energia?": [
+  "Qual modelo de geladeira apresenta o menor consumo de energia elétrica segundo as normas de eficiência energética da ANEEL?",
+  "Qual aparelho de refrigeração com maior eficiência energética está previsto na regulamentação de consumo de energia elétrica para residências?",
+  "Qual geladeira, de acordo com as diretrizes de eficiência energética do setor, apresenta o menor consumo de energia elétrica para uso doméstico?"
+ ],
+ "Minha operadora de celular pode cancelar meu plano sem avisar?": [
+  "A minha operadora de telefonia pode suspender o fornecimento de serviço de celular sem prévio aviso?",
+  "É possível que a minha operadora de celular interrompa o plano sem notificação prévia?",
+  "A operadora de celular pode encerrar o contrato de serviço sem dar aviso antecipado?"
+ ],
+ "Como pedir o seguro-desemprego?": [
+  "Como solicitar o auxílio-doença para desemprego?",
+  "Como obter o benefício de desemprego por inadimplência no contrato de trabalho?",
+  "Como pedir o auxílio-estável em caso de perda de emprego?"
+ ],
+ "O plano de saúde é obrigado a cobrir cirurgia de catarata?": [
+  "O plano de saúde está obrigado a incluir a cobertura de procedimentos cirúrgicos de catarata?",
+  "É obrigatório que um plano de saúde cubra a cirurgia de catarata?",
+  "O plano de saúde deve cobrir a cirurgia de catarata conforme os direitos do consumidor em saúde?"
+ ],
+ "Qual é a capital da Austrália?": [
+  "Qual é a capital do país Austrália?",
+  "O que é a capital da Austrália?",
+  "Qual a cidade que é a capital da Austrália?"
+ ],
+ "Como fazer pão caseiro sem fermento biológico?": [
+  "Como fazer pão caseiro sem usar levedura ou fermento biológico?",
+  "Como produzir pão caseiro sem adicionar fermento natural ou levedura?",
+  "Como fazer pão caseiro sem depender de fermento biológico ou levedura?"
+ ],
+ "O condomínio pode proibir que eu tenha cachorro no apartamento?": [
+  "O condomínio pode estabelecer uma regra que proíba a presença de animais de estimação em um apartamento dentro do edifício?",
+  "É possível que o condomínio restrinja ou proíba a manutenção de cachorro em um apartamento com base em suas normas?",
+  "O condomínio pode impedir que um morador tenha um cachorro no seu apartamento, conforme as regras de uso do imóvel?"
+ ],
+ "Como declarar o imposto de renda sendo MEI?": [
+  "Como declarar o imposto de renda como microempreendedor individual (MEI)?",
+  "Como faço a declaração do imposto de renda se sou MEI?",
+  "Qual o procedimento para declarar o imposto de renda no regime de MEI?"
+ ],
+ "A loja é obrigada a trocar um sapato que não serviu?": [
+  "De acordo com a Lei de Consumidor, a loja está obrigada a trocar um sapato que não se adapta ao uso do consumidor?",
+  "O consumidor tem direito a solicitar a substituição de um sapato que não atende aos seus requisitos de uso, conforme normas de proteção ao consumidor?",
+  "Em caso de produto que não serve, a loja deve efetuar a troca, conforme previsão do Código de Defesa do Consumidor (CDC)?"
+ ],
+ "Quantos quilômetros tem uma maratona?": [
+  "Qual a distância em quilômetros que compõe uma maratona?",
+  "A maratona tem quantos quilômetros de extensão?",
+  "Qual o valor em quilômetros da distância de uma maratona?"
+ ],
+ "Como faço para agendar vacina no posto de saúde?": [
+  "Como proceder para agendar a vacinação no posto de saúde?",
+  "Qual o processo para marcar a vacina no posto de saúde?",
+  "Como posso fazer a solicitação de vacina no posto de saúde?"
+ ],
+ "Quanto custa em reais o kWh da tarifa social da Enel?": [
+  "Qual é o valor em reais do kWh da tarifa social oferecida pela Enel, conforme regulamentação vigente da ANEEL?",
+  "O que custa, em reais, o quilowatt-hora da tarifa social da Enel, de acordo com as normas do REN 1.000/2021 e do PRODIST?",
+  "Qual é o preço em reais por kWh da tarifa social da Enel, considerando as diretrizes do CDC e da tarifa social de energia elétrica?"
+ ],
+ "Quando vai ser o próximo reajuste da conta de luz da Enel?": [
+  "Qual será o próximo momento em que a tarifa da energia elétrica da Enel será ajustada de acordo com a REN 1.000/2021 da ANEEL?",
+  "Em que período ocorrerá o próximo reajuste da fatura da Enel, considerando as normas de tarifação e os prazos definidos pelo PRODIST e a REN 1.000/2021?",
+  "Quando será aplicado o próximo reajuste na conta de energia elétrica da Enel, conforme os critérios de atualização tarifária estabelecidos pela ANEEL e pelo PRODIST?"
+ ],
+ "Qual vai ser a bandeira tarifária de dezembro?": [
+  "Qual será a bandeira de tarifa vigente no mês de dezembro, de acordo com a regulamentação da ANEEL?",
+  "Qual a bandeira tarifária prevista para o mês de dezembro, conforme a REN 1.000/2021 e as normas de tarifas da ANEEL?",
+  "Qual a bandeira de energia elétrica que será aplicada em dezembro, considerando a atualização da tarifa e os critérios de classificação da ANEEL?"
+ ],
+ "Quanto a Enel lucrou em 2025?": [
+  "Qual o lucro da Enel no ano de 2025 conforme as informações oficiais?",
+  "A Enel obteve um lucro em 2025? Se sim, qual foi o valor?",
+  "Em 2025, qual foi a rentabilidade da Enel, considerando os dados públicos?"
+ ],
+ "Qual é o telefone do Procon de Guarulhos?": [
+  "Qual é o número de contato do Procon localizado em Guarulhos para atendimento ao consumidor?",
+  "O que é o telefone do órgão de defesa do consumidor em Guarulhos, responsável pelo atendimento de casos de energia elétrica?",
+  "Como entrar em contato com o Procon de Guarulhos para resolver uma questão relacionada ao direito do consumidor de energia elétrica?"
+ ],
+ "Quantos dias durou o apagão de novembro de 2023 em São Paulo?": [
+  "Qual foi a duração, em dias, do evento de suspensão do fornecimento de energia elétrica em São Paulo no mês de novembro de 2023?",
+  "O apagão ocorrido em novembro de 2023 em São Paulo durou quantos dias consecutivos?",
+  "Em que período, em dias, houve a interrupção do serviço de energia elétrica em São Paulo durante o mês de novembro de 2023?"
+ ],
+ "A Enel vai perder a concessão em São Paulo?": [
+  "A Enel poderá perder a concessão de fornecimento de energia elétrica no estado de São Paulo devido a inadimplemento ou violação de normas regulatórias?",
+  "Há risco de suspensão da concessão da Enel para o estado de São Paulo, conforme os critérios estabelecidos pela ANEEL e o REN 1.000/2021?",
+  "A Enel está exposta ao risco de perda da concessão de energia elétrica no estado de São Paulo, com base nas regras de gestão e fiscalização do setor?"
+ ],
+ "Quanto custa instalar um sistema de placa solar de 5 kW?": [
+  "Qual o valor da instalação de um sistema fotovoltaico de 5 kW para residência?",
+  "O custo de montar uma placa solar de 5 kW em uma residência é qual?",
+  "Qual o preço de instalar um sistema solar de 5 kW para consumo residencial?"
+ ],
+ "Qual empresa instala placa solar mais barato em São Paulo?": [
+  "Qual prestadora de serviço de instalação de painéis solares oferece o menor custo para residências em São Paulo?",
+  "Quais empresas de energia solar apresentam o menor preço para instalação de sistemas fotovoltaicos no estado de São Paulo?",
+  "Em São Paulo, qual fornecedor de energia solar realiza a instalação de placa solar com o menor valor de custo?"
+ ],
+ "Quanto a Enel cobra em reais pela taxa de religação de urgência?": [
+  "Qual o valor, em reais, cobrado pela Enel pela taxa de religação de urgência conforme a normativa vigente?",
+  "Em que valor, em reais, a Enel aplica a taxa de religação de urgência para clientes com fatura vencida e não paga?",
+  "Qual o valor em reais da taxa de religação de urgência cobrada pela Enel, de acordo com as normas de direitos do consumidor de energia elétrica?"
+ ]
+}

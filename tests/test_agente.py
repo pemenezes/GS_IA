@@ -306,6 +306,58 @@ def test_correcao_v_reescreve_so_voz():
         assert ret.consultas == [esperado]
 
 
+class _RetrieverMulti:
+    """Cada consulta devolve um ranking próprio; o reranker inverte a ordem recebida."""
+
+    cfg_ret = {"rrf_k": 60}
+
+    def __init__(self, rankings, cos):
+        self.rankings, self.cos, self.consultas = rankings, cos, []
+
+    def buscar(self, q, k=None, modo="denso", reranker=None, vetor=None):
+        self.consultas.append(q)
+        return [
+            SimpleNamespace(
+                chunk={"chunk_id": i, "fonte": "REN", "texto": f"Texto {i}."},
+                chunk_id=i,
+                score=0.0,
+                score_denso=self.cos.get(q, 0.5),
+            )
+            for i in self.rankings.get(q, [])
+        ]
+
+    def _reranquear(self, pergunta, cands):
+        for n, c in enumerate(cands):
+            c.score = float(n)
+
+
+def test_multiconsulta_funde_rankings_e_usa_o_maior_cosseno():
+    from src.rag.multiconsulta import buscar_multi, reformular
+
+    ret = _RetrieverMulti({"p": ["a", "b"], "r1": ["c", "a"]}, {"p": 0.55, "r1": 0.7})
+    cands, nota = buscar_multi(ret, ["p", "r1"], k=2)
+    assert [c.chunk_id for c in cands] == ["a", "c"] and nota == 0.7
+    cands, _ = buscar_multi(ret, ["p", "r1"], k=3, reranker=True)
+    assert [c.chunk_id for c in cands][0] != "a"
+    assert reformular("p", _LLM(["não é json"])) == []
+    llm = _LLM([json.dumps({"reformulacoes": ["r1", " ", "r2", "r3"]})])
+    assert reformular("p", llm) == ["r1", "r2", "r3"]
+
+
+def test_correcao_m_no_c2():
+    rot = _rot(agenda=False, normas=True)
+    ret = _RetrieverMulti({"p?": ["a"], "r1": ["b"]}, {"p?": 0.5, "r1": 0.7})
+    cfg = {**CFG, "retrieval": {**CFG["retrieval"], "multiconsulta": {"k": 5, "tau": 0.66}}}
+    llm = _LLM([rot, json.dumps({"reformulacoes": ["r1"]}), "{}", "{}"])
+    s = C2(cfg, fonte=_Fonte(), retriever=ret, llm=llm, correcoes={"M"}).responder("p?")
+    assert ret.consultas == ["p?", "r1"] and s.nota_portao == 0.7 and s.origem == "contingencia"
+    assert s.consultas[0]["reformulacoes"] == ["r1"]
+    llm = _LLM([rot, json.dumps({"reformulacoes": ["r1"]})])
+    ret2 = _RetrieverMulti({"p?": ["a"], "r1": ["b"]}, {"p?": 0.5, "r1": 0.6})
+    s = C2(cfg, fonte=_Fonte(), retriever=ret2, llm=llm, correcoes={"M"}).responder("p?")
+    assert s.origem == "portao"
+
+
 def test_c2_pergunta_de_normas_segue_o_caminho_do_c1():
     llm = _LLM([_rot(agenda=False, normas=True)])
     s = _c2(llm, _Fonte()).responder("Qual o prazo para religar a luz?")

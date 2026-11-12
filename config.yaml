@@ -27,6 +27,12 @@ retrieval:
     dispositivo: cuda              # fp16; CPU levou ~12 s/pergunta, GPU ~0,24 s (cabe com o LLM)
   # Fase 4: cosseno do melhor trecho (densa); ≤ 5% das fora do domínio passam (dev + calibração).
   limiar_recusa: 0.6038            # ver avaliacao/retrieval/limiar.json
+  # Correção M (Fase 8B, opção B; avaliacao/busca/variantes.csv): 3 reformulações pelo LLM,
+  # RRF, reranker e 5 trechos. O τ vale para o maior cosseno entre a pergunta e as
+  # reformulações: no máximo 5% das 28 perguntas fora do domínio passam (test, T2 e calibração).
+  multiconsulta:
+    k: 5
+    tau: 0.6635
 llm:
   servidor: ollama
   host: "http://localhost:11434"

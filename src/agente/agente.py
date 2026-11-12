@@ -84,6 +84,8 @@ CORRECOES = {
     "E": "atos normativos antes de páginas com alerta, e alerta reforçado",
     "F": "autoverificação da resposta contra os trechos citados (uma chamada a mais)",
     "V": "reescrever a pergunta (como na A) só quando a origem é voz",
+    # Opção B da Fase 8B:
+    "M": "multiconsulta: 3 reformulações pelo LLM, reranker, 5 trechos e portão com τ próprio",
 }
 
 
@@ -110,6 +112,8 @@ class C2(C1):
         if "E" in self.correcoes:
             self.formato["alerta_forte"], self.ordenar = True, True
         self.verificar = "F" in self.correcoes
+        if "M" in self.correcoes:
+            self.multiconsulta = dict(cfg["retrieval"]["multiconsulta"])
         self.referencia = dt.date.fromisoformat(cfg["data_referencia"])
         self.fonte = fonte or ClienteParadasHTTP(
             cfg["api_paradas"]["base_url"], timeout=cfg["agente"]["timeout_ferramenta_s"]
@@ -196,7 +200,7 @@ class C2(C1):
         if rot.precisa_normas:
             cands, nota = self.recuperar(rot.pergunta_normas or pergunta)
             saida.nota_portao = round(nota, 4)
-            if nota >= self.tau:
+            if nota >= (self.multiconsulta["tau"] if self.multiconsulta else self.tau):
                 normas = [c.chunk for c in cands]
                 saida.trechos = [
                     {"chunk_id": c.chunk_id, "nota": round(float(c.score), 4)} for c in cands

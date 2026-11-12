@@ -1,0 +1,5786 @@
+{
+ "denso_k3": [
+  {
+   "id": "T-001",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.7205,
+   "todos_gold": true
+  },
+  {
+   "id": "T-002",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 0,
+   "nota": 0.6993,
+   "todos_gold": false
+  },
+  {
+   "id": "T-003",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.7476,
+   "todos_gold": false
+  },
+  {
+   "id": "T-004",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.7529,
+   "todos_gold": true
+  },
+  {
+   "id": "T-005",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 3,
+   "nota": 0.6956,
+   "todos_gold": true
+  },
+  {
+   "id": "T-006",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.7421,
+   "todos_gold": false
+  },
+  {
+   "id": "T-007",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 3,
+   "nota": 0.6184,
+   "todos_gold": false
+  },
+  {
+   "id": "T-008",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.6084,
+   "todos_gold": true
+  },
+  {
+   "id": "T-009",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.6652,
+   "todos_gold": true
+  },
+  {
+   "id": "T-010",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 2,
+   "nota": 0.7558,
+   "todos_gold": false
+  },
+  {
+   "id": "T-011",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 0,
+   "nota": 0.7085,
+   "todos_gold": false
+  },
+  {
+   "id": "T-012",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.7869,
+   "todos_gold": true
+  },
+  {
+   "id": "T-013",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 3,
+   "nota": 0.7058,
+   "todos_gold": true
+  },
+  {
+   "id": "T-014",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.7458,
+   "todos_gold": false
+  },
+  {
+   "id": "T-015",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.6659,
+   "todos_gold": false
+  },
+  {
+   "id": "T-016",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.7327,
+   "todos_gold": false
+  },
+  {
+   "id": "T-017",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.7409,
+   "todos_gold": false
+  },
+  {
+   "id": "T-018",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.6369,
+   "todos_gold": true
+  },
+  {
+   "id": "T-019",
+   "tipo": "coloquial",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.6481,
+   "todos_gold": false
+  },
+  {
+   "id": "T-020",
+   "tipo": "coloquial",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.6625,
+   "todos_gold": false
+  },
+  {
+   "id": "T-021",
+   "tipo": "coloquial",
+   "conjunto": "T1",
+   "pos": 0,
+   "nota": 0.7215,
+   "todos_gold": false
+  },
+  {
+   "id": "T-022",
+   "tipo": "coloquial",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.6166,
+   "todos_gold": true
+  },
+  {
+   "id": "T-023",
+   "tipo": "coloquial",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.6336,
+   "todos_gold": false
+  },
+  {
+   "id": "T-024",
+   "tipo": "coloquial",
+   "conjunto": "T1",
+   "pos": 0,
+   "nota": 0.6017,
+   "todos_gold": false
+  },
+  {
+   "id": "T-025",
+   "tipo": "coloquial",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.7713,
+   "todos_gold": false
+  },
+  {
+   "id": "T-026",
+   "tipo": "coloquial",
+   "conjunto": "T1",
+   "pos": 0,
+   "nota": 0.6812,
+   "todos_gold": false
+  },
+  {
+   "id": "T-027",
+   "tipo": "coloquial",
+   "conjunto": "T1",
+   "pos": 2,
+   "nota": 0.5919,
+   "todos_gold": true
+  },
+  {
+   "id": "T-028",
+   "tipo": "coloquial",
+   "conjunto": "T1",
+   "pos": 3,
+   "nota": 0.7021,
+   "todos_gold": false
+  },
+  {
+   "id": "T-029",
+   "tipo": "coloquial",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.6843,
+   "todos_gold": false
+  },
+  {
+   "id": "T-030",
+   "tipo": "coloquial",
+   "conjunto": "T1",
+   "pos": 2,
+   "nota": 0.6797,
+   "todos_gold": false
+  },
+  {
+   "id": "T-031",
+   "tipo": "ruido",
+   "conjunto": "T1",
+   "pos": 0,
+   "nota": 0.5724,
+   "todos_gold": false
+  },
+  {
+   "id": "T-032",
+   "tipo": "ruido",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.5895,
+   "todos_gold": false
+  },
+  {
+   "id": "T-033",
+   "tipo": "ruido",
+   "conjunto": "T1",
+   "pos": 0,
+   "nota": 0.6494,
+   "todos_gold": false
+  },
+  {
+   "id": "T-034",
+   "tipo": "ruido",
+   "conjunto": "T1",
+   "pos": 0,
+   "nota": 0.5954,
+   "todos_gold": false
+  },
+  {
+   "id": "T-035",
+   "tipo": "ruido",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.5721,
+   "todos_gold": false
+  },
+  {
+   "id": "T-036",
+   "tipo": "ruido",
+   "conjunto": "T1",
+   "pos": 0,
+   "nota": 0.5426,
+   "todos_gold": false
+  },
+  {
+   "id": "T-037",
+   "tipo": "multi_trecho",
+   "conjunto": "T1",
+   "pos": 0,
+   "nota": 0.6255,
+   "todos_gold": false
+  },
+  {
+   "id": "T-038",
+   "tipo": "multi_trecho",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.7409,
+   "todos_gold": true
+  },
+  {
+   "id": "T-039",
+   "tipo": "multi_trecho",
+   "conjunto": "T1",
+   "pos": 2,
+   "nota": 0.7097,
+   "todos_gold": false
+  },
+  {
+   "id": "T-040",
+   "tipo": "multi_trecho",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.5933,
+   "todos_gold": false
+  },
+  {
+   "id": "T-041",
+   "tipo": "multi_trecho",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.7032,
+   "todos_gold": false
+  },
+  {
+   "id": "T-042",
+   "tipo": "multi_trecho",
+   "conjunto": "T1",
+   "pos": 3,
+   "nota": 0.6417,
+   "todos_gold": false
+  },
+  {
+   "id": "T2-01",
+   "tipo": "direta",
+   "conjunto": "T2",
+   "pos": 1,
+   "nota": 0.6644,
+   "todos_gold": true
+  },
+  {
+   "id": "T2-02",
+   "tipo": "direta",
+   "conjunto": "T2",
+   "pos": 1,
+   "nota": 0.7533,
+   "todos_gold": true
+  },
+  {
+   "id": "T2-03",
+   "tipo": "direta",
+   "conjunto": "T2",
+   "pos": 0,
+   "nota": 0.7066,
+   "todos_gold": false
+  },
+  {
+   "id": "T2-04",
+   "tipo": "direta",
+   "conjunto": "T2",
+   "pos": 0,
+   "nota": 0.6915,
+   "todos_gold": false
+  },
+  {
+   "id": "T2-05",
+   "tipo": "direta",
+   "conjunto": "T2",
+   "pos": 1,
+   "nota": 0.6755,
+   "todos_gold": true
+  },
+  {
+   "id": "T2-06",
+   "tipo": "direta",
+   "conjunto": "T2",
+   "pos": 1,
+   "nota": 0.7815,
+   "todos_gold": true
+  },
+  {
+   "id": "T2-07",
+   "tipo": "direta",
+   "conjunto": "T2",
+   "pos": 0,
+   "nota": 0.6,
+   "todos_gold": false
+  },
+  {
+   "id": "T2-08",
+   "tipo": "coloquial",
+   "conjunto": "T2",
+   "pos": 2,
+   "nota": 0.7345,
+   "todos_gold": false
+  },
+  {
+   "id": "T2-09",
+   "tipo": "coloquial",
+   "conjunto": "T2",
+   "pos": 2,
+   "nota": 0.6529,
+   "todos_gold": false
+  },
+  {
+   "id": "T2-10",
+   "tipo": "coloquial",
+   "conjunto": "T2",
+   "pos": 0,
+   "nota": 0.7134,
+   "todos_gold": false
+  },
+  {
+   "id": "T2-11",
+   "tipo": "coloquial",
+   "conjunto": "T2",
+   "pos": 1,
+   "nota": 0.7357,
+   "todos_gold": true
+  },
+  {
+   "id": "T2-12",
+   "tipo": "coloquial",
+   "conjunto": "T2",
+   "pos": 1,
+   "nota": 0.6133,
+   "todos_gold": false
+  },
+  {
+   "id": "T2-13",
+   "tipo": "ruido",
+   "conjunto": "T2",
+   "pos": 0,
+   "nota": 0.6998,
+   "todos_gold": false
+  },
+  {
+   "id": "T2-14",
+   "tipo": "ruido",
+   "conjunto": "T2",
+   "pos": 2,
+   "nota": 0.6384,
+   "todos_gold": false
+  },
+  {
+   "id": "T2-15",
+   "tipo": "ruido",
+   "conjunto": "T2",
+   "pos": 0,
+   "nota": 0.5852,
+   "todos_gold": false
+  },
+  {
+   "id": "T2-16",
+   "tipo": "multi_trecho",
+   "conjunto": "T2",
+   "pos": 2,
+   "nota": 0.7305,
+   "todos_gold": false
+  },
+  {
+   "id": "T2-17",
+   "tipo": "multi_trecho",
+   "conjunto": "T2",
+   "pos": 3,
+   "nota": 0.6623,
+   "todos_gold": false
+  },
+  {
+   "id": "T2-18",
+   "tipo": "multi_trecho",
+   "conjunto": "T2",
+   "pos": 1,
+   "nota": 0.6958,
+   "todos_gold": true
+  }
+ ],
+ "denso_k5": [
+  {
+   "id": "T-001",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.7205,
+   "todos_gold": true
+  },
+  {
+   "id": "T-002",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 0,
+   "nota": 0.6993,
+   "todos_gold": false
+  },
+  {
+   "id": "T-003",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.7476,
+   "todos_gold": false
+  },
+  {
+   "id": "T-004",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.7529,
+   "todos_gold": true
+  },
+  {
+   "id": "T-005",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 3,
+   "nota": 0.6956,
+   "todos_gold": true
+  },
+  {
+   "id": "T-006",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.7421,
+   "todos_gold": false
+  },
+  {
+   "id": "T-007",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 3,
+   "nota": 0.6184,
+   "todos_gold": false
+  },
+  {
+   "id": "T-008",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.6084,
+   "todos_gold": true
+  },
+  {
+   "id": "T-009",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.6652,
+   "todos_gold": true
+  },
+  {
+   "id": "T-010",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 2,
+   "nota": 0.7558,
+   "todos_gold": true
+  },
+  {
+   "id": "T-011",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 4,
+   "nota": 0.7085,
+   "todos_gold": false
+  },
+  {
+   "id": "T-012",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.7869,
+   "todos_gold": true
+  },
+  {
+   "id": "T-013",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 3,
+   "nota": 0.7058,
+   "todos_gold": true
+  },
+  {
+   "id": "T-014",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.7458,
+   "todos_gold": false
+  },
+  {
+   "id": "T-015",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.6659,
+   "todos_gold": false
+  },
+  {
+   "id": "T-016",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.7327,
+   "todos_gold": false
+  },
+  {
+   "id": "T-017",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.7409,
+   "todos_gold": false
+  },
+  {
+   "id": "T-018",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.6369,
+   "todos_gold": true
+  },
+  {
+   "id": "T-019",
+   "tipo": "coloquial",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.6481,
+   "todos_gold": false
+  },
+  {
+   "id": "T-020",
+   "tipo": "coloquial",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.6625,
+   "todos_gold": true
+  },
+  {
+   "id": "T-021",
+   "tipo": "coloquial",
+   "conjunto": "T1",
+   "pos": 0,
+   "nota": 0.7215,
+   "todos_gold": false
+  },
+  {
+   "id": "T-022",
+   "tipo": "coloquial",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.6166,
+   "todos_gold": true
+  },
+  {
+   "id": "T-023",
+   "tipo": "coloquial",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.6336,
+   "todos_gold": true
+  },
+  {
+   "id": "T-024",
+   "tipo": "coloquial",
+   "conjunto": "T1",
+   "pos": 0,
+   "nota": 0.6017,
+   "todos_gold": false
+  },
+  {
+   "id": "T-025",
+   "tipo": "coloquial",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.7713,
+   "todos_gold": false
+  },
+  {
+   "id": "T-026",
+   "tipo": "coloquial",
+   "conjunto": "T1",
+   "pos": 0,
+   "nota": 0.6812,
+   "todos_gold": false
+  },
+  {
+   "id": "T-027",
+   "tipo": "coloquial",
+   "conjunto": "T1",
+   "pos": 2,
+   "nota": 0.5919,
+   "todos_gold": true
+  },
+  {
+   "id": "T-028",
+   "tipo": "coloquial",
+   "conjunto": "T1",
+   "pos": 3,
+   "nota": 0.7021,
+   "todos_gold": false
+  },
+  {
+   "id": "T-029",
+   "tipo": "coloquial",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.6843,
+   "todos_gold": false
+  },
+  {
+   "id": "T-030",
+   "tipo": "coloquial",
+   "conjunto": "T1",
+   "pos": 2,
+   "nota": 0.6797,
+   "todos_gold": false
+  },
+  {
+   "id": "T-031",
+   "tipo": "ruido",
+   "conjunto": "T1",
+   "pos": 0,
+   "nota": 0.5724,
+   "todos_gold": false
+  },
+  {
+   "id": "T-032",
+   "tipo": "ruido",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.5895,
+   "todos_gold": true
+  },
+  {
+   "id": "T-033",
+   "tipo": "ruido",
+   "conjunto": "T1",
+   "pos": 0,
+   "nota": 0.6494,
+   "todos_gold": false
+  },
+  {
+   "id": "T-034",
+   "tipo": "ruido",
+   "conjunto": "T1",
+   "pos": 0,
+   "nota": 0.5954,
+   "todos_gold": false
+  },
+  {
+   "id": "T-035",
+   "tipo": "ruido",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.5721,
+   "todos_gold": false
+  },
+  {
+   "id": "T-036",
+   "tipo": "ruido",
+   "conjunto": "T1",
+   "pos": 0,
+   "nota": 0.5426,
+   "todos_gold": false
+  },
+  {
+   "id": "T-037",
+   "tipo": "multi_trecho",
+   "conjunto": "T1",
+   "pos": 0,
+   "nota": 0.6255,
+   "todos_gold": false
+  },
+  {
+   "id": "T-038",
+   "tipo": "multi_trecho",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.7409,
+   "todos_gold": true
+  },
+  {
+   "id": "T-039",
+   "tipo": "multi_trecho",
+   "conjunto": "T1",
+   "pos": 2,
+   "nota": 0.7097,
+   "todos_gold": false
+  },
+  {
+   "id": "T-040",
+   "tipo": "multi_trecho",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.5933,
+   "todos_gold": true
+  },
+  {
+   "id": "T-041",
+   "tipo": "multi_trecho",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.7032,
+   "todos_gold": false
+  },
+  {
+   "id": "T-042",
+   "tipo": "multi_trecho",
+   "conjunto": "T1",
+   "pos": 3,
+   "nota": 0.6417,
+   "todos_gold": false
+  },
+  {
+   "id": "T2-01",
+   "tipo": "direta",
+   "conjunto": "T2",
+   "pos": 1,
+   "nota": 0.6644,
+   "todos_gold": true
+  },
+  {
+   "id": "T2-02",
+   "tipo": "direta",
+   "conjunto": "T2",
+   "pos": 1,
+   "nota": 0.7533,
+   "todos_gold": true
+  },
+  {
+   "id": "T2-03",
+   "tipo": "direta",
+   "conjunto": "T2",
+   "pos": 0,
+   "nota": 0.7066,
+   "todos_gold": false
+  },
+  {
+   "id": "T2-04",
+   "tipo": "direta",
+   "conjunto": "T2",
+   "pos": 0,
+   "nota": 0.6915,
+   "todos_gold": false
+  },
+  {
+   "id": "T2-05",
+   "tipo": "direta",
+   "conjunto": "T2",
+   "pos": 1,
+   "nota": 0.6755,
+   "todos_gold": true
+  },
+  {
+   "id": "T2-06",
+   "tipo": "direta",
+   "conjunto": "T2",
+   "pos": 1,
+   "nota": 0.7815,
+   "todos_gold": true
+  },
+  {
+   "id": "T2-07",
+   "tipo": "direta",
+   "conjunto": "T2",
+   "pos": 0,
+   "nota": 0.6,
+   "todos_gold": false
+  },
+  {
+   "id": "T2-08",
+   "tipo": "coloquial",
+   "conjunto": "T2",
+   "pos": 2,
+   "nota": 0.7345,
+   "todos_gold": false
+  },
+  {
+   "id": "T2-09",
+   "tipo": "coloquial",
+   "conjunto": "T2",
+   "pos": 2,
+   "nota": 0.6529,
+   "todos_gold": false
+  },
+  {
+   "id": "T2-10",
+   "tipo": "coloquial",
+   "conjunto": "T2",
+   "pos": 0,
+   "nota": 0.7134,
+   "todos_gold": false
+  },
+  {
+   "id": "T2-11",
+   "tipo": "coloquial",
+   "conjunto": "T2",
+   "pos": 1,
+   "nota": 0.7357,
+   "todos_gold": true
+  },
+  {
+   "id": "T2-12",
+   "tipo": "coloquial",
+   "conjunto": "T2",
+   "pos": 1,
+   "nota": 0.6133,
+   "todos_gold": true
+  },
+  {
+   "id": "T2-13",
+   "tipo": "ruido",
+   "conjunto": "T2",
+   "pos": 5,
+   "nota": 0.6998,
+   "todos_gold": false
+  },
+  {
+   "id": "T2-14",
+   "tipo": "ruido",
+   "conjunto": "T2",
+   "pos": 2,
+   "nota": 0.6384,
+   "todos_gold": false
+  },
+  {
+   "id": "T2-15",
+   "tipo": "ruido",
+   "conjunto": "T2",
+   "pos": 0,
+   "nota": 0.5852,
+   "todos_gold": false
+  },
+  {
+   "id": "T2-16",
+   "tipo": "multi_trecho",
+   "conjunto": "T2",
+   "pos": 2,
+   "nota": 0.7305,
+   "todos_gold": false
+  },
+  {
+   "id": "T2-17",
+   "tipo": "multi_trecho",
+   "conjunto": "T2",
+   "pos": 3,
+   "nota": 0.6623,
+   "todos_gold": false
+  },
+  {
+   "id": "T2-18",
+   "tipo": "multi_trecho",
+   "conjunto": "T2",
+   "pos": 1,
+   "nota": 0.6958,
+   "todos_gold": true
+  }
+ ],
+ "hib_rr_k3": [
+  {
+   "id": "T-001",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.7205,
+   "todos_gold": true
+  },
+  {
+   "id": "T-002",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 3,
+   "nota": 0.6993,
+   "todos_gold": true
+  },
+  {
+   "id": "T-003",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.7476,
+   "todos_gold": true
+  },
+  {
+   "id": "T-004",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 2,
+   "nota": 0.7529,
+   "todos_gold": true
+  },
+  {
+   "id": "T-005",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 2,
+   "nota": 0.6956,
+   "todos_gold": true
+  },
+  {
+   "id": "T-006",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.7421,
+   "todos_gold": false
+  },
+  {
+   "id": "T-007",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 0,
+   "nota": 0.6184,
+   "todos_gold": false
+  },
+  {
+   "id": "T-008",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.6084,
+   "todos_gold": true
+  },
+  {
+   "id": "T-009",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.6652,
+   "todos_gold": true
+  },
+  {
+   "id": "T-010",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 2,
+   "nota": 0.7558,
+   "todos_gold": true
+  },
+  {
+   "id": "T-011",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 3,
+   "nota": 0.7085,
+   "todos_gold": true
+  },
+  {
+   "id": "T-012",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.7869,
+   "todos_gold": true
+  },
+  {
+   "id": "T-013",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 0,
+   "nota": 0.7058,
+   "todos_gold": false
+  },
+  {
+   "id": "T-014",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.7458,
+   "todos_gold": true
+  },
+  {
+   "id": "T-015",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 2,
+   "nota": 0.6659,
+   "todos_gold": true
+  },
+  {
+   "id": "T-016",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.7327,
+   "todos_gold": true
+  },
+  {
+   "id": "T-017",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 2,
+   "nota": 0.7409,
+   "todos_gold": true
+  },
+  {
+   "id": "T-018",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.6369,
+   "todos_gold": true
+  },
+  {
+   "id": "T-019",
+   "tipo": "coloquial",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.6481,
+   "todos_gold": false
+  },
+  {
+   "id": "T-020",
+   "tipo": "coloquial",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.6625,
+   "todos_gold": false
+  },
+  {
+   "id": "T-021",
+   "tipo": "coloquial",
+   "conjunto": "T1",
+   "pos": 0,
+   "nota": 0.7215,
+   "todos_gold": false
+  },
+  {
+   "id": "T-022",
+   "tipo": "coloquial",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.6166,
+   "todos_gold": false
+  },
+  {
+   "id": "T-023",
+   "tipo": "coloquial",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.6336,
+   "todos_gold": false
+  },
+  {
+   "id": "T-024",
+   "tipo": "coloquial",
+   "conjunto": "T1",
+   "pos": 0,
+   "nota": 0.6017,
+   "todos_gold": false
+  },
+  {
+   "id": "T-025",
+   "tipo": "coloquial",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.7713,
+   "todos_gold": false
+  },
+  {
+   "id": "T-026",
+   "tipo": "coloquial",
+   "conjunto": "T1",
+   "pos": 0,
+   "nota": 0.6812,
+   "todos_gold": false
+  },
+  {
+   "id": "T-027",
+   "tipo": "coloquial",
+   "conjunto": "T1",
+   "pos": 0,
+   "nota": 0.5919,
+   "todos_gold": false
+  },
+  {
+   "id": "T-028",
+   "tipo": "coloquial",
+   "conjunto": "T1",
+   "pos": 0,
+   "nota": 0.7021,
+   "todos_gold": false
+  },
+  {
+   "id": "T-029",
+   "tipo": "coloquial",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.6843,
+   "todos_gold": false
+  },
+  {
+   "id": "T-030",
+   "tipo": "coloquial",
+   "conjunto": "T1",
+   "pos": 3,
+   "nota": 0.6797,
+   "todos_gold": false
+  },
+  {
+   "id": "T-031",
+   "tipo": "ruido",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.5724,
+   "todos_gold": false
+  },
+  {
+   "id": "T-032",
+   "tipo": "ruido",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.5895,
+   "todos_gold": false
+  },
+  {
+   "id": "T-033",
+   "tipo": "ruido",
+   "conjunto": "T1",
+   "pos": 0,
+   "nota": 0.6494,
+   "todos_gold": false
+  },
+  {
+   "id": "T-034",
+   "tipo": "ruido",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.5954,
+   "todos_gold": false
+  },
+  {
+   "id": "T-035",
+   "tipo": "ruido",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.5721,
+   "todos_gold": false
+  },
+  {
+   "id": "T-036",
+   "tipo": "ruido",
+   "conjunto": "T1",
+   "pos": 0,
+   "nota": 0.5426,
+   "todos_gold": false
+  },
+  {
+   "id": "T-037",
+   "tipo": "multi_trecho",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.6255,
+   "todos_gold": false
+  },
+  {
+   "id": "T-038",
+   "tipo": "multi_trecho",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.7409,
+   "todos_gold": false
+  },
+  {
+   "id": "T-039",
+   "tipo": "multi_trecho",
+   "conjunto": "T1",
+   "pos": 2,
+   "nota": 0.7097,
+   "todos_gold": true
+  },
+  {
+   "id": "T-040",
+   "tipo": "multi_trecho",
+   "conjunto": "T1",
+   "pos": 2,
+   "nota": 0.5933,
+   "todos_gold": true
+  },
+  {
+   "id": "T-041",
+   "tipo": "multi_trecho",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.7032,
+   "todos_gold": false
+  },
+  {
+   "id": "T-042",
+   "tipo": "multi_trecho",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.6417,
+   "todos_gold": false
+  },
+  {
+   "id": "T2-01",
+   "tipo": "direta",
+   "conjunto": "T2",
+   "pos": 1,
+   "nota": 0.6644,
+   "todos_gold": true
+  },
+  {
+   "id": "T2-02",
+   "tipo": "direta",
+   "conjunto": "T2",
+   "pos": 1,
+   "nota": 0.7533,
+   "todos_gold": true
+  },
+  {
+   "id": "T2-03",
+   "tipo": "direta",
+   "conjunto": "T2",
+   "pos": 0,
+   "nota": 0.7066,
+   "todos_gold": false
+  },
+  {
+   "id": "T2-04",
+   "tipo": "direta",
+   "conjunto": "T2",
+   "pos": 0,
+   "nota": 0.6915,
+   "todos_gold": false
+  },
+  {
+   "id": "T2-05",
+   "tipo": "direta",
+   "conjunto": "T2",
+   "pos": 1,
+   "nota": 0.6755,
+   "todos_gold": true
+  },
+  {
+   "id": "T2-06",
+   "tipo": "direta",
+   "conjunto": "T2",
+   "pos": 1,
+   "nota": 0.7815,
+   "todos_gold": true
+  },
+  {
+   "id": "T2-07",
+   "tipo": "direta",
+   "conjunto": "T2",
+   "pos": 0,
+   "nota": 0.6,
+   "todos_gold": false
+  },
+  {
+   "id": "T2-08",
+   "tipo": "coloquial",
+   "conjunto": "T2",
+   "pos": 2,
+   "nota": 0.7345,
+   "todos_gold": false
+  },
+  {
+   "id": "T2-09",
+   "tipo": "coloquial",
+   "conjunto": "T2",
+   "pos": 1,
+   "nota": 0.6529,
+   "todos_gold": false
+  },
+  {
+   "id": "T2-10",
+   "tipo": "coloquial",
+   "conjunto": "T2",
+   "pos": 0,
+   "nota": 0.7134,
+   "todos_gold": false
+  },
+  {
+   "id": "T2-11",
+   "tipo": "coloquial",
+   "conjunto": "T2",
+   "pos": 1,
+   "nota": 0.7357,
+   "todos_gold": true
+  },
+  {
+   "id": "T2-12",
+   "tipo": "coloquial",
+   "conjunto": "T2",
+   "pos": 2,
+   "nota": 0.6133,
+   "todos_gold": true
+  },
+  {
+   "id": "T2-13",
+   "tipo": "ruido",
+   "conjunto": "T2",
+   "pos": 2,
+   "nota": 0.6998,
+   "todos_gold": false
+  },
+  {
+   "id": "T2-14",
+   "tipo": "ruido",
+   "conjunto": "T2",
+   "pos": 1,
+   "nota": 0.6384,
+   "todos_gold": false
+  },
+  {
+   "id": "T2-15",
+   "tipo": "ruido",
+   "conjunto": "T2",
+   "pos": 0,
+   "nota": 0.5852,
+   "todos_gold": false
+  },
+  {
+   "id": "T2-16",
+   "tipo": "multi_trecho",
+   "conjunto": "T2",
+   "pos": 2,
+   "nota": 0.7305,
+   "todos_gold": false
+  },
+  {
+   "id": "T2-17",
+   "tipo": "multi_trecho",
+   "conjunto": "T2",
+   "pos": 2,
+   "nota": 0.6623,
+   "todos_gold": false
+  },
+  {
+   "id": "T2-18",
+   "tipo": "multi_trecho",
+   "conjunto": "T2",
+   "pos": 1,
+   "nota": 0.6958,
+   "todos_gold": true
+  }
+ ],
+ "hib_rr_k5": [
+  {
+   "id": "T-001",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.7205,
+   "todos_gold": true
+  },
+  {
+   "id": "T-002",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 3,
+   "nota": 0.6993,
+   "todos_gold": true
+  },
+  {
+   "id": "T-003",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.7476,
+   "todos_gold": true
+  },
+  {
+   "id": "T-004",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 2,
+   "nota": 0.7529,
+   "todos_gold": true
+  },
+  {
+   "id": "T-005",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 2,
+   "nota": 0.6956,
+   "todos_gold": true
+  },
+  {
+   "id": "T-006",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.7421,
+   "todos_gold": false
+  },
+  {
+   "id": "T-007",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 4,
+   "nota": 0.6184,
+   "todos_gold": false
+  },
+  {
+   "id": "T-008",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.6084,
+   "todos_gold": true
+  },
+  {
+   "id": "T-009",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.6652,
+   "todos_gold": true
+  },
+  {
+   "id": "T-010",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 2,
+   "nota": 0.7558,
+   "todos_gold": true
+  },
+  {
+   "id": "T-011",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 3,
+   "nota": 0.7085,
+   "todos_gold": true
+  },
+  {
+   "id": "T-012",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.7869,
+   "todos_gold": true
+  },
+  {
+   "id": "T-013",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 4,
+   "nota": 0.7058,
+   "todos_gold": true
+  },
+  {
+   "id": "T-014",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.7458,
+   "todos_gold": true
+  },
+  {
+   "id": "T-015",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 2,
+   "nota": 0.6659,
+   "todos_gold": true
+  },
+  {
+   "id": "T-016",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.7327,
+   "todos_gold": true
+  },
+  {
+   "id": "T-017",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 2,
+   "nota": 0.7409,
+   "todos_gold": true
+  },
+  {
+   "id": "T-018",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.6369,
+   "todos_gold": true
+  },
+  {
+   "id": "T-019",
+   "tipo": "coloquial",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.6481,
+   "todos_gold": true
+  },
+  {
+   "id": "T-020",
+   "tipo": "coloquial",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.6625,
+   "todos_gold": true
+  },
+  {
+   "id": "T-021",
+   "tipo": "coloquial",
+   "conjunto": "T1",
+   "pos": 0,
+   "nota": 0.7215,
+   "todos_gold": false
+  },
+  {
+   "id": "T-022",
+   "tipo": "coloquial",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.6166,
+   "todos_gold": false
+  },
+  {
+   "id": "T-023",
+   "tipo": "coloquial",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.6336,
+   "todos_gold": true
+  },
+  {
+   "id": "T-024",
+   "tipo": "coloquial",
+   "conjunto": "T1",
+   "pos": 0,
+   "nota": 0.6017,
+   "todos_gold": false
+  },
+  {
+   "id": "T-025",
+   "tipo": "coloquial",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.7713,
+   "todos_gold": false
+  },
+  {
+   "id": "T-026",
+   "tipo": "coloquial",
+   "conjunto": "T1",
+   "pos": 0,
+   "nota": 0.6812,
+   "todos_gold": false
+  },
+  {
+   "id": "T-027",
+   "tipo": "coloquial",
+   "conjunto": "T1",
+   "pos": 5,
+   "nota": 0.5919,
+   "todos_gold": true
+  },
+  {
+   "id": "T-028",
+   "tipo": "coloquial",
+   "conjunto": "T1",
+   "pos": 5,
+   "nota": 0.7021,
+   "todos_gold": false
+  },
+  {
+   "id": "T-029",
+   "tipo": "coloquial",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.6843,
+   "todos_gold": false
+  },
+  {
+   "id": "T-030",
+   "tipo": "coloquial",
+   "conjunto": "T1",
+   "pos": 3,
+   "nota": 0.6797,
+   "todos_gold": false
+  },
+  {
+   "id": "T-031",
+   "tipo": "ruido",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.5724,
+   "todos_gold": false
+  },
+  {
+   "id": "T-032",
+   "tipo": "ruido",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.5895,
+   "todos_gold": true
+  },
+  {
+   "id": "T-033",
+   "tipo": "ruido",
+   "conjunto": "T1",
+   "pos": 0,
+   "nota": 0.6494,
+   "todos_gold": false
+  },
+  {
+   "id": "T-034",
+   "tipo": "ruido",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.5954,
+   "todos_gold": false
+  },
+  {
+   "id": "T-035",
+   "tipo": "ruido",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.5721,
+   "todos_gold": false
+  },
+  {
+   "id": "T-036",
+   "tipo": "ruido",
+   "conjunto": "T1",
+   "pos": 0,
+   "nota": 0.5426,
+   "todos_gold": false
+  },
+  {
+   "id": "T-037",
+   "tipo": "multi_trecho",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.6255,
+   "todos_gold": false
+  },
+  {
+   "id": "T-038",
+   "tipo": "multi_trecho",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.7409,
+   "todos_gold": false
+  },
+  {
+   "id": "T-039",
+   "tipo": "multi_trecho",
+   "conjunto": "T1",
+   "pos": 2,
+   "nota": 0.7097,
+   "todos_gold": true
+  },
+  {
+   "id": "T-040",
+   "tipo": "multi_trecho",
+   "conjunto": "T1",
+   "pos": 2,
+   "nota": 0.5933,
+   "todos_gold": true
+  },
+  {
+   "id": "T-041",
+   "tipo": "multi_trecho",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.7032,
+   "todos_gold": false
+  },
+  {
+   "id": "T-042",
+   "tipo": "multi_trecho",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.6417,
+   "todos_gold": false
+  },
+  {
+   "id": "T2-01",
+   "tipo": "direta",
+   "conjunto": "T2",
+   "pos": 1,
+   "nota": 0.6644,
+   "todos_gold": true
+  },
+  {
+   "id": "T2-02",
+   "tipo": "direta",
+   "conjunto": "T2",
+   "pos": 1,
+   "nota": 0.7533,
+   "todos_gold": true
+  },
+  {
+   "id": "T2-03",
+   "tipo": "direta",
+   "conjunto": "T2",
+   "pos": 0,
+   "nota": 0.7066,
+   "todos_gold": false
+  },
+  {
+   "id": "T2-04",
+   "tipo": "direta",
+   "conjunto": "T2",
+   "pos": 0,
+   "nota": 0.6915,
+   "todos_gold": false
+  },
+  {
+   "id": "T2-05",
+   "tipo": "direta",
+   "conjunto": "T2",
+   "pos": 1,
+   "nota": 0.6755,
+   "todos_gold": true
+  },
+  {
+   "id": "T2-06",
+   "tipo": "direta",
+   "conjunto": "T2",
+   "pos": 1,
+   "nota": 0.7815,
+   "todos_gold": true
+  },
+  {
+   "id": "T2-07",
+   "tipo": "direta",
+   "conjunto": "T2",
+   "pos": 0,
+   "nota": 0.6,
+   "todos_gold": false
+  },
+  {
+   "id": "T2-08",
+   "tipo": "coloquial",
+   "conjunto": "T2",
+   "pos": 2,
+   "nota": 0.7345,
+   "todos_gold": false
+  },
+  {
+   "id": "T2-09",
+   "tipo": "coloquial",
+   "conjunto": "T2",
+   "pos": 1,
+   "nota": 0.6529,
+   "todos_gold": false
+  },
+  {
+   "id": "T2-10",
+   "tipo": "coloquial",
+   "conjunto": "T2",
+   "pos": 0,
+   "nota": 0.7134,
+   "todos_gold": false
+  },
+  {
+   "id": "T2-11",
+   "tipo": "coloquial",
+   "conjunto": "T2",
+   "pos": 1,
+   "nota": 0.7357,
+   "todos_gold": true
+  },
+  {
+   "id": "T2-12",
+   "tipo": "coloquial",
+   "conjunto": "T2",
+   "pos": 2,
+   "nota": 0.6133,
+   "todos_gold": true
+  },
+  {
+   "id": "T2-13",
+   "tipo": "ruido",
+   "conjunto": "T2",
+   "pos": 2,
+   "nota": 0.6998,
+   "todos_gold": false
+  },
+  {
+   "id": "T2-14",
+   "tipo": "ruido",
+   "conjunto": "T2",
+   "pos": 1,
+   "nota": 0.6384,
+   "todos_gold": false
+  },
+  {
+   "id": "T2-15",
+   "tipo": "ruido",
+   "conjunto": "T2",
+   "pos": 0,
+   "nota": 0.5852,
+   "todos_gold": false
+  },
+  {
+   "id": "T2-16",
+   "tipo": "multi_trecho",
+   "conjunto": "T2",
+   "pos": 2,
+   "nota": 0.7305,
+   "todos_gold": false
+  },
+  {
+   "id": "T2-17",
+   "tipo": "multi_trecho",
+   "conjunto": "T2",
+   "pos": 2,
+   "nota": 0.6623,
+   "todos_gold": false
+  },
+  {
+   "id": "T2-18",
+   "tipo": "multi_trecho",
+   "conjunto": "T2",
+   "pos": 1,
+   "nota": 0.6958,
+   "todos_gold": true
+  }
+ ],
+ "hib_rr_faq_k3": [
+  {
+   "id": "T-001",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.7205,
+   "todos_gold": true
+  },
+  {
+   "id": "T-002",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 2,
+   "nota": 0.6993,
+   "todos_gold": true
+  },
+  {
+   "id": "T-003",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.7476,
+   "todos_gold": false
+  },
+  {
+   "id": "T-004",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.7529,
+   "todos_gold": true
+  },
+  {
+   "id": "T-005",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 2,
+   "nota": 0.6956,
+   "todos_gold": true
+  },
+  {
+   "id": "T-006",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.7421,
+   "todos_gold": false
+  },
+  {
+   "id": "T-007",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 3,
+   "nota": 0.6184,
+   "todos_gold": false
+  },
+  {
+   "id": "T-008",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.6084,
+   "todos_gold": true
+  },
+  {
+   "id": "T-009",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.6652,
+   "todos_gold": true
+  },
+  {
+   "id": "T-010",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.7558,
+   "todos_gold": true
+  },
+  {
+   "id": "T-011",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 3,
+   "nota": 0.7085,
+   "todos_gold": true
+  },
+  {
+   "id": "T-012",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.7869,
+   "todos_gold": true
+  },
+  {
+   "id": "T-013",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 2,
+   "nota": 0.7058,
+   "todos_gold": true
+  },
+  {
+   "id": "T-014",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.7458,
+   "todos_gold": false
+  },
+  {
+   "id": "T-015",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.6659,
+   "todos_gold": false
+  },
+  {
+   "id": "T-016",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.7327,
+   "todos_gold": true
+  },
+  {
+   "id": "T-017",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 2,
+   "nota": 0.7409,
+   "todos_gold": true
+  },
+  {
+   "id": "T-018",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.6369,
+   "todos_gold": true
+  },
+  {
+   "id": "T-019",
+   "tipo": "coloquial",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.6481,
+   "todos_gold": true
+  },
+  {
+   "id": "T-020",
+   "tipo": "coloquial",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.6625,
+   "todos_gold": true
+  },
+  {
+   "id": "T-021",
+   "tipo": "coloquial",
+   "conjunto": "T1",
+   "pos": 0,
+   "nota": 0.7215,
+   "todos_gold": false
+  },
+  {
+   "id": "T-022",
+   "tipo": "coloquial",
+   "conjunto": "T1",
+   "pos": 0,
+   "nota": 0.6166,
+   "todos_gold": false
+  },
+  {
+   "id": "T-023",
+   "tipo": "coloquial",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.6336,
+   "todos_gold": false
+  },
+  {
+   "id": "T-024",
+   "tipo": "coloquial",
+   "conjunto": "T1",
+   "pos": 0,
+   "nota": 0.6017,
+   "todos_gold": false
+  },
+  {
+   "id": "T-025",
+   "tipo": "coloquial",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.7713,
+   "todos_gold": false
+  },
+  {
+   "id": "T-026",
+   "tipo": "coloquial",
+   "conjunto": "T1",
+   "pos": 0,
+   "nota": 0.6812,
+   "todos_gold": false
+  },
+  {
+   "id": "T-027",
+   "tipo": "coloquial",
+   "conjunto": "T1",
+   "pos": 3,
+   "nota": 0.5919,
+   "todos_gold": true
+  },
+  {
+   "id": "T-028",
+   "tipo": "coloquial",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.7021,
+   "todos_gold": false
+  },
+  {
+   "id": "T-029",
+   "tipo": "coloquial",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.6843,
+   "todos_gold": false
+  },
+  {
+   "id": "T-030",
+   "tipo": "coloquial",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.6797,
+   "todos_gold": false
+  },
+  {
+   "id": "T-031",
+   "tipo": "ruido",
+   "conjunto": "T1",
+   "pos": 0,
+   "nota": 0.5724,
+   "todos_gold": false
+  },
+  {
+   "id": "T-032",
+   "tipo": "ruido",
+   "conjunto": "T1",
+   "pos": 2,
+   "nota": 0.5895,
+   "todos_gold": true
+  },
+  {
+   "id": "T-033",
+   "tipo": "ruido",
+   "conjunto": "T1",
+   "pos": 0,
+   "nota": 0.6494,
+   "todos_gold": false
+  },
+  {
+   "id": "T-034",
+   "tipo": "ruido",
+   "conjunto": "T1",
+   "pos": 0,
+   "nota": 0.5954,
+   "todos_gold": false
+  },
+  {
+   "id": "T-035",
+   "tipo": "ruido",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.5721,
+   "todos_gold": false
+  },
+  {
+   "id": "T-036",
+   "tipo": "ruido",
+   "conjunto": "T1",
+   "pos": 0,
+   "nota": 0.5426,
+   "todos_gold": false
+  },
+  {
+   "id": "T-037",
+   "tipo": "multi_trecho",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.6255,
+   "todos_gold": false
+  },
+  {
+   "id": "T-038",
+   "tipo": "multi_trecho",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.7409,
+   "todos_gold": false
+  },
+  {
+   "id": "T-039",
+   "tipo": "multi_trecho",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.7097,
+   "todos_gold": true
+  },
+  {
+   "id": "T-040",
+   "tipo": "multi_trecho",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.5933,
+   "todos_gold": true
+  },
+  {
+   "id": "T-041",
+   "tipo": "multi_trecho",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.7032,
+   "todos_gold": false
+  },
+  {
+   "id": "T-042",
+   "tipo": "multi_trecho",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.6417,
+   "todos_gold": false
+  },
+  {
+   "id": "T2-01",
+   "tipo": "direta",
+   "conjunto": "T2",
+   "pos": 1,
+   "nota": 0.6644,
+   "todos_gold": true
+  },
+  {
+   "id": "T2-02",
+   "tipo": "direta",
+   "conjunto": "T2",
+   "pos": 1,
+   "nota": 0.7533,
+   "todos_gold": true
+  },
+  {
+   "id": "T2-03",
+   "tipo": "direta",
+   "conjunto": "T2",
+   "pos": 0,
+   "nota": 0.7066,
+   "todos_gold": false
+  },
+  {
+   "id": "T2-04",
+   "tipo": "direta",
+   "conjunto": "T2",
+   "pos": 0,
+   "nota": 0.6915,
+   "todos_gold": false
+  },
+  {
+   "id": "T2-05",
+   "tipo": "direta",
+   "conjunto": "T2",
+   "pos": 1,
+   "nota": 0.6755,
+   "todos_gold": true
+  },
+  {
+   "id": "T2-06",
+   "tipo": "direta",
+   "conjunto": "T2",
+   "pos": 1,
+   "nota": 0.7815,
+   "todos_gold": true
+  },
+  {
+   "id": "T2-07",
+   "tipo": "direta",
+   "conjunto": "T2",
+   "pos": 0,
+   "nota": 0.6,
+   "todos_gold": false
+  },
+  {
+   "id": "T2-08",
+   "tipo": "coloquial",
+   "conjunto": "T2",
+   "pos": 0,
+   "nota": 0.7345,
+   "todos_gold": false
+  },
+  {
+   "id": "T2-09",
+   "tipo": "coloquial",
+   "conjunto": "T2",
+   "pos": 0,
+   "nota": 0.6529,
+   "todos_gold": false
+  },
+  {
+   "id": "T2-10",
+   "tipo": "coloquial",
+   "conjunto": "T2",
+   "pos": 0,
+   "nota": 0.7134,
+   "todos_gold": false
+  },
+  {
+   "id": "T2-11",
+   "tipo": "coloquial",
+   "conjunto": "T2",
+   "pos": 1,
+   "nota": 0.7357,
+   "todos_gold": true
+  },
+  {
+   "id": "T2-12",
+   "tipo": "coloquial",
+   "conjunto": "T2",
+   "pos": 2,
+   "nota": 0.6133,
+   "todos_gold": true
+  },
+  {
+   "id": "T2-13",
+   "tipo": "ruido",
+   "conjunto": "T2",
+   "pos": 0,
+   "nota": 0.6998,
+   "todos_gold": false
+  },
+  {
+   "id": "T2-14",
+   "tipo": "ruido",
+   "conjunto": "T2",
+   "pos": 0,
+   "nota": 0.6384,
+   "todos_gold": false
+  },
+  {
+   "id": "T2-15",
+   "tipo": "ruido",
+   "conjunto": "T2",
+   "pos": 0,
+   "nota": 0.5852,
+   "todos_gold": false
+  },
+  {
+   "id": "T2-16",
+   "tipo": "multi_trecho",
+   "conjunto": "T2",
+   "pos": 0,
+   "nota": 0.7305,
+   "todos_gold": false
+  },
+  {
+   "id": "T2-17",
+   "tipo": "multi_trecho",
+   "conjunto": "T2",
+   "pos": 0,
+   "nota": 0.6623,
+   "todos_gold": false
+  },
+  {
+   "id": "T2-18",
+   "tipo": "multi_trecho",
+   "conjunto": "T2",
+   "pos": 1,
+   "nota": 0.6958,
+   "todos_gold": true
+  }
+ ],
+ "hib_rr_faq_k5": [
+  {
+   "id": "T-001",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.7205,
+   "todos_gold": true
+  },
+  {
+   "id": "T-002",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 2,
+   "nota": 0.6993,
+   "todos_gold": true
+  },
+  {
+   "id": "T-003",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.7476,
+   "todos_gold": false
+  },
+  {
+   "id": "T-004",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.7529,
+   "todos_gold": true
+  },
+  {
+   "id": "T-005",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 2,
+   "nota": 0.6956,
+   "todos_gold": true
+  },
+  {
+   "id": "T-006",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.7421,
+   "todos_gold": false
+  },
+  {
+   "id": "T-007",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 3,
+   "nota": 0.6184,
+   "todos_gold": false
+  },
+  {
+   "id": "T-008",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.6084,
+   "todos_gold": true
+  },
+  {
+   "id": "T-009",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.6652,
+   "todos_gold": true
+  },
+  {
+   "id": "T-010",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.7558,
+   "todos_gold": true
+  },
+  {
+   "id": "T-011",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 3,
+   "nota": 0.7085,
+   "todos_gold": true
+  },
+  {
+   "id": "T-012",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.7869,
+   "todos_gold": true
+  },
+  {
+   "id": "T-013",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 2,
+   "nota": 0.7058,
+   "todos_gold": true
+  },
+  {
+   "id": "T-014",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.7458,
+   "todos_gold": false
+  },
+  {
+   "id": "T-015",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.6659,
+   "todos_gold": false
+  },
+  {
+   "id": "T-016",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.7327,
+   "todos_gold": true
+  },
+  {
+   "id": "T-017",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 2,
+   "nota": 0.7409,
+   "todos_gold": true
+  },
+  {
+   "id": "T-018",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.6369,
+   "todos_gold": true
+  },
+  {
+   "id": "T-019",
+   "tipo": "coloquial",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.6481,
+   "todos_gold": true
+  },
+  {
+   "id": "T-020",
+   "tipo": "coloquial",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.6625,
+   "todos_gold": true
+  },
+  {
+   "id": "T-021",
+   "tipo": "coloquial",
+   "conjunto": "T1",
+   "pos": 5,
+   "nota": 0.7215,
+   "todos_gold": true
+  },
+  {
+   "id": "T-022",
+   "tipo": "coloquial",
+   "conjunto": "T1",
+   "pos": 5,
+   "nota": 0.6166,
+   "todos_gold": false
+  },
+  {
+   "id": "T-023",
+   "tipo": "coloquial",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.6336,
+   "todos_gold": false
+  },
+  {
+   "id": "T-024",
+   "tipo": "coloquial",
+   "conjunto": "T1",
+   "pos": 0,
+   "nota": 0.6017,
+   "todos_gold": false
+  },
+  {
+   "id": "T-025",
+   "tipo": "coloquial",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.7713,
+   "todos_gold": false
+  },
+  {
+   "id": "T-026",
+   "tipo": "coloquial",
+   "conjunto": "T1",
+   "pos": 0,
+   "nota": 0.6812,
+   "todos_gold": false
+  },
+  {
+   "id": "T-027",
+   "tipo": "coloquial",
+   "conjunto": "T1",
+   "pos": 3,
+   "nota": 0.5919,
+   "todos_gold": true
+  },
+  {
+   "id": "T-028",
+   "tipo": "coloquial",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.7021,
+   "todos_gold": false
+  },
+  {
+   "id": "T-029",
+   "tipo": "coloquial",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.6843,
+   "todos_gold": false
+  },
+  {
+   "id": "T-030",
+   "tipo": "coloquial",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.6797,
+   "todos_gold": true
+  },
+  {
+   "id": "T-031",
+   "tipo": "ruido",
+   "conjunto": "T1",
+   "pos": 5,
+   "nota": 0.5724,
+   "todos_gold": false
+  },
+  {
+   "id": "T-032",
+   "tipo": "ruido",
+   "conjunto": "T1",
+   "pos": 2,
+   "nota": 0.5895,
+   "todos_gold": true
+  },
+  {
+   "id": "T-033",
+   "tipo": "ruido",
+   "conjunto": "T1",
+   "pos": 5,
+   "nota": 0.6494,
+   "todos_gold": false
+  },
+  {
+   "id": "T-034",
+   "tipo": "ruido",
+   "conjunto": "T1",
+   "pos": 4,
+   "nota": 0.5954,
+   "todos_gold": false
+  },
+  {
+   "id": "T-035",
+   "tipo": "ruido",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.5721,
+   "todos_gold": false
+  },
+  {
+   "id": "T-036",
+   "tipo": "ruido",
+   "conjunto": "T1",
+   "pos": 0,
+   "nota": 0.5426,
+   "todos_gold": false
+  },
+  {
+   "id": "T-037",
+   "tipo": "multi_trecho",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.6255,
+   "todos_gold": false
+  },
+  {
+   "id": "T-038",
+   "tipo": "multi_trecho",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.7409,
+   "todos_gold": false
+  },
+  {
+   "id": "T-039",
+   "tipo": "multi_trecho",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.7097,
+   "todos_gold": true
+  },
+  {
+   "id": "T-040",
+   "tipo": "multi_trecho",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.5933,
+   "todos_gold": true
+  },
+  {
+   "id": "T-041",
+   "tipo": "multi_trecho",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.7032,
+   "todos_gold": false
+  },
+  {
+   "id": "T-042",
+   "tipo": "multi_trecho",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.6417,
+   "todos_gold": false
+  },
+  {
+   "id": "T2-01",
+   "tipo": "direta",
+   "conjunto": "T2",
+   "pos": 1,
+   "nota": 0.6644,
+   "todos_gold": true
+  },
+  {
+   "id": "T2-02",
+   "tipo": "direta",
+   "conjunto": "T2",
+   "pos": 1,
+   "nota": 0.7533,
+   "todos_gold": true
+  },
+  {
+   "id": "T2-03",
+   "tipo": "direta",
+   "conjunto": "T2",
+   "pos": 0,
+   "nota": 0.7066,
+   "todos_gold": false
+  },
+  {
+   "id": "T2-04",
+   "tipo": "direta",
+   "conjunto": "T2",
+   "pos": 0,
+   "nota": 0.6915,
+   "todos_gold": false
+  },
+  {
+   "id": "T2-05",
+   "tipo": "direta",
+   "conjunto": "T2",
+   "pos": 1,
+   "nota": 0.6755,
+   "todos_gold": true
+  },
+  {
+   "id": "T2-06",
+   "tipo": "direta",
+   "conjunto": "T2",
+   "pos": 1,
+   "nota": 0.7815,
+   "todos_gold": true
+  },
+  {
+   "id": "T2-07",
+   "tipo": "direta",
+   "conjunto": "T2",
+   "pos": 0,
+   "nota": 0.6,
+   "todos_gold": false
+  },
+  {
+   "id": "T2-08",
+   "tipo": "coloquial",
+   "conjunto": "T2",
+   "pos": 5,
+   "nota": 0.7345,
+   "todos_gold": false
+  },
+  {
+   "id": "T2-09",
+   "tipo": "coloquial",
+   "conjunto": "T2",
+   "pos": 0,
+   "nota": 0.6529,
+   "todos_gold": false
+  },
+  {
+   "id": "T2-10",
+   "tipo": "coloquial",
+   "conjunto": "T2",
+   "pos": 0,
+   "nota": 0.7134,
+   "todos_gold": false
+  },
+  {
+   "id": "T2-11",
+   "tipo": "coloquial",
+   "conjunto": "T2",
+   "pos": 1,
+   "nota": 0.7357,
+   "todos_gold": true
+  },
+  {
+   "id": "T2-12",
+   "tipo": "coloquial",
+   "conjunto": "T2",
+   "pos": 2,
+   "nota": 0.6133,
+   "todos_gold": true
+  },
+  {
+   "id": "T2-13",
+   "tipo": "ruido",
+   "conjunto": "T2",
+   "pos": 5,
+   "nota": 0.6998,
+   "todos_gold": false
+  },
+  {
+   "id": "T2-14",
+   "tipo": "ruido",
+   "conjunto": "T2",
+   "pos": 0,
+   "nota": 0.6384,
+   "todos_gold": false
+  },
+  {
+   "id": "T2-15",
+   "tipo": "ruido",
+   "conjunto": "T2",
+   "pos": 0,
+   "nota": 0.5852,
+   "todos_gold": false
+  },
+  {
+   "id": "T2-16",
+   "tipo": "multi_trecho",
+   "conjunto": "T2",
+   "pos": 0,
+   "nota": 0.7305,
+   "todos_gold": false
+  },
+  {
+   "id": "T2-17",
+   "tipo": "multi_trecho",
+   "conjunto": "T2",
+   "pos": 4,
+   "nota": 0.6623,
+   "todos_gold": false
+  },
+  {
+   "id": "T2-18",
+   "tipo": "multi_trecho",
+   "conjunto": "T2",
+   "pos": 1,
+   "nota": 0.6958,
+   "todos_gold": true
+  }
+ ],
+ "mq_k3": [
+  {
+   "id": "T-001",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.7477,
+   "todos_gold": true
+  },
+  {
+   "id": "T-002",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 0,
+   "nota": 0.7241,
+   "todos_gold": false
+  },
+  {
+   "id": "T-003",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.7584,
+   "todos_gold": false
+  },
+  {
+   "id": "T-004",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.8017,
+   "todos_gold": true
+  },
+  {
+   "id": "T-005",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.7261,
+   "todos_gold": true
+  },
+  {
+   "id": "T-006",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.7608,
+   "todos_gold": false
+  },
+  {
+   "id": "T-007",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 3,
+   "nota": 0.6634,
+   "todos_gold": false
+  },
+  {
+   "id": "T-008",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.7009,
+   "todos_gold": true
+  },
+  {
+   "id": "T-009",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.7668,
+   "todos_gold": true
+  },
+  {
+   "id": "T-010",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.7558,
+   "todos_gold": false
+  },
+  {
+   "id": "T-011",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 2,
+   "nota": 0.7365,
+   "todos_gold": false
+  },
+  {
+   "id": "T-012",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.7869,
+   "todos_gold": true
+  },
+  {
+   "id": "T-013",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.7268,
+   "todos_gold": true
+  },
+  {
+   "id": "T-014",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.7458,
+   "todos_gold": false
+  },
+  {
+   "id": "T-015",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.6829,
+   "todos_gold": false
+  },
+  {
+   "id": "T-016",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 2,
+   "nota": 0.7883,
+   "todos_gold": false
+  },
+  {
+   "id": "T-017",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.7409,
+   "todos_gold": false
+  },
+  {
+   "id": "T-018",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 0,
+   "nota": 0.6772,
+   "todos_gold": false
+  },
+  {
+   "id": "T-019",
+   "tipo": "coloquial",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.7298,
+   "todos_gold": true
+  },
+  {
+   "id": "T-020",
+   "tipo": "coloquial",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.7222,
+   "todos_gold": false
+  },
+  {
+   "id": "T-021",
+   "tipo": "coloquial",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.7697,
+   "todos_gold": true
+  },
+  {
+   "id": "T-022",
+   "tipo": "coloquial",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.6993,
+   "todos_gold": false
+  },
+  {
+   "id": "T-023",
+   "tipo": "coloquial",
+   "conjunto": "T1",
+   "pos": 2,
+   "nota": 0.6875,
+   "todos_gold": false
+  },
+  {
+   "id": "T-024",
+   "tipo": "coloquial",
+   "conjunto": "T1",
+   "pos": 0,
+   "nota": 0.7201,
+   "todos_gold": false
+  },
+  {
+   "id": "T-025",
+   "tipo": "coloquial",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.7947,
+   "todos_gold": false
+  },
+  {
+   "id": "T-026",
+   "tipo": "coloquial",
+   "conjunto": "T1",
+   "pos": 0,
+   "nota": 0.7106,
+   "todos_gold": false
+  },
+  {
+   "id": "T-027",
+   "tipo": "coloquial",
+   "conjunto": "T1",
+   "pos": 0,
+   "nota": 0.7599,
+   "todos_gold": false
+  },
+  {
+   "id": "T-028",
+   "tipo": "coloquial",
+   "conjunto": "T1",
+   "pos": 3,
+   "nota": 0.7181,
+   "todos_gold": false
+  },
+  {
+   "id": "T-029",
+   "tipo": "coloquial",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.7226,
+   "todos_gold": false
+  },
+  {
+   "id": "T-030",
+   "tipo": "coloquial",
+   "conjunto": "T1",
+   "pos": 2,
+   "nota": 0.7025,
+   "todos_gold": false
+  },
+  {
+   "id": "T-031",
+   "tipo": "ruido",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.6802,
+   "todos_gold": false
+  },
+  {
+   "id": "T-032",
+   "tipo": "ruido",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.8133,
+   "todos_gold": true
+  },
+  {
+   "id": "T-033",
+   "tipo": "ruido",
+   "conjunto": "T1",
+   "pos": 0,
+   "nota": 0.7634,
+   "todos_gold": false
+  },
+  {
+   "id": "T-034",
+   "tipo": "ruido",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.6784,
+   "todos_gold": false
+  },
+  {
+   "id": "T-035",
+   "tipo": "ruido",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.6635,
+   "todos_gold": false
+  },
+  {
+   "id": "T-036",
+   "tipo": "ruido",
+   "conjunto": "T1",
+   "pos": 0,
+   "nota": 0.7454,
+   "todos_gold": false
+  },
+  {
+   "id": "T-037",
+   "tipo": "multi_trecho",
+   "conjunto": "T1",
+   "pos": 0,
+   "nota": 0.7062,
+   "todos_gold": false
+  },
+  {
+   "id": "T-038",
+   "tipo": "multi_trecho",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.7925,
+   "todos_gold": true
+  },
+  {
+   "id": "T-039",
+   "tipo": "multi_trecho",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.7331,
+   "todos_gold": false
+  },
+  {
+   "id": "T-040",
+   "tipo": "multi_trecho",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.5933,
+   "todos_gold": false
+  },
+  {
+   "id": "T-041",
+   "tipo": "multi_trecho",
+   "conjunto": "T1",
+   "pos": 3,
+   "nota": 0.7115,
+   "todos_gold": false
+  },
+  {
+   "id": "T-042",
+   "tipo": "multi_trecho",
+   "conjunto": "T1",
+   "pos": 3,
+   "nota": 0.6417,
+   "todos_gold": false
+  },
+  {
+   "id": "T2-01",
+   "tipo": "direta",
+   "conjunto": "T2",
+   "pos": 1,
+   "nota": 0.7322,
+   "todos_gold": true
+  },
+  {
+   "id": "T2-02",
+   "tipo": "direta",
+   "conjunto": "T2",
+   "pos": 1,
+   "nota": 0.7882,
+   "todos_gold": true
+  },
+  {
+   "id": "T2-03",
+   "tipo": "direta",
+   "conjunto": "T2",
+   "pos": 0,
+   "nota": 0.7066,
+   "todos_gold": false
+  },
+  {
+   "id": "T2-04",
+   "tipo": "direta",
+   "conjunto": "T2",
+   "pos": 0,
+   "nota": 0.7308,
+   "todos_gold": false
+  },
+  {
+   "id": "T2-05",
+   "tipo": "direta",
+   "conjunto": "T2",
+   "pos": 2,
+   "nota": 0.716,
+   "todos_gold": true
+  },
+  {
+   "id": "T2-06",
+   "tipo": "direta",
+   "conjunto": "T2",
+   "pos": 1,
+   "nota": 0.7829,
+   "todos_gold": true
+  },
+  {
+   "id": "T2-07",
+   "tipo": "direta",
+   "conjunto": "T2",
+   "pos": 0,
+   "nota": 0.6509,
+   "todos_gold": false
+  },
+  {
+   "id": "T2-08",
+   "tipo": "coloquial",
+   "conjunto": "T2",
+   "pos": 2,
+   "nota": 0.7517,
+   "todos_gold": false
+  },
+  {
+   "id": "T2-09",
+   "tipo": "coloquial",
+   "conjunto": "T2",
+   "pos": 2,
+   "nota": 0.7279,
+   "todos_gold": false
+  },
+  {
+   "id": "T2-10",
+   "tipo": "coloquial",
+   "conjunto": "T2",
+   "pos": 0,
+   "nota": 0.7134,
+   "todos_gold": false
+  },
+  {
+   "id": "T2-11",
+   "tipo": "coloquial",
+   "conjunto": "T2",
+   "pos": 1,
+   "nota": 0.7701,
+   "todos_gold": true
+  },
+  {
+   "id": "T2-12",
+   "tipo": "coloquial",
+   "conjunto": "T2",
+   "pos": 1,
+   "nota": 0.7169,
+   "todos_gold": false
+  },
+  {
+   "id": "T2-13",
+   "tipo": "ruido",
+   "conjunto": "T2",
+   "pos": 0,
+   "nota": 0.6998,
+   "todos_gold": false
+  },
+  {
+   "id": "T2-14",
+   "tipo": "ruido",
+   "conjunto": "T2",
+   "pos": 2,
+   "nota": 0.7121,
+   "todos_gold": false
+  },
+  {
+   "id": "T2-15",
+   "tipo": "ruido",
+   "conjunto": "T2",
+   "pos": 0,
+   "nota": 0.727,
+   "todos_gold": false
+  },
+  {
+   "id": "T2-16",
+   "tipo": "multi_trecho",
+   "conjunto": "T2",
+   "pos": 1,
+   "nota": 0.7648,
+   "todos_gold": false
+  },
+  {
+   "id": "T2-17",
+   "tipo": "multi_trecho",
+   "conjunto": "T2",
+   "pos": 0,
+   "nota": 0.7079,
+   "todos_gold": false
+  },
+  {
+   "id": "T2-18",
+   "tipo": "multi_trecho",
+   "conjunto": "T2",
+   "pos": 1,
+   "nota": 0.6992,
+   "todos_gold": true
+  }
+ ],
+ "mq_k5": [
+  {
+   "id": "T-001",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.7477,
+   "todos_gold": true
+  },
+  {
+   "id": "T-002",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 4,
+   "nota": 0.7241,
+   "todos_gold": true
+  },
+  {
+   "id": "T-003",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.7584,
+   "todos_gold": false
+  },
+  {
+   "id": "T-004",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.8017,
+   "todos_gold": true
+  },
+  {
+   "id": "T-005",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.7261,
+   "todos_gold": true
+  },
+  {
+   "id": "T-006",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.7608,
+   "todos_gold": false
+  },
+  {
+   "id": "T-007",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 3,
+   "nota": 0.6634,
+   "todos_gold": false
+  },
+  {
+   "id": "T-008",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.7009,
+   "todos_gold": true
+  },
+  {
+   "id": "T-009",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.7668,
+   "todos_gold": true
+  },
+  {
+   "id": "T-010",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.7558,
+   "todos_gold": true
+  },
+  {
+   "id": "T-011",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 2,
+   "nota": 0.7365,
+   "todos_gold": false
+  },
+  {
+   "id": "T-012",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.7869,
+   "todos_gold": true
+  },
+  {
+   "id": "T-013",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.7268,
+   "todos_gold": true
+  },
+  {
+   "id": "T-014",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.7458,
+   "todos_gold": false
+  },
+  {
+   "id": "T-015",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.6829,
+   "todos_gold": false
+  },
+  {
+   "id": "T-016",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 2,
+   "nota": 0.7883,
+   "todos_gold": true
+  },
+  {
+   "id": "T-017",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.7409,
+   "todos_gold": false
+  },
+  {
+   "id": "T-018",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 0,
+   "nota": 0.6772,
+   "todos_gold": false
+  },
+  {
+   "id": "T-019",
+   "tipo": "coloquial",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.7298,
+   "todos_gold": true
+  },
+  {
+   "id": "T-020",
+   "tipo": "coloquial",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.7222,
+   "todos_gold": true
+  },
+  {
+   "id": "T-021",
+   "tipo": "coloquial",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.7697,
+   "todos_gold": true
+  },
+  {
+   "id": "T-022",
+   "tipo": "coloquial",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.6993,
+   "todos_gold": true
+  },
+  {
+   "id": "T-023",
+   "tipo": "coloquial",
+   "conjunto": "T1",
+   "pos": 2,
+   "nota": 0.6875,
+   "todos_gold": false
+  },
+  {
+   "id": "T-024",
+   "tipo": "coloquial",
+   "conjunto": "T1",
+   "pos": 0,
+   "nota": 0.7201,
+   "todos_gold": false
+  },
+  {
+   "id": "T-025",
+   "tipo": "coloquial",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.7947,
+   "todos_gold": false
+  },
+  {
+   "id": "T-026",
+   "tipo": "coloquial",
+   "conjunto": "T1",
+   "pos": 0,
+   "nota": 0.7106,
+   "todos_gold": false
+  },
+  {
+   "id": "T-027",
+   "tipo": "coloquial",
+   "conjunto": "T1",
+   "pos": 0,
+   "nota": 0.7599,
+   "todos_gold": false
+  },
+  {
+   "id": "T-028",
+   "tipo": "coloquial",
+   "conjunto": "T1",
+   "pos": 3,
+   "nota": 0.7181,
+   "todos_gold": false
+  },
+  {
+   "id": "T-029",
+   "tipo": "coloquial",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.7226,
+   "todos_gold": false
+  },
+  {
+   "id": "T-030",
+   "tipo": "coloquial",
+   "conjunto": "T1",
+   "pos": 2,
+   "nota": 0.7025,
+   "todos_gold": false
+  },
+  {
+   "id": "T-031",
+   "tipo": "ruido",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.6802,
+   "todos_gold": true
+  },
+  {
+   "id": "T-032",
+   "tipo": "ruido",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.8133,
+   "todos_gold": true
+  },
+  {
+   "id": "T-033",
+   "tipo": "ruido",
+   "conjunto": "T1",
+   "pos": 5,
+   "nota": 0.7634,
+   "todos_gold": false
+  },
+  {
+   "id": "T-034",
+   "tipo": "ruido",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.6784,
+   "todos_gold": true
+  },
+  {
+   "id": "T-035",
+   "tipo": "ruido",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.6635,
+   "todos_gold": false
+  },
+  {
+   "id": "T-036",
+   "tipo": "ruido",
+   "conjunto": "T1",
+   "pos": 0,
+   "nota": 0.7454,
+   "todos_gold": false
+  },
+  {
+   "id": "T-037",
+   "tipo": "multi_trecho",
+   "conjunto": "T1",
+   "pos": 0,
+   "nota": 0.7062,
+   "todos_gold": false
+  },
+  {
+   "id": "T-038",
+   "tipo": "multi_trecho",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.7925,
+   "todos_gold": true
+  },
+  {
+   "id": "T-039",
+   "tipo": "multi_trecho",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.7331,
+   "todos_gold": false
+  },
+  {
+   "id": "T-040",
+   "tipo": "multi_trecho",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.5933,
+   "todos_gold": false
+  },
+  {
+   "id": "T-041",
+   "tipo": "multi_trecho",
+   "conjunto": "T1",
+   "pos": 3,
+   "nota": 0.7115,
+   "todos_gold": false
+  },
+  {
+   "id": "T-042",
+   "tipo": "multi_trecho",
+   "conjunto": "T1",
+   "pos": 3,
+   "nota": 0.6417,
+   "todos_gold": false
+  },
+  {
+   "id": "T2-01",
+   "tipo": "direta",
+   "conjunto": "T2",
+   "pos": 1,
+   "nota": 0.7322,
+   "todos_gold": true
+  },
+  {
+   "id": "T2-02",
+   "tipo": "direta",
+   "conjunto": "T2",
+   "pos": 1,
+   "nota": 0.7882,
+   "todos_gold": true
+  },
+  {
+   "id": "T2-03",
+   "tipo": "direta",
+   "conjunto": "T2",
+   "pos": 0,
+   "nota": 0.7066,
+   "todos_gold": false
+  },
+  {
+   "id": "T2-04",
+   "tipo": "direta",
+   "conjunto": "T2",
+   "pos": 0,
+   "nota": 0.7308,
+   "todos_gold": false
+  },
+  {
+   "id": "T2-05",
+   "tipo": "direta",
+   "conjunto": "T2",
+   "pos": 2,
+   "nota": 0.716,
+   "todos_gold": true
+  },
+  {
+   "id": "T2-06",
+   "tipo": "direta",
+   "conjunto": "T2",
+   "pos": 1,
+   "nota": 0.7829,
+   "todos_gold": true
+  },
+  {
+   "id": "T2-07",
+   "tipo": "direta",
+   "conjunto": "T2",
+   "pos": 0,
+   "nota": 0.6509,
+   "todos_gold": false
+  },
+  {
+   "id": "T2-08",
+   "tipo": "coloquial",
+   "conjunto": "T2",
+   "pos": 2,
+   "nota": 0.7517,
+   "todos_gold": false
+  },
+  {
+   "id": "T2-09",
+   "tipo": "coloquial",
+   "conjunto": "T2",
+   "pos": 2,
+   "nota": 0.7279,
+   "todos_gold": false
+  },
+  {
+   "id": "T2-10",
+   "tipo": "coloquial",
+   "conjunto": "T2",
+   "pos": 0,
+   "nota": 0.7134,
+   "todos_gold": false
+  },
+  {
+   "id": "T2-11",
+   "tipo": "coloquial",
+   "conjunto": "T2",
+   "pos": 1,
+   "nota": 0.7701,
+   "todos_gold": true
+  },
+  {
+   "id": "T2-12",
+   "tipo": "coloquial",
+   "conjunto": "T2",
+   "pos": 1,
+   "nota": 0.7169,
+   "todos_gold": true
+  },
+  {
+   "id": "T2-13",
+   "tipo": "ruido",
+   "conjunto": "T2",
+   "pos": 4,
+   "nota": 0.6998,
+   "todos_gold": false
+  },
+  {
+   "id": "T2-14",
+   "tipo": "ruido",
+   "conjunto": "T2",
+   "pos": 2,
+   "nota": 0.7121,
+   "todos_gold": false
+  },
+  {
+   "id": "T2-15",
+   "tipo": "ruido",
+   "conjunto": "T2",
+   "pos": 0,
+   "nota": 0.727,
+   "todos_gold": false
+  },
+  {
+   "id": "T2-16",
+   "tipo": "multi_trecho",
+   "conjunto": "T2",
+   "pos": 1,
+   "nota": 0.7648,
+   "todos_gold": false
+  },
+  {
+   "id": "T2-17",
+   "tipo": "multi_trecho",
+   "conjunto": "T2",
+   "pos": 0,
+   "nota": 0.7079,
+   "todos_gold": false
+  },
+  {
+   "id": "T2-18",
+   "tipo": "multi_trecho",
+   "conjunto": "T2",
+   "pos": 1,
+   "nota": 0.6992,
+   "todos_gold": true
+  }
+ ],
+ "mq_rr_k3": [
+  {
+   "id": "T-001",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.7477,
+   "todos_gold": true
+  },
+  {
+   "id": "T-002",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 3,
+   "nota": 0.7241,
+   "todos_gold": true
+  },
+  {
+   "id": "T-003",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.7584,
+   "todos_gold": true
+  },
+  {
+   "id": "T-004",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 2,
+   "nota": 0.8017,
+   "todos_gold": true
+  },
+  {
+   "id": "T-005",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 2,
+   "nota": 0.7261,
+   "todos_gold": true
+  },
+  {
+   "id": "T-006",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.7608,
+   "todos_gold": false
+  },
+  {
+   "id": "T-007",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 3,
+   "nota": 0.6634,
+   "todos_gold": false
+  },
+  {
+   "id": "T-008",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.7009,
+   "todos_gold": true
+  },
+  {
+   "id": "T-009",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.7668,
+   "todos_gold": true
+  },
+  {
+   "id": "T-010",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 2,
+   "nota": 0.7558,
+   "todos_gold": true
+  },
+  {
+   "id": "T-011",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 3,
+   "nota": 0.7365,
+   "todos_gold": true
+  },
+  {
+   "id": "T-012",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.7869,
+   "todos_gold": true
+  },
+  {
+   "id": "T-013",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 0,
+   "nota": 0.7268,
+   "todos_gold": false
+  },
+  {
+   "id": "T-014",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.7458,
+   "todos_gold": true
+  },
+  {
+   "id": "T-015",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 2,
+   "nota": 0.6829,
+   "todos_gold": true
+  },
+  {
+   "id": "T-016",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.7883,
+   "todos_gold": true
+  },
+  {
+   "id": "T-017",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 2,
+   "nota": 0.7409,
+   "todos_gold": true
+  },
+  {
+   "id": "T-018",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.6772,
+   "todos_gold": true
+  },
+  {
+   "id": "T-019",
+   "tipo": "coloquial",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.7298,
+   "todos_gold": false
+  },
+  {
+   "id": "T-020",
+   "tipo": "coloquial",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.7222,
+   "todos_gold": false
+  },
+  {
+   "id": "T-021",
+   "tipo": "coloquial",
+   "conjunto": "T1",
+   "pos": 0,
+   "nota": 0.7697,
+   "todos_gold": false
+  },
+  {
+   "id": "T-022",
+   "tipo": "coloquial",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.6993,
+   "todos_gold": false
+  },
+  {
+   "id": "T-023",
+   "tipo": "coloquial",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.6875,
+   "todos_gold": false
+  },
+  {
+   "id": "T-024",
+   "tipo": "coloquial",
+   "conjunto": "T1",
+   "pos": 0,
+   "nota": 0.7201,
+   "todos_gold": false
+  },
+  {
+   "id": "T-025",
+   "tipo": "coloquial",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.7947,
+   "todos_gold": false
+  },
+  {
+   "id": "T-026",
+   "tipo": "coloquial",
+   "conjunto": "T1",
+   "pos": 2,
+   "nota": 0.7106,
+   "todos_gold": true
+  },
+  {
+   "id": "T-027",
+   "tipo": "coloquial",
+   "conjunto": "T1",
+   "pos": 0,
+   "nota": 0.7599,
+   "todos_gold": false
+  },
+  {
+   "id": "T-028",
+   "tipo": "coloquial",
+   "conjunto": "T1",
+   "pos": 0,
+   "nota": 0.7181,
+   "todos_gold": false
+  },
+  {
+   "id": "T-029",
+   "tipo": "coloquial",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.7226,
+   "todos_gold": false
+  },
+  {
+   "id": "T-030",
+   "tipo": "coloquial",
+   "conjunto": "T1",
+   "pos": 3,
+   "nota": 0.7025,
+   "todos_gold": false
+  },
+  {
+   "id": "T-031",
+   "tipo": "ruido",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.6802,
+   "todos_gold": false
+  },
+  {
+   "id": "T-032",
+   "tipo": "ruido",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.8133,
+   "todos_gold": false
+  },
+  {
+   "id": "T-033",
+   "tipo": "ruido",
+   "conjunto": "T1",
+   "pos": 0,
+   "nota": 0.7634,
+   "todos_gold": false
+  },
+  {
+   "id": "T-034",
+   "tipo": "ruido",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.6784,
+   "todos_gold": false
+  },
+  {
+   "id": "T-035",
+   "tipo": "ruido",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.6635,
+   "todos_gold": false
+  },
+  {
+   "id": "T-036",
+   "tipo": "ruido",
+   "conjunto": "T1",
+   "pos": 0,
+   "nota": 0.7454,
+   "todos_gold": false
+  },
+  {
+   "id": "T-037",
+   "tipo": "multi_trecho",
+   "conjunto": "T1",
+   "pos": 0,
+   "nota": 0.7062,
+   "todos_gold": false
+  },
+  {
+   "id": "T-038",
+   "tipo": "multi_trecho",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.7925,
+   "todos_gold": false
+  },
+  {
+   "id": "T-039",
+   "tipo": "multi_trecho",
+   "conjunto": "T1",
+   "pos": 2,
+   "nota": 0.7331,
+   "todos_gold": true
+  },
+  {
+   "id": "T-040",
+   "tipo": "multi_trecho",
+   "conjunto": "T1",
+   "pos": 2,
+   "nota": 0.5933,
+   "todos_gold": true
+  },
+  {
+   "id": "T-041",
+   "tipo": "multi_trecho",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.7115,
+   "todos_gold": false
+  },
+  {
+   "id": "T-042",
+   "tipo": "multi_trecho",
+   "conjunto": "T1",
+   "pos": 0,
+   "nota": 0.6417,
+   "todos_gold": false
+  },
+  {
+   "id": "T2-01",
+   "tipo": "direta",
+   "conjunto": "T2",
+   "pos": 1,
+   "nota": 0.7322,
+   "todos_gold": true
+  },
+  {
+   "id": "T2-02",
+   "tipo": "direta",
+   "conjunto": "T2",
+   "pos": 1,
+   "nota": 0.7882,
+   "todos_gold": true
+  },
+  {
+   "id": "T2-03",
+   "tipo": "direta",
+   "conjunto": "T2",
+   "pos": 0,
+   "nota": 0.7066,
+   "todos_gold": false
+  },
+  {
+   "id": "T2-04",
+   "tipo": "direta",
+   "conjunto": "T2",
+   "pos": 3,
+   "nota": 0.7308,
+   "todos_gold": true
+  },
+  {
+   "id": "T2-05",
+   "tipo": "direta",
+   "conjunto": "T2",
+   "pos": 1,
+   "nota": 0.716,
+   "todos_gold": true
+  },
+  {
+   "id": "T2-06",
+   "tipo": "direta",
+   "conjunto": "T2",
+   "pos": 1,
+   "nota": 0.7829,
+   "todos_gold": true
+  },
+  {
+   "id": "T2-07",
+   "tipo": "direta",
+   "conjunto": "T2",
+   "pos": 2,
+   "nota": 0.6509,
+   "todos_gold": true
+  },
+  {
+   "id": "T2-08",
+   "tipo": "coloquial",
+   "conjunto": "T2",
+   "pos": 2,
+   "nota": 0.7517,
+   "todos_gold": false
+  },
+  {
+   "id": "T2-09",
+   "tipo": "coloquial",
+   "conjunto": "T2",
+   "pos": 1,
+   "nota": 0.7279,
+   "todos_gold": false
+  },
+  {
+   "id": "T2-10",
+   "tipo": "coloquial",
+   "conjunto": "T2",
+   "pos": 0,
+   "nota": 0.7134,
+   "todos_gold": false
+  },
+  {
+   "id": "T2-11",
+   "tipo": "coloquial",
+   "conjunto": "T2",
+   "pos": 1,
+   "nota": 0.7701,
+   "todos_gold": true
+  },
+  {
+   "id": "T2-12",
+   "tipo": "coloquial",
+   "conjunto": "T2",
+   "pos": 2,
+   "nota": 0.7169,
+   "todos_gold": true
+  },
+  {
+   "id": "T2-13",
+   "tipo": "ruido",
+   "conjunto": "T2",
+   "pos": 2,
+   "nota": 0.6998,
+   "todos_gold": false
+  },
+  {
+   "id": "T2-14",
+   "tipo": "ruido",
+   "conjunto": "T2",
+   "pos": 1,
+   "nota": 0.7121,
+   "todos_gold": false
+  },
+  {
+   "id": "T2-15",
+   "tipo": "ruido",
+   "conjunto": "T2",
+   "pos": 0,
+   "nota": 0.727,
+   "todos_gold": false
+  },
+  {
+   "id": "T2-16",
+   "tipo": "multi_trecho",
+   "conjunto": "T2",
+   "pos": 2,
+   "nota": 0.7648,
+   "todos_gold": false
+  },
+  {
+   "id": "T2-17",
+   "tipo": "multi_trecho",
+   "conjunto": "T2",
+   "pos": 2,
+   "nota": 0.7079,
+   "todos_gold": false
+  },
+  {
+   "id": "T2-18",
+   "tipo": "multi_trecho",
+   "conjunto": "T2",
+   "pos": 1,
+   "nota": 0.6992,
+   "todos_gold": true
+  }
+ ],
+ "mq_rr_k5": [
+  {
+   "id": "T-001",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.7477,
+   "todos_gold": true
+  },
+  {
+   "id": "T-002",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 3,
+   "nota": 0.7241,
+   "todos_gold": true
+  },
+  {
+   "id": "T-003",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.7584,
+   "todos_gold": true
+  },
+  {
+   "id": "T-004",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 2,
+   "nota": 0.8017,
+   "todos_gold": true
+  },
+  {
+   "id": "T-005",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 2,
+   "nota": 0.7261,
+   "todos_gold": true
+  },
+  {
+   "id": "T-006",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.7608,
+   "todos_gold": false
+  },
+  {
+   "id": "T-007",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 3,
+   "nota": 0.6634,
+   "todos_gold": false
+  },
+  {
+   "id": "T-008",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.7009,
+   "todos_gold": true
+  },
+  {
+   "id": "T-009",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.7668,
+   "todos_gold": true
+  },
+  {
+   "id": "T-010",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 2,
+   "nota": 0.7558,
+   "todos_gold": true
+  },
+  {
+   "id": "T-011",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 3,
+   "nota": 0.7365,
+   "todos_gold": true
+  },
+  {
+   "id": "T-012",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.7869,
+   "todos_gold": true
+  },
+  {
+   "id": "T-013",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 4,
+   "nota": 0.7268,
+   "todos_gold": true
+  },
+  {
+   "id": "T-014",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.7458,
+   "todos_gold": true
+  },
+  {
+   "id": "T-015",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 2,
+   "nota": 0.6829,
+   "todos_gold": true
+  },
+  {
+   "id": "T-016",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.7883,
+   "todos_gold": true
+  },
+  {
+   "id": "T-017",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 2,
+   "nota": 0.7409,
+   "todos_gold": true
+  },
+  {
+   "id": "T-018",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.6772,
+   "todos_gold": true
+  },
+  {
+   "id": "T-019",
+   "tipo": "coloquial",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.7298,
+   "todos_gold": true
+  },
+  {
+   "id": "T-020",
+   "tipo": "coloquial",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.7222,
+   "todos_gold": true
+  },
+  {
+   "id": "T-021",
+   "tipo": "coloquial",
+   "conjunto": "T1",
+   "pos": 0,
+   "nota": 0.7697,
+   "todos_gold": false
+  },
+  {
+   "id": "T-022",
+   "tipo": "coloquial",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.6993,
+   "todos_gold": false
+  },
+  {
+   "id": "T-023",
+   "tipo": "coloquial",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.6875,
+   "todos_gold": true
+  },
+  {
+   "id": "T-024",
+   "tipo": "coloquial",
+   "conjunto": "T1",
+   "pos": 0,
+   "nota": 0.7201,
+   "todos_gold": false
+  },
+  {
+   "id": "T-025",
+   "tipo": "coloquial",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.7947,
+   "todos_gold": false
+  },
+  {
+   "id": "T-026",
+   "tipo": "coloquial",
+   "conjunto": "T1",
+   "pos": 2,
+   "nota": 0.7106,
+   "todos_gold": true
+  },
+  {
+   "id": "T-027",
+   "tipo": "coloquial",
+   "conjunto": "T1",
+   "pos": 5,
+   "nota": 0.7599,
+   "todos_gold": true
+  },
+  {
+   "id": "T-028",
+   "tipo": "coloquial",
+   "conjunto": "T1",
+   "pos": 5,
+   "nota": 0.7181,
+   "todos_gold": false
+  },
+  {
+   "id": "T-029",
+   "tipo": "coloquial",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.7226,
+   "todos_gold": false
+  },
+  {
+   "id": "T-030",
+   "tipo": "coloquial",
+   "conjunto": "T1",
+   "pos": 3,
+   "nota": 0.7025,
+   "todos_gold": false
+  },
+  {
+   "id": "T-031",
+   "tipo": "ruido",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.6802,
+   "todos_gold": true
+  },
+  {
+   "id": "T-032",
+   "tipo": "ruido",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.8133,
+   "todos_gold": true
+  },
+  {
+   "id": "T-033",
+   "tipo": "ruido",
+   "conjunto": "T1",
+   "pos": 0,
+   "nota": 0.7634,
+   "todos_gold": false
+  },
+  {
+   "id": "T-034",
+   "tipo": "ruido",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.6784,
+   "todos_gold": false
+  },
+  {
+   "id": "T-035",
+   "tipo": "ruido",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.6635,
+   "todos_gold": false
+  },
+  {
+   "id": "T-036",
+   "tipo": "ruido",
+   "conjunto": "T1",
+   "pos": 0,
+   "nota": 0.7454,
+   "todos_gold": false
+  },
+  {
+   "id": "T-037",
+   "tipo": "multi_trecho",
+   "conjunto": "T1",
+   "pos": 0,
+   "nota": 0.7062,
+   "todos_gold": false
+  },
+  {
+   "id": "T-038",
+   "tipo": "multi_trecho",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.7925,
+   "todos_gold": false
+  },
+  {
+   "id": "T-039",
+   "tipo": "multi_trecho",
+   "conjunto": "T1",
+   "pos": 2,
+   "nota": 0.7331,
+   "todos_gold": true
+  },
+  {
+   "id": "T-040",
+   "tipo": "multi_trecho",
+   "conjunto": "T1",
+   "pos": 2,
+   "nota": 0.5933,
+   "todos_gold": true
+  },
+  {
+   "id": "T-041",
+   "tipo": "multi_trecho",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.7115,
+   "todos_gold": false
+  },
+  {
+   "id": "T-042",
+   "tipo": "multi_trecho",
+   "conjunto": "T1",
+   "pos": 0,
+   "nota": 0.6417,
+   "todos_gold": false
+  },
+  {
+   "id": "T2-01",
+   "tipo": "direta",
+   "conjunto": "T2",
+   "pos": 1,
+   "nota": 0.7322,
+   "todos_gold": true
+  },
+  {
+   "id": "T2-02",
+   "tipo": "direta",
+   "conjunto": "T2",
+   "pos": 1,
+   "nota": 0.7882,
+   "todos_gold": true
+  },
+  {
+   "id": "T2-03",
+   "tipo": "direta",
+   "conjunto": "T2",
+   "pos": 0,
+   "nota": 0.7066,
+   "todos_gold": false
+  },
+  {
+   "id": "T2-04",
+   "tipo": "direta",
+   "conjunto": "T2",
+   "pos": 3,
+   "nota": 0.7308,
+   "todos_gold": true
+  },
+  {
+   "id": "T2-05",
+   "tipo": "direta",
+   "conjunto": "T2",
+   "pos": 1,
+   "nota": 0.716,
+   "todos_gold": true
+  },
+  {
+   "id": "T2-06",
+   "tipo": "direta",
+   "conjunto": "T2",
+   "pos": 1,
+   "nota": 0.7829,
+   "todos_gold": true
+  },
+  {
+   "id": "T2-07",
+   "tipo": "direta",
+   "conjunto": "T2",
+   "pos": 2,
+   "nota": 0.6509,
+   "todos_gold": true
+  },
+  {
+   "id": "T2-08",
+   "tipo": "coloquial",
+   "conjunto": "T2",
+   "pos": 2,
+   "nota": 0.7517,
+   "todos_gold": false
+  },
+  {
+   "id": "T2-09",
+   "tipo": "coloquial",
+   "conjunto": "T2",
+   "pos": 1,
+   "nota": 0.7279,
+   "todos_gold": false
+  },
+  {
+   "id": "T2-10",
+   "tipo": "coloquial",
+   "conjunto": "T2",
+   "pos": 0,
+   "nota": 0.7134,
+   "todos_gold": false
+  },
+  {
+   "id": "T2-11",
+   "tipo": "coloquial",
+   "conjunto": "T2",
+   "pos": 1,
+   "nota": 0.7701,
+   "todos_gold": true
+  },
+  {
+   "id": "T2-12",
+   "tipo": "coloquial",
+   "conjunto": "T2",
+   "pos": 2,
+   "nota": 0.7169,
+   "todos_gold": true
+  },
+  {
+   "id": "T2-13",
+   "tipo": "ruido",
+   "conjunto": "T2",
+   "pos": 2,
+   "nota": 0.6998,
+   "todos_gold": false
+  },
+  {
+   "id": "T2-14",
+   "tipo": "ruido",
+   "conjunto": "T2",
+   "pos": 1,
+   "nota": 0.7121,
+   "todos_gold": false
+  },
+  {
+   "id": "T2-15",
+   "tipo": "ruido",
+   "conjunto": "T2",
+   "pos": 5,
+   "nota": 0.727,
+   "todos_gold": true
+  },
+  {
+   "id": "T2-16",
+   "tipo": "multi_trecho",
+   "conjunto": "T2",
+   "pos": 2,
+   "nota": 0.7648,
+   "todos_gold": false
+  },
+  {
+   "id": "T2-17",
+   "tipo": "multi_trecho",
+   "conjunto": "T2",
+   "pos": 2,
+   "nota": 0.7079,
+   "todos_gold": false
+  },
+  {
+   "id": "T2-18",
+   "tipo": "multi_trecho",
+   "conjunto": "T2",
+   "pos": 1,
+   "nota": 0.6992,
+   "todos_gold": true
+  }
+ ],
+ "mq_rr_faq_k3": [
+  {
+   "id": "T-001",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.7477,
+   "todos_gold": true
+  },
+  {
+   "id": "T-002",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 2,
+   "nota": 0.7241,
+   "todos_gold": true
+  },
+  {
+   "id": "T-003",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.7584,
+   "todos_gold": false
+  },
+  {
+   "id": "T-004",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.8017,
+   "todos_gold": true
+  },
+  {
+   "id": "T-005",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 2,
+   "nota": 0.7261,
+   "todos_gold": true
+  },
+  {
+   "id": "T-006",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.7608,
+   "todos_gold": false
+  },
+  {
+   "id": "T-007",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 2,
+   "nota": 0.6634,
+   "todos_gold": false
+  },
+  {
+   "id": "T-008",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.7009,
+   "todos_gold": true
+  },
+  {
+   "id": "T-009",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.7668,
+   "todos_gold": true
+  },
+  {
+   "id": "T-010",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.7558,
+   "todos_gold": true
+  },
+  {
+   "id": "T-011",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 3,
+   "nota": 0.7365,
+   "todos_gold": true
+  },
+  {
+   "id": "T-012",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.7869,
+   "todos_gold": true
+  },
+  {
+   "id": "T-013",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 2,
+   "nota": 0.7268,
+   "todos_gold": true
+  },
+  {
+   "id": "T-014",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.7458,
+   "todos_gold": false
+  },
+  {
+   "id": "T-015",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.6829,
+   "todos_gold": false
+  },
+  {
+   "id": "T-016",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.7883,
+   "todos_gold": true
+  },
+  {
+   "id": "T-017",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 2,
+   "nota": 0.7409,
+   "todos_gold": true
+  },
+  {
+   "id": "T-018",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.6772,
+   "todos_gold": true
+  },
+  {
+   "id": "T-019",
+   "tipo": "coloquial",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.7298,
+   "todos_gold": true
+  },
+  {
+   "id": "T-020",
+   "tipo": "coloquial",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.7222,
+   "todos_gold": true
+  },
+  {
+   "id": "T-021",
+   "tipo": "coloquial",
+   "conjunto": "T1",
+   "pos": 0,
+   "nota": 0.7697,
+   "todos_gold": false
+  },
+  {
+   "id": "T-022",
+   "tipo": "coloquial",
+   "conjunto": "T1",
+   "pos": 0,
+   "nota": 0.6993,
+   "todos_gold": false
+  },
+  {
+   "id": "T-023",
+   "tipo": "coloquial",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.6875,
+   "todos_gold": false
+  },
+  {
+   "id": "T-024",
+   "tipo": "coloquial",
+   "conjunto": "T1",
+   "pos": 0,
+   "nota": 0.7201,
+   "todos_gold": false
+  },
+  {
+   "id": "T-025",
+   "tipo": "coloquial",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.7947,
+   "todos_gold": false
+  },
+  {
+   "id": "T-026",
+   "tipo": "coloquial",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.7106,
+   "todos_gold": true
+  },
+  {
+   "id": "T-027",
+   "tipo": "coloquial",
+   "conjunto": "T1",
+   "pos": 3,
+   "nota": 0.7599,
+   "todos_gold": true
+  },
+  {
+   "id": "T-028",
+   "tipo": "coloquial",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.7181,
+   "todos_gold": false
+  },
+  {
+   "id": "T-029",
+   "tipo": "coloquial",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.7226,
+   "todos_gold": false
+  },
+  {
+   "id": "T-030",
+   "tipo": "coloquial",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.7025,
+   "todos_gold": false
+  },
+  {
+   "id": "T-031",
+   "tipo": "ruido",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.6802,
+   "todos_gold": true
+  },
+  {
+   "id": "T-032",
+   "tipo": "ruido",
+   "conjunto": "T1",
+   "pos": 2,
+   "nota": 0.8133,
+   "todos_gold": true
+  },
+  {
+   "id": "T-033",
+   "tipo": "ruido",
+   "conjunto": "T1",
+   "pos": 3,
+   "nota": 0.7634,
+   "todos_gold": false
+  },
+  {
+   "id": "T-034",
+   "tipo": "ruido",
+   "conjunto": "T1",
+   "pos": 0,
+   "nota": 0.6784,
+   "todos_gold": false
+  },
+  {
+   "id": "T-035",
+   "tipo": "ruido",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.6635,
+   "todos_gold": false
+  },
+  {
+   "id": "T-036",
+   "tipo": "ruido",
+   "conjunto": "T1",
+   "pos": 0,
+   "nota": 0.7454,
+   "todos_gold": false
+  },
+  {
+   "id": "T-037",
+   "tipo": "multi_trecho",
+   "conjunto": "T1",
+   "pos": 0,
+   "nota": 0.7062,
+   "todos_gold": false
+  },
+  {
+   "id": "T-038",
+   "tipo": "multi_trecho",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.7925,
+   "todos_gold": false
+  },
+  {
+   "id": "T-039",
+   "tipo": "multi_trecho",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.7331,
+   "todos_gold": true
+  },
+  {
+   "id": "T-040",
+   "tipo": "multi_trecho",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.5933,
+   "todos_gold": true
+  },
+  {
+   "id": "T-041",
+   "tipo": "multi_trecho",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.7115,
+   "todos_gold": false
+  },
+  {
+   "id": "T-042",
+   "tipo": "multi_trecho",
+   "conjunto": "T1",
+   "pos": 0,
+   "nota": 0.6417,
+   "todos_gold": false
+  },
+  {
+   "id": "T2-01",
+   "tipo": "direta",
+   "conjunto": "T2",
+   "pos": 1,
+   "nota": 0.7322,
+   "todos_gold": true
+  },
+  {
+   "id": "T2-02",
+   "tipo": "direta",
+   "conjunto": "T2",
+   "pos": 1,
+   "nota": 0.7882,
+   "todos_gold": true
+  },
+  {
+   "id": "T2-03",
+   "tipo": "direta",
+   "conjunto": "T2",
+   "pos": 0,
+   "nota": 0.7066,
+   "todos_gold": false
+  },
+  {
+   "id": "T2-04",
+   "tipo": "direta",
+   "conjunto": "T2",
+   "pos": 2,
+   "nota": 0.7308,
+   "todos_gold": true
+  },
+  {
+   "id": "T2-05",
+   "tipo": "direta",
+   "conjunto": "T2",
+   "pos": 1,
+   "nota": 0.716,
+   "todos_gold": true
+  },
+  {
+   "id": "T2-06",
+   "tipo": "direta",
+   "conjunto": "T2",
+   "pos": 1,
+   "nota": 0.7829,
+   "todos_gold": true
+  },
+  {
+   "id": "T2-07",
+   "tipo": "direta",
+   "conjunto": "T2",
+   "pos": 1,
+   "nota": 0.6509,
+   "todos_gold": true
+  },
+  {
+   "id": "T2-08",
+   "tipo": "coloquial",
+   "conjunto": "T2",
+   "pos": 0,
+   "nota": 0.7517,
+   "todos_gold": false
+  },
+  {
+   "id": "T2-09",
+   "tipo": "coloquial",
+   "conjunto": "T2",
+   "pos": 0,
+   "nota": 0.7279,
+   "todos_gold": false
+  },
+  {
+   "id": "T2-10",
+   "tipo": "coloquial",
+   "conjunto": "T2",
+   "pos": 0,
+   "nota": 0.7134,
+   "todos_gold": false
+  },
+  {
+   "id": "T2-11",
+   "tipo": "coloquial",
+   "conjunto": "T2",
+   "pos": 1,
+   "nota": 0.7701,
+   "todos_gold": true
+  },
+  {
+   "id": "T2-12",
+   "tipo": "coloquial",
+   "conjunto": "T2",
+   "pos": 2,
+   "nota": 0.7169,
+   "todos_gold": true
+  },
+  {
+   "id": "T2-13",
+   "tipo": "ruido",
+   "conjunto": "T2",
+   "pos": 1,
+   "nota": 0.6998,
+   "todos_gold": true
+  },
+  {
+   "id": "T2-14",
+   "tipo": "ruido",
+   "conjunto": "T2",
+   "pos": 0,
+   "nota": 0.7121,
+   "todos_gold": false
+  },
+  {
+   "id": "T2-15",
+   "tipo": "ruido",
+   "conjunto": "T2",
+   "pos": 1,
+   "nota": 0.727,
+   "todos_gold": true
+  },
+  {
+   "id": "T2-16",
+   "tipo": "multi_trecho",
+   "conjunto": "T2",
+   "pos": 0,
+   "nota": 0.7648,
+   "todos_gold": false
+  },
+  {
+   "id": "T2-17",
+   "tipo": "multi_trecho",
+   "conjunto": "T2",
+   "pos": 0,
+   "nota": 0.7079,
+   "todos_gold": false
+  },
+  {
+   "id": "T2-18",
+   "tipo": "multi_trecho",
+   "conjunto": "T2",
+   "pos": 1,
+   "nota": 0.6992,
+   "todos_gold": true
+  }
+ ],
+ "mq_rr_faq_k5": [
+  {
+   "id": "T-001",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.7477,
+   "todos_gold": true
+  },
+  {
+   "id": "T-002",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 2,
+   "nota": 0.7241,
+   "todos_gold": true
+  },
+  {
+   "id": "T-003",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.7584,
+   "todos_gold": false
+  },
+  {
+   "id": "T-004",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.8017,
+   "todos_gold": true
+  },
+  {
+   "id": "T-005",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 2,
+   "nota": 0.7261,
+   "todos_gold": true
+  },
+  {
+   "id": "T-006",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.7608,
+   "todos_gold": false
+  },
+  {
+   "id": "T-007",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 2,
+   "nota": 0.6634,
+   "todos_gold": false
+  },
+  {
+   "id": "T-008",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.7009,
+   "todos_gold": true
+  },
+  {
+   "id": "T-009",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.7668,
+   "todos_gold": true
+  },
+  {
+   "id": "T-010",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.7558,
+   "todos_gold": true
+  },
+  {
+   "id": "T-011",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 3,
+   "nota": 0.7365,
+   "todos_gold": true
+  },
+  {
+   "id": "T-012",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.7869,
+   "todos_gold": true
+  },
+  {
+   "id": "T-013",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 2,
+   "nota": 0.7268,
+   "todos_gold": true
+  },
+  {
+   "id": "T-014",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.7458,
+   "todos_gold": false
+  },
+  {
+   "id": "T-015",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.6829,
+   "todos_gold": false
+  },
+  {
+   "id": "T-016",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.7883,
+   "todos_gold": true
+  },
+  {
+   "id": "T-017",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 2,
+   "nota": 0.7409,
+   "todos_gold": true
+  },
+  {
+   "id": "T-018",
+   "tipo": "direta",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.6772,
+   "todos_gold": true
+  },
+  {
+   "id": "T-019",
+   "tipo": "coloquial",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.7298,
+   "todos_gold": true
+  },
+  {
+   "id": "T-020",
+   "tipo": "coloquial",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.7222,
+   "todos_gold": true
+  },
+  {
+   "id": "T-021",
+   "tipo": "coloquial",
+   "conjunto": "T1",
+   "pos": 4,
+   "nota": 0.7697,
+   "todos_gold": true
+  },
+  {
+   "id": "T-022",
+   "tipo": "coloquial",
+   "conjunto": "T1",
+   "pos": 4,
+   "nota": 0.6993,
+   "todos_gold": false
+  },
+  {
+   "id": "T-023",
+   "tipo": "coloquial",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.6875,
+   "todos_gold": false
+  },
+  {
+   "id": "T-024",
+   "tipo": "coloquial",
+   "conjunto": "T1",
+   "pos": 0,
+   "nota": 0.7201,
+   "todos_gold": false
+  },
+  {
+   "id": "T-025",
+   "tipo": "coloquial",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.7947,
+   "todos_gold": false
+  },
+  {
+   "id": "T-026",
+   "tipo": "coloquial",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.7106,
+   "todos_gold": true
+  },
+  {
+   "id": "T-027",
+   "tipo": "coloquial",
+   "conjunto": "T1",
+   "pos": 3,
+   "nota": 0.7599,
+   "todos_gold": true
+  },
+  {
+   "id": "T-028",
+   "tipo": "coloquial",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.7181,
+   "todos_gold": false
+  },
+  {
+   "id": "T-029",
+   "tipo": "coloquial",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.7226,
+   "todos_gold": false
+  },
+  {
+   "id": "T-030",
+   "tipo": "coloquial",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.7025,
+   "todos_gold": false
+  },
+  {
+   "id": "T-031",
+   "tipo": "ruido",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.6802,
+   "todos_gold": true
+  },
+  {
+   "id": "T-032",
+   "tipo": "ruido",
+   "conjunto": "T1",
+   "pos": 2,
+   "nota": 0.8133,
+   "todos_gold": true
+  },
+  {
+   "id": "T-033",
+   "tipo": "ruido",
+   "conjunto": "T1",
+   "pos": 3,
+   "nota": 0.7634,
+   "todos_gold": false
+  },
+  {
+   "id": "T-034",
+   "tipo": "ruido",
+   "conjunto": "T1",
+   "pos": 0,
+   "nota": 0.6784,
+   "todos_gold": false
+  },
+  {
+   "id": "T-035",
+   "tipo": "ruido",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.6635,
+   "todos_gold": false
+  },
+  {
+   "id": "T-036",
+   "tipo": "ruido",
+   "conjunto": "T1",
+   "pos": 0,
+   "nota": 0.7454,
+   "todos_gold": false
+  },
+  {
+   "id": "T-037",
+   "tipo": "multi_trecho",
+   "conjunto": "T1",
+   "pos": 0,
+   "nota": 0.7062,
+   "todos_gold": false
+  },
+  {
+   "id": "T-038",
+   "tipo": "multi_trecho",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.7925,
+   "todos_gold": false
+  },
+  {
+   "id": "T-039",
+   "tipo": "multi_trecho",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.7331,
+   "todos_gold": true
+  },
+  {
+   "id": "T-040",
+   "tipo": "multi_trecho",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.5933,
+   "todos_gold": true
+  },
+  {
+   "id": "T-041",
+   "tipo": "multi_trecho",
+   "conjunto": "T1",
+   "pos": 1,
+   "nota": 0.7115,
+   "todos_gold": false
+  },
+  {
+   "id": "T-042",
+   "tipo": "multi_trecho",
+   "conjunto": "T1",
+   "pos": 5,
+   "nota": 0.6417,
+   "todos_gold": false
+  },
+  {
+   "id": "T2-01",
+   "tipo": "direta",
+   "conjunto": "T2",
+   "pos": 1,
+   "nota": 0.7322,
+   "todos_gold": true
+  },
+  {
+   "id": "T2-02",
+   "tipo": "direta",
+   "conjunto": "T2",
+   "pos": 1,
+   "nota": 0.7882,
+   "todos_gold": true
+  },
+  {
+   "id": "T2-03",
+   "tipo": "direta",
+   "conjunto": "T2",
+   "pos": 0,
+   "nota": 0.7066,
+   "todos_gold": false
+  },
+  {
+   "id": "T2-04",
+   "tipo": "direta",
+   "conjunto": "T2",
+   "pos": 2,
+   "nota": 0.7308,
+   "todos_gold": true
+  },
+  {
+   "id": "T2-05",
+   "tipo": "direta",
+   "conjunto": "T2",
+   "pos": 1,
+   "nota": 0.716,
+   "todos_gold": true
+  },
+  {
+   "id": "T2-06",
+   "tipo": "direta",
+   "conjunto": "T2",
+   "pos": 1,
+   "nota": 0.7829,
+   "todos_gold": true
+  },
+  {
+   "id": "T2-07",
+   "tipo": "direta",
+   "conjunto": "T2",
+   "pos": 1,
+   "nota": 0.6509,
+   "todos_gold": true
+  },
+  {
+   "id": "T2-08",
+   "tipo": "coloquial",
+   "conjunto": "T2",
+   "pos": 5,
+   "nota": 0.7517,
+   "todos_gold": false
+  },
+  {
+   "id": "T2-09",
+   "tipo": "coloquial",
+   "conjunto": "T2",
+   "pos": 0,
+   "nota": 0.7279,
+   "todos_gold": false
+  },
+  {
+   "id": "T2-10",
+   "tipo": "coloquial",
+   "conjunto": "T2",
+   "pos": 0,
+   "nota": 0.7134,
+   "todos_gold": false
+  },
+  {
+   "id": "T2-11",
+   "tipo": "coloquial",
+   "conjunto": "T2",
+   "pos": 1,
+   "nota": 0.7701,
+   "todos_gold": true
+  },
+  {
+   "id": "T2-12",
+   "tipo": "coloquial",
+   "conjunto": "T2",
+   "pos": 2,
+   "nota": 0.7169,
+   "todos_gold": true
+  },
+  {
+   "id": "T2-13",
+   "tipo": "ruido",
+   "conjunto": "T2",
+   "pos": 1,
+   "nota": 0.6998,
+   "todos_gold": true
+  },
+  {
+   "id": "T2-14",
+   "tipo": "ruido",
+   "conjunto": "T2",
+   "pos": 0,
+   "nota": 0.7121,
+   "todos_gold": false
+  },
+  {
+   "id": "T2-15",
+   "tipo": "ruido",
+   "conjunto": "T2",
+   "pos": 1,
+   "nota": 0.727,
+   "todos_gold": true
+  },
+  {
+   "id": "T2-16",
+   "tipo": "multi_trecho",
+   "conjunto": "T2",
+   "pos": 4,
+   "nota": 0.7648,
+   "todos_gold": false
+  },
+  {
+   "id": "T2-17",
+   "tipo": "multi_trecho",
+   "conjunto": "T2",
+   "pos": 5,
+   "nota": 0.7079,
+   "todos_gold": false
+  },
+  {
+   "id": "T2-18",
+   "tipo": "multi_trecho",
+   "conjunto": "T2",
+   "pos": 1,
+   "nota": 0.6992,
+   "todos_gold": true
+  }
+ ]
+}
