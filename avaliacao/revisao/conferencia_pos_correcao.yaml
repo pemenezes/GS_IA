@@ -1,0 +1,16 @@
+# Conferência pós-correção do test (Fase 8): C2 com as correções A e C. Feita pelo ASSISTENTE em
+# 12/11/2026, a pedido do Pedro, relendo as respostas contra os trechos; pendente de validação do
+# Pedro. As respostas não listadas herdam o veredito do C2 original (conferencia_pos_pre.yaml).
+status: conferido_assistente
+itens:
+  C2_AC:
+    T-007: {veredito: incorreta, falso: sim, nota: "Afirma a alínea b do item 14 do PRODIST Módulo 9, revogada pela REN 1.137/2025 (o trecho tinha o alerta)."}
+    T-011: {veredito: correta, falso: nao, nota: "Critério geral certo; fala em 'membro com deficiência', e a fonte diz 'condição de saúde que exija equipamentos elétricos'."}
+    T-018: {veredito: incorreta, falso: sim, nota: "Diz que o CDC não obriga a continuidade; o art. 22 do CDC estava entre os trechos."}
+    T-020: {veredito: incorreta, falso: sim, nota: "A reescrita trocou 'corte por erro' por 'interrupção programada'."}
+    T-028: {veredito: parcial, falso: sim}
+    T-032: {veredito: correta, falso: nao}
+    T-034: {veredito: incorreta, falso: sim}
+    T-037: {veredito: correta, falso: nao, nota: "Item 220-A: compensação por interrupção em situação de emergência acima do limite do DISE."}
+    T-038: {veredito: correta, falso: nao}
+    T-039: {veredito: correta, falso: nao, nota: "15 dias (item 50) e 20 dias (art. 618, II)."}

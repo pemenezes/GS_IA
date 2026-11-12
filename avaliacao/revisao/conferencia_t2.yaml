@@ -1,0 +1,29 @@
+# Conferência do T2 (Fase 8B). Feita pelo ASSISTENTE em 12/11/2026, a pedido do Pedro, relendo
+# cada resposta contra o texto dos trechos citados e dos trechos gold; pendente de validação do
+# Pedro. O relatório deve dizer que esta conferência não foi feita por um humano.
+# C2 final: respostas com o mesmo sentido herdam o veredito do C2 original (ver
+# conferencia_t2_pre.yaml, herdadas_c2_final).
+status: conferido_assistente
+itens:
+  C2:
+    T2-01: {veredito: correta, falso: nao}
+    T2-02: {veredito: correta, falso: nao}
+    T2-03: {veredito: incorreta, falso: sim, nota: "Nega o intervalo de leitura; o art. 260 não veio."}
+    T2-04: {veredito: incorreta, falso: sim, nota: "Aplica o art. 582 (pós-pagamento eletrônico: 15 dias, ou 30 para baixa renda) à regra geral; a vedação após 90 dias (art. 357) não veio."}
+    T2-05: {veredito: correta, falso: nao}
+    T2-06: {veredito: correta, falso: nao}
+    T2-08: {veredito: correta, falso: nao}
+    T2-09: {veredito: correta, falso: nao}
+    T2-10: {veredito: incorreta, falso: sim, nota: "Diz que ainda pode cortar pela conta de 4 meses; o art. 357 não veio."}
+    T2-11: {veredito: parcial, falso: nao, nota: "Paráfrase ambígua do art. 338, § 2º: dá a entender que é preciso esperar 12 meses para a primeira mudança."}
+    T2-12: {veredito: incorreta, falso: sim, nota: "Usa a exceção de 15 a 47 dias (primeiro faturamento, remanejamento de rota) para dizer que 40 dias é permitido."}
+    T2-13: {veredito: correta, falso: nao}
+    T2-14: {veredito: correta, falso: nao}
+    T2-16: {veredito: correta, falso: nao}
+    T2-17: {veredito: parcial, falso: nao, nota: "Dobro, correção e juros certos; não dá o prazo (2º ciclo) e cita o art. 103 (conexão)."}
+    T2-18: {veredito: correta, falso: nao}
+  C2_final:
+    T2-03: {veredito: incorreta, falso: sim, nota: "Cita o art. 243 (reparo da medição externa em 15 dias) como se fosse o intervalo de leitura."}
+    T2-14: {veredito: correta, falso: nao}
+    T2-15: {veredito: incorreta, falso: sim, nota: "Diz que pode cortar pela conta de 4 meses."}
+    T2-17: {veredito: incorreta, falso: sim, nota: "Inverte o art. 324: diz que a devolução é em dobro quando o erro é do consumidor; nesse caso ela é simples."}
