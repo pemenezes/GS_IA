@@ -54,6 +54,8 @@ llm:
 geracao:
   estruturada: true                # `format` do Ollama com o JSON Schema
 agente:
+  # Fase 8B: correções do C2 escolhidas no dev (ver src/agente/agente.py, CORRECOES).
+  correcoes_finais: CDEV
   max_passos: 3
   timeout_ferramenta_s: 5
 api_paradas:

@@ -203,3 +203,24 @@ reconhece "ridículo" e "ridicularizado") e T2-08 ("moradores anteriores", tamb�
 voz T2-13). Congelado em `avaliacao/teste2.jsonl` (sha256 `2bfa246b`). Um primeiro
 congelamento, feito por engano antes de os dois ajustes entrarem no arquivo, foi desfeito antes
 de qualquer execução sobre o T2.
+
+**Escolha da configuração final (12/11/2026, só no dev).** Critério declarado no plano: (1)
+JSON válido em 100%; (2) menos respostas que afirmam algo falso, pela minha leitura das
+respostas do dev; (3) mais acertos; (4) latência p95 de até 60 s.
+- Todos os modelos maiores foram piores ou iguais e de 4 a 15 vezes mais lentos: qwen3 8B 12/16
+  (89 s, errou uma dinâmica), 8B pensando 13/16 (260 s), qwen3.5 9B 13/16 (161 s), 4B thinking
+  13/16 (122 s, 2 JSON inválidos na 1ª tentativa).
+- A autoverificação (F) foi descartada: no dev ela não acrescentou acertos e causou duas
+  afirmações falsas. No T-055, o verificador apontou um erro de data inexistente e o reparo
+  transformou "sim, há parada das 9h às 13h" em "não há parada"; no T-010, levou a "não tem
+  desconto de 100%". A métrica automática contou os dois como acertos.
+- O qwen3 4B q8 empatou com o q4 sem a F (14/16), foi duas vezes mais lento (p95 de 37 s contra
+  17 s) e afirmou na T-035 que o caso "é uma situação de serviço essencial".
+- **Escolhido:** qwen3 4B instruct q4 com as correções C, D, E e V (14/16 no dev, 0 afirmações
+  falsas na leitura, recusa indevida 1/16, dinâmicas 3/3, latência p95 de 17 s, pico de VRAM de
+  5,9 GB). Na calibração, com as correções, a recusa correta continuou em 30/30.
+
+**Disco (12/11/2026):** a pedido do Pedro, os modelos do Ollama (27,7 GB) foram movidos para
+`D:\GS_IA\models\ollama` (ignorado pelo git), com a variável de usuário `OLLAMA_MODELS`. Um
+atalho de diretório no lugar antigo não funcionou (o Ollama não abre os pesos por ele). O disco
+C passou de 11 para 39 GB livres.

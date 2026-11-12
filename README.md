@@ -34,6 +34,14 @@ ollama pull gemma3:4b-it-q4_K_M
 ollama pull llama3.2:3b-instruct-q4_K_M
 ```
 
+Os modelos do Ollama ocupam cerca de 28 GB. Para guardá-los fora do disco C, defina a variável
+de ambiente do usuário `OLLAMA_MODELS` (nesta máquina, `D:\GS_IA\models\ollama`; a pasta
+`models/` é ignorada pelo git) e reinicie o Ollama.
+
+Os modelos do Ollama ocupam cerca de 28 GB. Para guardá-los fora do disco C, defina a variável
+de ambiente do usuário `OLLAMA_MODELS` (nesta máquina, `D:\GS_IA\models\ollama`; a pasta
+`models/` é ignorada pelo git) e reinicie o Ollama.
+
 `requirements.txt` traz as dependências diretas com versão travada; `requirements-lock.txt`
 traz o freeze completo do ambiente de referência (`pip install -r requirements-lock.txt` para
 reproduzir exatamente; regenere com `scripts\gerar_lock.py`).
