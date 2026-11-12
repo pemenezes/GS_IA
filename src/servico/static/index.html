@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Luz Cidadã: teste do assistente</title>
+<style>
+  :root {
+    --azul: #1d4e89; --azul-claro: #e8f0fa; --verde: #1f7a4d; --verde-claro: #e6f4ec;
+    --laranja: #a85d00; --laranja-claro: #fff3e0; --cinza: #5a6472; --borda: #d5dbe3;
+    --fundo: #f6f8fb;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: "Segoe UI", system-ui, sans-serif; font-size: 18px;
+         line-height: 1.5; color: #1b2430; background: var(--fundo); }
+  header { background: var(--azul); color: #fff; padding: 18px 24px; }
+  header h1 { margin: 0; font-size: 28px; }
+  header p { margin: 4px 0 0; opacity: .9; font-size: 16px; }
+  main { max-width: 1200px; margin: 0 auto; padding: 20px 24px 40px; }
+  .cartao { background: #fff; border: 1px solid var(--borda); border-radius: 10px;
+            padding: 18px 20px; margin-bottom: 18px; }
+  textarea { width: 100%; min-height: 96px; font: inherit; padding: 12px;
+             border: 2px solid var(--borda); border-radius: 8px; resize: vertical; }
+  textarea:focus, select:focus, button:focus { outline: 3px solid #8fb4e6; outline-offset: 1px; }
+  .linha { display: flex; flex-wrap: wrap; gap: 14px; align-items: center; margin-top: 12px; }
+  label { font-size: 16px; color: var(--cinza); }
+  select { font: inherit; font-size: 16px; padding: 6px 8px; border-radius: 6px;
+           border: 1px solid var(--borda); }
+  button { font: inherit; border: 0; border-radius: 8px; padding: 10px 22px; cursor: pointer; }
+  .principal { background: var(--azul); color: #fff; font-weight: 600; }
+  .principal:disabled { background: #8a9bb3; cursor: wait; }
+  .exemplos { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+  .exemplos button { background: var(--azul-claro); color: var(--azul); font-size: 15px;
+                     padding: 6px 12px; }
+  #status { font-size: 15px; padding: 4px 10px; border-radius: 20px; background: #eee; }
+  #status.pronto { background: var(--verde-claro); color: var(--verde); }
+  #status.erro { background: #fde8e8; color: #a12; }
+  .resultados { display: grid; gap: 18px; grid-template-columns: 1fr; }
+  .resultados.comparar { grid-template-columns: 1fr 1fr; }
+  @media (max-width: 860px) { .resultados.comparar { grid-template-columns: 1fr; } }
+  .rotulo { font-size: 14px; font-weight: 700; letter-spacing: .03em; text-transform: uppercase;
+            color: var(--cinza); }
+  .selo { display: inline-block; font-size: 14px; font-weight: 600; padding: 2px 10px;
+          border-radius: 20px; margin-left: 8px; }
+  .selo.resposta { background: var(--verde-claro); color: var(--verde); }
+  .selo.recusa { background: var(--laranja-claro); color: var(--laranja); }
+  .texto-resposta { font-size: 21px; margin: 10px 0 6px; white-space: pre-wrap; }
+  .motivo { color: var(--laranja); font-size: 16px; }
+  .fonte { border-left: 4px solid var(--azul); background: var(--azul-claro); padding: 10px 14px;
+           margin-top: 10px; border-radius: 0 8px 8px 0; font-size: 16px; }
+  .fonte.api { border-color: var(--verde); background: var(--verde-claro); }
+  .fonte blockquote { margin: 6px 0 0; font-style: italic; color: #2d3a4a; }
+  .meta { font-size: 14px; color: var(--cinza); margin-top: 12px; }
+  details { margin-top: 10px; font-size: 14px; color: var(--cinza); }
+  details pre { white-space: pre-wrap; background: #f1f3f6; padding: 8px; border-radius: 6px; }
+  .aviso { font-size: 14px; color: var(--cinza); margin-top: 8px; }
+  #historico li { margin-bottom: 6px; font-size: 15px; cursor: pointer; }
+  #historico li:hover { text-decoration: underline; }
+  .carregando { color: var(--cinza); font-style: italic; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Luz Cidadã</h1>
+  <p>Assistente informativo sobre direitos do consumidor de energia elétrica (Região Metropolitana
+     de São Paulo). Página de teste do protótipo.</p>
+</header>
+<main>
+  <section class="cartao" aria-label="Pergunta">
+    <div class="linha" style="margin-top:0; justify-content:space-between">
+      <label for="pergunta" style="font-size:18px; color:#1b2430"><b>Sua pergunta</b></label>
+      <span id="status">verificando o assistente…</span>
+    </div>
+    <textarea id="pergunta" placeholder="Ex.: Paguei a conta atrasada hoje. Em quanto tempo a empresa tem que religar a luz?"></textarea>
+    <div class="exemplos" aria-label="Perguntas de exemplo">
+      <button type="button">Paguei a conta atrasada hoje. Em quanto tempo religam a luz?</button>
+      <button type="button">Quem tem direito à Tarifa Social de Energia?</button>
+      <button type="button">Vai ter manutenção programada amanhã na Vila Mariana?</button>
+      <button type="button">Tem manutenção programada no Jardim amanhã?</button>
+      <button type="button">Minha geladeira queimou depois que a luz voltou. Em quanto tempo posso pedir o ressarcimento?</button>
+      <button type="button">Qual é a capital da Austrália?</button>
+    </div>
+    <div class="linha">
+      <label>Configuração
+        <select id="config"></select>
+      </label>
+      <label>Origem
+        <select id="origem">
+          <option value="texto">texto</option>
+          <option value="voz">voz (transcrição)</option>
+        </select>
+      </label>
+      <label><input type="checkbox" id="comparar"> comparar com o C0 (LLM sem a base)</label>
+      <button class="principal" id="enviar" type="button">Perguntar</button>
+    </div>
+  </section>
+
+  <section id="resultados" class="resultados" aria-live="polite"></section>
+
+  <section class="cartao">
+    <div class="rotulo">Histórico desta sessão</div>
+    <ul id="historico"><li class="carregando">nenhuma pergunta ainda</li></ul>
+    <p class="aviso">Orientação informativa; não substitui o atendimento da distribuidora, da ANEEL
+      ou de um advogado. A agenda de paradas programadas usa dados simulados. Não digite dados
+      pessoais: CPF, telefone, e-mail e números longos são mascarados antes de ir ao modelo.</p>
+  </section>
+</main>
+
+<script>
+const $ = (s) => document.querySelector(s);
+const el = (tag, attrs = {}, ...filhos) => {
+  const e = document.createElement(tag);
+  for (const [k, v] of Object.entries(attrs)) {
+    if (k === "class") e.className = v; else if (k === "text") e.textContent = v; else e.setAttribute(k, v);
+  }
+  for (const f of filhos) if (f) e.append(f);
+  return e;
+};
+const historico = [];
+
+async function verificarStatus() {
+  try {
+    const r = await (await fetch("/health")).json();
+    const s = $("#status");
+    if (r.erro) { s.textContent = "erro ao carregar: " + r.erro; s.className = "erro"; return; }
+    if (r.carregado) { s.textContent = "assistente pronto"; s.className = "pronto"; return; }
+    s.textContent = "carregando modelos… (até 1 minuto)"; s.className = "";
+  } catch { $("#status").textContent = "serviço fora do ar"; $("#status").className = "erro"; }
+  setTimeout(verificarStatus, 3000);
+}
+
+async function carregarConfigs() {
+  const r = await (await fetch("/v1/configs")).json();
+  for (const [id, desc] of Object.entries(r.configs)) {
+    const o = el("option", { value: id, text: `${id}: ${desc}` });
+    if (id === r.padrao) o.selected = true;
+    $("#config").append(o);
+  }
+}
+
+function cartaoResultado(titulo) {
+  const c = el("article", { class: "cartao" }, el("div", { class: "rotulo", text: titulo }),
+    el("p", { class: "carregando", text: "pensando… (de 5 a 30 segundos)" }));
+  $("#resultados").append(c);
+  return c;
+}
+
+function preencher(c, titulo, r) {
+  c.replaceChildren();
+  const resp = r.resposta || {};
+  const recusa = !!resp.recusa;
+  const cab = el("div", { class: "rotulo", text: titulo });
+  cab.append(el("span", { class: "selo " + (recusa ? "recusa" : "resposta"),
+                          text: recusa ? "recusou responder" : "respondeu" }));
+  c.append(cab, el("p", { class: "texto-resposta", text: resp.resposta || "(sem resposta)" }));
+  if (recusa && resp.motivo_recusa) c.append(el("p", { class: "motivo", text: "Motivo: " + resp.motivo_recusa }));
+  for (const f of r.fontes || []) {
+    const d = el("div", { class: "fonte" + (f.tipo === "api" ? " api" : "") });
+    const nome = [f.rotulo || f.documento, f.artigo].filter(Boolean).join(", ") || f.id;
+    const t = el("div", {}, el("b", { text: nome }));
+    if (f.url) t.append(" · ", el("a", { href: f.url, target: "_blank", rel: "noopener", text: "abrir a fonte" }));
+    t.append(el("span", { text: `  (${f.id})`, style: "color:#5a6472" }));
+    d.append(t, el("blockquote", { text: "“" + f.trecho_citado + "”" }));
+    c.append(d);
+  }
+  const meta = [`${r.config}`, `${r.latencia_s} s`, `origem da resposta: ${r.origem_resposta}`];
+  if (r.nota_portao !== null && r.nota_portao !== undefined) meta.push(`nota do portão: ${r.nota_portao}`);
+  if ((r.dados_pessoais_mascarados || []).length) meta.push("dados pessoais mascarados: " + r.dados_pessoais_mascarados.join(", "));
+  c.append(el("div", { class: "meta", text: meta.join(" · ") }));
+  const det = el("details", {}, el("summary", { text: "detalhes técnicos" }));
+  det.append(el("pre", { text: JSON.stringify({ trechos_consultados: r.trechos, roteamento: r.roteamento, consultas: r.consultas }, null, 2) }));
+  c.append(det, el("p", { class: "aviso", text: r.aviso }));
+}
+
+async function consultar(pergunta, config, origem, c) {
+  const titulo = config === "C0" ? "C0: LLM sem a base (comparação)" : `${config}: resposta do assistente`;
+  try {
+    const resp = await fetch("/v1/perguntar", { method: "POST", headers: { "Content-Type": "application/json" },
+                                                body: JSON.stringify({ pergunta, config, origem }) });
+    const r = await resp.json();
+    if (!resp.ok) throw new Error(r.detail ? JSON.stringify(r.detail) : resp.statusText);
+    preencher(c, titulo, r);
+    return r;
+  } catch (e) {
+    c.replaceChildren(el("div", { class: "rotulo", text: titulo }), el("p", { class: "motivo", text: "Erro: " + e.message }));
+  }
+}
+
+async function enviar() {
+  const pergunta = $("#pergunta").value.trim();
+  if (pergunta.length < 3) { $("#pergunta").focus(); return; }
+  const config = $("#config").value, origem = $("#origem").value, comparar = $("#comparar").checked;
+  $("#enviar").disabled = true;
+  $("#resultados").replaceChildren();
+  $("#resultados").className = "resultados" + (comparar ? " comparar" : "");
+  const principal = cartaoResultado(`${config}: resposta do assistente`);
+  const c0 = comparar && config !== "C0" ? cartaoResultado("C0: LLM sem a base (comparação)") : null;
+  const r = await consultar(pergunta, config, origem, principal);
+  if (c0) await consultar(pergunta, "C0", origem, c0);
+  $("#enviar").disabled = false;
+  if (r) {
+    historico.unshift({ pergunta, config, recusa: r.resposta && r.resposta.recusa });
+    $("#historico").replaceChildren(...historico.map((h) => {
+      const li = el("li", { text: `${h.config} · ${h.recusa ? "recusou" : "respondeu"} · ${h.pergunta}` });
+      li.onclick = () => { $("#pergunta").value = h.pergunta; };
+      return li;
+    }));
+  }
+}
+
+document.querySelectorAll(".exemplos button").forEach((b) => b.onclick = () => { $("#pergunta").value = b.textContent; });
+$("#enviar").onclick = enviar;
+$("#pergunta").addEventListener("keydown", (e) => { if (e.key === "Enter" && (e.ctrlKey || e.metaKey)) enviar(); });
+carregarConfigs();
+verificarStatus();
+</script>
+</body>
+</html>

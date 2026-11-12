@@ -86,6 +86,20 @@ O benchmark grava `avaliacao/runs/benchmark_modelos.csv`. Feche programas que us
 - Escrita (`POST /paradas`, `PATCH /paradas/{id}`) exige o header `X-API-Key` igual a `PARADAS_API_KEY` do `.env`. Sem chave configurada, ou com o valor de exemplo, a escrita fica desligada.
 - Os dados são **simulados**, calibrados com interrupções programadas reais da Enel SP. Os detalhes estão em [`docs/dados_simulados.md`](docs/dados_simulados.md).
 
+## Interface de teste do assistente
+
+Com o Ollama rodando e os índices gerados:
+
+```powershell
+.\.venv\Scripts\python.exe -m uvicorn src.servico.app:app --port 8000
+```
+
+Abra `http://localhost:8000`. Os modelos carregam em segundo plano (cerca de 30 s; o selo "assistente pronto" indica o fim). A página permite escolher a configuração (C0, C1, C2 ou C2M, a recomendada), a origem (texto ou voz) e comparar a resposta lado a lado com o C0. A API correspondente é `POST /v1/perguntar` com `{"pergunta": ..., "config": "C2M", "origem": "texto"}`.
+
+- CPF, CNPJ, telefone, e-mail, CEP e números longos são mascarados antes de chegar ao modelo.
+- O log (`logs/servico.jsonl`) guarda um hash da pergunta, a configuração, a latência, se houve recusa, os ids das fontes e os tipos de dado mascarados, sem o texto da pergunta nem da resposta.
+- A agenda de paradas usada pelo C2 é a mesma API simulada, executada no mesmo processo (não é preciso subir a porta 8001).
+
 Para executar os notebooks, ative o venv antes (`.\.venv\Scripts\Activate.ps1`), para que o kernel use as bibliotecas do projeto:
 
 ```powershell
