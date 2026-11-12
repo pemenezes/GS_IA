@@ -32,9 +32,11 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 from src.avaliacao.casos import (  # noqa: E402
     LOCK,
     LOCK2,
+    LOCK3,
     Caso,
     carregar_congelado,
     carregar_test2,
+    carregar_test3,
 )
 from src.avaliacao.geracao import (  # noqa: E402
     avaliar_dinamica,
@@ -54,8 +56,10 @@ RESUMO = RAIZ / "avaliacao" / "geracao"
 CALIBRACAO = RAIZ / "avaliacao" / "retrieval" / "calibracao.jsonl"
 INJECAO = RESUMO / "injecao.jsonl"
 DINAMICAS_EXTRA = RAIZ / "avaliacao" / "agente" / "dinamicas_extra.jsonl"
-CONJUNTOS = ["dev", "test", "test2", "calibracao", "injecao", "dinamicas_extra"]
-UNICA_VEZ = ("test", "test2")  # conjuntos medidos uma única vez por configuração
+CONJUNTOS = ["dev", "test", "test2", "test3", "calibracao", "injecao", "dinamicas_extra"]
+UNICA_VEZ = ("test", "test2", "test3")  # conjuntos medidos uma única vez por configuração
+COM_CASOS = ("dev", "test", "test2", "test3")
+CARREGAR_TESTE = {"test2": carregar_test2, "test3": carregar_test3}
 
 
 def _ler_jsonl(arq: Path) -> list[dict[str, Any]]:
@@ -65,8 +69,8 @@ def _ler_jsonl(arq: Path) -> list[dict[str, Any]]:
 
 def _itens(conjunto: str) -> list[dict[str, Any]]:
     """Perguntas do conjunto: id, tipo, pergunta, Caso (dev e test) e o esperado da agenda."""
-    if conjunto in ("dev", "test", "test2"):
-        casos = carregar_test2() if conjunto == "test2" else carregar_congelado(conjunto)
+    if conjunto in COM_CASOS:
+        casos = CARREGAR_TESTE.get(conjunto, lambda: carregar_congelado(conjunto))()
         return [
             {
                 "id": c.id,
@@ -312,6 +316,7 @@ def rodar(cfg: dict[str, Any], args: argparse.Namespace) -> None:
             for k in ("num_ctx", "num_predict", "temperature", "top_p", "seed", "think")
         },
         "teste2_lock": LOCK2.read_text(encoding="utf-8").split()[0] if LOCK2.exists() else None,
+        "teste3_lock": LOCK3.read_text(encoding="utf-8").split()[0] if LOCK3.exists() else None,
         "hash_prompt_verificacao": hashlib.sha256(prompt.SISTEMA_VERIFICACAO.encode()).hexdigest()[
             :12
         ],
@@ -333,6 +338,8 @@ def resumo(_cfg: dict[str, Any], _args: argparse.Namespace) -> None:
     casos = {c.id: c for c in carregar_congelado()}
     if LOCK2.exists():
         casos |= {c.id: c for c in carregar_test2()}
+    if LOCK3.exists():
+        casos |= {c.id: c for c in carregar_test3()}
     chunks = {c["chunk_id"]: c for c in denso.trechos_indexaveis()}
     govbr = {i: c["texto"] for i, c in chunks.items() if not c.get("versionado", True)}
     extras = {x["id"]: x for x in _ler_jsonl(DINAMICAS_EXTRA)} if DINAMICAS_EXTRA.exists() else {}
@@ -344,7 +351,7 @@ def resumo(_cfg: dict[str, Any], _args: argparse.Namespace) -> None:
         meta = json.loads(arq_meta.read_text(encoding="utf-8"))
         runs = _ler_jsonl(arq)
         for x in runs:
-            caso = casos.get(x["id"]) if meta["conjunto"] in ("dev", "test", "test2") else None
+            caso = casos.get(x["id"]) if meta["conjunto"] in COM_CASOS else None
             # Execuções anteriores à Fase 7 não gravavam o esperado da agenda.
             if caso is not None:
                 x["requer_api"] = caso.requer_api

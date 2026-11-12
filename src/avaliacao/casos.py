@@ -18,6 +18,10 @@ LOCK = RAIZ / "avaliacao" / "teste.lock"
 TESTE2 = RAIZ / "avaliacao" / "teste2.jsonl"
 CANDIDATAS2 = RAIZ / "avaliacao" / "teste2_candidatas.jsonl"
 LOCK2 = RAIZ / "avaliacao" / "teste2.lock"
+# Test T3 (Fase 8B): temas sem uso anterior, escrito depois da escolha do C2+M e medido uma vez.
+TESTE3 = RAIZ / "avaliacao" / "teste3.jsonl"
+CANDIDATAS3 = RAIZ / "avaliacao" / "teste3_candidatas.jsonl"
+LOCK3 = RAIZ / "avaliacao" / "teste3.lock"
 
 Tipo = Literal[
     "direta", "coloquial", "ruido", "multi_trecho", "nao_consta", "fora_dominio", "dinamica"
@@ -45,7 +49,7 @@ class ApiEsperada(BaseModel):
 
 class Caso(BaseModel):
     id: str
-    split: Literal["dev", "test", "test2", "pendente"] = "pendente"
+    split: Literal["dev", "test", "test2", "test3", "pendente"] = "pendente"
     tipo: Tipo
     grupo: str
     tema: str
@@ -111,6 +115,14 @@ def carregar_test2() -> list[Caso]:
     if sha != LOCK2.read_text(encoding="utf-8").split()[0]:
         raise RuntimeError("avaliacao/teste2.jsonl mudou depois de congelado (hash diferente)")
     return carregar(TESTE2)
+
+
+def carregar_test3() -> list[Caso]:
+    """Test T3 congelado; falha se o arquivo não bater com o hash de teste3.lock."""
+    sha = hashlib.sha256(TESTE3.read_bytes()).hexdigest()
+    if sha != LOCK3.read_text(encoding="utf-8").split()[0]:
+        raise RuntimeError("avaliacao/teste3.jsonl mudou depois de congelado (hash diferente)")
+    return carregar(TESTE3)
 
 
 def gravar(casos: list[Caso], caminho: Path) -> None:
