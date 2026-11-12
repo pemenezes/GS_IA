@@ -12,7 +12,7 @@ As demais herdam o veredito que você já deu ao C2 original:
 O test já tinha sido visto quando as correções foram feitas; por isso esta medição é rotulada
 "pós-correção" e não substitui o placar oficial.
 
-> Nesta versão, as citações de páginas gov.br aparecem como hash (licença CC BY-ND). A versão completa está em `avaliacao/runs/local/conferencia_test_completa.md`.
+> Nesta versão, as citações de páginas gov.br aparecem como hash (licença CC BY-ND). A versão completa está em `avaliacao/runs/local/conferencia_pos_correcao_completa.md`.
 
 
 

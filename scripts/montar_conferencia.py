@@ -52,7 +52,7 @@ As respostas do C1 iguais às do C2 não se repetem: só entram as 5 que diferem
 """
 AVISO_VERSIONADO = (
     "\n> Nesta versão, as citações de páginas gov.br aparecem como hash (licença CC BY-ND). "
-    "A versão completa está em `avaliacao/runs/local/conferencia_test_completa.md`.\n"
+    "A versão completa está em `avaliacao/runs/local/{local}`.\n"
 )
 
 
@@ -109,16 +109,60 @@ O test já tinha sido visto quando as correções foram feitas; por isso esta me
 """
 
 
+CABECALHO_T2 = """# Conferência do test novo, T2 (Fase 8B)
+
+**Para:** Pedro. **Itens:** {n}. O T2 foi medido uma única vez, com o sistema congelado. Entram:
+- **C2 original:** todas as respostas dadas às perguntas respondíveis;
+- **C2 final** (qwen3 4B q4 com as correções C, D, E e V): só as respostas cujo **sentido mudou**.
+
+Os critérios são os mesmos das conferências anteriores. Responda no chat só com as discordâncias,
+por exemplo: "C2 T2-11: correta".
+
+No C2 final, as demais respostas herdam o veredito do C2 original:
+- **mesma resposta:** {mesma};
+- **redação diferente, mesmo sentido:** {sentido};
+- **continuam recusadas:** {recusadas};
+- **nova recusa (contingência):** {nova}.
+{aviso}
+"""
+
+
 def main() -> int:
     if hasattr(sys.stdout, "reconfigure"):
         sys.stdout.reconfigure(encoding="utf-8")
     pos = "--pos-correcao" in sys.argv
-    casos = {c.id: c for c in carregar_congelado("test")}
-    arq_pre = PRE.with_name("conferencia_pos_pre.yaml") if pos else PRE
+    t2 = "--t2" in sys.argv
+    if t2:
+        from src.avaliacao.casos import carregar_test2
+
+        casos = {c.id: c for c in carregar_test2()}
+    else:
+        casos = {c.id: c for c in carregar_congelado("test")}
+    if t2:
+        arq_pre = PRE.with_name("conferencia_t2_pre.yaml")
+    else:
+        arq_pre = PRE.with_name("conferencia_pos_pre.yaml") if pos else PRE
     dados = yaml.safe_load(arq_pre.read_text(encoding="utf-8"))
     pre = dados["itens"]
     govbr = {c["chunk_id"] for c in denso.trechos_indexaveis() if not c.get("versionado", True)}
-    if pos:
+    if t2:
+        runs = {"C2": _ler(f"C2_test2_{Q}"), "C2_final": _ler(f"C2_test2_{Q}_corrCDEV")}
+        secoes = [
+            ("C2", "C2", "## 1. C2 original: respostas dadas às perguntas respondíveis"),
+            ("C2_final", "C2_final", "## 2. C2 final: respostas cujo sentido mudou"),
+        ]
+        saida = SAIDA.with_name("conferencia_t2.md")
+        saida_local = SAIDA_LOCAL.with_name("conferencia_t2_completa.md")
+        h = dados["herdadas_c2_final"]
+        cabecalho = CABECALHO_T2.format(
+            n="{n}",
+            mesma=", ".join(h["mesma_resposta"]),
+            sentido=", ".join(h["mesmo_sentido"]),
+            recusadas=", ".join(h["continuam_recusadas"]),
+            nova=", ".join(h["recusa_nova"]),
+            aviso="{aviso}",
+        )
+    elif pos:
         runs = {"C2_AC": _ler(f"C2_test_{Q}_corrAC")}
         secoes = [("C2_AC", "C2_AC", "## Respostas do C2 + A + C cujo sentido mudou")]
         saida = SAIDA.with_name("conferencia_pos_correcao.md")
@@ -142,7 +186,8 @@ def main() -> int:
         saida, saida_local, cabecalho = SAIDA, SAIDA_LOCAL, CABECALHO
     n = sum(len(pre[k]) for k, _, _ in secoes)
     for destino, mascarar in ((saida, True), (saida_local, False)):
-        partes = [cabecalho.format(n=n, aviso=AVISO_VERSIONADO if mascarar else "")]
+        aviso = AVISO_VERSIONADO.format(local=saida_local.name) if mascarar else ""
+        partes = [cabecalho.format(n=n, aviso=aviso)]
         for chave, cfg, titulo in secoes:
             partes.append(titulo)
             for id_, p in pre[chave].items():

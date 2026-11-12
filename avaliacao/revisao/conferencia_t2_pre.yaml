@@ -1,0 +1,33 @@
+# Pré-classificação da conferência do T2 (Fase 8B), feita pelo agente em 12/11/2026.
+# C2 original: todas as respostas dadas às respondíveis. C2 final (qwen3 4B q4 + correções CDEV):
+# só as respostas cujo sentido mudou; as demais herdam o veredito do C2 original.
+# Mesmos critérios da conferência do test: veredito correta | parcial | incorreta; falso sim | nao.
+status: pre_classificado
+herdadas_c2_final:
+  mesma_resposta: [T2-01, T2-02, T2-23, T2-24]
+  mesmo_sentido: [T2-04, T2-05, T2-06, T2-08, T2-09, T2-10, T2-12, T2-13, T2-16, T2-18]
+  continuam_recusadas: [T2-07]
+  recusa_nova: [T2-11]
+itens:
+  C2:
+    T2-01: {veredito: correta, falso: nao, nota: ""}
+    T2-02: {veredito: correta, falso: nao, nota: ""}
+    T2-03: {veredito: incorreta, falso: sim, nota: "Diz que não há prazo fixo para a leitura; o art. 260 (27 a 33 dias) não veio entre os trechos."}
+    T2-04: {veredito: incorreta, falso: sim, nota: "Responde com os 30 dias da baixa renda (art. 358) e um prazo de 15 dias; não fala da vedação após 90 dias (art. 357, que não veio)."}
+    T2-05: {veredito: correta, falso: nao, nota: ""}
+    T2-06: {veredito: correta, falso: nao, nota: ""}
+    T2-08: {veredito: correta, falso: nao, nota: "Cita a página D14-q05 (não estava entre os equivalentes), que diz o mesmo."}
+    T2-09: {veredito: correta, falso: nao, nota: "Responde o que foi perguntado (em dobro); não cita o IPCA e os juros."}
+    T2-10: {veredito: incorreta, falso: sim, nota: "Diz que a empresa AINDA PODE cortar pela conta de 4 meses; depois de 90 dias o corte é vedado."}
+    T2-11: {veredito: parcial, falso: nao, nota: "Acerta as seis datas, mas diz 'a mudança só pode ser feita após 12 meses', quando a regra é que a data só pode ser alterada de novo depois de 12 meses."}
+    T2-12: {veredito: incorreta, falso: sim, nota: "Diz que 40 dias está dentro do permitido; o intervalo normal é de 27 a 33 dias, e 15 a 47 só vale para exceções como o primeiro faturamento."}
+    T2-13: {veredito: correta, falso: nao, nota: "Versão de voz da T2-08."}
+    T2-14: {veredito: correta, falso: nao, nota: "Versão de voz da T2-09."}
+    T2-16: {veredito: correta, falso: nao, nota: ""}
+    T2-17: {veredito: parcial, falso: nao, nota: "Acerta o dobro com correção e juros; diz que o prazo para devolver não está nos trechos (é até o 2º ciclo, art. 323, que não veio inteiro) e cita o art. 103 (conexão)."}
+    T2-18: {veredito: correta, falso: nao, nota: ""}
+  C2_final:
+    T2-03: {veredito: incorreta, falso: sim, nota: "Outro erro: diz que não há intervalo fixo e fala de reparo em 15 dias."}
+    T2-14: {veredito: correta, falso: nao, nota: "Agora também cita a correção pelo IPCA."}
+    T2-15: {veredito: incorreta, falso: sim, nota: "Pergunta de voz que o portão barrava no C2 original; agora responde que a empresa PODE cortar pela conta de 4 meses."}
+    T2-17: {veredito: incorreta, falso: sim, nota: "Inverte a regra: diz que a devolução é em dobro quando a culpa é do consumidor ou de terceiros, e cita um prazo de 36 ciclos de outro artigo."}
