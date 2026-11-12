@@ -60,8 +60,9 @@ llm:
 geracao:
   estruturada: true                # `format` do Ollama com o JSON Schema
 agente:
-  # Fase 8B: correções do C2 escolhidas no dev (ver src/agente/agente.py, CORRECOES).
-  correcoes_finais: CDEV
+  # Fase 8B: sistema oficial C2+M (multiconsulta, com num_ctx 6144), escolhido pelo Pedro em
+  # 12/11/2026 e medido sem viés no T3. O CDEV, escolhido no dev, não se repetiu no T2.
+  correcoes_finais: M
   max_passos: 3
   timeout_ferramenta_s: 5
 api_paradas:

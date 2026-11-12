@@ -1,0 +1,49 @@
+# Conferência do test T3 (Fase 8B), feita pelo ASSISTENTE em 12/11/2026 a pedido do Pedro, que
+# valida depois. O T3 foi escrito depois da escolha do C2+M, sobre temas sem uso anterior, e medido
+# uma única vez (sha256 2a6ba918). Os gabaritos também foram revisados pelo assistente, sem correções.
+# Mesmos critérios das conferências anteriores: veredito correta | parcial | incorreta; falso sim | nao.
+# Recusas de respondíveis contam como recusa indevida; negativas e agenda ficam de fora (as 4
+# negativas foram recusadas e as 2 da agenda acertaram nos dois sistemas).
+status: conferido_assistente
+recusas_indevidas:
+  C2: {T3-03: llm, T3-09: portao, T3-14: portao}
+  C2M: {T3-06: portao, T3-15: portao}
+itens:
+  C2:
+    T3-01: {veredito: correta, falso: nao, nota: "Não cita o mínimo de três parcelas, que não foi perguntado."}
+    T3-02: {veredito: incorreta, falso: sim, nota: "Diz que pode exigir garantia de casa residencial; o § 1º do art. 345 exclui a classe residencial."}
+    T3-04: {veredito: correta, falso: nao}
+    T3-05: {veredito: correta, falso: nao, nota: "Diz 'a partir do' primeiro ciclo completo; a norma diz 'até'. Diferença pequena."}
+    T3-06: {veredito: correta, falso: nao, nota: "Cita o art. 655-G da REN 1000, que diz o mesmo que a Lei 14.300."}
+    T3-07: {veredito: correta, falso: nao}
+    T3-08: {veredito: correta, falso: nao}
+    T3-10: {veredito: parcial, falso: nao, nota: "Falta manter o CadÚnico atualizado; só fala em avisar a distribuidora."}
+    T3-11: {veredito: parcial, falso: nao, nota: "Diz 'você pode receber, pois está no CadÚnico' (o CadÚnico sozinho não garante o benefício) e não fala da documentação."}
+    T3-12: {veredito: correta, falso: nao}
+    T3-13: {veredito: parcial, falso: nao, nota: "Voz. Conclusão certa (corte indevido), mas pela regra do comprovante na hora do corte, não pela do PIX (art. 361)."}
+    T3-15: {veredito: correta, falso: nao, nota: "Voz."}
+    T3-16: {veredito: correta, falso: nao, nota: "Multa, juros e atualização monetária sem os limites (2%, 1% ao mês); mesmo critério da T2-09."}
+    T3-17: {veredito: parcial, falso: nao, nota: "4 horas certo; define indevido como 'sem aviso ou sem justificativa' e não cita os casos de pagamento."}
+    T3-18: {veredito: incorreta, falso: sim, nota: "Diz 15 dias (usa o art. 243, de reparo do visor); o prazo é 30 dias (art. 252)."}
+  C2M:
+    T3-01: {veredito: correta, falso: nao, nota: "Igual ao C2."}
+    T3-02: {veredito: incorreta, falso: sim, nota: "Diz que pode exigir garantia; o § 1º do art. 345 exclui a classe residencial."}
+    T3-03: {veredito: correta, falso: nao, nota: "No C2, recusada."}
+    T3-04: {veredito: correta, falso: nao, nota: "Acrescenta a Ouvidoria com efeito suspensivo, que está no art. 325, § 4º, e no art. 422."}
+    T3-05: {veredito: correta, falso: nao}
+    T3-07: {veredito: correta, falso: nao}
+    T3-08: {veredito: correta, falso: nao, nota: "Escreve 'indevido' (masculino), por isso a métrica automática não reconheceu."}
+    T3-09: {veredito: correta, falso: nao, nota: "No C2, recusada pelo portão."}
+    T3-10: {veredito: correta, falso: nao}
+    T3-11: {veredito: correta, falso: nao}
+    T3-12: {veredito: correta, falso: nao, nota: "Cita também o art. 52 do CDC, que diz o mesmo."}
+    T3-13: {veredito: correta, falso: nao, nota: "Voz; agora pelo art. 361."}
+    T3-14: {veredito: correta, falso: nao, nota: "Voz; no C2, recusada pelo portão."}
+    T3-16: {veredito: correta, falso: nao, nota: "Dá a multa de até 2% e os juros de 1% ao mês; não cita o IPCA nem as três parcelas."}
+    T3-17: {veredito: incorreta, falso: sim, nota: "Diz 72 horas e '120 horas nos outros casos', prazos só de SIGFI e MIGDI; para o consumidor comum são 4 horas. Também define indevido pela regra do comprovante."}
+    T3-18: {veredito: correta, falso: nao}
+achados:
+  - "T3-23 (agenda, os dois sistemas): a resposta dá o horário certo (10h às 13h), mas o trecho citado pelo modelo traz '13:00 (17h)'. O texto original do registro diz '13:00 (13h)'; o validador aceitou porque a citação passa na comparação aproximada (90%). O sistema não foi mudado depois do T3."
+resumo:
+  C2: {corretas: 9, parciais: 4, incorretas: 2, recusas_indevidas: 3, n: 18, falso: 2, respondidas: 15}
+  C2M: {corretas: 14, parciais: 0, incorretas: 2, recusas_indevidas: 2, n: 18, falso: 2, respondidas: 16}

@@ -224,3 +224,34 @@ respostas do dev; (3) mais acertos; (4) latência p95 de até 60 s.
 `D:\GS_IA\models\ollama` (ignorado pelo git), com a variável de usuário `OLLAMA_MODELS`. Um
 atalho de diretório no lugar antigo não funcionou (o Ollama não abre os pesos por ele). O disco
 C passou de 11 para 39 GB livres.
+
+## Sistema oficial e test T3 (12/11/2026, Fase 8B)
+
+**Escolha:** depois de ver a multiconsulta (M) no test e no T2, o Pedro escolheu o **C2+M**
+(qwen3 4B q4, C2 com 3 reformulações pelo LLM, RRF, reranker, 5 trechos, portão com τ = 0,6635 e
+`num_ctx` 6144) como sistema oficial do relatório e do serviço. O CDEV, escolhido no dev, não se
+repetiu no T2 e foi abandonado.
+
+**Por que um T3:** a M foi escolhida olhando a busca no T1 e no T2, então os dois deixaram de
+medir a M sem viés. O T3 tem 24 perguntas com a composição do T2, sobre trechos que nenhum
+conjunto anterior usou como gold (só o art. 362 reaparece, como apoio de uma multi-trecho).
+A pergunta sobre a Lei 13.460 foi trocada, por decisão do Pedro, pela da Tarifa Social acima de
+80 kWh. O assistente escreveu e revisou os gabaritos a pedido do Pedro, que valida depois;
+nenhum gabarito foi corrigido. Congelado em `avaliacao/teste3.jsonl` (sha256 `2a6ba918`, commit
+anterior a qualquer execução). Regra declarada antes: o sistema não muda depois do T3.
+
+**Resultado (uma execução de cada; conferência do assistente em `conferencia_t3.yaml`):**
+- C2 original: 9/18 corretas (50%, IC 95% 29% a 71%), 4 parciais, 2 incorretas, 3 recusas
+  indevidas; afirma algo falso em 2 de 15 respostas.
+- C2+M: 14/18 corretas (78%, IC 95% 55% a 91%), 2 incorretas, 2 recusas indevidas; afirma algo
+  falso em 2 de 16.
+- Por pergunta, a M acerta 6 que o C2 não acerta e perde 2 (recusas do portão); McNemar exato
+  p = 0,29. A direção se repete nos três conjuntos (test, T2 e T3), mas o T3 sozinho não basta
+  para afirmar a diferença com 95% de confiança.
+- Negativas 4/4 recusadas e agenda 2/2 nos dois sistemas.
+- Erros do C2+M: T3-02 (toma a regra geral da garantia e ignora a exclusão da classe
+  residencial) e T3-17 (usa os prazos de SIGFI e MIGDI, 72 e 120 horas, no lugar de 4 horas).
+
+**Achado:** na T3-23, o modelo citou o registro da agenda com "13:00 (17h)"; o texto original diz
+"13:00 (13h)" e a resposta deu o horário certo. A comparação aproximada das citações (90%)
+aceita esse tipo de troca de número. Fica registrado e não foi corrigido, pela regra acima.

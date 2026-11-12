@@ -1,6 +1,7 @@
 """Documento da conferência manual do test (Fase 8), a partir das saídas e da pré-classificação.
 
   python scripts/montar_conferencia.py
+  python scripts/montar_conferencia.py --t3   # C2 original e C2+M no test T3
 
 Grava avaliacao/revisao/conferencia_test.md (versionado; citações de páginas gov.br trocadas
 por hash) e avaliacao/runs/local/conferencia_test_completa.md (completo, fora do git).
@@ -126,26 +127,61 @@ No C2 final, as demais respostas herdam o veredito do C2 original:
 {aviso}
 """
 
+CABECALHO_T3 = """# Conferência do test T3 (Fase 8B): C2 original e C2+M
+
+**Para:** Pedro. **Itens:** {n}. O T3 foi escrito depois da escolha do C2+M, sobre temas sem uso
+anterior, congelado (sha256 `2a6ba918`) e medido uma única vez. Os gabaritos e esta conferência
+foram feitos pelo assistente, a seu pedido; falta a sua validação. Entram todas as respostas dadas
+às perguntas respondíveis, nos dois sistemas. Responda no chat só com as discordâncias, por
+exemplo: "C2M T3-16: parcial".
+
+Recusas indevidas (perguntas respondíveis recusadas): C2 {rec_c2}; C2+M {rec_m}. As 4 negativas
+foram recusadas e as 2 perguntas da agenda acertaram nos dois sistemas.
+{aviso}
+"""
+
 
 def main() -> int:
     if hasattr(sys.stdout, "reconfigure"):
         sys.stdout.reconfigure(encoding="utf-8")
     pos = "--pos-correcao" in sys.argv
     t2 = "--t2" in sys.argv
+    t3 = "--t3" in sys.argv
     if t2:
         from src.avaliacao.casos import carregar_test2
 
         casos = {c.id: c for c in carregar_test2()}
+    elif t3:
+        from src.avaliacao.casos import carregar_test3
+
+        casos = {c.id: c for c in carregar_test3()}
     else:
         casos = {c.id: c for c in carregar_congelado("test")}
-    if t2:
+    if t3:
+        arq_pre = PRE.with_name("conferencia_t3.yaml")
+    elif t2:
         arq_pre = PRE.with_name("conferencia_t2_pre.yaml")
     else:
         arq_pre = PRE.with_name("conferencia_pos_pre.yaml") if pos else PRE
     dados = yaml.safe_load(arq_pre.read_text(encoding="utf-8"))
     pre = dados["itens"]
     govbr = {c["chunk_id"] for c in denso.trechos_indexaveis() if not c.get("versionado", True)}
-    if t2:
+    if t3:
+        runs = {"C2": _ler(f"C2_test3_{Q}"), "C2M": _ler(f"C2_test3_{Q}_corrM")}
+        secoes = [
+            ("C2", "C2", "## 1. C2 original: respostas dadas às perguntas respondíveis"),
+            ("C2M", "C2M", "## 2. C2+M: respostas dadas às perguntas respondíveis"),
+        ]
+        saida = SAIDA.with_name("conferencia_t3.md")
+        saida_local = SAIDA_LOCAL.with_name("conferencia_t3_completa.md")
+        rec = dados["recusas_indevidas"]
+        cabecalho = CABECALHO_T3.format(
+            n="{n}",
+            rec_c2=", ".join(rec["C2"]),
+            rec_m=", ".join(rec["C2M"]),
+            aviso="{aviso}",
+        )
+    elif t2:
         runs = {"C2": _ler(f"C2_test2_{Q}"), "C2_final": _ler(f"C2_test2_{Q}_corrCDEV")}
         secoes = [
             ("C2", "C2", "## 1. C2 original: respostas dadas às perguntas respondíveis"),
