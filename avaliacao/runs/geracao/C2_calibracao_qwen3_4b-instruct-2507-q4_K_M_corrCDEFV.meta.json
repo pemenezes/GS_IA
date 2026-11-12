@@ -1,0 +1,177 @@
+{
+ "run": "C2_calibracao_qwen3_4b-instruct-2507-q4_K_M_corrCDEFV",
+ "config": "C2",
+ "conjunto": "calibracao",
+ "modelo": "qwen3:4b-instruct-2507-q4_K_M",
+ "digest": "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0",
+ "estruturada": true,
+ "hash_prompts": "0be3168f3345",
+ "hash_prompts_agente": "0a8dbf57b98c",
+ "correcoes": "CDEFV",
+ "hash_prompt_reescrita": "63b5c0232988",
+ "pos_correcao": false,
+ "teste_lock": "41ec971221d50bf73c3a548db89b77cbd462baa4995cfcc56e40a5487bb49ccd",
+ "retrieval": {
+  "hibrido": false,
+  "top_k_final": 3,
+  "limiar_recusa": 0.6038
+ },
+ "llm": {
+  "num_ctx": 4096,
+  "num_predict": 1024,
+  "temperature": 0.0,
+  "top_p": 1.0,
+  "seed": 42,
+  "think": false
+ },
+ "teste2_lock": "2bfa246b29e273e69e122075c866fa8d2da479bbc555cbdf2b2ddd3a79534480",
+ "hash_prompt_verificacao": "c43db4db3661",
+ "ollama": "0.40.16",
+ "vram_pico_mib": 6091,
+ "data_hora": "2026-11-10T19:16:56",
+ "resumo": {
+  "n": 45,
+  "json_valido_1a": {
+   "k": 18,
+   "n": 18,
+   "taxa": 1.0,
+   "ic95": [
+    0.8241154494176252,
+    1.0
+   ]
+  },
+  "regras_1a": {
+   "k": 18,
+   "n": 18,
+   "taxa": 1.0,
+   "ic95": [
+    0.8241154494176252,
+    1.0
+   ]
+  },
+  "valida_final": {
+   "k": 45,
+   "n": 45,
+   "taxa": 1.0,
+   "ic95": [
+    0.9213457380593594,
+    1.0
+   ]
+  },
+  "acuracia": {
+   "k": 0,
+   "n": 0,
+   "taxa": null,
+   "ic95": [
+    0.0,
+    0.0
+   ]
+  },
+  "citacao_correta": {
+   "k": 0,
+   "n": 0,
+   "taxa": null,
+   "ic95": [
+    0.0,
+    0.0
+   ]
+  },
+  "alucinacao": {
+   "k": 0,
+   "n": 0,
+   "taxa": null,
+   "ic95": [
+    0.0,
+    0.0
+   ]
+  },
+  "recusa_correta": {
+   "k": 30,
+   "n": 30,
+   "taxa": 1.0,
+   "ic95": [
+    0.8864829086095221,
+    1.0
+   ]
+  },
+  "recusa_indevida": {
+   "k": 0,
+   "n": 15,
+   "taxa": 0.0,
+   "ic95": [
+    0.0,
+    0.20388926630434784
+   ]
+  },
+  "citacao_verificavel": {
+   "k": 15,
+   "n": 15,
+   "taxa": 1.0,
+   "ic95": [
+    0.7961107336956521,
+    1.0
+   ]
+  },
+  "recusa_nega_regra": {
+   "k": 0,
+   "n": 0,
+   "taxa": null,
+   "ic95": [
+    0.0,
+    0.0
+   ]
+  },
+  "recusa_dinamicas": {
+   "k": 0,
+   "n": 0,
+   "taxa": null,
+   "ic95": [
+    0.0,
+    0.0
+   ]
+  },
+  "acerto_dinamicas": {
+   "k": 0,
+   "n": 0,
+   "taxa": null,
+   "ic95": [
+    0.0,
+    0.0
+   ]
+  },
+  "roteamento_correto": {
+   "k": 45,
+   "n": 45,
+   "taxa": 1.0,
+   "ic95": [
+    0.9213457380593594,
+    1.0
+   ]
+  },
+  "latencia_p50_s": 4.23,
+  "latencia_p95_s": 18.17,
+  "por_tipo": {
+   "respondivel": {
+    "n": 15,
+    "recusou": 0,
+    "acuracia": 0,
+    "citacao_correta": 0,
+    "alucinacao": 0
+   },
+   "fora_dominio": {
+    "n": 20,
+    "recusou": 20,
+    "acuracia": 0,
+    "citacao_correta": 0,
+    "alucinacao": 0
+   },
+   "nao_consta": {
+    "n": 10,
+    "recusou": 10,
+    "acuracia": 0,
+    "citacao_correta": 0,
+    "alucinacao": 0
+   }
+  }
+ }
+}
