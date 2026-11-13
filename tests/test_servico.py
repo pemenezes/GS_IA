@@ -65,3 +65,24 @@ def test_rotas_e_log_sem_texto(tmp_path, monkeypatch):
     assert "religam" not in log and "123.456" not in log
     assert json.loads(log)["fontes"] == ["D01-x"]
     assert c.post("/v1/perguntar", json={"pergunta": "oi", "config": "C2M"}).status_code == 422
+
+    m = c.get("/metrics").json()
+    assert m["perguntas"] == 1 and m["recusas"] == 0 and m["erros"] == 0
+    assert m["por_config"] == {"C2M": 1} and m["por_origem"] == {"voz": 1}
+    assert m["dados_pessoais_mascarados"] == {"cpf": 1}
+    assert m["latencia_s"] == {"p50": 1.2, "p95": 1.2, "amostras": 1}
+    assert "religam" not in json.dumps(m)
+
+
+class _PipelineQuebrado:
+    def responder(self, pergunta, origem="texto"):
+        raise RuntimeError("Ollama fora do ar")
+
+
+def test_erro_do_pipeline_vira_503_e_conta_nas_metricas(tmp_path, monkeypatch):
+    monkeypatch.setattr(servico, "LOGS", tmp_path)
+    c = TestClient(servico.criar_app({"C2M": _PipelineQuebrado()}, {}))
+    r = c.post("/v1/perguntar", json={"pergunta": "Quando religam a luz?"})
+    assert r.status_code == 503
+    assert c.get("/metrics").json()["erros"] == 1
+    assert not (tmp_path / "servico.jsonl").exists()

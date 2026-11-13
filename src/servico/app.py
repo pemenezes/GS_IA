@@ -6,7 +6,8 @@ Rotas:
 - GET  /                página HTML para testar o assistente;
 - POST /v1/perguntar    {"pergunta": str, "origem": "texto|voz|ocr", "config": "C0|C1|C2|C2M"};
 - GET  /v1/configs      configurações disponíveis;
-- GET  /health          status.
+- GET  /health          status;
+- GET  /metrics         contagens e latências desde a partida, sem texto de pergunta.
 
 A pergunta passa pelo mascaramento de dados pessoais antes de ir ao modelo. O log (JSONL em
 logs/) guarda só o hash da pergunta, a configuração, a latência e os ids das fontes.
@@ -20,8 +21,10 @@ import dataclasses
 import datetime as dt
 import hashlib
 import json
+import statistics
 import tempfile
 import threading
+from collections import Counter, deque
 from pathlib import Path
 from typing import Any, Literal
 
@@ -105,6 +108,7 @@ def criar_app(pipelines: dict[str, Any] | None = None, chunks: dict | None = Non
     """`pipelines` e `chunks` podem ser injetados (testes); senão, são carregados na partida."""
     estado: dict[str, Any] = {"pipelines": pipelines, "chunks": chunks, "erro": None}
     trava = threading.Lock()  # um LLM local: uma pergunta por vez
+    metricas = _Metricas()
 
     @contextlib.asynccontextmanager
     async def _ciclo(_app: FastAPI):
@@ -154,15 +158,21 @@ def criar_app(pipelines: dict[str, Any] | None = None, chunks: dict | None = Non
     def configs() -> dict:
         return {"padrao": PADRAO, "configs": DESCRICOES}
 
+    @app.get("/metrics")
+    def metrics() -> dict:
+        return metricas.resumo()
+
     @app.post("/v1/perguntar")
     def perguntar(p: Pergunta) -> dict:
         texto, dados = mascarar(p.pergunta)
         with trava:
             try:
                 _carregar()
+                s = estado["pipelines"][p.config].responder(texto, origem=p.origem)
             except Exception as e:  # noqa: BLE001
-                raise HTTPException(503, f"o assistente não conseguiu carregar: {e}") from e
-            s = estado["pipelines"][p.config].responder(texto, origem=p.origem)
+                metricas.erros += 1
+                raise HTTPException(503, f"o assistente não conseguiu responder: {e}") from e
+        metricas.registrar(p, s, dados)
         saida = dataclasses.asdict(s)
         resposta = s.resposta.model_dump() if s.resposta else None
         corpo = {
@@ -183,6 +193,48 @@ def criar_app(pipelines: dict[str, Any] | None = None, chunks: dict | None = Non
         return corpo
 
     return app
+
+
+class _Metricas:
+    """Contagens em memória desde a partida do serviço (zeradas a cada reinício)."""
+
+    def __init__(self) -> None:
+        self.inicio = dt.datetime.now().isoformat(timespec="seconds")
+        self.perguntas = 0
+        self.erros = 0
+        self.recusas = 0
+        self.por_config: Counter[str] = Counter()
+        self.por_origem: Counter[str] = Counter()
+        self.origem_resposta: Counter[str] = Counter()
+        self.mascarados: Counter[str] = Counter()
+        self.latencias: deque[float] = deque(maxlen=1000)
+
+    def registrar(self, p: Pergunta, s: Any, dados: list[str]) -> None:
+        self.perguntas += 1
+        self.recusas += bool(s.resposta and s.resposta.recusa)
+        self.por_config[p.config] += 1
+        self.por_origem[p.origem] += 1
+        self.origem_resposta[s.origem] += 1
+        self.mascarados.update(dados)
+        self.latencias.append(s.latencia_s)
+
+    def resumo(self) -> dict:
+        lat = sorted(self.latencias)
+        return {
+            "desde": self.inicio,
+            "perguntas": self.perguntas,
+            "erros": self.erros,
+            "recusas": self.recusas,
+            "por_config": dict(self.por_config),
+            "por_origem": dict(self.por_origem),
+            "origem_resposta": dict(self.origem_resposta),
+            "dados_pessoais_mascarados": dict(self.mascarados),
+            "latencia_s": {
+                "p50": round(statistics.median(lat), 2) if lat else None,
+                "p95": round(lat[min(len(lat) - 1, int(0.95 * len(lat)))], 2) if lat else None,
+                "amostras": len(lat),
+            },
+        }
 
 
 def _registrar(p: Pergunta, s: Any, dados: list[str]) -> None:

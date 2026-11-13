@@ -103,9 +103,10 @@ def test_split_respeita_grupos_e_proporcao():
     assert dividir(_casos_ficticios(), 0.4, 42) == casos
 
 
+# Os gold incluem páginas gov.br, cujos trechos só existem na cópia local (fora do git, e do CI).
 sem_base = pytest.mark.skipif(
-    not base.CHUNKS.exists() or not CANDIDATAS.exists(),
-    reason="base ou candidatas ainda não geradas",
+    not base.CHUNKS.exists() or not base.CHUNKS_LOCAL.exists() or not CANDIDATAS.exists(),
+    reason="base completa (com as páginas gov.br locais) ou candidatas ainda não geradas",
 )
 
 

@@ -2,7 +2,9 @@
 
 Para cada modelo: descarrega tudo, mede a VRAM de base, faz uma chamada de aquecimento (tempo de
 carga) e três casos com contexto fictício (curto, recusa e contexto longo), amostrando a VRAM da
-GPU a cada 100 ms. Grava avaliacao/runs/benchmark_modelos.csv.
+GPU a cada 100 ms. Grava avaliacao/runs/benchmark_modelos.csv e as saídas brutas em
+avaliacao/runs/benchmark_modelos_saidas.jsonl. Descarrega os modelos que estiverem carregados no
+Ollama (avisando quais), para medir a VRAM de cada um isoladamente.
 
 Os casos não repetem o texto uns dos outros: o Ollama reaproveita o cache de um prefixo de prompt
 já processado, o que deixaria a latência artificialmente baixa. Só o prompt de sistema é comum a
@@ -16,6 +18,7 @@ from __future__ import annotations
 import argparse
 import csv
 import datetime as dt
+import json
 import sys
 import time
 from pathlib import Path
@@ -30,6 +33,8 @@ from src.rag import llm_ollama  # noqa: E402
 from src.rag.schema import classificar_saida, schema_para_llm  # noqa: E402
 
 SAIDA = RAIZ / "avaliacao" / "runs" / "benchmark_modelos.csv"
+# Textos fictícios: as saídas brutas podem ser versionadas, para auditoria (seção 7.3).
+SAIDAS_BRUTAS = RAIZ / "avaliacao" / "runs" / "benchmark_modelos_saidas.jsonl"
 
 SISTEMA = (
     "Responda somente com base nos TRECHOS fornecidos, em português simples. "
@@ -102,8 +107,11 @@ def medir_modelo(cfg: dict, modelo: str, info: dict, mon: MonitorVRAM) -> dict:
     opcoes = llm_ollama.opcoes_do_config(cfg["llm"])
     schema = schema_para_llm()
 
-    for m in llm_ollama.modelos_carregados(host):
-        llm_ollama.descarregar(host, m["name"])
+    carregados = [m["name"] for m in llm_ollama.modelos_carregados(host)]
+    if carregados:
+        print(f"   [aviso] descarregando do Ollama para medir a VRAM: {', '.join(carregados)}")
+    for nome in carregados:
+        llm_ollama.descarregar(host, nome)
     time.sleep(3)
     base = mon.usada_mib()
 
@@ -159,6 +167,9 @@ def medir_modelo(cfg: dict, modelo: str, info: dict, mon: MonitorVRAM) -> dict:
         if r and not r.recusa and any(f.id.strip("[]") == esperado for f in r.fontes):
             citou += 1
     linha["citou_fonte_certa"] = f"{citou}/2"
+    linha["_saidas"] = {
+        nome: corpo["message"]["content"] for nome, (corpo, _) in resultados.items()
+    }
 
     linha.update(info)
     linha["data_hora"] = dt.datetime.now().isoformat(timespec="seconds")
@@ -229,7 +240,12 @@ def main() -> int:
         w = csv.DictWriter(f, fieldnames=COLUNAS, extrasaction="ignore")
         w.writeheader()
         w.writerows(linhas)
-    print(f"\nSalvo em {SAIDA.relative_to(RAIZ)}")
+    with open(SAIDAS_BRUTAS, "w", encoding="utf-8", newline="\n") as f:
+        for linha in linhas:
+            for caso, conteudo in linha.get("_saidas", {}).items():
+                registro = {"modelo": linha["modelo"], "caso": caso, "saida": conteudo}
+                f.write(json.dumps(registro, ensure_ascii=False) + "\n")
+    print(f"\nSalvo em {SAIDA.relative_to(RAIZ)} e {SAIDAS_BRUTAS.relative_to(RAIZ)}")
     return 0
 
 

@@ -4,7 +4,7 @@ import httpx
 import pytest
 from pydantic import ValidationError
 
-from src.config import RAIZ, carregar_config
+from src.config import RAIZ, carregar_config, url_ollama
 from src.rag import llm_ollama
 from src.rag.schema import Resposta, classificar_saida, schema_para_llm
 
@@ -40,6 +40,22 @@ def test_lock_aponta_indice_do_torch_cuda():
 def test_ollama_host_sobrescrito_por_env(monkeypatch):
     monkeypatch.setenv("OLLAMA_HOST", "127.0.0.1:9999")
     assert carregar_config()["llm"]["host"] == "http://127.0.0.1:9999"
+
+
+@pytest.mark.parametrize(
+    ("valor", "url"),
+    [
+        ("0.0.0.0", "http://127.0.0.1:11434"),
+        ("0.0.0.0:11434", "http://127.0.0.1:11434"),
+        (":11434", "http://127.0.0.1:11434"),
+        ("localhost", "http://localhost:11434"),
+        ("http://host.docker.internal:11434", "http://host.docker.internal:11434"),
+        ("https://ollama.exemplo:8443/", "https://ollama.exemplo:8443"),
+        ("[::]:11434", "http://127.0.0.1:11434"),
+    ],
+)
+def test_url_ollama_normaliza_valores_do_servidor(valor, url):
+    assert url_ollama(valor) == url
 
 
 def test_schema_aceita_resposta_valida():

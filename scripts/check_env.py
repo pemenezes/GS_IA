@@ -47,6 +47,16 @@ PACOTES = [
     "dateparser",
     "pytest",
     "ruff",
+    "lxml",
+    "matplotlib",
+    "unidecode",
+    "tenacity",
+    "python-dotenv",
+    "pyyaml",
+    "psutil",
+    "nvidia-ml-py",
+    "jupyter",
+    "nbconvert",
 ]
 
 # Contexto fictício e neutro: testa formato e citação sem tocar em conteúdo jurídico.
@@ -129,6 +139,11 @@ def checar_gpu() -> None:
     except (FileNotFoundError, subprocess.SubprocessError) as e:
         falha(f"nvidia-smi indisponível: {e}")
 
+
+def checar_torch() -> None:
+    # Roda depois do teste do Ollama: o contexto CUDA do torch segura VRAM até o fim do processo
+    # e poderia empurrar parte do modelo para a CPU no meio do teste.
+    secao("PyTorch")
     try:
         import torch
 
@@ -161,11 +176,11 @@ def checar_ollama(cfg: dict, modelo: str) -> None:
     host = cfg["llm"]["host"]
     try:
         ok(f"servidor {host} no ar, versão {llm_ollama.versao(host)}")
+        locais = {m["name"]: m for m in llm_ollama.modelos_locais(host)}
     except Exception as e:  # noqa: BLE001
         falha(f"servidor Ollama inacessível em {host}: {e}")
         return
 
-    locais = {m["name"]: m for m in llm_ollama.modelos_locais(host)}
     candidatos = cfg["llm"].get("candidatos", {})
     for cand, esperado in candidatos.items():
         if cand not in locais:
@@ -210,8 +225,11 @@ def checar_ollama(cfg: dict, modelo: str) -> None:
 
     tps = corpo.get("eval_count", 0) / max(corpo.get("eval_duration", 1) / 1e9, 1e-9)
     carga = corpo.get("load_duration", 0) / 1e9
-    msg = f"tempo total {dt:.1f} s (carga {carga:.1f} s), geração {tps:.1f} tokens/s"
-    (ok if dt < LIMITE_JSON_S else falha)(f"{msg} [limite {LIMITE_JSON_S:.0f} s]")
+    resposta_s = dt - carga
+    msg = f"resposta em {resposta_s:.1f} s, geração {tps:.1f} tokens/s"
+    (ok if resposta_s < LIMITE_JSON_S else falha)(f"{msg} [limite {LIMITE_JSON_S:.0f} s]")
+    if carga > LIMITE_JSON_S:
+        aviso(f"carga do modelo levou {carga:.1f} s (só na primeira chamada, com o disco frio)")
     if resp and not resp.recusa and any(f.id.strip("[]") == "teste-1" for f in resp.fontes):
         ok("citou a fonte do trecho de teste")
     else:
@@ -280,6 +298,7 @@ def main() -> int:
     checar_gpu()
     checar_versoes()
     checar_ollama(cfg, modelo)
+    checar_torch()
     if not args.sem_embeddings:
         checar_embeddings(cfg)
 
