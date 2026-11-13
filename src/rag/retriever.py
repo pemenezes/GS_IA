@@ -46,7 +46,10 @@ def _carregar_reranker(nome: str, revisao: str | None, dispositivo: str) -> Any:
     if dispositivo == "cuda":
         import torch
 
-        kwargs["model_kwargs"] = {"torch_dtype": torch.float16}
+        if torch.cuda.is_available():
+            kwargs["model_kwargs"] = {"torch_dtype": torch.float16}
+        else:  # por exemplo, um container sem acesso à GPU: mais lento, mesmo resultado
+            dispositivo = "cpu"
     return CrossEncoder(nome, revision=revisao, device=dispositivo, max_length=512, **kwargs)
 
 

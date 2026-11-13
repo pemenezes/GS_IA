@@ -1,0 +1,25 @@
+# docker compose up --build   ->   http://localhost:8000
+# Pré-requisitos no host: Ollama rodando com o modelo do config.yaml, a base e os índices gerados
+# (base/ e base/indices/) e os modelos do Hugging Face já baixados (bge-m3 e bge-reranker-v2-m3).
+services:
+  luz-cidada:
+    build: .
+    image: luz-cidada:1.0
+    ports:
+      - "8000:8000"
+    environment:
+      OLLAMA_HOST: http://host.docker.internal:11434
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    volumes:
+      - ./base:/app/base:ro
+      - ./logs:/app/logs
+      - ${HF_CACHE:-${USERPROFILE:-${HOME}}/.cache/huggingface}:/root/.cache/huggingface
+    # GPU para o reranker; sem ela, o reranker roda na CPU (mais lento).
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
