@@ -260,5 +260,12 @@ aceita esse tipo de troca de número. Fica registrado e não foi corrigido, pela
 assistente (T2, pós-correção, M e T3) e os gabaritos do T3. Os arquivos passaram para o status
 `validado_pedro`.
 
+**Teste de reprodutibilidade (13/11/2026):** clone do GitHub (commit `834beed`) numa pasta vazia,
+venv novo e só os passos do README. Instalação em 7 min; testes passando; `construir_base.py`
+gerou os mesmos 1.812 trechos (os 1.698 versionados idênticos byte a byte; os 114 das páginas
+gov.br com o mesmo texto, mudando só a data de consulta e o hash da página inteira);
+`construir_indices.py` em 1 min; `check_env.py` com "Ambiente OK"; C2+M no dev com o mesmo
+resultado automático da execução original (13/16, 1 recusa indevida, agenda 3/3).
+
 **Docker (13/11/2026):** com autorização do Pedro, o Docker Desktop foi instalado com os dados em
 `D:\Docker\wsl` (o disco C tem pouco espaço); o serviço ganha um Dockerfile, com o Ollama no host.

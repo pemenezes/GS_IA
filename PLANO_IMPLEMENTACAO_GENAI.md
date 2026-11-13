@@ -568,17 +568,17 @@ Se algo atrasar: cortar na ordem **LoRA (9) → reranker → Docker/CI → pergu
 
 ## 11. Checklist final de entrega (mapeado à pontuação)
 
-- [ ] **01** `docs/tarefa_ia.md` + `avaliacao/teste.jsonl` (60 casos com gabarito, incluindo "não consta")
-- [ ] **02** `base/chunks.jsonl` + `base/fontes.csv` (fonte, formato, licença, nº de trechos)
-- [ ] **03** recall@1 e recall@3 medidos (dev e test) + limiar justificado + gráficos
-- [ ] **04** JSON válido, citação verificável e recusa funcionando (notebook com saídas)
-- [ ] **05** Agente (C2) comparado ao RAG simples (C1)
-- [ ] **06** `avaliacao/placar.csv` com C0, C1, C2, interpretado
-- [ ] **07** 5 erros reais: causa e correção proposta
-- [ ] **08** README reproduzível, testado em clone limpo
-- [ ] Relatório com os 7 itens (nomes e RM, ficha técnica, diagrama, tabela da base, performance, 5 erros, conclusão + links)
+- [x] **01** `docs/tarefa_ia.md` + `avaliacao/teste.jsonl` (60 casos com gabarito, incluindo "não consta")
+- [x] **02** `base/chunks.jsonl` + `base/fontes.csv` (fonte, formato, licença, nº de trechos)
+- [x] **03** recall@1 e recall@3 medidos (dev e test) + limiar justificado + gráficos
+- [x] **04** JSON válido, citação verificável e recusa funcionando (notebook com saídas)
+- [x] **05** Agente (C2) comparado ao RAG simples (C1)
+- [x] **06** `avaliacao/placar.csv` com C0, C1, C2, interpretado (mais o C2+M, no T2 e no T3)
+- [x] **07** 5 erros reais: causa e correção proposta (notebook 06, com o efeito medido)
+- [x] **08** README reproduzível, testado em clone limpo (13/11/2026)
+- [x] Relatório com os 7 itens (nomes e RM, ficha técnica, diagrama, tabela da base, performance, 5 erros, conclusão + links), falta só o link do vídeo
 - [ ] Vídeo gravado e link no relatório
-- [ ] Repositório **público**, notebooks com saídas, tag `v1.0`
+- [ ] Repositório **público**, notebooks com saídas, tag `v1.0` (público e com saídas: sim; tag depois do vídeo)
 - [ ] Links enviados no Teams **até 19/11 às 23h55** (meta: 18/11 às 18h)
 
 ---
