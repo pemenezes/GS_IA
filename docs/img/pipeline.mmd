@@ -1,0 +1,28 @@
+flowchart TB
+  subgraph Ingestao["Ingestão (offline)"]
+    direction LR
+    A["19 documentos oficiais<br/>(HTML e PDF)"] --> B["Extração, limpeza<br/>e notas de revogação"]
+    B --> C["Trechos por artigo,<br/>com metadados"]
+    C --> D[("1.812 trechos<br/>atos: no git<br/>páginas gov.br: só locais")]
+    D --> E["bge-m3<br/>(1024 dim.)"]
+    E --> F[("Índice FAISS")]
+  end
+  subgraph Servico["Serviço (online, na máquina local)"]
+    direction TB
+    U["Cidadão (texto ou voz)"] --> API["FastAPI: POST /v1/perguntar"]
+    API --> PII["Mascaramento de dados pessoais"]
+    PII --> RT{"Roteador<br/>(regras + LLM)"}
+    RT -->|normas| MQ["Multiconsulta: pergunta +<br/>3 reformulações pelo LLM"]
+    MQ --> BUS["Busca densa de cada consulta"]
+    BUS --> RRF["Fusão RRF + reranker<br/>bge-reranker-v2-m3"]
+    RRF --> G{"Portão: maior<br/>cosseno ≥ τ?"}
+    G -->|não| REC["Recusa com canal oficial"]
+    G -->|"sim: 5 trechos"| LLM["qwen3 4B via Ollama<br/>(JSON com schema)"]
+    RT -->|agenda| PAR[("API de paradas<br/>(simulada, SQLite)")]
+    PAR -->|registros| LLM
+    LLM --> V["Validador: schema, citação,<br/>números e idioma (1 reparo)"]
+    V --> OUT["Resposta com fontes ou recusa"]
+    REC --> OUT
+    OUT --> LOG[("Log sem texto e /metrics")]
+  end
+  F -.-> BUS
