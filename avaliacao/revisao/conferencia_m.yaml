@@ -2,7 +2,8 @@
 # ASSISTENTE em 12/11/2026, relendo as respostas que mudaram em relação ao C2 original; as que não
 # mudaram herdam o veredito das conferências anteriores. Pendente de validação do Pedro.
 # Atenção: a correção M foi escolhida medindo a busca no test e no T2; os números são pós-correção.
-status: conferido_assistente
+# Validada pelo Pedro em 13/11/2026, sem alterações.
+status: validado_pedro
 test:
   herdadas: [T-005, T-008, T-013, T-040]
   itens:

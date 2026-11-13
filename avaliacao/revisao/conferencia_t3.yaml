@@ -4,7 +4,8 @@
 # Mesmos critérios das conferências anteriores: veredito correta | parcial | incorreta; falso sim | nao.
 # Recusas de respondíveis contam como recusa indevida; negativas e agenda ficam de fora (as 4
 # negativas foram recusadas e as 2 da agenda acertaram nos dois sistemas).
-status: conferido_assistente
+# Validada pelo Pedro em 13/11/2026, sem alterações (vale também para os gabaritos do T3).
+status: validado_pedro
 recusas_indevidas:
   C2: {T3-03: llm, T3-09: portao, T3-14: portao}
   C2M: {T3-06: portao, T3-15: portao}

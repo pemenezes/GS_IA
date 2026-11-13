@@ -3,7 +3,8 @@
 # Pedro. O relatório deve dizer que esta conferência não foi feita por um humano.
 # C2 final: respostas com o mesmo sentido herdam o veredito do C2 original (ver
 # conferencia_t2_pre.yaml, herdadas_c2_final).
-status: conferido_assistente
+# Validada pelo Pedro em 13/11/2026, sem alterações.
+status: validado_pedro
 itens:
   C2:
     T2-01: {veredito: correta, falso: nao}

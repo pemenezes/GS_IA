@@ -245,8 +245,8 @@ anterior a qualquer execução). Regra declarada antes: o sistema não muda depo
   indevidas; afirma algo falso em 2 de 15 respostas.
 - C2+M: 14/18 corretas (78%, IC 95% 55% a 91%), 2 incorretas, 2 recusas indevidas; afirma algo
   falso em 2 de 16.
-- Por pergunta, a M acerta 6 que o C2 não acerta e perde 2 (recusas do portão); McNemar exato
-  p = 0,29. A direção se repete nos três conjuntos (test, T2 e T3), mas o T3 sozinho não basta
+- Por pergunta, a M acerta 7 que o C2 não acerta e perde 2 (recusas do portão); McNemar exato
+  p = 0,18. (Corrigido em 13/11: a primeira contagem, 6 e p = 0,29, esqueceu a T3-18.) A direção se repete nos três conjuntos (test, T2 e T3), mas o T3 sozinho não basta
   para afirmar a diferença com 95% de confiança.
 - Negativas 4/4 recusadas e agenda 2/2 nos dois sistemas.
 - Erros do C2+M: T3-02 (toma a regra geral da garantia e ignora a exclusão da classe
@@ -255,3 +255,10 @@ anterior a qualquer execução). Regra declarada antes: o sistema não muda depo
 **Achado:** na T3-23, o modelo citou o registro da agenda com "13:00 (17h)"; o texto original diz
 "13:00 (13h)" e a resposta deu o horário certo. A comparação aproximada das citações (90%)
 aceita esse tipo de troca de número. Fica registrado e não foi corrigido, pela regra acima.
+
+**Validação (13/11/2026):** o Pedro validou, sem alterações, as conferências feitas pelo
+assistente (T2, pós-correção, M e T3) e os gabaritos do T3. Os arquivos passaram para o status
+`validado_pedro`.
+
+**Docker (13/11/2026):** com autorização do Pedro, o Docker Desktop foi instalado com os dados em
+`D:\Docker\wsl` (o disco C tem pouco espaço); o serviço ganha um Dockerfile, com o Ollama no host.

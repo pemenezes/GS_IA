@@ -1,7 +1,8 @@
 # Conferência pós-correção do test (Fase 8): C2 com as correções A e C. Feita pelo ASSISTENTE em
 # 12/11/2026, a pedido do Pedro, relendo as respostas contra os trechos; pendente de validação do
 # Pedro. As respostas não listadas herdam o veredito do C2 original (conferencia_pos_pre.yaml).
-status: conferido_assistente
+# Validada pelo Pedro em 13/11/2026, sem alterações.
+status: validado_pedro
 itens:
   C2_AC:
     T-007: {veredito: incorreta, falso: sim, nota: "Afirma a alínea b do item 14 do PRODIST Módulo 9, revogada pela REN 1.137/2025 (o trecho tinha o alerta)."}
